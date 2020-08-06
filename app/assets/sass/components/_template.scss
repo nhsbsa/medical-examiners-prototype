@@ -1,0 +1,82 @@
+.nhsBSA-sidebar-container {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    min-height: calc(100vh - 99px);
+    margin: 0;
+    padding: 0;
+    .nhsBSA-sidebar-wrapper {
+        flex: 1 0 auto;
+        display: flex;
+        .nhsBSA-sidebar-content {
+            flex: 1 0 auto;
+            background-color: #f0f4f5;
+            padding: 32px;
+            margin: 0px;
+        }
+        .nhsBSA-sidebar-nav {
+            width: 360px;
+            order: -1;
+            background-color: #d8dde0;
+            margin: 0;
+        }
+    }
+}
+
+.side-nav {
+    h3 {
+        padding: 16px;
+        margin: 0;
+    }
+
+    p {
+        padding: 0px 16px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0px;
+    }
+
+    li a {
+        display: block;
+        color: #005EB8;
+        font-size: 18px;
+        text-decoration: none;
+        border-top: #ccc 1px solid;
+        border-bottom: #ccc 1px solid;
+        padding: 16px;
+        &.active {
+            background-color: #005EB8;
+            color: white;
+            font-weight: 600;
+            border-top: #005EB8 1px solid;
+            border-bottom: #005EB8 1px solid;
+        }
+    }
+}
+
+.side-nav li a:hover:not(.active) {
+    background-color: #005EB8;
+    color: white;
+}
+
+
+@media (min-width: 48.0525em) {
+    .nhsBSA-sidebar-container {
+        min-height: calc(100vh - 80px);
+    }
+
+    .side-nav {
+        h3 {
+            padding: 32px;
+        }
+        p {
+            padding: 0px 32px;
+        }
+        li a {
+            padding: 16px 32px;
+        }
+    }
+}

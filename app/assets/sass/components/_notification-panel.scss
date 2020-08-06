@@ -1,0 +1,8 @@
+.nhsuk-notification-panel {
+    border: 2px solid #4c6272;
+    border-left: 8px solid $color_nhsuk-green;
+    padding: 16px;
+    p:last-of-type {
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,218 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Next of kin
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+    <h1>Create a new case</h1>
+
+    <div class="nhsuk-progress-bar">
+		<ol class="nhsuk-progress-bar__list">
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon nhsuk-progress-bar__icon--complete"></span>
+				<span class="nhsuk-progress-bar__label">Patient details</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item" aria-current="step">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">Next of kin</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">QAP input</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">ME Scrutiny</span>
+			</li>
+
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">Escalation or feedback</span>
+			</li>
+
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">Case closed</span>
+			</li>
+		</ol>
+	</div> 
+
+	<div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="forename">
+		  	Forename(s) (optional)
+		</label>
+		<input class="nhsuk-input nhsuk-u-width-one-half" id="forename" name="forename" type="text">
+	</div>
+
+	<div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="surname">
+		  	Surname (optional)
+		</label>
+		<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="contact-number">
+		  	Primary contact number (optional)
+		</label>
+		<input class="nhsuk-input nhsuk-u-width-one-half" id="contact-number" name="contact-number" type="number">
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="alt-number">
+		  	Alternative contact number (optional)
+		</label>
+		<input class="nhsuk-input nhsuk-u-width-one-half" id="alt-number" name="alt-number" type="number">
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="relation">
+		  	Relation to deceased (optional)
+		</label>
+		<select class="nhsuk-select" id="relation" name="relation">
+            <option value="brother">Brother</option>
+            <option value="cousin">Cousin</option>
+            <option value="father">Father</option>
+            <option value="husband">Husband</option>
+            <option value="mother">Mother</option>
+            <option value="sister">Sister</option>
+            <option value="wife">Wife</option>
+		</select>
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<fieldset class="nhsuk-fieldset">
+			<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+					Has the representative been informed?
+				</p>
+			</legend>
+	  
+			<div class="nhsuk-radios nhsuk-radios--inline">
+		
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="rep-informed-1" name="rep-informed" type="radio" value="yes">
+					<label class="nhsuk-label nhsuk-radios__label" for="rep-informed-1">
+						Yes
+					</label>
+				</div>
+			
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="rep-informed-2" name="rep-informed" type="radio" value="no">
+					<label class="nhsuk-label nhsuk-radios__label" for="rep-informed-2">
+						No
+					</label>
+				</div>
+		
+			</div>
+		</fieldset>
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<fieldset class="nhsuk-fieldset" aria-describedby="doc-hint" role="group">
+		  <legend class="nhsuk-fieldset__legend">
+			<p class="nhsuk-fieldset__heading">
+			  Date of conversation
+			</p>
+		  </legend>
+		  <span class="nhsuk-hint" id="dod-hint">
+			For example, 15 3 1984
+		  </span>
+	  
+		  <div class="nhsuk-date-input" id="dod">
+			<div class="nhsuk-date-input__item">
+			  <div class="nhsuk-form-group">
+				<label class="nhsuk-label nhsuk-date-input__label" for="doc-day">
+				  Day
+				</label>
+				<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="doc-day" name="doc-day" type="number" pattern="[0-9]*">
+			  </div>
+			</div>
+			<div class="nhsuk-date-input__item">
+			  <div class="nhsuk-form-group">
+				<label class="nhsuk-label nhsuk-date-input__label" for="doc-month">
+				  Month
+				</label>
+				<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="doc-month" name="doc-month" type="number" pattern="[0-9]*">
+			  </div>
+			</div>
+			<div class="nhsuk-date-input__item">
+			  <div class="nhsuk-form-group">
+				<label class="nhsuk-label nhsuk-date-input__label" for="doc-year">
+				  Year
+				</label>
+				<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="doc-year" name="doc-year" type="number" pattern="[0-9]*">
+			  </div>
+			</div>
+		  </div>
+		</fieldset>  
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<fieldset class="nhsuk-fieldset">
+			<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+					Have any concerns been raised?
+				</p>
+			</legend>
+	  
+			<div class="nhsuk-radios nhsuk-radios--inline">
+		
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="concerns-raised-1" name="concerns-raised" type="radio" value="yes">
+					<label class="nhsuk-label nhsuk-radios__label" for="concerns-raised-1">
+						Yes
+					</label>
+				</div>
+			
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="concerns-raised-2" name="concerns-raised" type="radio" value="no">
+					<label class="nhsuk-label nhsuk-radios__label" for="concerns-raised-2">
+						No
+					</label>
+				</div>
+		
+			</div>
+		</fieldset>
+    </div>
+
+    <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+          Detail of the conversation
+        </label>
+        <!-- <span class="nhsuk-hint" id="example-hint">
+          Do not include personal or financial information, for example, your National Insurance number or credit card details.
+        </span> -->
+        <textarea class="nhsuk-textarea" id="conversation" name="conversation" rows="5" aria-describedby="example-hint"></textarea>
+    </div>
+
+    <button class="nhsuk-button nhsuk-button--secondary" type="submit">
+        Add another 
+    </button>
+
+	<a class="nhsuk-button" href="/create-new-case/qap-input" draggable="false">
+		Save and continue
+	</a>
+
+{% endblock %}

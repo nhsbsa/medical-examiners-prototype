@@ -1,0 +1,100 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  ME Scrutiny
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+    <h1>ME Scrutiny</h1>
+
+    <div class="nhsuk-progress-bar">
+		<ol class="nhsuk-progress-bar__list">
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon nhsuk-progress-bar__icon--complete"></span>
+				<span class="nhsuk-progress-bar__label">Patient details</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon nhsuk-progress-bar__icon--complete"></span>
+				<span class="nhsuk-progress-bar__label">Next of kin</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item" >
+				<span class="nhsuk-progress-bar__icon nhsuk-progress-bar__icon--complete"></span>
+				<span class="nhsuk-progress-bar__label">QAP input</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item" aria-current="step">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">ME Scrutiny</span>
+			</li>
+
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">Escalation or feedback</span>
+			</li>
+
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">Case closed</span>
+			</li>
+		</ol>
+    </div> 
+    
+    <p class="nhsuk-u-font-weight-bold">Medical examiners team:</p>
+
+    <div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="assigned-meo">
+		  	MEO assigned to case
+		</label>
+		<select class="nhsuk-select" id="assigned-meo" name="assigned-meo">
+			<option value="test">Mr Test User</option>
+			<option value="user">Mrs User Test</option>
+		</select>
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="meo-location">
+			Location
+		</label>
+		<input class="nhsuk-input nhsuk-u-width-one-half" id="meo-location" name="meo-location" type="text">
+    </div>
+    
+    <div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="assign-me">
+		  	Assign an ME to the case
+		</label>
+		<select class="nhsuk-select" id="assign-me" name="assign-me">
+			<option value="test">Mr Test User</option>
+			<option value="user">Mrs User Test</option>
+		</select>
+    </div>
+
+    <div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="me-location">
+			Location
+		</label>
+		<input class="nhsuk-input nhsuk-u-width-one-half" id="me-location" name="me-location" type="text">
+    </div>
+
+    <a class="nhsuk-button" href="/cases-awaiting-scrutiny" draggable="false">
+		Save and refer
+	</a>
+{% endblock %}

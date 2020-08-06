@@ -1,0 +1,187 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  ME Scrutiny
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+    <h1>ME Scrutiny</h1>
+
+    <div class="nhsuk-progress-bar">
+		<ol class="nhsuk-progress-bar__list">
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon nhsuk-progress-bar__icon--complete"></span>
+				<span class="nhsuk-progress-bar__label">Patient details</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon nhsuk-progress-bar__icon--complete"></span>
+				<span class="nhsuk-progress-bar__label">Next of kin</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item" >
+				<span class="nhsuk-progress-bar__icon nhsuk-progress-bar__icon--complete"></span>
+				<span class="nhsuk-progress-bar__label">QAP input</span>
+			</li>
+			
+			<li class="nhsuk-progress-bar__list-item" aria-current="step">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">ME Scrutiny</span>
+			</li>
+
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">Escalation or feedback</span>
+			</li>
+
+			<li class="nhsuk-progress-bar__list-item">
+				<span class="nhsuk-progress-bar__icon"></span>
+				<span class="nhsuk-progress-bar__label">Case closed</span>
+			</li>
+		</ol>
+	</div> 
+	
+	<div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="initial-notes">
+          Initial notes on the case (optional)
+        </label>
+        <textarea class="nhsuk-textarea" id="initial-notes" name="initial-notes" rows="5"></textarea>
+	</div>
+	
+	<div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="death-circumstances">
+            Circumstances of death
+		</label>
+		<select class="nhsuk-select" id="death-circumstances" name="death-circumstances">
+			<option value="one">Circumstance One</option>
+			<option value="two">Circumstance Two</option>
+		</select>
+	</div>
+	
+	<p>Possible causes of death</p>
+
+	<div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="one-a">
+          1a
+        </label>
+        <textarea class="nhsuk-textarea" id="one-a" name="one-a" rows="5"></textarea>
+    </div>
+
+    <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="one-b">
+          1b
+        </label>
+        <textarea class="nhsuk-textarea" id="one-b" name="one-b" rows="5"></textarea>
+    </div>
+
+    <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="one-c">
+          1c
+        </label>
+        <textarea class="nhsuk-textarea" id="one-c" name="one-c" rows="5"></textarea>
+	</div>
+
+	<button class="nhsuk-button nhsuk-button--secondary" type="submit">
+        Add another
+	</button>
+	
+	<div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="relevant-info">
+          Other relevant information about the scrutiny (optional)
+        </label>
+        <textarea class="nhsuk-textarea" id="relevant-info" name="relevant-info" rows="5"></textarea>
+	</div>
+
+	<div class="nhsuk-form-group">
+		<fieldset class="nhsuk-fieldset">
+			<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+					Do you dispute the QAPs proposal?
+				</p>
+			</legend>
+	  
+			<div class="nhsuk-radios nhsuk-radios--inline">
+		
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="dispute-yes" name="dispute" type="radio" value="yes">
+					<label class="nhsuk-label nhsuk-radios__label" for="dispute-yes">
+						Yes
+					</label>
+				</div>
+			
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="dispute-no" name="dispute" type="radio" value="no">
+					<label class="nhsuk-label nhsuk-radios__label" for="dispute-no">
+						No
+					</label>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="nhsuk-form-group">
+		<fieldset class="nhsuk-fieldset">
+			<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+					Has the dispute been resolved internally?
+				</p>
+			</legend>
+	  
+			<div class="nhsuk-radios nhsuk-radios--inline">
+		
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="resolved-yes" name="resolved" type="radio" value="yes">
+					<label class="nhsuk-label nhsuk-radios__label" for="resolved-yes">
+						Yes
+					</label>
+				</div>
+			
+				<div class="nhsuk-radios__item">
+					<input class="nhsuk-radios__input" id="resolved-no" name="resolved" type="radio" value="no">
+					<label class="nhsuk-label nhsuk-radios__label" for="resolved-no">
+						No
+					</label>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="escalated-info">
+          If yes, please provide information about who the case was escalated to and the resolution (optional)
+        </label>
+        <textarea class="nhsuk-textarea" id="escalated-info" name="escalated-info" rows="5"></textarea>
+	</div>
+
+	<div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="how-proceed">
+            How should the case proceed?
+		</label>
+		<select class="nhsuk-select" id="how-proceed" name="how-proceed">
+			<option value="one">Proceed One</option>
+			<option value="two">Proceed Two</option>
+		</select>
+	</div> 
+
+	<a class="nhsuk-button" href="#" draggable="false">
+		Continue
+	</a>
+
+{% endblock %}
