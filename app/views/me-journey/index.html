@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'login-template.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  Notifications
+	Login
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -21,13 +21,3 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-{% block content %}
-    <h1>Notifications</h1>
-
-    <div class="nhsuk-notification-panel">
-        <p class="nhsuk-u-margin-bottom-1">
-            <a href="/qap-input-2">1 case has had QAP input</a>
-        </p>
-        <p>Cause of death proposed by: Dr Junior Doctor 02/02/2020 11:25</p>
-    </div>
-{% endblock %}

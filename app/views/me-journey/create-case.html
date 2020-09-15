@@ -1,0 +1,252 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Create a new case
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block userName %}
+	ME Username
+{% endblock %}
+
+{% block jobRole %}Medical Examiner{% endblock %}
+
+{% block gmcNumber %}
+<p class="nhsuk-u-margin-bottom-1">
+	GMC Number: 12345679
+</p>
+{% endblock %}
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+            <h1>
+                Create a new case
+                <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+                Patient details
+                </span>
+			</h1>
+			
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="forename">
+					  Forename(s)
+				</label>
+				<input class="nhsuk-input nhsuk-u-width-one-half" id="forename" name="forename" type="text">
+			</div>
+		
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="surname">
+					  Surname
+				</label>
+				<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
+			</div>
+
+			<div class="nhsuk-form-group">
+				<fieldset class="nhsuk-fieldset">
+					<legend class="nhsuk-fieldset__legend">
+						<p class="nhsuk-fieldset__heading">
+							Gender
+						</p>
+					</legend>
+			  
+					<div class="nhsuk-radios nhsuk-radios--inline">
+				
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="gender-female" name="gender" type="radio" value="female">
+							<label class="nhsuk-label nhsuk-radios__label" for="gender-female">
+								Female
+							</label>
+						</div>
+					
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="gender-male" name="gender" type="radio" value="male">
+							<label class="nhsuk-label nhsuk-radios__label" for="gender-male">
+								Male
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+
+			<div class="nhsuk-form-group">
+				<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+				  <legend class="nhsuk-fieldset__legend">
+					<p class="nhsuk-fieldset__heading">
+					  Date of birth
+					</p>
+				  </legend>
+				  <span class="nhsuk-hint" id="dob-hint">
+					For example, 15 3 1984
+				  </span>
+			  
+				  <div class="nhsuk-date-input" id="dob">
+					<div class="nhsuk-date-input__item">
+					  <div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+						  Day
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+					  </div>
+					</div>
+					<div class="nhsuk-date-input__item">
+					  <div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+						  Month
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+					  </div>
+					</div>
+					<div class="nhsuk-date-input__item">
+					  <div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+						  Year
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+					  </div>
+					</div>
+				  </div>
+				</fieldset>	  
+			</div>
+
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="nhs-number">
+					  NHS number
+				</label>
+				<input class="nhsuk-input nhsuk-u-width-one-half" id="nhs-number" name="nhs-number" type="text">
+			</div>
+		
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="hospital-number">
+					  Hospital number
+				</label>
+				<input class="nhsuk-input nhsuk-u-width-one-half" id="hospital-number" name="hospital-number" type="text">
+			</div>
+			<div class="nhsuk-u-width-one-half">
+				<p class="nhsuk-add-another">
+					<a href="#">Add another</a>
+				</p>
+			</div>
+
+			<fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
+				<legend class="nhsuk-fieldset__legend">
+					<p class="nhsuk-fieldset__heading nhsuk-u-font-weight-bold">
+						Residential address of the deceased:
+					</p>
+				</legend>
+			  
+				<div class="nhsuk-form-group">
+					<label class="nhsuk-label" for="address-line-1">
+						Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+					</label>
+					<input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
+				</div>
+			  
+				<div class="nhsuk-form-group">
+					<label class="nhsuk-label" for="address-line-2">
+						<span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+					</label>
+					<input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
+				</div>
+			  
+				<div class="nhsuk-form-group">
+					<label class="nhsuk-label" for="address-town">
+						Town or city
+					</label>
+					<input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
+				</div>
+			  
+				<div class="nhsuk-form-group">
+				  <label class="nhsuk-label" for="address-county">
+					County
+				  </label>
+				  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+				</div>
+			  
+				<div class="nhsuk-form-group">
+				  <label class="nhsuk-label" for="address-postcode">
+					Postcode
+				  </label>
+				  <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+				</div>
+			</fieldset>
+
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="occupation">
+					Occupation
+				</label>
+				<input class="nhsuk-input nhsuk-u-width-one-half" id="occupation" name="occupation" type="text">
+			</div>
+
+			<div class="nhsuk-u-width-one-half">
+				<p class="nhsuk-add-another">
+					<a href="#">Add another</a>
+				</p>
+			</div>
+
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="additional-info">
+					Any further relevant detail about past occupations
+				</label>
+				<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="5"></textarea>
+			</div>
+
+			<a class="nhsuk-button" href="case-overview" draggable="false">
+				Create case
+			</a>
+		</div>
+	</div>
+{% endblock %}
+
+{% block sideNav %}
+	<li>							
+		<a href="create-case" class="active">
+			Create a new case
+		</a>
+	</li>
+
+	<li>							
+		<a href="all-cases"> 
+			All cases
+		</a>
+	</li>
+
+	<li>							
+		<a href="urgent-priority-cases">
+			Urgent and priority cases
+		</a>
+	</li>
+
+	<li>							
+		<a href="cases-awaiting-feedback">
+			Cases awaiting coroner feedback
+		</a>
+	</li>
+
+	<li>							
+		<a href="closed-cases">
+			Closed cases
+		</a>
+	</li>
+
+	<li>							
+		<a href="/">
+			Log out
+		</a>
+	</li>
+{% endblock %}

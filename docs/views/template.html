@@ -35,7 +35,7 @@
 {% from 'select/macro.njk' import select %}
 {% from 'summary-list/macro.njk' import summaryList %}
 {% from 'textarea/macro.njk' import textarea %}
-    
+
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
   <head>
@@ -91,113 +91,36 @@
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-	  <div class="nhsBSA-sidebar-container">
-
-			<div class="nhsBSA-sidebar-wrapper">
-				<div class="nhsBSA-sidebar-content" id="maincontent">
-					{% block content %}{% endblock %}
-				</div>
-				<div class="nhsBSA-sidebar-nav">
-					<div class="side-nav">
-		
-						<h3>George Rowley</h3>
-						<p class="nhsuk-u-margin-bottom-1">
-							Regional Medical Examining Officer
-						</p>
-						<p class="nhsuk-u-margin-bottom-1">
-							Salford Royal
-						</p>
-						<p>
-							GMC Number: 12345567890
-						</p>
-						<p>
-							<a href="#">
-								Sign out
-							</a>
-						</p>
-		
-						<ul>
-							<div id="options" class="options">
-								<li>							
-									<a href="/" class="active">
-										Dashboard overview
-									</a>
-								</li>
-		
-								<li>							
-									<a href="/create-new-case">
-										Create a new case
-									</a>
-								</li>
-		
-								<li>							
-									<a href="/notifications">
-										Notifications
-									</a>
-								</li>
-		
-								<li>							
-									<a href="#">
-										Urgent and important cases
-									</a>
-								</li>
-		
-								<li>							
-									<a href="#">
-										All cases
-									</a>
-								</li>
-		
-								<li>							
-									<a href="#">
-										Open cases
-									</a>
-								</li>
-		
-								<li>							
-									<a href="#">
-										Cases awaiting QAP input
-									</a>
-								</li>
-		
-								<li>							
-									<a href="#">
-										Cases awaiting ME input
-									</a>
-								</li>
-		
-								<li>							
-									<a href="#">
-										Cases awaiting coroner feedback
-									</a>
-								</li>
-		
-								<li>							
-									<a href="#">
-										Closed cases
-									</a>
-								</li>
-								
-							</div>
-						</ul>
-					</div>
-				</div>
-			</div>
-		
-		</div>
-							
-
+        <div class="nhsuk-width-container {{ containerClasses }}">
+          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
+            {% block content %}{% endblock %}
+          </main>
+        </div>
       {% endblock %}
 
       {% block footer %}
-        {{ footer({
-          "showLogo": "false"
-        })}}
+      <footer role="contentinfo">
+        <div class="nhsuk-footer" id="nhsuk-footer">
+          <div class="nhsuk-width-container">
+    
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+            <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+            <ul class="nhsuk-footer__list">
+              <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/">Home</a></li>
+              <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/">Privacy</a></li>
+              <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/">Accessibility</a></li>
+            </ul>
+    
+            <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </footer>
       {% endblock %}
 
     {% block bodyEnd %}{% endblock %}
-    
+
   </body>
 </html>
-
-

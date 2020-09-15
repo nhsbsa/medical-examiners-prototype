@@ -1,0 +1,107 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Case learning
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block userName %}
+	QAP Username
+{% endblock %}
+
+{% block jobRole %}Junior Doctor{% endblock %}
+
+{% block gmcNumber %}
+<p class="nhsuk-u-margin-bottom-1">
+	GMC Number: 12345679
+</p>
+{% endblock %}
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+			<h1>
+				Case learning
+            </h1>
+            
+            <p>
+                Please note that all of the cases shown below are for clinical learning purposes only. The cases have been completed and 
+                closed, are read-only and will be non-editable. The below cases will comprise of any cases that you have previously provided
+                a proposed cause of death on and has been disagreed with during scrutiny. Whether it be that the established cause of death
+                proposed by the Medical Examiner was taken forward, or a new cause of death was created between yourself and the Medical Examiner,
+                or any cases that were referred to the coroner after providing a proposed cause of death.
+            </p>
+
+            <div class="nhsuk-table-responsive">
+                <table class="nhsuk-table">
+                    <caption class="nhsuk-table__caption">Awaiting proposed COD</caption>
+                    <thead class="nhsuk-table__head">
+                        <tr class="nhsuk-table__row">
+                            <th class="nhsuk-table__header" scope="col">Name</th>
+                            <th class="nhsuk-table__header" scope="col">Date of birth</th>
+                            <th class="nhsuk-table__header" scope="col">Date of death</th>
+                            <th class="nhsuk-table__header" scope="col">NHS number</th>
+                            <th class="nhsuk-table__header" scope="col">Case created</th>
+                            <th class="nhsuk-table__header" scope="col">Case type</th>
+                        </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                        <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">Mo Salah</td>
+                            <td class="nhsuk-table__cell">01/01/1980</td>
+                            <td class="nhsuk-table__cell">01/01/2020</td>
+                            <td class="nhsuk-table__cell">1234567890</td>
+                            <td class="nhsuk-table__cell">01/01/2020</td>
+                            <td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--closed">Routine</a></td>
+                        </tr>
+                        <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">Sadio Mane</td>
+                            <td class="nhsuk-table__cell">01/01/1980</td>
+                            <td class="nhsuk-table__cell">01/01/2020</td>
+                            <td class="nhsuk-table__cell">1234567890</td>
+                            <td class="nhsuk-table__cell">01/01/2020</td>
+                            <td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--closed">Urgent</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block sideNav %}
+
+	<li>							
+		<a href="all-cases"> 
+			All cases
+		</a>
+	</li>
+
+	<li>							
+		<a href="case-learning" class="active">
+			Case learning
+		</a>
+    </li>
+    
+    <li>							
+		<a href="/">
+			Log out
+		</a>
+	</li>
+{% endblock %}

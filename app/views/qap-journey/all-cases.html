@@ -1,0 +1,149 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	All cases
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block userName %}
+	QAP Username
+{% endblock %}
+
+{% block jobRole %}Junior Doctor{% endblock %}
+
+{% block gmcNumber %}
+<p class="nhsuk-u-margin-bottom-1">
+	GMC Number: 12345679
+</p>
+{% endblock %}
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+			<h1>
+				All cases
+			</h1>
+
+			<div class="tabs">
+				<div role="tablist" aria-label="Entertainment">
+					<button role="tab" aria-selected="true" aria-controls="awaiting-proposed" id="cod">
+						Awaiting proposed COD
+					</button>
+					<button role="tab" aria-selected="false" aria-controls="awaiting-mccd" id="mccd" tabindex="-1">
+						Awaiting MCCD
+					</button>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="awaiting-proposed" aria-labelledby="cod">
+					<div class="nhsuk-table-responsive">
+						<table class="nhsuk-table">
+							<caption class="nhsuk-table__caption">Awaiting proposed COD</caption>
+							<thead class="nhsuk-table__head">
+								<tr class="nhsuk-table__row">
+									<th class="nhsuk-table__header" scope="col">Name</th>
+									<th class="nhsuk-table__header" scope="col">Date of birth</th>
+									<th class="nhsuk-table__header" scope="col">Date of death</th>
+									<th class="nhsuk-table__header" scope="col">NHS number</th>
+									<th class="nhsuk-table__header" scope="col">Case created</th>
+									<th class="nhsuk-table__header" scope="col">Case type</th>
+								</tr>
+							</thead>
+							<tbody class="nhsuk-table__body">
+								<tr class="nhsuk-table__row">
+									<td class="nhsuk-table__cell">Test One</td>
+									<td class="nhsuk-table__cell">01/01/1980</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell">1234567890</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--routine">Routine</a></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+									<td class="nhsuk-table__cell">Test Two</td>
+									<td class="nhsuk-table__cell">01/01/1980</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell">1234567890</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--routine">Routine</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="awaiting-mccd" aria-labelledby="mccd" hidden="">
+					<div class="nhsuk-table-responsive">
+						<table class="nhsuk-table">
+							<caption class="nhsuk-table__caption">Awaiting MCCD</caption>
+							<thead class="nhsuk-table__head">
+								<tr class="nhsuk-table__row">
+									<th class="nhsuk-table__header" scope="col">Name</th>
+									<th class="nhsuk-table__header" scope="col">Date of birth</th>
+									<th class="nhsuk-table__header" scope="col">Date of death</th>
+									<th class="nhsuk-table__header" scope="col">NHS number</th>
+									<th class="nhsuk-table__header" scope="col">Case created</th>
+									<th class="nhsuk-table__header" scope="col">Case type</th>
+								</tr>
+							</thead>
+							<tbody class="nhsuk-table__body">
+								<tr class="nhsuk-table__row">
+									<td class="nhsuk-table__cell">Test One</td>
+									<td class="nhsuk-table__cell">01/01/1980</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell">1234567890</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--routine">Routine</a></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+									<td class="nhsuk-table__cell">Test Two</td>
+									<td class="nhsuk-table__cell">01/01/1980</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell">1234567890</td>
+									<td class="nhsuk-table__cell">01/01/2020</td>
+									<td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--routine">Routine</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block sideNav %}
+
+	<li>							
+		<a href="all-cases" class="active"> 
+			All cases
+		</a>
+	</li>
+
+	<li>							
+		<a href="case-learning">
+			Case learning
+		</a>
+    </li>
+    
+    <li>							
+		<a href="/">
+			Log out
+		</a>
+	</li>
+{% endblock %}

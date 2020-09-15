@@ -1,0 +1,98 @@
+
+[role="tablist"] {
+    margin: 0 0 -0.1em;
+    overflow: visible;
+}
+
+[role="tab"] {
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    margin: 0;
+    padding: 10px 20px;
+    border: 2px solid #4c6272;
+    overflow: visible;
+    font-family: inherit;
+    font-size: inherit;
+    background: #4c6272;
+}
+
+[role="tab"]:hover::before,
+[role="tab"]:focus::before,
+[role="tab"][aria-selected="true"]::before {
+    position: absolute;
+    bottom: 100%;
+    right: -1px;
+    left: -1px;
+    content: '';
+}
+
+[role="tab"][aria-selected="true"] {
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 0;
+    color: #212b32;
+    background: hsl(220, 43%, 99%);
+    outline: 0;
+    padding: 10px 20px;
+}
+
+
+[role="tab"][aria-selected="true"]::after {
+    position: absolute;
+    z-index: 3;
+    bottom: -2px;
+    right: 0;
+    left: 0;
+    height: 0.3em;
+    background: hsl(220, 43%, 99%);
+    box-shadow: none;
+    content: '';
+}
+
+[role="tab"]:hover {
+    cursor: pointer;
+}
+
+[role="tab"]:hover,
+[role="tab"]:focus,
+[role="tab"]:active {
+    outline: 0;
+    border-radius: 0;
+    color: #fff;
+}
+
+[role="tab"][aria-selected="true"]:hover,
+[role="tab"][aria-selected="true"]:focus,
+[role="tab"][aria-selected="true"]:active {
+    color: 	#212b32;
+}
+
+[role="tabpanel"] {
+position: relative;
+    z-index: 2;
+    padding: 20px;
+    border: 2px solid #4c6272;
+    background: hsl(220, 43%, 99%);
+}
+
+[role="tabpanel"]:focus {
+    outline: 0;
+}
+
+[role="tabpanel"]:focus::after {
+    position: absolute;
+    bottom: 0;
+    right: -1px;
+    left: -1px;
+    content: '';
+}
+
+[role="tabpanel"] p {
+    margin: 0;
+}
+
+[role="tabpanel"] * + p {
+    margin-top: 1em;
+}
