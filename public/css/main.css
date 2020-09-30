@@ -6882,33 +6882,33 @@ b {
 .nhsbsa-pagination__link:focus {
   outline: 3px solid transparent;
   color: #0b0c0c;
-  background-color: #ffdd00;
-  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  background-color: #ffeb3b;
+  box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
   text-decoration: none; }
 
 .nhsbsa-pagination__link:link {
-  color: #1d70b8; }
+  color: #005eb8; }
 
 .nhsbsa-pagination__link:visited {
-  color: #4c2c92; }
+  color: #330072; }
 
 .nhsbsa-pagination__link:hover {
-  color: #003078; }
+  color: #7C2855; }
 
 .nhsbsa-pagination__link:active {
-  color: #0b0c0c; }
+  color: #005eb8; }
 
 .nhsbsa-pagination__link:focus {
-  color: #0b0c0c; }
+  color: #212b32; }
 
 .nhsbsa-pagination__link:link, .nhsbsa-pagination__link:visited {
-  color: #1d70b8; }
+  color: #330072; }
 
 .nhsbsa-pagination__link:hover {
-  color: #5694ca; }
+  color: #7C2855; }
 
 .nhsbsa-pagination__link:focus {
-  color: #0b0c0c; }
+  color: #212b32; }
 
 .nhsbsa-pagination__results {
   padding: 5px; }
