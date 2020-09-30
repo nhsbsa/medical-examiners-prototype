@@ -14,3 +14,13 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+
+// class to disable side nav links during testing sessions, just add to relevant <li>
+
+.nav-inactive a {
+    pointer-events: none; 
+    cursor: default; 
+    text-decoration: none; 
+    color: 	#768692!important; 
+}
