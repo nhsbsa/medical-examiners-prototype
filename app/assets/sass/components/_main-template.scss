@@ -20,6 +20,7 @@
             background-color: #d8dde0;
             margin: 0;
         }
+
     }
 }
 
@@ -176,4 +177,9 @@
 
 .nhsuk-urgent-intro__button {
     margin-right: 20px;
+}
+
+.fixed-nav {
+    position: fixed;
+    width: 360px;
 }

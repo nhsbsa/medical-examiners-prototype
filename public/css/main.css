@@ -6755,6 +6755,10 @@ b {
 .nhsuk-urgent-intro__button {
   margin-right: 20px; }
 
+.fixed-nav {
+  position: fixed;
+  width: 360px; }
+
 @media (min-width: 48.0625em) {
   .nhsbsa-pagination {
     margin-left: -5px;

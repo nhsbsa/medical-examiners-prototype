@@ -98,14 +98,6 @@
 			</div>
 
 			<div class="nhsuk-header__content" id="content-header">
-        <div class="nhsuk-form-group nhsuk-header-select">
-          <select class="nhsuk-select" id="office-location" name="office-location">
-            <option value="1" selected>Office location</option>
-            <option value="2">Office location 2</option>
-            <option value="3">Office location 3</option>
-          </select>
-        </div>
-
 				<div class="nhsuk-header__search">
 					<button class="nhsuk-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
 						<svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -144,6 +136,7 @@
         <div class="nhsabsa-sidebar-container">
             <div class="nhsabsa-sidebar-wrapper">
                 <div class="nhsabsa-sidebar-nav">
+                  <div class="fixed-nav">
                     <div class="side-nav">
 
                         <h3>{% block userName %}George Rowley{% endblock %}</h3>
@@ -193,6 +186,7 @@
                             </div>
                         </ul>
                     </div>
+                  </div>
                 </div>
                 
                 <div class="nhsabsa-sidebar-content" id="maincontent">
