@@ -6912,3 +6912,9 @@ b {
 
 .nhsbsa-pagination__results {
   padding: 5px; }
+
+.nav-inactive a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #768692 !important; }

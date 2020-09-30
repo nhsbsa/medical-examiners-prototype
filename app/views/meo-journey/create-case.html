@@ -61,12 +61,19 @@
 				<fieldset class="nhsuk-fieldset">
 					<legend class="nhsuk-fieldset__legend">
 						<p class="nhsuk-fieldset__heading">
-							Gender
+							Sex
 						</p>
 					</legend>
 			  
-					<div class="nhsuk-radios nhsuk-radios--inline">
+					<div class="nhsuk-radios nhsuk-radios--conditional">
 				
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="gender-male" name="gender" type="radio" value="male">
+							<label class="nhsuk-label nhsuk-radios__label" for="gender-male">
+								Male
+							</label>
+						</div>
+
 						<div class="nhsuk-radios__item">
 							<input class="nhsuk-radios__input" id="gender-female" name="gender" type="radio" value="female">
 							<label class="nhsuk-label nhsuk-radios__label" for="gender-female">
@@ -74,15 +81,89 @@
 							</label>
 						</div>
 					
+					
+
 						<div class="nhsuk-radios__item">
-							<input class="nhsuk-radios__input" id="gender-male" name="gender" type="radio" value="male">
-							<label class="nhsuk-label nhsuk-radios__label" for="gender-male">
-								Male
+							<input class="nhsuk-radios__input" id="gender-other" name="gender" type="radio" value="other" aria-controls="gender-other-reveal" aria-expanded="false">
+							<label class="nhsuk-label nhsuk-radios__label" for="gender-other-specify">
+								Other
 							</label>
 						</div>
+
+						<div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="gender-other-reveal">
+
+							<div class="nhsuk-form-group">
+							  <label class="nhsuk-label" for="gender-other-specify">
+								Please specify
+							  </label>
+							  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="gender-other-specify" name="other-specify" type="text">
+							</div>
+					
+						  </div>
+
+						
+
 					</div>
 				</fieldset>
 			</div>
+
+
+			<div class="nhsuk-form-group">
+				<fieldset class="nhsuk-fieldset">
+					<legend class="nhsuk-fieldset__legend">
+						<p class="nhsuk-fieldset__heading">
+							Ethnicity
+						</p>
+					</legend>
+			  
+					<div class="nhsuk-radios nhsuk-radios--conditional">
+				
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="ethnicity-white-bitish" name="ethnicity" type="radio" value="white / white british">
+							<label class="nhsuk-label nhsuk-radios__label" for="ethnicity-white-british">
+								White/ White British
+							</label>
+						</div>
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="ethnicity-mixed" name="ethnicity" type="radio" value="mixed / multiple ethnic groups">
+							<label class="nhsuk-label nhsuk-radios__label" for="ethnicity-mixed">
+								Mixed/ multiple ethnic groups
+							</label>
+						</div>
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="ethnicity-asian-british" name="ethnicity" type="radio" value="asian / asian british">
+							<label class="nhsuk-label nhsuk-radios__label" for="ethnicity-asian-british">
+								Asian/ Asian British
+							</label>
+						</div>
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="ethnicity-black-british" name="ethnicity" type="radio" value="black / african / carribean / black British">
+							<label class="nhsuk-label nhsuk-radios__label" for="ethnicity-black-british">
+								Black/ African/ Carribean/ Black British
+							</label>
+						</div>
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="ethnicity-unknown" name="ethnicity" type="radio" value="unknown">
+							<label class="nhsuk-label nhsuk-radios__label" for="ethnicity-unknown">
+								Unknown
+							</label>
+						</div>
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="ethnicity-other" name="ethnicity" type="radio" value="other" aria-controls="ethnicity-other-input" aria-expanded="false">
+							<label class="nhsuk-label nhsuk-radios__label" for="ethnicity-other">
+								Other
+							</label>
+						</div>
+						<div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="ethnicity-other-input">
+							<div class="nhsuk-form-group">
+							  <label class="nhsuk-label" for="ethnicity-other-specify">
+								Please specify
+							  </label>
+							  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="ethnicity-other-specify" name="other-specify" type="text">
+							</div>
+						  </div>
+			</fieldset>
+		</div>
 
 			<div class="nhsuk-form-group">
 				<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
@@ -126,23 +207,24 @@
 
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="nhs-number">
-					  NHS number
+					NHS number
 				</label>
 				<input class="nhsuk-input nhsuk-u-width-one-half" id="nhs-number" name="nhs-number" type="text">
 			</div>
 		
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="hospital-number">
-					  Hospital number
+					Hospital number
 				</label>
 				<input class="nhsuk-input nhsuk-u-width-one-half" id="hospital-number" name="hospital-number" type="text">
 			</div>
+			<!--
 			<div class="nhsuk-u-width-one-half">
 				<p class="nhsuk-add-another">
 					<a href="#">Add another</a>
 				</p>
 			</div>
-
+			-->	
 			<fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
 				<legend class="nhsuk-fieldset__legend">
 					<p class="nhsuk-fieldset__heading nhsuk-u-font-weight-bold">
@@ -188,17 +270,29 @@
 
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="occupation">
-					Occupation
+					Main occupation in life
 				</label>
 				<input class="nhsuk-input nhsuk-u-width-one-half" id="occupation" name="occupation" type="text">
 			</div>
 
+				<div class="nhsuk-form-group">
+					  <div class="nhsuk-checkboxes">
+				  
+						<div class="nhsuk-checkboxes__item">
+						  <input class="nhsuk-checkboxes__input" id="occupation-unknown" name="occupation-unknown" type="checkbox" value="unknown">
+						  <label class="nhsuk-label nhsuk-checkboxes__label" for="occupation-unknown">
+							Unknown
+						  </label>
+						</div>
+					</div>
+				</div>
+<!--
 			<div class="nhsuk-u-width-one-half">
 				<p class="nhsuk-add-another">
 					<a href="#">Add another</a>
 				</p>
 			</div>
-
+-->
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="additional-info">
 					Any further relevant detail about past occupations
@@ -207,8 +301,11 @@
 			</div>
 
 			<a class="nhsuk-button" href="case-overview" draggable="false">
-				Create case
+				Save and continue
 			</a>
+			<div class="nhsuk-u-width-one-half">
+				<a href="all-cases">Cancel. Go back and don't save</a>
+			</div>
 		</div>
 	</div>
 {% endblock %}
@@ -226,24 +323,24 @@
 		</a>
 	</li>
 
-	<li>							
+	<li class="nav-inactive">							
 		<a href="urgent-priority-cases">
 			Urgent and priority cases
 		</a>
 	</li>
 
-	<li>							
+	<li class="nav-inactive">								
 		<a href="cases-awaiting-feedback">
 			Cases awaiting coroner feedback
 		</a>
 	</li>
 
-	<li>							
+	<li class="nav-inactive">	
 		<a href="closed-cases">
 			Closed cases
 		</a>
 	</li>
-
+	
 	<li>							
 		<a href="/">
 			Log out
