@@ -1,0 +1,198 @@
+
+@media (min-width: 48.0625em) {
+    .nhsbsa-pagination {
+        margin-left: -5px;
+        margin-right: -5px;
+        font-size: 0;
+        text-align: justify;
+    }
+    .nhsbsa-pagination:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.nhsbsa-pagination__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 48.0625em) {
+    .nhsbsa-pagination__list {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}
+
+.nhsbsa-pagination__results {
+    font-family: Frutiger W01, Arial, Sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 0;
+}
+
+@media print {
+    .nhsbsa-pagination__results {
+        font-family: sans-serif;
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .nhsbsa-pagination__results {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+
+@media print {
+    .nhsbsa-pagination__results {
+        font-size: 14pt;
+        line-height: 1.15;
+    }
+}
+
+@media (min-width: 48.0625em) {
+    .nhsbsa-pagination__results {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}
+
+.nhsbsa-pagination__item {
+    font-family: Frutiger W01, Arial, Sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: inline-block;
+}
+
+@media print {
+    .nhsbsa-pagination__item {
+        font-family: sans-serif;
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .nhsbsa-pagination__item {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+
+@media print {
+    .nhsbsa-pagination__item {
+        font-size: 14pt;
+        line-height: 1.15;
+    }
+}
+
+.nhsbsa-pagination__item--active,
+.nhsbsa-pagination__item--dots {
+    font-weight: bold;
+    height: 25px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.nhsbsa-pagination__item--dots {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nhsbsa-pagination__item--prev .nhsbsa-pagination__link:before,
+.nhsbsa-pagination__item--next .nhsbsa-pagination__link:after {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-style: solid;
+    color: #0b0c0c;
+    background: transparent;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    content: "";
+}
+
+.nhsbsa-pagination__item--prev .nhsbsa-pagination__link:before {
+    border-width: 3px 0 0 3px;
+    margin-right: 5px;
+}
+
+.nhsbsa-pagination__item--next .nhsbsa-pagination__link:after {
+    border-width: 0 3px 3px 0;
+    margin-left: 5px;
+}
+
+.nhsbsa-pagination__link {
+    font-family: Frutiger W01, Arial, Sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 25px;
+}
+
+@media print {
+    .nhsbsa-pagination__link {
+        font-family: sans-serif;
+    }
+}
+
+.nhsbsa-pagination__link:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: $nhsuk-focus-color;
+    box-shadow: 0 -2px $nhsuk-focus-color, 0 4px $nhsuk-focus-text-color;
+    text-decoration: none;
+}
+
+.nhsbsa-pagination__link:link {
+    color: $nhsuk-link-color;
+}
+
+.nhsbsa-pagination__link:visited {
+    color: $nhsuk-link-visited-color;
+}
+
+.nhsbsa-pagination__link:hover {
+    color:  $nhsuk-link-hover-color;
+}
+
+.nhsbsa-pagination__link:active {
+    color: $nhsuk-link-color;
+}
+
+.nhsbsa-pagination__link:focus {
+    color: $nhsuk-focus-text-color;
+}
+
+.nhsbsa-pagination__link:link, .nhsbsa-pagination__link:visited {
+    color: $nhsuk-link-visited-color;
+}
+
+.nhsbsa-pagination__link:hover {
+    color:  $nhsuk-link-hover-color;
+}
+
+.nhsbsa-pagination__link:focus {
+    color: $nhsuk-focus-text-color;
+}
+
+.nhsbsa-pagination__results {
+    padding: 5px;
+}
