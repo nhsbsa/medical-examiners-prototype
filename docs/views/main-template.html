@@ -150,45 +150,26 @@
                             Last log in: 08/09/2020 11:31:07
                         </p>
 
+      
                         <ul>
                             <div id="options" class="options">
                                 {% block sideNav %}
-                                <li>							
-                                    <a href="#">
-                                        Create a new case
-                                    </a>
-                                </li>
 
-                                <li>							
-                                    <a href="#" class="active"> 
-                                        All cases
-                                    </a>
-                                </li>
+                                {% if active == "me-user" %} 
+                                  {% include "includes/me__left-nav.html" %}
+                                {% elif active == "meo-user" %} 
+                                  {% include "includes/meo__left-nav.html" %}
+                                {% elif active == "qap-user" %} 
+                                  {% include "includes/qap__left-nav.html" %}
+                                {% endif %} 
 
-                                <li>							
-                                    <a href="#">
-                                        Urgent and priority cases
-                                    </a>
-                                </li>
-
-                                <li>							
-                                    <a href="#">
-                                        Cases awaiting coroner feedback
-                                    </a>
-                                </li>
-
-                                <li>							
-                                    <a href="#">
-                                        Closed cases
-                                    </a>
-                                </li>
                                 {% endblock %}
                             </div>
                         </ul>
                     </div>
                   </div>
                 </div>
-                
+                      
                 <div class="nhsabsa-sidebar-content" id="maincontent">
                     {% block content %}{% endblock %}
                 </div>
@@ -196,7 +177,7 @@
             </div>
         </div>
       {% endblock %}
-
+                
       {% block footer %}
       <footer role="contentinfo">
         <div class="nhsuk-footer" id="nhsuk-footer">

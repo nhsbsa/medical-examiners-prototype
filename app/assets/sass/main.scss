@@ -25,3 +25,15 @@
     text-decoration: none; 
     color: 	#768692!important; 
 }
+
+.nav-active {
+    background-color: #005EB8;
+    font-weight: 600;
+    border-top: #005eb8 1px solid;
+    border-bottom: #005eb8 1px solid;
+
+}
+
+.nav-active a {
+    color: white!important;
+}
