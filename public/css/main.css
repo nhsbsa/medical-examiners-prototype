@@ -7039,6 +7039,38 @@ ul.grid-grid {
 .nav-active a {
   color: white !important; }
 
+.nhsuk-details__summary:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  border-width: 7px 0 7px 12.124px;
+  border-left-color: inherit; }
+
+.nhsuk-details__above--third {
+  width: 33%;
+  display: inline-block; }
+  .nhsuk-details__above--third .case-type-center {
+    text-align: center; }
+  .nhsuk-details__above--third p {
+    margin-bottom: 0px; }
+    .nhsuk-details__above--third p.case-stage-title {
+      margin-bottom: 32px; }
+    .nhsuk-details__above--third p.status-title {
+      margin-bottom: 32px;
+      text-align: center; }
+    .nhsuk-details__above--third p.edit-title {
+      margin-bottom: 32px;
+      text-align: right; }
+
 .nhsuk-details__summary-text--third {
   width: calc(33.33% - 20px);
   display: inline-block; }
@@ -7046,14 +7078,6 @@ ul.grid-grid {
     text-align: center; }
   .nhsuk-details__summary-text--third p {
     margin-bottom: 0px; }
-    .nhsuk-details__summary-text--third p.case-stage-title {
-      margin-bottom: 32px; }
-    .nhsuk-details__summary-text--third p.status-title {
-      margin-bottom: 32px;
-      text-align: center; }
-    .nhsuk-details__summary-text--third p.edit-title {
-      margin-bottom: 32px;
-      text-align: right; }
   .nhsuk-details__summary-text--third a {
     line-height: 15px;
     float: right;

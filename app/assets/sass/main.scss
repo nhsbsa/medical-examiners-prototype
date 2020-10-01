@@ -53,10 +53,10 @@
     clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
     border-width: 7px 0 7px 12.124px;
     border-left-color: inherit;
+}
 
-
-.nhsuk-details__summary-text--third {
-    width: calc(33.33% - 20px);
+.nhsuk-details__above--third {
+    width: 33%;
     display: inline-block;
     .case-type-center {
         text-align: center;
@@ -74,6 +74,17 @@
             margin-bottom: 32px;
             text-align: right;
         }
+    }
+}
+
+.nhsuk-details__summary-text--third {
+    width: calc(33.33% - 20px);
+    display: inline-block;
+    .case-type-center {
+        text-align: center;
+    }
+    p {
+        margin-bottom: 0px;
     }
     a {
         line-height: 15px;
