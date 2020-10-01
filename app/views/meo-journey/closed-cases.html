@@ -4,6 +4,8 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
+{% set active = "meo-user" %}
+{% set activesub = "closed-cases" %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -79,42 +81,4 @@
             </table>	
 		</div>
 	</div>
-{% endblock %}
-
-{% block sideNav %}
-	<li>							
-		<a href="create-case">
-			Create a new case
-		</a>
-	</li>
-
-	<li>							
-		<a href="all-cases"> 
-			All cases
-		</a>
-	</li>
-
-	<li>							
-		<a href="urgent-priority-cases">
-			Urgent and priority cases
-		</a>
-	</li>
-
-	<li>							
-		<a href="cases-awaiting-feedback">
-			Cases awaiting coroner feedback
-		</a>
-	</li>
-
-	<li>							
-		<a href="closed-cases" class="active">
-			Closed cases
-		</a>
-    </li>
-    
-    <li>							
-		<a href="/">
-			Log out
-		</a>
-	</li>
 {% endblock %}

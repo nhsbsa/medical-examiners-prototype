@@ -4,6 +4,8 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
+{% set active = "qap-user" %}
+{% set activesub = "case-learning" %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -83,25 +85,4 @@
             </div>
 		</div>
 	</div>
-{% endblock %}
-
-{% block sideNav %}
-
-	<li>							
-		<a href="all-cases"> 
-			All cases
-		</a>
-	</li>
-
-	<li>							
-		<a href="case-learning" class="active">
-			Case learning
-		</a>
-    </li>
-    
-    <li>							
-		<a href="/">
-			Log out
-		</a>
-	</li>
 {% endblock %}
