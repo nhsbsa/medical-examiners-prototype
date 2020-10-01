@@ -11,6 +11,7 @@
 @import 'components/tab-panels';
 @import 'components/main-template';
 @import 'components/pagination';
+@import 'components/cases-expander-test';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
@@ -29,11 +30,30 @@
 .nav-active {
     background-color: #005EB8;
     font-weight: 600;
-    border-top: #005eb8 1px solid;
-    border-bottom: #005eb8 1px solid;
-
 }
 
 .nav-active a {
     color: white!important;
+}
+
+// Expander Tweaks
+
+.nhsuk-details__summary-text--third {
+    width: calc(33.33% - 30px);
+    display: inline-block;
+    .case-type-center {
+        text-align: center;
+    }
+    p {
+        margin-bottom: 0px;
+    }
+    a {
+        line-height: 15px;
+        float: right;
+        margin-bottom: 0px;
+    }
+}
+
+.nhsuk-details__summary-text-center {
+    text-align: center;
 }

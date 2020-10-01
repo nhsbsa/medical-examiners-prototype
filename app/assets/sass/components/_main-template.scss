@@ -86,6 +86,7 @@
     text-transform: uppercase;
     text-decoration: none;
 }
+
 .nhsuk-table__button--routine {
     border: 2px solid $nhsuk-link-color;
     &:visited {
@@ -130,6 +131,18 @@
     &:hover {
         background-color: $nhsuk-secondary-text-color;
         color: #fff;
+    }
+}
+
+.nhsuk-table__button--complete {
+    color: $nhsuk-button-color !important;
+    border: 2px solid $nhsuk-button-color;
+    &:visited {
+        color: $nhsuk-button-color;
+    }
+    &:hover {
+        background-color: $nhsuk-button-color;
+        color: #fff !important;
     }
 }
 
