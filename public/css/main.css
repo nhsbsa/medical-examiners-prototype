@@ -7046,6 +7046,14 @@ ul.grid-grid {
     text-align: center; }
   .nhsuk-details__summary-text--third p {
     margin-bottom: 0px; }
+    .nhsuk-details__summary-text--third p.case-stage-title {
+      margin-bottom: 32px; }
+    .nhsuk-details__summary-text--third p.status-title {
+      margin-bottom: 32px;
+      text-align: center; }
+    .nhsuk-details__summary-text--third p.edit-title {
+      margin-bottom: 32px;
+      text-align: right; }
   .nhsuk-details__summary-text--third a {
     line-height: 15px;
     float: right;

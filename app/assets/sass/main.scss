@@ -38,6 +38,23 @@
 
 // Expander Tweaks
 
+.nhsuk-details__summary:before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    border-width: 7px 0 7px 12.124px;
+    border-left-color: inherit;
+
+
 .nhsuk-details__summary-text--third {
     width: calc(33.33% - 20px);
     display: inline-block;
@@ -46,6 +63,17 @@
     }
     p {
         margin-bottom: 0px;
+        &.case-stage-title {
+            margin-bottom: 32px;
+        }
+        &.status-title {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        &.edit-title {
+            margin-bottom: 32px;
+            text-align: right;
+        }
     }
     a {
         line-height: 15px;
