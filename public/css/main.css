@@ -6728,6 +6728,15 @@ b {
     background-color: #007f3b;
     color: #fff !important; }
 
+.nhsuk-table__button--incomplete {
+  color: #4c6272 !important;
+  border: 2px solid #4c6272; }
+  .nhsuk-table__button--incomplete:visited {
+    color: #4c6272; }
+  .nhsuk-table__button--incomplete:hover {
+    background-color: #4c6272;
+    color: #fff !important; }
+
 .nhsuk-header-select {
   float: left;
   margin-bottom: 0px; }
@@ -7031,7 +7040,7 @@ ul.grid-grid {
   color: white !important; }
 
 .nhsuk-details__summary-text--third {
-  width: calc(33.33% - 30px);
+  width: calc(33.33% - 20px);
   display: inline-block; }
   .nhsuk-details__summary-text--third .case-type-center {
     text-align: center; }

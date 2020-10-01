@@ -146,6 +146,18 @@
     }
 }
 
+.nhsuk-table__button--incomplete {
+    color: $nhsuk-secondary-button-color!important;
+    border: 2px solid $nhsuk-secondary-button-color;
+    &:visited {
+        color: $nhsuk-secondary-button-color;
+    }
+    &:hover {
+        background-color: $nhsuk-secondary-button-color;
+        color: #fff !important;
+    }
+}
+
 .nhsuk-header-select {
     float: left;
     margin-bottom: 0px;
