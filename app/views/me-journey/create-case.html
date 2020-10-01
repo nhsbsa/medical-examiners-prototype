@@ -4,6 +4,8 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "create" %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -35,6 +37,7 @@
 
 {% block content %}
 	<div class="nhsuk-grid-row">
+		
 		<div class="nhsuk-grid-column-full">
             <h1>
                 Create a new case
@@ -310,40 +313,3 @@
 	</div>
 {% endblock %}
 
-{% block sideNav %}
-	<li>							
-		<a href="create-case" class="active">
-			Create a new case
-		</a>
-	</li>
-
-	<li>							
-		<a href="all-cases"> 
-			All cases
-		</a>
-	</li>
-
-	<li class="nav-inactive">							
-		<a href="urgent-priority-cases">
-			Urgent and priority cases
-		</a>
-	</li>
-
-	<li class="nav-inactive">								
-		<a href="cases-awaiting-feedback">
-			Cases awaiting coroner feedback
-		</a>
-	</li>
-
-	<li class="nav-inactive">	
-		<a href="closed-cases">
-			Closed cases
-		</a>
-	</li>
-	
-	<li>							
-		<a href="/">
-			Log out
-		</a>
-	</li>
-{% endblock %}
