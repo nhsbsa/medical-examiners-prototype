@@ -148,22 +148,17 @@
 
 .nhsuk-expander .nhsuk-details__summary-text {
     background: none!important;
-    background-size: 32px 32px;
-    color: #005eb8;
-    cursor: pointer;
-    display: inline-block;
-    padding: 8px 8px 8px 38px;
-    position: relative;
+
     
 }
 .nhsuk-expander .nhsuk-details__summary:focus .nhsuk-details__summary-text {
-    background-color: #ffeb3b;
+    background-color: #ffeb3b!important;
     box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
     color: #212b32;
     outline: 4px solid transparent;
     text-decoration: none;
     background: #ffeb3b ;
-    background-size: 32px 32px;
+   
 }
 
 .nhsuk-expander .nhsuk-details__summary-text:before {
@@ -183,7 +178,12 @@
     border-left-color: inherit;
 }
 .nhsuk-expander[open] .nhsuk-details__summary:focus .nhsuk-details__summary-text {
-    background: none!important;
+    
+    background-color: #ffeb3b!important;
+    box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+    color: #212b32;
+    outline: 4px solid transparent;
+    text-decoration: none;
 }
 
 .nhsuk-expander[open] .nhsuk-details__summary-text:before {
