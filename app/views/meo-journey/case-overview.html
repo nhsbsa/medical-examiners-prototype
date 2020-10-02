@@ -27,7 +27,7 @@
 	MEO Username
 {% endblock %}
 
-{% block jobRole %}Medical Examining Officer{% endblock %}
+{% block jobRole %}Medical Examiner Officer{% endblock %}
 
 {% block gmcNumber %}
 <p class="nhsuk-u-margin-bottom-1">
@@ -42,12 +42,370 @@
 				Case overview
             </h1>
             
-            <p>
+            <p class="nhsuk-u-margin-bottom-8">
 				From here you will be able to view and access all aspects of a case. Some areas of the case will be restricted depending on your job role.
 				However, these areas will be read only once inputted by the relevant user. You can see what status a section of the case is at, and all
 				information entered is audited. There is no particular order in which a case must be completed, however all sections must be complete to
 				process to an MCCD or close the case.
-            </p>
+			</p>
+			<div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s case-stage-title">
+					Case stage
+				</p>
+			</div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s status-title">
+					Status
+				</p>
+			</div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s edit-title">
+					Edit/Audit
+				</p>
+			</div>
+			</div>
+			
+			<div class="nhsuk-expander-group">
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Patient details
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--complete">
+									Complete
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="patient-details">
+								Edit patient details
+							</a>
+						</div>
+					</summary>
+					<div class="nhsuk-details__text">
+						<div class="nhsuk-table-responsive">
+							<table class="nhsuk-table">
+							  <caption class="nhsuk-table__caption">caption</caption>
+							  <thead class="nhsuk-table__head">
+							</thead>
+							<tbody>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header"scope="row" width="50%">Forename(s)</th>
+								  <td class="nhsuk-table__cell " width="35%">Jaipur</td>
+								  <td class="nhsuk-table__cell table-text-small" width="20%">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header"  scope="row">Surname</th>
+								<td class="nhsuk-table__cell ">Malenka</td>
+								<td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">Sex</th>
+								<td class="nhsuk-table__cell ">Male</td>
+								 <td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">Ethnicity</th>
+								<td class="nhsuk-table__cell ">White</td>
+ 								<td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">Date of birth</th>
+								<td class="nhsuk-table__cell ">09/04/1964</td>
+								<td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">NHS number</th>
+								<td class="nhsuk-table__cell ">6754372917</td>
+ 								<td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">Hospital number</th>
+								<td class="nhsuk-table__cell ">832456</td>
+ 								<td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">Residential address of the deceased</th>
+								<td class="nhsuk-table__cell ">23 View Terrace, <br>Preston,<br>PR1 2BF</td>
+ 								<td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">Main occupation in life</th>
+								<td class="nhsuk-table__cell ">Teaching assistant</td>
+ 								<td class="nhsuk-table__cell table-text-small">Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+							  <tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" scope="row">Any further relevant detail about past occupations</th>
+								<td class="nhsuk-table__cell "></td>
+ 								<td class="nhsuk-table__cell table-text-small" >Mr test user <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+							  </tr>
+								
+							  </tbody>
+							</table>
+						  </div>
+					</div>
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Details of the death
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--incomplete">
+									Incomplete
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add details of the death
+							</a>
+						</div>
+					</summary>
+					
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Informant and other contacts
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add informant & other contacts
+							</a>
+						</div>
+					</summary>
+				
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Pre-scrutiny notes
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add pre-scrutiny notes
+							</a>
+						</div>
+					</summary>
+				
+				</details>
+
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Care team
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add care team
+							</a>
+						</div>
+					</summary>
+		
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander" >
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third inactive">
+							QAP's proposed Cause of death
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								
+							</a>
+						</div>
+					</summary>
+				
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Medical record review
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add medical record review
+							</a>
+						</div>
+					</summary>
+			
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Discussion with the QAP
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add discussion with QAP
+							</a>
+						</div>
+					</summary>
+	
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Informant discussion
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add informant discussion
+							</a>
+						</div>
+					</summary>
+
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Case concerns
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add case concerns
+							</a>
+						</div>
+					</summary>
+
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Supporting documents
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add supporting documents
+							</a>
+						</div>
+					</summary>
+
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">
+							Feedback or learning
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-table__button nhsuk-table__button--not-started">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="">
+								Add feedback and learning
+							</a>
+						</div>
+					</summary>
+
+				</details>
+
 		</div>
 	</div>
 {% endblock %}
