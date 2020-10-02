@@ -141,3 +141,58 @@
     color: white!important;
     background-color: 	#768692;
 }
+
+.nhsuk-expander .nhsuk-details__summary {
+    padding: 0px!important;
+}
+
+.nhsuk-expander .nhsuk-details__summary-text {
+    background: none!important;
+    background-size: 32px 32px;
+    color: #005eb8;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 8px 8px 38px;
+    position: relative;
+    
+}
+.nhsuk-expander .nhsuk-details__summary:focus .nhsuk-details__summary-text {
+    background-color: #ffeb3b;
+    box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+    color: #212b32;
+    outline: 4px solid transparent;
+    text-decoration: none;
+    background: #ffeb3b ;
+    background-size: 32px 32px;
+}
+
+.nhsuk-expander .nhsuk-details__summary-text:before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    border-width: 7px 0 7px 12.124px;
+    border-left-color: inherit;
+}
+.nhsuk-expander[open] .nhsuk-details__summary:focus .nhsuk-details__summary-text {
+    background: none!important;
+}
+
+.nhsuk-expander[open] .nhsuk-details__summary-text:before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    border-width: 12.124px 7px 0 7px;
+    border-top-color: inherit;
+}
