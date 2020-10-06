@@ -651,3 +651,205 @@ color: #ffffff !important;
       color: #f0f4f5; }
     nav.patient-info a {
       padding: 0; }
+
+
+.search-strip {
+  position:relative;
+  display:block
+ }
+ @media (min-width:1024px) {
+  .site-header .search-strip {
+   float:right;
+   width:600px;
+   margin-top:5px
+  }
+  .js-enabled .site-header .search-strip {
+   margin-right:120px
+  }
+ }
+ .search-strip .search-strip__icon--loading {
+  -webkit-animation:spin 1s linear infinite;
+  animation:spin 1s linear infinite
+ }
+ .search-strip__table-cell {
+  position:relative;
+  display:table-cell;
+  width:auto;
+  vertical-align:middle;
+  height:100%
+ }
+ .search-strip__table-cell--button {
+  width:44px
+ }
+ .search-strip__contents {
+  position:relative;
+  width:100%;
+  display:table;
+  top:3px;
+  left:3px
+ }
+ .search-strip__input {
+  font-family:Frutiger W01,Arial,sans-serif;
+  font-size:16px;
+  font-weight:400;
+  line-height:26px;
+  text-transform:none;
+  position:relative;
+  left:-3px;
+  top:-3px;
+  border:2px solid #005eb8;
+  border-right:0 solid #f0f4f5;
+  outline:0;
+  -moz-appearance:none;
+  appearance:none;
+  -webkit-appearance:none;
+  width:100%;
+  height:44px;
+  line-height:18px;
+  padding:10px 14px;
+  color:#425563;
+  background-color:#fff
+ }
+ @media (min-width:925px) {
+  .search-strip__input {
+   font-size:18px;
+   line-height:30px
+  }
+ }
+ .search-strip__input:focus {
+  border:3px solid #ffb81c;
+  outline:0;
+  padding:10px 13px
+ }
+ .search-strip__button {
+  display:inline-block;
+  width:100%;
+  font-family:Frutiger W01,Arial,sans-serif;
+  font-size:18px;
+  font-weight:400;
+  line-height:28px;
+  text-transform:none;
+  -webkit-font-smoothing:antialiased;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background-color:#005eb8;
+  box-shadow:0 2px 0 #0059ae;
+  cursor:pointer;
+  letter-spacing:.5px;
+  line-height:1.25;
+  outline:1px solid transparent;
+  outline-offset:-1px;
+  text-decoration:none;
+  border-radius:0;
+  color:#fff;
+  position:relative;
+  border:3px solid transparent;
+  outline:0;
+  left:-3px;
+  top:-3px;
+  width:44px;
+  height:44px;
+  padding:0;
+  box-shadow:none;
+  outline-offset:-3px;
+  text-align:center;
+  vertical-align:middle;
+  line-height:44px
+ }
+ @media (min-width:925px) {
+  .search-strip__button {
+   font-size:20px;
+   line-height:30px
+  }
+ }
+ @media (min-width:641px) {
+  .search-strip__button {
+   width:auto
+  }
+ }
+ .search-strip__button+.button {
+  margin-top:16px
+ }
+ @media (min-width:641px) {
+  .search-strip__button+.button {
+   margin-left:16px;
+   margin-top:0
+  }
+ }
+ @media (min-width:925px) {
+  .search-strip__button+.button {
+   margin-left:32px
+  }
+ }
+ .search-strip__button:visited {
+  background-color:#005eb8
+ }
+ .search-strip__button:focus {
+  outline:3px solid #ffb81c
+ }
+ .search-strip__button:focus,
+ .search-strip__button:hover {
+  background-color:#00519f
+ }
+ .search-strip__button:active {
+  box-shadow:0 0 0 #005eb8
+ }
+ .search-strip__button.disabled,
+ .search-strip__button[disabled=disabled],
+ .search-strip__button[disabled] {
+  opacity:.5
+ }
+ .search-strip__button.disabled:hover,
+ .search-strip__button[disabled=disabled]:hover,
+ .search-strip__button[disabled]:hover {
+  background-color:#005eb8;
+  cursor:default
+ }
+ .search-strip__button.disabled:active,
+ .search-strip__button[disabled=disabled]:active,
+ .search-strip__button[disabled]:active {
+  box-shadow:0 2px 0 #00376c;
+  top:0
+ }
+ .search-strip__button:focus,
+ .search-strip__button:hover,
+ .search-strip__button:link,
+ .search-strip__button:visited {
+  color:#fff
+ }
+ .search-strip__button:before {
+  background:transparent;
+  content:"";
+  display:block;
+  height:110%;
+  left:0;
+  position:absolute;
+  top:0;
+  width:100%
+ }
+ .search-strip__button:active:before {
+  height:120%;
+  top:-10%
+ }
+ .search-strip__button:focus {
+  border:3px solid #ffb81c;
+  outline:0
+ }
+ .search-strip__button:before {
+  height:0
+ }
+ @media (min-width:641px) {
+  .search-strip__button {
+   width:44px
+  }
+ }
+ .search-strip__button img,
+ .search-strip__button svg {
+  position:relative;
+  display:block;
+  width:50%;
+  height:auto;
+  left:25%;
+  fill:#fff
+ }

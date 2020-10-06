@@ -153,8 +153,33 @@
 
 
 <div class="moj-primary-navigation__search">
+<form role="search" method="get" action="/search" class="search-strip" aria-label="???search-banner.title???" id="search" autocomplete="off">
+    <div class="search-strip__contents">
+        <div class="search-strip__table-cell">
+            <input type="text" name="query" id="query" class="search-strip__input" placeholder="Search" value="" aria-label="Search">
+            <label for="query" class="nhsuk-u-visually-hidden">Search</label>
+        </div>
+        <div class="search-strip__table-cell search-strip__table-cell--button">
+            <button data-uipath="search.button" class="search-strip__button" aria-label="Search" id="search_button">
+                <img src="/images/icon-search-white.png" alt="Magnifying glass" class="search-strip__icon" aria-hidden="true">
 
-<div class="nhsuk-header__search">
+                {# <img src="/images/icon-loading.svg" alt="Spinning circle graphic" class="search-strip__icon search-strip__icon--loading" aria-hidden="true"> #}
+            </button>
+        </div>
+    </div>
+     <script type="text/javascript">
+        document.getElementById("search_button").addEventListener("click", myFunction);
+        document.getElementsByName("query")[0].addEventListener("click", myFunction);
+        function myFunction() {
+            var searchData = {};
+            searchData["q"] = document.querySelector("#query").value;;
+            searchData["catalogs"] = [{ "name" : "content_en" }];
+            BrTrk.getTracker().logEvent("suggest", "submit",searchData,{},true);
+        }
+     </script>
+</form>
+
+{# <div class="nhsuk-header__search">
     <button class="nhsuk-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
         <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
@@ -204,7 +229,7 @@
             </button>
         </form>
     </div>
-</div>
+</div> #}
 
 </div>
 </div>
