@@ -30,8 +30,13 @@
 .inactive {
     pointer-events: none!important; 
     cursor: default!important; 
-    text-decoration: none; 
+    
     color: 	#768692!important; 
+}
+
+.disable-dropdown {
+    pointer-events: none!important; 
+    cursor: default!important; 
 }
 
 .nav-active {
