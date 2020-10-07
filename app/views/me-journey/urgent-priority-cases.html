@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-	Urgent and priority cases
+	Urgent and priority
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -23,23 +23,13 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-{% block userName %}
-	ME Username
-{% endblock %}
-
-{% block jobRole %}Medical Examiner{% endblock %}
-
-{% block gmcNumber %}
-<p class="nhsuk-u-margin-bottom-1">
-	GMC Number: 12345679
-</p>
-{% endblock %}
+ 
 
 {% block content %}
 	<div class="nhsuk-grid-row">
 		<div class="nhsuk-grid-column-full">
 			<h1>
-				Urgent and priority cases
+				Urgent and priority
 			</h1>
 			<div class="nhsuk-urgent-intro">
 				<div class="nhsuk-urgent-intro__button">
@@ -90,7 +80,7 @@
 							</thead>
 							<tbody class="nhsuk-table__body">
 								<tr class="nhsuk-table__row">
-									<td class="nhsuk-table__cell">Test One</td>
+									<td class="nhsuk-table__cell"><a href="case-overview">Test One</a></td>
 									<td class="nhsuk-table__cell">01/01/1980</td>
 									<td class="nhsuk-table__cell">01/01/2020</td>
 									<td class="nhsuk-table__cell">1234567890</td>
@@ -98,7 +88,7 @@
 									<td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--urgent">Urgent</a></td>
 								</tr>
 								<tr class="nhsuk-table__row">
-									<td class="nhsuk-table__cell">Test Two</td>
+									<td class="nhsuk-table__cell"><a href="case-overview">Test Two</a></td>
 									<td class="nhsuk-table__cell">01/01/1980</td>
 									<td class="nhsuk-table__cell">01/01/2020</td>
 									<td class="nhsuk-table__cell">1234567890</td>
@@ -126,7 +116,7 @@
 							</thead>
 							<tbody class="nhsuk-table__body">
 								<tr class="nhsuk-table__row">
-									<td class="nhsuk-table__cell">Test One</td>
+									<td class="nhsuk-table__cell"><a href="case-overview">Test One</a></td>
 									<td class="nhsuk-table__cell">01/01/1980</td>
 									<td class="nhsuk-table__cell">01/01/2020</td>
 									<td class="nhsuk-table__cell">1234567890</td>
@@ -134,7 +124,7 @@
 									<td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--priority">Priority</a></td>
 								</tr>
 								<tr class="nhsuk-table__row">
-									<td class="nhsuk-table__cell">Test Two</td>
+									<td class="nhsuk-table__cell"><a href="case-overview">Test Two</a></td>
 									<td class="nhsuk-table__cell">01/01/1980</td>
 									<td class="nhsuk-table__cell">01/01/2020</td>
 									<td class="nhsuk-table__cell">1234567890</td>

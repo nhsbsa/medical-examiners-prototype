@@ -23,17 +23,7 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-{% block userName %}
-	MEO Username
-{% endblock %}
 
-{% block jobRole %}Medical Examining Officer{% endblock %}
-
-{% block gmcNumber %}
-<p class="nhsuk-u-margin-bottom-1">
-	GMC Number: 12345679
-</p>
-{% endblock %}
 
 {% block content %}
 	<div class="nhsuk-grid-row">
@@ -41,12 +31,6 @@
 			<h1>
 				All cases
 			</h1>
-
-			<p>
-				All of the cases listed below are awaiting action. Please click into a case to see in the case overview what is left to be completed on the case.
-				Cases shown are relevant for your Medical Examiner's. If you work across two or more offices, the office responsible for the case has also been
-				listed as part of the table.
-			</p>
 
 			<div class="nhsuk-table-responsive">
 				<table class="nhsuk-table">
@@ -64,49 +48,49 @@
 					</thead>
 					<tbody class="nhsuk-table__body">
 						<tr class="nhsuk-table__row">
-							<td class="nhsuk-table__cell">Test Eleven</td>
+							<td class="nhsuk-table__cell"><a href="case-overview">Test Eleven</a></td>
 							<td class="nhsuk-table__cell">01/01/1980</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
 							<td class="nhsuk-table__cell">1234567890</td>
 							<td class="nhsuk-table__cell">Preston</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
-							<td class="nhsuk-table__cell"><a href="case-overview" class="nhsuk-table__button nhsuk-table__button--urgent">Urgent</a></td>
+							<td><span class="nhsuk-tag nhsuk-tag--red">Urgent</span></td>
 						</tr>
 						<tr class="nhsuk-table__row">
-							<td class="nhsuk-table__cell">Test Twelve</td>
+							<td class="nhsuk-table__cell"><a href="case-overview">Test Twelve</a></td>
 							<td class="nhsuk-table__cell">01/01/1980</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
 							<td class="nhsuk-table__cell">1234567890</td>
 							<td class="nhsuk-table__cell">Blackburn</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
-							<td class="nhsuk-table__cell"><a href="case-overview" class="nhsuk-table__button nhsuk-table__button--routine">Routine</a></td>
+							<td><span class="nhsuk-tag nhsuk-tag--green">Routine</span></td>
 						</tr>
 						<tr class="nhsuk-table__row">
-							<td class="nhsuk-table__cell">Test Thirteen</td>
+							<td class="nhsuk-table__cell"><a href="case-overview">Test Thirteen</a></td>
 							<td class="nhsuk-table__cell">01/01/1980</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
 							<td class="nhsuk-table__cell">1234567890</td>
 							<td class="nhsuk-table__cell">Wigan</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
-							<td class="nhsuk-table__cell"><a href="case-overview" class="nhsuk-table__button nhsuk-table__button--routine">Routine</a></td>
+							<td><span class="nhsuk-tag nhsuk-tag--green">Routine</span></td>
 						</tr>
 						<tr class="nhsuk-table__row">
-							<td class="nhsuk-table__cell">Test Fourteen</td>
+							<td class="nhsuk-table__cell"><a href="case-overview">Test Fourteen</a></td>
 							<td class="nhsuk-table__cell">01/01/1980</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
 							<td class="nhsuk-table__cell">1234567890</td>
 							<td class="nhsuk-table__cell">Preston</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
-							<td class="nhsuk-table__cell"><a href="case-overview" class="nhsuk-table__button nhsuk-table__button--priority">Priority</a></td>
+							<td><span class="nhsuk-tag nhsuk-tag--yellow">Priority</span></td>
 						</tr>
 						<tr class="nhsuk-table__row">
-							<td class="nhsuk-table__cell">Test Fifteen</td>
+							<td class="nhsuk-table__cell"><a href="case-overview">Test Fifteen</a></td>
 							<td class="nhsuk-table__cell">01/01/1980</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
 							<td class="nhsuk-table__cell">1234567890</td>
 							<td class="nhsuk-table__cell">Preston</td>
 							<td class="nhsuk-table__cell">01/01/2020</td>
-							<td class="nhsuk-table__cell"><a href="case-overview" class="nhsuk-table__button nhsuk-table__button--routine">Routine</a></td>
+							<td><span class="nhsuk-tag nhsuk-tag--green">Routine</span></td>
 						</tr>
 					</tbody>
 				</table>
