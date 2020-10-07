@@ -1,7 +1,7 @@
 
 <li {% if activesub == "create" %} class="nav-active"{% endif %}>							
     <a href="create-case">
-        Create a new case
+        Overview
     </a>
 </li>
 <li {% if activesub == "cases" %} class="nav-active"{% endif %}>							
@@ -12,24 +12,18 @@
 
 <li {% if activesub == "up-cases" %} class="nav-active"{% endif %} class="nav-inactive">							
     <a href="urgent-priority-cases">
-        Urgent and priority cases
+        Urgent and priority
     </a>
 </li>
 
 <li {% if activesub == "feedback-cases" %} class="nav-active"{% endif %} class="nav-inactive">								
     <a href="cases-awaiting-feedback">
-        Cases awaiting coroner feedback
+        Awaiting coroner feedback
     </a>
 </li>
 
 <li {% if activesub == "closed-cases" %} class="nav-active"{% endif %} class="nav-inactive">	
     <a href="closed-cases">
         Closed cases
-    </a>
-</li>
-
-<li>							
-    <a href="/">
-        Log out
     </a>
 </li>
