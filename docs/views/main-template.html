@@ -126,16 +126,13 @@
       			<nav class="moj-primary-navigation" aria-label="Primary navigation">
 					<ul class="moj-primary-navigation__list">
 						<li class="moj-primary-navigation__item">
-							<a class="moj-primary-navigation__link" aria-current="page" href="#1">Overview</a>
+							<a class="moj-primary-navigation__link" {% if activesub == "overview" %}aria-current="page"{% endif %} href="overview">Overview</a>
 						</li>
 					
 						<li class="moj-primary-navigation__item">
-							<a class="moj-primary-navigation__link" href="#2">Cases</a>
+							<a class="moj-primary-navigation__link" {% if activesub == "cases" %}aria-current="page"{% endif %}href="all-cases">Cases</a>
 						</li>
 					
-						<li class="moj-primary-navigation__item">
-							<a class="moj-primary-navigation__link" href="#3">Nav item 3</a>
-						</li>
 					</ul>
       			</nav>
 			</div>
