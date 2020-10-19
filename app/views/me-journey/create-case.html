@@ -30,9 +30,9 @@
 		
 		<div class="nhsuk-grid-column-full">
             <h1>
-                Patient details
+                Patient's details
                 <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
-                New case
+                Create new case
                 </span>
 			</h1>
 			
@@ -73,29 +73,6 @@
 								Female
 							</label>
 						</div>
-					
-					
-
-						<div class="nhsuk-radios__item">
-							<input class="nhsuk-radios__input" id="gender-other" name="gender" type="radio" value="other" aria-controls="gender-other-reveal" aria-expanded="false">
-							<label class="nhsuk-label nhsuk-radios__label" for="gender-other-specify">
-								Other
-							</label>
-						</div>
-
-						<div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="gender-other-reveal">
-
-							<div class="nhsuk-form-group">
-							  <label class="nhsuk-label" for="gender-other-specify">
-								Please specify
-							  </label>
-							  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="gender-other-specify" name="other-specify" type="text">
-							</div>
-					
-						  </div>
-
-						
-
 					</div>
 				</fieldset>
 			</div>
@@ -105,7 +82,7 @@
 				<fieldset class="nhsuk-fieldset">
 					<legend class="nhsuk-fieldset__legend">
 						<p class="nhsuk-fieldset__heading">
-							Ethnicity
+							Ethnic group
 						</p>
 					</legend>
 			  
@@ -217,7 +194,36 @@
 					<a href="#">Add another</a>
 				</p>
 			</div>
-			-->	
+			-->
+			
+			<div class="nhsuk-form-group">
+				<fieldset class="nhsuk-fieldset">
+					<legend class="nhsuk-fieldset__legend">
+						<p class="nhsuk-fieldset__heading">
+							Request for rapid release?
+						</p>
+					</legend>
+			  
+					<div class="nhsuk-radios nhsuk-radios--conditional">
+				
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="rapid-release-yes" name="rapid-release" type="radio" value="yes">
+							<label class="nhsuk-label nhsuk-radios__label" for="apid-release-yes">
+								Yes
+							</label>
+						</div>
+
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="apid-release-no" name="rapid-release" type="radio" value="no">
+							<label class="nhsuk-label nhsuk-radios__label" for="apid-release-no">
+								No
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+
+			
 			<fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
 				<legend class="nhsuk-fieldset__legend">
 					<p class="nhsuk-fieldset__heading nhsuk-u-font-weight-bold">
@@ -263,7 +269,7 @@
 
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="occupation">
-					Main occupation in life
+					Main job
 				</label>
 				<input class="nhsuk-input nhsuk-u-width-one-half" id="occupation" name="occupation" type="text">
 			</div>
@@ -288,7 +294,7 @@
 -->
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="additional-info">
-					Any further relevant detail about past occupations
+					You can list details about past jobs here. For example, if the patient worked with harmful chemicals. 
 				</label>
 				<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="5"></textarea>
 			</div>
@@ -297,7 +303,7 @@
 				Save and continue
 			</a>
 			<div class="nhsuk-u-width-one-half">
-				<a href="all-cases">Cancel. Go back and don't save</a>
+				<a href="all-cases">Return to previous page without saving</a>
 			</div>
 		</div>
 	</div>
