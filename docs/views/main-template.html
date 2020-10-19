@@ -159,35 +159,21 @@
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-        <div class="nhsabsa-sidebar-container">
-            <div class="nhsabsa-sidebar-wrapper">
-                <div class="nhsabsa-sidebar-nav">
-                    <div class="side-nav">
-                          <ul>
-                            <div id="options" class="options">
-                                {% block sideNav %}
-
-                                {% if active == "me-user" %} 
-                                  {% include "includes/me__left-nav.html" %}
-                                {% elif active == "meo-user" %} 
-                                  {% include "includes/meo__left-nav.html" %}
-                                {% elif active == "qap-user" %} 
-                                  {% include "includes/qap__left-nav.html" %}
-                                {% endif %} 
-
-                                {% endblock %}
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-                      
+      
+      
                 <div class="nhsabsa-sidebar-content" id="maincontent">
+                  <div class="nhsuk-width-container-fluid">
+                  <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-full">
                     {% block content %}{% endblock %}
                 </div>
-
-            </div>
-        </div>
+                </div>
+                </div>
+                </div>
+        
       {% endblock %}
+
+      
                 
       {% block footer %}
       <footer role="contentinfo">
