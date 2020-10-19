@@ -4,8 +4,8 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
-{% set active = "me-user" %}
-{% set activesub = "overview" %}
+{% set active = "meo-user" %}
+{% set activesub = "cases" %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-	Your cases
+	Open cases
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -31,7 +31,7 @@
             <div class="nhsuk-grid-row">
 				<div class="nhsuk-grid-column-two-thirds">
 					<h1 class="nhsuk-heading-xl">
-						Your cases
+						Open cases
 					</h1>
 				</div>
 				<div class="nhsuk-grid-column-one-third">
@@ -121,6 +121,26 @@
 					</table>
 				</div>
 			</div>
+
+			<nav class="nhsbsa-pagination" id="pagination-label">
+				<p class="nhsuk-u-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+			  
+				<ul class="nhsbsa-pagination__list">
+					<!-- <li class="nhsbsa-pagination__item  nhsbsa-pagination__item--prev">
+						<a class="nhsbsa-pagination__link" href="">Previous<span class="nhsuk-u-visually-hidden"> set of pages</span></a>
+					</li> -->
+					<li class="nhsbsa-pagination__item nhsbsa-pagination__item--active">1</li>
+				
+					<li class="nhsbsa-pagination__item"><a class="nhsbsa-pagination__link" href="open-cases-2">2</a></li>
+					
+					<li class="nhsbsa-pagination__item"><a class="nhsbsa-pagination__link" href="open-cases-3">3</a></li>
+					
+					<li class="nhsbsa-pagination__item  nhsbsa-pagination__item--next">
+						<a class="nhsbsa-pagination__link" href="open-cases-2">Next<span class="nhsuk-u-visually-hidden"> set of pages</span></a>
+					</li>
+				  </ul>
+				  <p class="nhsbsa-pagination__results">Showing <b>1</b> to <b>5</b> of <b>15</b> results</p>
+			</nav>
 		</div>
 	</div>
 {% endblock %}

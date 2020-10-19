@@ -5,7 +5,7 @@
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
 {% set active = "meo-user" %}
-{% set activesub = "closed-cases" %}
+{% set activesub = "closed" %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -24,51 +24,98 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 
-
 {% block content %}
 	<div class="nhsuk-grid-row">
 		<div class="nhsuk-grid-column-full">
-			<h1>
-                Closed cases
-			</h1>
+            <div class="nhsuk-grid-row">
+				<div class="nhsuk-grid-column-two-thirds">
+					<h1 class="nhsuk-heading-xl">
+						Closed cases
+					</h1>
+				</div>
+			</div>
 
-			<p>
-                All of the cases listed below have beeen referred to the corner by the Medical Examiner and are awaiting action. 
-                From here you may close a case if you find out that the coroner is going to take the case on or you can document 
-                that a 100A has been issued by the coroner and the case can have an MCCD issued.
-			</p>
-	
-            <table class="nhsuk-table">
-                <caption class="nhsuk-table__caption">Urgent</caption>
-                <thead class="nhsuk-table__head">
-                    <tr class="nhsuk-table__row">
-                        <th class="nhsuk-table__header" scope="col">Name</th>
-                        <th class="nhsuk-table__header" scope="col">Date of birth</th>
-                        <th class="nhsuk-table__header" scope="col">Date of death</th>
-                        <th class="nhsuk-table__header" scope="col">NHS number</th>
-                        <th class="nhsuk-table__header" scope="col">Case created</th>
-                        <th class="nhsuk-table__header" scope="col">Case type</th>
-                    </tr>
-                </thead>
-                <tbody class="nhsuk-table__body">
-                    <tr class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell"><a href="case-overview">Test One</a></td>
-                        <td class="nhsuk-table__cell">01/01/1980</td>
-                        <td class="nhsuk-table__cell">01/01/2020</td>
-                        <td class="nhsuk-table__cell">1234567890</td>
-                        <td class="nhsuk-table__cell">01/01/2020</td>
-                        <td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--closed">Urgent</a></td>
-                    </tr>
-                    <tr class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell"><a href="case-overview">Test Two</a></td>
-                        <td class="nhsuk-table__cell">01/01/1980</td>
-                        <td class="nhsuk-table__cell">01/01/2020</td>
-                        <td class="nhsuk-table__cell">1234567890</td>
-                        <td class="nhsuk-table__cell">01/01/2020</td>
-                        <td class="nhsuk-table__cell"><a href="#" class="nhsuk-table__button nhsuk-table__button--closed">Routine</a></td>
-                    </tr>
-                </tbody>
-            </table>	
+			<hr style="border-bottom:4px solid #005eb8; margin:0">
+			<div id="table-scroll" class="table-scroll">
+				<div class="nhsuk-table-responsive nhsuk-u-margin-top-0 table-wrap">
+					<table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable main-table">
+						<thead class="nhsuk-table__head">
+							<tr class="nhsuk-table__row">
+								<th class="nhsuk-table__header" aria-sort="none" scope="col">
+									<button type="button" data-index="0">Name</button>
+								</th>
+								<th class="nhsuk-table__header" aria-sort="none" scope="col">
+									<button onclick="sortTable()" type="button" data-index="0">Date of birth</button>
+								</th>
+								<th class="nhsuk-table__header" aria-sort="none" scope="col">
+									<button onclick="sortTable()" type="button" data-index="0">Date of death</button>
+								</th>
+								<th class="nhsuk-table__header" aria-sort="none" scope="col">
+									<button onclick="sortTable()" type="button" data-index="0">NHS number</button>
+								</th>
+								<th class="nhsuk-table__header" aria-sort="none" scope="col">
+									<button onclick="sortTable()" type="button" data-index="0">Hospital number</button>
+								</th>
+								<th class="nhsuk-table__header fixed-side" aria-sort="none" scope="col">
+									<button onclick="sortTable()" type="button" data-index="0">Case created</button>
+								</th>
+								<th class="nhsuk-table__header fixed-side" aria-sort="none" scope="col">
+									<button onclick="sortTable()" type="button" data-index="0">Status</button>
+								</th>
+							</tr>
+						</thead>
+
+						<tbody class="nhsuk-table__body">
+							<tr class="nhsuk-table__row">
+								<td class="nhsuk-table__cell"><a href="case-overview">Test One</a></td>
+								<td class="nhsuk-table__cell">01/01/1980</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td class="nhsuk-table__cell">1234567890</td>
+								<td class="nhsuk-table__cell">12395</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td><span class="nhsuk-tag nhsuk-tag--grey">Urgent</span></td>
+							</tr>
+							<tr class="nhsuk-table__row">
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Two</a></td>
+								<td class="nhsuk-table__cell">01/01/1980</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td class="nhsuk-table__cell">1234567890</td>
+								<td class="nhsuk-table__cell">62155</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td><span class="nhsuk-tag nhsuk-tag--grey">Routine</span></td>
+							</tr>
+							<tr class="nhsuk-table__row">
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Three</a></td>
+								<td class="nhsuk-table__cell">01/01/1980</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td class="nhsuk-table__cell">1234567890</td>
+								<td class="nhsuk-table__cell">62155</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td><span class="nhsuk-tag nhsuk-tag--grey">Priority</span></td>
+							</tr>
+							<tr class="nhsuk-table__row">
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Four</a></td>
+								<td class="nhsuk-table__cell">01/01/1980</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td class="nhsuk-table__cell">1234567890</td>
+								<td class="nhsuk-table__cell">42897</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td><span class="nhsuk-tag nhsuk-tag--grey">Urgent</span></td>
+							</tr>
+							<tr class="nhsuk-table__row">
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Five</a></td>
+								<td class="nhsuk-table__cell">01/01/1980</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td class="nhsuk-table__cell">1234567890</td>
+								<td class="nhsuk-table__cell">62155</td>
+								<td class="nhsuk-table__cell">01/01/2020</td>
+								<td><span class="nhsuk-tag nhsuk-tag--grey">Routine</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 {% endblock %}
+

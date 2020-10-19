@@ -4,7 +4,7 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
-{% set active = "meo-user" %}
+{% set active = "me-user" %}
 {% set activesub = "cases" %}
 <!-- 
   In /views/layout.html you can:
@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-	All cases
+	Open cases
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -23,7 +23,7 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-
+ 
 
 {% block content %}
 	<div class="nhsuk-grid-row">
@@ -31,7 +31,7 @@
             <div class="nhsuk-grid-row">
 				<div class="nhsuk-grid-column-two-thirds">
 					<h1 class="nhsuk-heading-xl">
-						All cases
+						Open cases
 					</h1>
 				</div>
 				<div class="nhsuk-grid-column-one-third">
@@ -73,7 +73,7 @@
 
 						<tbody class="nhsuk-table__body">
 							<tr class="nhsuk-table__row">
-								<td class="nhsuk-table__cell"><a href="case-overview">Test One</a></td>
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Eleven</a></td>
 								<td class="nhsuk-table__cell">01/01/1980</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
 								<td class="nhsuk-table__cell">1234567890</td>
@@ -82,7 +82,7 @@
 								<td><span class="nhsuk-tag nhsuk-tag--red">Urgent</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
-								<td class="nhsuk-table__cell"><a href="case-overview">Test Two</a></td>
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Twelve</a></td>
 								<td class="nhsuk-table__cell">01/01/1980</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
 								<td class="nhsuk-table__cell">1234567890</td>
@@ -91,7 +91,7 @@
 								<td><span class="nhsuk-tag nhsuk-tag--green">Routine</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
-								<td class="nhsuk-table__cell"><a href="case-overview">Test Three</a></td>
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Thirteen</a></td>
 								<td class="nhsuk-table__cell">01/01/1980</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
 								<td class="nhsuk-table__cell">1234567890</td>
@@ -100,7 +100,7 @@
 								<td><span class="nhsuk-tag nhsuk-tag--yellow">Priority</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
-								<td class="nhsuk-table__cell"><a href="case-overview">Test Four</a></td>
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Fourteen</a></td>
 								<td class="nhsuk-table__cell">01/01/1980</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
 								<td class="nhsuk-table__cell">1234567890</td>
@@ -109,7 +109,7 @@
 								<td><span class="nhsuk-tag nhsuk-tag--red">Urgent</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
-								<td class="nhsuk-table__cell"><a href="case-overview">Test Five</a></td>
+								<td class="nhsuk-table__cell"><a href="case-overview">Test Fifteen</a></td>
 								<td class="nhsuk-table__cell">01/01/1980</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
 								<td class="nhsuk-table__cell">1234567890</td>
@@ -123,24 +123,26 @@
 			</div>
 
 			<nav class="nhsbsa-pagination" id="pagination-label">
+
 				<p class="nhsuk-u-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
 			  
 				<ul class="nhsbsa-pagination__list">
-					<!-- <li class="nhsbsa-pagination__item  nhsbsa-pagination__item--prev">
-						<a class="nhsbsa-pagination__link" href="">Previous<span class="nhsuk-u-visually-hidden"> set of pages</span></a>
-					</li> -->
-					<li class="nhsbsa-pagination__item nhsbsa-pagination__item--active">1</li>
-				
-					<li class="nhsbsa-pagination__item"><a class="nhsbsa-pagination__link" href="all-cases-2">2</a></li>
-					
-					<li class="nhsbsa-pagination__item"><a class="nhsbsa-pagination__link" href="all-cases-3">3</a></li>
-					
-					<li class="nhsbsa-pagination__item  nhsbsa-pagination__item--next">
-						<a class="nhsbsa-pagination__link" href="all-cases-2">Next<span class="nhsuk-u-visually-hidden"> set of pages</span></a>
+					<li class="nhsbsa-pagination__item  nhsbsa-pagination__item--prev">
+						<a class="nhsbsa-pagination__link" href="open-cases-2">Previous<span class="nhsuk-u-visually-hidden"> set of pages</span></a>
 					</li>
+					<li class="nhsbsa-pagination__item"><a class="nhsbsa-pagination__link" href="open-cases">1</a></li>
+                    
+					<li class="nhsbsa-pagination__item"><a class="nhsbsa-pagination__link" href="open-cases-2">2</a></li>
+					
+					<li class="nhsbsa-pagination__item nhsbsa-pagination__item--active">3</li>
+					
+					<!-- <li class="nhsbsa-pagination__item  nhsbsa-pagination__item--next">
+						<a class="nhsbsa-pagination__link" href="open-cases-3">Next<span class="nhsuk-u-visually-hidden"> set of pages</span></a>
+					</li> -->
 				  </ul>
-				  <p class="nhsbsa-pagination__results">Showing <b>1</b> to <b>5</b> of <b>15</b> results</p>
+				  <p class="nhsbsa-pagination__results">Showing <b>10</b> to <b>15</b> of <b>15</b> results</p>
 			</nav>
 		</div>
 	</div>
 {% endblock %}
+
