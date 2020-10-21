@@ -26,6 +26,17 @@
 
 
 {% block content %}
+<script>
+	function toggleCheckbox() {
+		var toggles = document.getElementById("checkbox-toggle")
+		
+		if (toggles.style.display === "none") {
+			toggles.style.display = "block";
+		} else {
+			toggles.style.display = "none";
+  }
+	}
+</script>
 	<div class="nhsuk-grid-row">
 		<div class="nhsuk-grid-column-full">
             <div class="nhsuk-grid-row">
@@ -33,7 +44,58 @@
 					<h1 class="nhsuk-heading-xl">
 						Open cases
 					</h1>
+					<button class="nhsuk-button nhsuk-button--secondary toggle-checkbox" onclick="toggleCheckbox()">
+						Show/ hide columns      
+					  </button>
+					  <div class="checkbox-list" id="checkbox-toggle">
+						<div class="nhsuk-checkboxes">
+
+							<div class="nhsuk-checkboxes__item">
+							  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+							  <label class="nhsuk-label nhsuk-checkboxes__label toggle-label" for="example-1">
+								Name
+							  </label>
+							</div>
+							<div class="nhsuk-checkboxes__item">
+								<input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								<label class="nhsuk-label nhsuk-checkboxes__label toggle-label" for="example-1">
+								  Date of birth
+								</label>
+							  </div>
+							  <div class="nhsuk-checkboxes__item">
+								<input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								<label class="nhsuk-label nhsuk-checkboxes__label toggle-label" for="example-1">
+								  Date of death
+								</label>
+							  </div>
+							  <div class="nhsuk-checkboxes__item">
+								<input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								<label class="nhsuk-label nhsuk-checkboxes__label toggle-label"  for="example-1">
+								  NHS number
+								</label>
+							  </div>
+							  <div class="nhsuk-checkboxes__item">
+								<input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								<label class="nhsuk-label nhsuk-checkboxes__label toggle-label" for="example-1">
+								  Hospital number
+								</label>
+							  </div>
+							  <div class="nhsuk-checkboxes__item">
+								<input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								<label class="nhsuk-label nhsuk-checkboxes__label toggle-label" for="example-1">
+								  Case created
+								</label>
+							  </div>
+							  <div class="nhsuk-checkboxes__item">
+								<input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								<label class="nhsuk-label nhsuk-checkboxes__label toggle-label" for="example-1">
+								  Status
+								</label>
+							  </div>
+						  </div>
+					</div>
 				</div>
+				
 				<div class="nhsuk-grid-column-one-third">
 					<a href="create-case" class="nhsuk-button" style="float:right">
 					Create new case
