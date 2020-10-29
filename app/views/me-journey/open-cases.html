@@ -25,17 +25,7 @@
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 
 {% block content %}
-<script>
-	function toggleCheckbox() {
-		var toggles = document.getElementById("checkbox-toggle")
-		
-		if (toggles.style.display === "none") {
-			toggles.style.display = "block";
-		} else {
-			toggles.style.display = "none";
-  }
-	}
-</script>
+
 	<div class="nhsuk-grid-row">
 		<div class="nhsuk-grid-column-full">
             <div class="nhsuk-grid-row">
@@ -44,7 +34,7 @@
 						Open cases
 					</h1>
 					<button class="nhsuk-button nhsuk-button--secondary toggle-checkbox" onclick="toggleCheckbox()">
-						Show/ hide columns      
+						Reset table order    
 					  </button>
 					  <div class="checkbox-list" id="checkbox-toggle">
 						<div class="nhsuk-checkboxes">
@@ -140,7 +130,7 @@
 								<td class="nhsuk-table__cell">9975360025</td>
 								<td class="nhsuk-table__cell">66543</td>
 								<td class="nhsuk-table__cell">28/09/2020</td>
-								<td><span class="nhsuk-tag nhsuk-tag--red">Urgent</span></td>
+								<td><span class="nhsuk-tag nhsuk-tag--red case-tag">Urgent</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
 								<td class="nhsuk-table__cell"><a href="case-overview">Test Two</a></td>
@@ -149,7 +139,7 @@
 								<td class="nhsuk-table__cell">1234567890</td>
 								<td class="nhsuk-table__cell">62155</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
-								<td><span class="nhsuk-tag nhsuk-tag--blue">Routine</span></td>
+								<td><span class="nhsuk-tag nhsuk-tag--yellow case-tag">Overdue</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
 								<td class="nhsuk-table__cell"><a href="case-overview">Test Three</a></td>
@@ -158,7 +148,7 @@
 								<td class="nhsuk-table__cell">1234567890</td>
 								<td class="nhsuk-table__cell">62155</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
-								<td><span class="nhsuk-tag nhsuk-tag--yellow">Priority</span></td>
+								<td><span class="nhsuk-tag nhsuk-tag--green case-tag">Due today</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
 								<td class="nhsuk-table__cell"><a href="case-overview">Test Four</a></td>
@@ -167,7 +157,7 @@
 								<td class="nhsuk-table__cell">1234567890</td>
 								<td class="nhsuk-table__cell">42897</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
-								<td><span class="nhsuk-tag nhsuk-tag--red">Urgent</span></td>
+								<td><span class="nhsuk-tag nhsuk-tag--blue case-tag">Routine</span></td>
 							</tr>
 							<tr class="nhsuk-table__row">
 								<td class="nhsuk-table__cell"><a href="case-overview">Test Five</a></td>
@@ -176,7 +166,7 @@
 								<td class="nhsuk-table__cell">1234567890</td>
 								<td class="nhsuk-table__cell">62155</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
-								<td><span class="nhsuk-tag nhsuk-tag--blue">Routine</span></td>
+								<td><span class="nhsuk-tag nhsuk-tag--blue case-tag">Routine</span></td>
 							</tr>
 						</tbody>
 					</table>
