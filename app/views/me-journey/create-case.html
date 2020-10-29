@@ -36,16 +36,23 @@
 			
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="forename">
-			*Forename(s)
+			Forename(s)
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="forename" name="forename" type="text">
 	</div>
 		
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="surname">
-			*Surname
+			Surname
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
+	</div>
+
+	<div class="nhsuk-form-group">
+		<label class="nhsuk-label" for="known-as">
+			Known as <span class="optional-span">(optional)</span>
+		</label>
+		<input class="nhsuk-input nhsuk-u-width-one-half" id="known-as" name="known-as" type="text">
 	</div>
 
 	<div class="nhsuk-form-group">
@@ -74,7 +81,7 @@
 			</div>
 		</fieldset>
 	</div>
-
+<!--
 	<div class="nhsuk-form-group">
 		<fieldset class="nhsuk-fieldset">
 			<legend class="nhsuk-fieldset__legend">
@@ -133,12 +140,12 @@
 			</div>
 		</fieldset>
 	</div>
-
+-->
 	<div class="nhsuk-form-group">
 		<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
 			<legend class="nhsuk-fieldset__legend">
 				<p class="nhsuk-fieldset__heading">
-					*Date of birth
+					Date of birth
 				</p>
 			</legend>
 			<span class="nhsuk-hint" id="dob-hint">
@@ -176,23 +183,62 @@
 
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="nhs-number">
-			*NHS number
+			NHS number
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="nhs-number" name="nhs-number" type="text">
 	</div>
 		
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="hospital-number">
-			Hospital number
+			Hospital number <span class="optional-span">(optional)</span>
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="hospital-number" name="hospital-number" type="text">
 	</div>
-			
+	<div class="nhsuk-form-group">
+		<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+			<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+					Date of death
+				</p>
+			</legend>
+			<span class="nhsuk-hint" id="dob-hint">
+				For example, 15 3 1984
+			</span>
+		
+			<div class="nhsuk-date-input" id="dob">
+				<div class="nhsuk-date-input__item">
+					<div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+							Day
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+					</div>
+				</div>
+				<div class="nhsuk-date-input__item">
+					<div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+							Month
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+					</div>
+				</div>
+				<div class="nhsuk-date-input__item">
+					<div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+							Year
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+					</div>
+				</div>
+			</div>
+		</fieldset>	  
+	</div>	
+
 	<div class="nhsuk-form-group">
 		<fieldset class="nhsuk-fieldset">
 			<legend class="nhsuk-fieldset__legend">
 				<p class="nhsuk-fieldset__heading">
-					*Request for rapid release?
+					Request for rapid release?
 				</p>
 			</legend>
 		
@@ -218,7 +264,7 @@
 	<fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
 		<legend class="nhsuk-fieldset__legend">
 			<p class="nhsuk-fieldset__heading nhsuk-u-font-weight-bold">
-				Residential address of the deceased:
+				Home address
 			</p>
 		</legend>
 	
@@ -238,14 +284,14 @@
 	
 		<div class="nhsuk-form-group">
 			<label class="nhsuk-label" for="address-town">
-				Town or city
+				Town or city <span class="optional-span">(optional)</span>
 			</label>
 			<input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
 		</div>
 	
 		<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="address-county">
-			County
+			County <span class="optional-span">(optional)</span>
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
 		</div>
