@@ -17,6 +17,18 @@
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
 
+.delete-button {
+  background-color:	#d5281b ;
+}
+
+.delete-button:hover {
+  background-color: 	#7C2855;
+}
+
+
+.time-date-span {
+  float: right;
+}
 
 // class to disable side nav links during testing sessions, just add to relevant <li>
 

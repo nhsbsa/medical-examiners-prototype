@@ -1,0 +1,152 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "cases" %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Case overview
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+ 
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+
+			<nav class="nhsuk-red-background patient-info">
+				<ul role="navigation">
+				  <li><span><strong>Case type: </strong> Urgent</span></li>
+				  <li><span><strong> Forename(s): </strong> Martin</span></li>
+				  <li><span><strong>Surname: </strong> Lincoln</span></li>
+				  <li><span><strong>Date of birth: </strong> 02/11/1935</span></li>
+				  <li><span><strong>NHS Number: </strong> 9975360025</span></li>
+				</ul>
+			  </nav>
+
+			<h1>
+				Location of the death
+            </h1>
+
+            <p class="nhsuk-heading-s">You answered Community</p>
+
+            <div class="nhsuk-form-group">
+                <p>Please provide detail as to where in the community</p>
+                </div>
+
+                <div class="nhsuk-form-group">
+
+                    <fieldset class="nhsuk-fieldset">
+
+                  
+                      <div class="nhsuk-radios">
+                  
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+                          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                            Same as home address
+                          </label>
+                        </div>
+                  
+
+                  
+                      </div>
+                    </fieldset>
+                  
+                  </div>
+
+                  <fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
+                    <legend class="nhsuk-fieldset__legend">
+                        <p class="nhsuk-fieldset__heading ">
+                            Other address
+                        </p>
+                    </legend>
+                
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="address-line-1">
+                            Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+                        </label>
+                        <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
+                    </div>
+                
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="address-line-2">
+                            <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+                        </label>
+                        <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
+                    </div>
+                
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="address-town">
+                            Town or city <span class="optional-span">(optional)</span>
+                        </label>
+                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
+                    </div>
+                
+                    <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="address-county">
+                        County <span class="optional-span">(optional)</span>
+                    </label>
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+                    </div>
+                
+                    <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="address-postcode">
+                        Postcode
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+                    </div>
+                </fieldset>
+                
+                <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
+		
+                    <div class="nhsuk-radios nhsuk-radios--conditional">
+            
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="rapid-release-yes" name="rapid-release" type="radio" value="yes" aria-controls="rapid-yes" aria-expanded="false">
+                            <label class="nhsuk-label nhsuk-radios__label" for="apid-release-yes">
+                                Location with no specific address
+                            </label>
+                        </div>
+        
+                            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="rapid-yes">
+                      
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label" for="email">
+                                  Please specify
+                                </label>
+                                <input class="nhsuk-input nhsuk-u-width-one-third" id="email" name="email" type="text">
+                              </div>
+                      
+                            </div>
+
+                    </div>
+            </fieldset>
+        </div>
+		
+
+	<a class="nhsuk-button" href="case-overview" draggable="false">
+		Save and continue
+    </a>
+
+	<div class="nhsuk-u-width-one-half">
+		<a href="case-overview">Return to previous page without saving</a>
+	</div>
+</div>
+</div>
+{% endblock %}
