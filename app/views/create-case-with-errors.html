@@ -107,6 +107,9 @@
             <a href="#example-error-4">Date of death must be a real date</a>
           </li>
           <li>
+            <a href="#example-error-time">Enter a time of death</a>
+          </li>
+          <li>
             <a href="#example-error-8">Select yes if rapid release</a>
           </li>
           <li>
@@ -435,6 +438,43 @@
     </fieldset>
   
   </div>
+
+  <div class="nhsuk-form-group nhsuk-form-group--error">
+		<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+			<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+					Time of death
+				</p>
+			</legend>
+			<span class="nhsuk-hint" id="dob-hint">
+				Please use 24 hour format. For example, 16 03
+      </span>
+      
+      <span class="nhsuk-error-message" id="example-error-time">
+        <span class="nhsuk-u-visually-hidden">Error:</span> Enter a time of death
+      </span>
+		
+			<div class="nhsuk-date-input" id="dob">
+				<div class="nhsuk-date-input__item">
+					<div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+							Hour
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 nhsuk-input--error" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+					</div>
+				</div>
+				<div class="nhsuk-date-input__item">
+					<div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+							Minutes
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 nhsuk-input--error" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+					</div>
+				</div>
+			</div>
+		</fieldset>	  
+	</div>
+
 	<div class="nhsuk-form-group nhsuk-form-group--error">
 		<fieldset class="nhsuk-fieldset">
 			<legend class="nhsuk-fieldset__legend">

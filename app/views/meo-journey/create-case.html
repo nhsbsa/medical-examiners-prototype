@@ -30,7 +30,7 @@
 		<span class="nhsuk-caption-m nhsuk-caption--bottom ">
 			Create new case
 			</span>
-		Patient's details
+		Deeased person's details
 		
 	</h1>
 			
@@ -235,6 +235,38 @@
 	</div>	
 
 	<div class="nhsuk-form-group">
+		<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+			<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+					Time of death
+				</p>
+			</legend>
+			<span class="nhsuk-hint" id="dob-hint">
+				Please use 24 hour format. For example, 16 03
+			</span>
+		
+			<div class="nhsuk-date-input" id="dob">
+				<div class="nhsuk-date-input__item">
+					<div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+							Hour
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+					</div>
+				</div>
+				<div class="nhsuk-date-input__item">
+					<div class="nhsuk-form-group">
+						<label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+							Minutes
+						</label>
+						<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+					</div>
+				</div>
+			</div>
+		</fieldset>	  
+	</div>
+
+	<div class="nhsuk-form-group">
 		<fieldset class="nhsuk-fieldset">
 			<legend class="nhsuk-fieldset__legend">
 				<p class="nhsuk-fieldset__heading">
@@ -245,11 +277,24 @@
 			<div class="nhsuk-radios nhsuk-radios--conditional">
 		
 				<div class="nhsuk-radios__item">
-					<input class="nhsuk-radios__input" id="rapid-release-yes" name="rapid-release" type="radio" value="yes">
+					<input class="nhsuk-radios__input" id="rapid-release-yes" name="rapid-release" type="radio" value="yes" aria-controls="rapid-yes" aria-expanded="false">
 					<label class="nhsuk-label nhsuk-radios__label" for="apid-release-yes">
 						Yes
 					</label>
 				</div>
+
+
+
+					<div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="rapid-yes">
+			  
+					  <div class="nhsuk-form-group">
+						<label class="nhsuk-label" for="email">
+						  Please specify why
+						</label>
+						<input class="nhsuk-input nhsuk-u-width-one-third" id="email" name="email" type="text">
+					  </div>
+			  
+					</div>
 
 				<div class="nhsuk-radios__item">
 					<input class="nhsuk-radios__input" id="apid-release-no" name="rapid-release" type="radio" value="no">
