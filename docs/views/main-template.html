@@ -123,11 +123,11 @@
       			<nav class="moj-primary-navigation" aria-label="Primary navigation">
 					<ul class="moj-primary-navigation__list">
 						<li class="moj-primary-navigation__item">
-							<a class="moj-primary-navigation__link" {% if activesub == "cases" %}aria-current="page"{% endif %}href="open-cases">Open cases</a>
+							<a class="moj-primary-navigation__link" {% if activesub = "cases" %}aria-current="page"{% endif %}href="open-cases">Open cases</a>
 						</li>
 
 						<li class="moj-primary-navigation__item">
-							<a class="moj-primary-navigation__link" {% if activesub == "closed" %}aria-current="page"{% endif %} href="closed-cases">Closed cases</a>
+							<a class="moj-primary-navigation__link" {% if activesub = "closed" %}aria-current="page"{% endif %} href="closed-cases">Closed cases</a>
 						</li>
 					
 					

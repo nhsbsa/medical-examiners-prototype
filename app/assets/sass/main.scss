@@ -397,142 +397,87 @@ color: #ffffff !important;
 
 }
 /* ==========================================================================
-   #PRIMARY NAVIGATION
-   ========================================================================== */
+   SECONDARY NAV
+  ========================================================================== */
+// Secondary nav component
+.nhsuk-secondary-navigation {
+	background-color: $color_nhsuk-white;
+}
 
-   .moj-primary-navigation {
-    background-color: white;
-  }
-  
-  .moj-primary-navigation__container {
-    text-align: justify; // Trick to remove the need for floats
-  margin:0 30px;
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 100%;
-    }
-  
-  }
-  
-  .moj-primary-navigation__nav {
-    text-align: left;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  
-  .moj-primary-navigation__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .moj-primary-navigation__item {
-    @include nhsuk-font($size: 19);
-    display: inline-block;
-    margin-right: nhsuk-spacing(4);
-    margin-top: 0;
-  
-    &:last-child {
-      margin-right: 0;
-    }
-  
-  }
-  
-  .moj-primary-navigation__link {
-    display: block;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    text-decoration: none;
-    font-weight: bold;
-  
-    &:link,
-    &:visited {
-      color:  	#005eb8 ;
-    }
-  
-    &:focus {
-      color:black; // Focus colour on yellow should really be black.
-      position: relative; // Ensure focus sits above everything else.
-      z-index: 1;
-      box-shadow: none;
-    }
-  
-    &[aria-current] {
-      color: 	#005eb8 ;
-      position: relative;
-      text-decoration: none;
-      font-weight: bold;
-      &:before {
-        background-color: 	#005eb8 ;
-        content: "";
-        display: block;
-        height: 5px;
-        position: absolute; bottom: 0; left: 0;
-        width: 100%;
-      }
-  
-      &:focus {
-        color: black; // Focus colour on yellow should really be black.
-        position: relative; // Ensure focus sits above everything else.
-        border: none;
-  
-        &:before {
-          background-color: black;
-        }
-  
-      }
-  
-    }
-  
-  }
-  
-  .moj-primary-navigation__search {
+.nhsuk-secondary-navigation__container {
+	text-align: justify; // Trick to remove the need for floats
+	margin:0 30px;
+}
 
-      display: inline-block;
-      vertical-align: middle;
-    }
-  
-    .moj-search {
-      font-size: 0; // Fallback
-    }
-    
-    .moj-search form {
-      align-items: flex-end;
-      display: flex;
-    }
-    
-    .moj-search .govuk-form-group {
-      display: inline-block;
-      flex: 1;
-      margin-bottom: 0;
-      vertical-align: top;
-    }
-    
-    .moj-search__label,
-    .moj-search__hint {
-      text-align: left;
-    }
-    
-    .moj-search__input:focus {
-      position: relative;
-      z-index: 1;
-    }
-    
-    .moj-search__button {
-      display: inline-block;
-      margin-bottom: 0;
-      margin-left:nhsuk-spacing(2);
-      position: relative;
-      top: -2px; // Override default gov properties due to active pixel movement
-      vertical-align: bottom;
-      width: auto;
-    }
-    
-    .moj-search--inline {
-      padding: nhsuk-spacing(2) 0 !important;
-    }
+.nhsuk-secondary-navigation__nav {
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+}
 
+.nhsuk-secondary-navigation__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nhsuk-secondary-navigation__item {
+	@include nhsuk-font($size: 19);
+	display: inline-block;
+	margin-right: nhsuk-spacing(4);
+	margin-top: 0;
+	margin-bottom: 0;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.nhsuk-secondary-navigation__link {
+	display: block;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	text-decoration: none;
+	font-weight: bold;
+
+	&:link,
+	&:visited {
+		color: $color_nhsuk-blue;
+	}	
+
+	&:focus {
+		color:black; // Focus colour on yellow should really be black.
+		position: relative; // Ensure focus sits above everything else.
+		z-index: 1;
+		box-shadow: none;
+	}
+
+	&[aria-current] {
+		color: $color_nhsuk-blue;
+		position: relative;
+		text-decoration: none;
+		font-weight: bold;
+		&:before {
+			background-color: $color_nhsuk-blue;
+			content: "";
+			display: block;
+			height: 5px;
+			position: absolute; bottom: 0; left: 0;
+			width: 100%;
+		}
+
+		&:focus {
+			color: black; // Focus colour on yellow should really be black.
+			position: relative; // Ensure focus sits above everything else.
+			border: none;
+
+			&:before {
+				background-color: black;
+			}	
+		}
+	}
+}
+ 
     .hmcts-page-heading {
 
       margin-bottom: nhsuk-spacing(7);
