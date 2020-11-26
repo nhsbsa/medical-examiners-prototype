@@ -40,11 +40,18 @@
 }
 
 .inactive {
-    pointer-events: none!important; 
-    cursor: default!important; 
+ 
+   
     
     color: 	#768692!important; 
 }
+
+.inactive a{
+
+  cursor: default!important; 
+  
+  color: 	#768692!important; 
+} 
 
 .disable-dropdown {
     pointer-events: none!important; 
