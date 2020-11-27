@@ -45,117 +45,96 @@
 
 
             <div class="nhsuk-form-group">
-                </div>
 
-                <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
 
-                    <fieldset class="nhsuk-fieldset">
-
-                  
-                      <div class="nhsuk-radios">
-                  
-                        <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-                          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                            Same as home address
-                          </label>
-                        </div>
-                  
-
-                  
-                      </div>
-                   
-                  
-                  </div>
-
-                  
-
-                   
-            
-                
-
-                    <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
-		
-                      <div class="nhsuk-radios nhsuk-radios--conditional">
-              
-                          <div class="nhsuk-radios__item">
-                              <input class="nhsuk-radios__input" id="rapid-release-yes" name="rapid-release" type="radio" value="yes" aria-controls="other" aria-expanded="false">
-                              <label class="nhsuk-label nhsuk-radios__label" for="apid-release-yes">
-                                  Other address
-                              </label>
-                          </div>
-          
-                              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="other">
-                        
-                                <div class="nhsuk-form-group">
-                                  <div class="nhsuk-form-group">
-                                    <label class="nhsuk-label" for="address-line-1">
-                                        Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
-                                    </label>
-                                    <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
-                                </div>
-                            
-                                <div class="nhsuk-form-group">
-                                    <label class="nhsuk-label" for="address-line-2">
-                                        <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
-                                    </label>
-                                    <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
-                                </div>
-                            
-                                <div class="nhsuk-form-group">
-                                    <label class="nhsuk-label" for="address-town">
-                                        Town or city <span class="optional-span">(optional)</span>
-                                    </label>
-                                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
-                                </div>
-                            
-                                <div class="nhsuk-form-group">
-                                <label class="nhsuk-label" for="address-county">
-                                    County <span class="optional-span">(optional)</span>
-                                </label>
-                                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
-                                </div>
-                            
-                                <div class="nhsuk-form-group">
-                                <label class="nhsuk-label" for="address-postcode">
-                                    Postcode
-                                </label>
-                                <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-                                </div>
-                                  <input class="nhsuk-input nhsuk-u-width-one-third" id="email" name="email" type="text">
-                                </div>
-                        
-                              </div>
   
-                      </div>
-              </fieldset>
-          </div>
-
-                <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
-		
-                    <div class="nhsuk-radios nhsuk-radios--conditional">
             
-                        <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="rapid-release-yes" name="rapid-release" type="radio" value="yes" aria-controls="rapid-yes" aria-expanded="false">
-                            <label class="nhsuk-label nhsuk-radios__label" for="apid-release-yes">
-                                Location with no specific address
-                            </label>
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                     Same as home address
+                    </label>
+                  </div>
+            
+    
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                      Other address
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+            
+                    <div class="nhsuk-form-group nhsuk-u-width-one-half">
+                      <fieldset class="nhsuk-fieldset">
+                      
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="address-line-1">
+                            Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+                          </label>
+                          <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
                         </div>
-        
-                            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="rapid-yes">
                       
-                              <div class="nhsuk-form-group">
-                                <label class="nhsuk-label" for="email">
-                                  Please specify
-                                </label>
-                                <input class="nhsuk-input nhsuk-u-width-one-third" id="email" name="email" type="text">
-                              </div>
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="address-line-2">
+                            <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+                          </label>
+                          <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
+                        </div>
                       
-                            </div>
-
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="address-town">
+                            Town or city
+                          </label>
+                          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
+                        </div>
+                      
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="address-county">
+                            County
+                          </label>
+                          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+                        </div>
+                      
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="address-postcode">
+                            Postcode
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+                        </div>
+                      
+                      </fieldset>
                     </div>
-            </fieldset>
-        </div>
+            
+                  </div>
+            
+                  <div class="nhsuk-radios__item nhsuk-u-width-one-half">
+                    <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+                      Location with no specific address
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-3">
+            
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="mobile">
+                        Please specify
+                      </label>
+                      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+                    </div>
+            
+                  </div>
+            
+                </div>
+              </fieldset>
+            
+            </div>
 		
 
 	<a class="nhsuk-button" href="case-overview" draggable="false">
