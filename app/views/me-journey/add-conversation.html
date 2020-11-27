@@ -41,9 +41,9 @@
 
 			<h1>
                 <span class="nhsuk-caption-m nhsuk-caption--bottom ">
-                    Add a conversation
+                    Add a note
                     </span>
-				Conversation log
+				Communication log
             </h1>
 
             <div class="nhsuk-form-group">
@@ -51,7 +51,7 @@
 
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="select-1">
-                  Please select who the conversation was with
+                  Select the name of the contact involved
                 </label>
                 <select class="nhsuk-select nhsuk-u-width-one-half" id="select-1" name="select-1">
                   <option value="1">option 1</option>
@@ -60,11 +60,24 @@
                 </select>
               </div>
 
+              <div class="nhsuk-inset-text">
+                <span class="nhsuk-u-visually-hidden">Information: </span>
+                <p><a href="create-a-contact">Create a contact</a> if they do not appear in the dropdown</p>
+              </div>
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="forename">
+                    Enter the name of the team member involved
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-one-half" id="forename" name="forename" type="text">
+            </div>
+                
+
               <div class="nhsuk-form-group">
                 <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
                     <legend class="nhsuk-fieldset__legend">
                         <p class="nhsuk-fieldset__heading">
-                            Date of conversation
+                            Date of communication
                         </p>
                     </legend>
                     <span class="nhsuk-hint" id="dob-hint">
@@ -104,11 +117,11 @@
                 <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
                     <legend class="nhsuk-fieldset__legend">
                         <p class="nhsuk-fieldset__heading">
-                            Time of conversation
+                            Time of communication
                         </p>
                     </legend>
                     <span class="nhsuk-hint" id="dob-hint">
-                        Please use 24 hour format. For example, 16 03
+                    For example, 16 03
                     </span>
                 
                     <div class="nhsuk-date-input" id="dob">
@@ -133,8 +146,20 @@
             </div>
 
             <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="select-1">
+                  Select the method of communication
+                </label>
+                <select class="nhsuk-select nhsuk-u-width-one-half" id="select-1" name="select-1">
+                    <option value="0"></option> 
+                <option value="1">In person conversation</option>
+                  <option value="2" >Phone call</option>
+                  <option value="3" >Email</option>
+                </select>
+              </div>
+
+            <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="example">
-                  Please detail the conversation below
+                  Enter details of what was discussed
                 </label>
 
                 <textarea class="nhsuk-textarea nhsuk-u-width-full" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>

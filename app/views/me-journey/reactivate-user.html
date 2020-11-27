@@ -26,29 +26,43 @@
  
 
 {% block content %}
+<nav class="nhsuk-red-background patient-info">
+    <ul role="navigation">
+      <li><span><strong>Case type: </strong> Urgent</span></li>
+      <li><span><strong> Forename(s): </strong> Martin</span></li>
+      <li><span><strong>Surname: </strong> Lincoln</span></li>
+      <li><span><strong>Date of birth: </strong> 02/11/1935</span></li>
+      <li><span><strong>NHS Number: </strong> 9975360025</span></li>
+    </ul>
+  </nav>
+
 	<div class="nhsuk-grid-row">
+        
 		<div class="nhsuk-grid-column-full">
+            <div class="nhsuk-grid-row">
+          
+			
+				<div class="nhsuk-grid-column-two-thirds">
+					<h1 class="nhsuk-heading-xl">
+						Contacts
+                    </h1>
+                    
+					
 
-			<nav class="nhsuk-red-background patient-info">
-				<ul role="navigation">
-				  <li><span><strong>Case type: </strong> Urgent</span></li>
-				  <li><span><strong> Forename(s): </strong> Martin</span></li>
-				  <li><span><strong>Surname: </strong> Lincoln</span></li>
-				  <li><span><strong>Date of birth: </strong> 02/11/1935</span></li>
-				  <li><span><strong>NHS Number: </strong> 9975360025</span></li>
-				</ul>
-			  </nav>
-
-			<h1>
-				  Contacts
-            </h1>
-
+				</div>
+				
+				<div class="nhsuk-grid-column-one-third">
+					<a href="reactivate-contact-approval" class="nhsuk-button" style="float:right">
+					Reactivate contact
+					</a>
+				</div>
+			</div>
             <div class="nhsuk-form-group">
               
                 <fieldset class="nhsuk-fieldset">
                     <legend class="nhsuk-fieldset__legend">
                         <p class="nhsuk-fieldset__heading">
-                            You are deactivating <strong>Linda Robson. </strong> This will mean they are no longer contacted about the case.
+                            <strong>Linda Robson </strong> was deactivated 10/11/2020, 11:34:06 by teset user
                         </p>
                     </legend>
 
@@ -58,15 +72,13 @@
                         State why this contact is being deactivated
                       </label>
       
-                      <textarea class="nhsuk-textarea nhsuk-u-width-full" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                      <textarea class="nhsuk-textarea nhsuk-u-width-full inactive" id="example" name="example" rows="5" aria-describedby="example-hint">
+Example text goes here
+                      </textarea>
                     </div>
                 </fieldset>
                 <br>
-                <a href="informant-contacts-deactivated">
-                <button class="nhsuk-button" type="submit">
-                  Save and continue
-                </button>   
-              </a>
+          
               </div>
 
 

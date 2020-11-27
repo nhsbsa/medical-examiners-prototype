@@ -7091,7 +7091,9 @@ ul.grid-grid {
   color: #768692 !important; }
 
 .inactive {
-  pointer-events: none !important;
+  color: #768692 !important; }
+
+.inactive a {
   cursor: default !important;
   color: #768692 !important; }
 
@@ -7354,18 +7356,14 @@ ul.grid-grid {
   text-decoration: none; }
 
 /* ==========================================================================
-   #PRIMARY NAVIGATION
-   ========================================================================== */
+   SECONDARY NAV
+  ========================================================================== */
 .nhsuk-secondary-navigation {
-  background-color: white; }
+  background-color: #ffffff; }
 
 .nhsuk-secondary-navigation__container {
   text-align: justify;
   margin: 0 30px; }
-  .nhsuk-secondary-navigation__container:after {
-    content: '';
-    display: inline-block;
-    width: 100%; }
 
 .nhsuk-secondary-navigation__nav {
   text-align: left;
@@ -7384,7 +7382,8 @@ ul.grid-grid {
   line-height: 1.5;
   display: inline-block;
   margin-right: 24px;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 0; }
   @media (min-width: 40.0625em) {
     .nhsuk-secondary-navigation__item {
       font-size: 19px;
@@ -7430,43 +7429,6 @@ ul.grid-grid {
       border: none; }
       .nhsuk-secondary-navigation__link[aria-current]:focus:before {
         background-color: black; }
-
-.nhsuk-secondary-navigation__search {
-  display: inline-block;
-  vertical-align: middle; }
-
-.moj-search {
-  font-size: 0; }
-
-.moj-search form {
-  align-items: flex-end;
-  display: flex; }
-
-.moj-search .govuk-form-group {
-  display: inline-block;
-  flex: 1;
-  margin-bottom: 0;
-  vertical-align: top; }
-
-.moj-search__label,
-.moj-search__hint {
-  text-align: left; }
-
-.moj-search__input:focus {
-  position: relative;
-  z-index: 1; }
-
-.moj-search__button {
-  display: inline-block;
-  margin-bottom: 0;
-  margin-left: 8px;
-  position: relative;
-  top: -2px;
-  vertical-align: bottom;
-  width: auto; }
-
-.moj-search--inline {
-  padding: 8px 0 !important; }
 
 .hmcts-page-heading {
   margin-bottom: 48px;

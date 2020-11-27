@@ -40,44 +40,40 @@
 			  </nav>
 
 			<h1>
-				Informant and other contacts
+				  Contacts
             </h1>
 
             <div class="nhsuk-form-group">
-              <form action="informant-handler" method="post">
+              
                 <fieldset class="nhsuk-fieldset">
                     <legend class="nhsuk-fieldset__legend">
                         <p class="nhsuk-fieldset__heading">
-                            Are you sure you want to delete <strong>Linda Robson </strong> as a contact?
+                            You are deactivating <strong>Linda Robson. </strong> This will mean they are no longer contacted about the case.
                         </p>
                     </legend>
 
               
-                  <div class="nhsuk-radios nhsuk-radios--inline">
-
-                   
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="informant-yes" name="informant" type="radio" value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="informant-yes">
-                        Yes
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="example">
+                        State why this contact is being deactivated
                       </label>
+      
+                      <textarea class="nhsuk-textarea nhsuk-u-width-full" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
                     </div>
-
-                            
-                  </div>
                 </fieldset>
                 <br>
+                <a href="informant-contacts-deactivated">
                 <button class="nhsuk-button" type="submit">
                   Save and continue
                 </button>   
-              </form>
+              </a>
               </div>
 
 
              
 	<div class="nhsuk-u-width-one-half">
 
-		<a href="edit-a-contact">Return to previous page without saving</a>
+		<a href="informant-contact-added">Return to previous page without saving</a>
 	</div>
 </div>
 </div>

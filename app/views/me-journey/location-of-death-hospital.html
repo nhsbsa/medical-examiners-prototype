@@ -43,8 +43,6 @@
 				Location of the death
             </h1>
 
-            <p class="nhsuk-heading-s">You answered Hospital/ Acute</p>
-
             <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="select-1">
                   Healthcare provider
@@ -58,16 +56,62 @@
 
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="example">
-                  Ward (if known)
+                  Location details 
                 </label>
+                <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                  For example, Ward 2B, or A&E
+                </div>
                 <input class="nhsuk-input nhsuk-u-width-one-half" id="example" name="example" type="text">
               </div>
 
               <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="example">
-                  Admission details (if known)
-                </label>
+                <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+                  <legend class="nhsuk-fieldset__legend">
+                    <p class="nhsuk-fieldset__heading">
+                      Date of admission
+                    </p>
+                  </legend>
+                  <span class="nhsuk-hint" id="dob-hint">
+                    For example, 15 3 1984
+                  </span>
+                
+                  <div class="nhsuk-date-input" id="dob">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>	  
+              </div>
+            
 
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="example">
+                  Admission details (optional)
+                </label>
+                <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                For example, the admission time, method and reason               
+                </div>
                 <textarea class="nhsuk-textarea nhsuk-u-width-two-thirds" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
               </div>
 
@@ -76,7 +120,7 @@
 		Save and continue
 	</a>
 	<div class="nhsuk-u-width-one-half">
-		<a href="case-overview">Return to previous page without saving</a>
+		<a href="case-overview">Return to case overview without saving</a>
 	</div>
 </div>
 </div>

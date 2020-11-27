@@ -40,40 +40,59 @@
 			  </nav>
 
 			<h1>
-				  Contacts
+				Contacts
             </h1>
 
             <div class="nhsuk-form-group">
-              
+
                 <fieldset class="nhsuk-fieldset">
                     <legend class="nhsuk-fieldset__legend">
                         <p class="nhsuk-fieldset__heading">
-                            You are deactivating <strong>Linda Robson. </strong> This will mean they are no longer contacted about the case.
+                            You are reactivating <strong>Linda Robson. </strong> Would you like to reactivate them as the main contact for the case?
                         </p>
+                        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+If you select yes, the contact type of all remaining contacts will update to 'other'
+                          </div>
                     </legend>
 
+                 
+              </div>
+
+              <div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+                  </legend>
               
-                    <div class="nhsuk-form-group">
-                      <label class="nhsuk-label" for="example">
-                        State why this contact is being deactivated
+                  <div class="nhsuk-radios">
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                        Yes
                       </label>
-      
-                      <textarea class="nhsuk-textarea nhsuk-u-width-full" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
                     </div>
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                        No
+                      </label>
+                    </div>
+              
+                  </div>
                 </fieldset>
-                <br>
-                <a href="informant-contacts-deactivated">
-                <button class="nhsuk-button" type="submit">
-                  Save and continue
-                </button>   
-              </a>
+              
               </div>
 
 
-             
+              <a class="nhsuk-button" type="submit" href="informant-contact-added">
+                Save and continue
+              </a>   
 	<div class="nhsuk-u-width-one-half">
 
-		<a href="informant-contact-added">Return to previous page without saving</a>
+		<a href="case-overview">Return to previous page without saving</a>
 	</div>
 </div>
 </div>
