@@ -1,0 +1,176 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "cases" %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Case overview
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+ 
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+
+			<nav class="nhsuk-red-background patient-info">
+				<ul role="navigation">
+				  <li><span><strong>Case type: </strong> Urgent</span></li>
+				  <li><span><strong> Forename(s): </strong> Martin</span></li>
+				  <li><span><strong>Surname: </strong> Lincoln</span></li>
+				  <li><span><strong>Date of birth: </strong> 02/11/1935</span></li>
+				  <li><span><strong>NHS Number: </strong> 9975360025</span></li>
+				</ul>
+			  </nav>
+
+			<h1>
+                <span class="nhsuk-caption-m nhsuk-caption--bottom ">
+                    Add a person
+                    </span>
+				Care team
+            </h1>
+
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="select-1">
+                  Select the role of the person you are adding to the care team
+                </label>
+                <select class="nhsuk-select" id="select-1" name="select-1">
+                  <option value="1">QAP able to write an MDDC</option>
+                  <option value="2">Usual GP</option>
+                  <option value="3" >Consultant responsible for care</option>
+                  <option value="4">Person responsible for nursing</option>
+                  <option value="5" >Person who verified fact of death</option>
+                </select>
+              </div>
+
+              <div class="nhsuk-form-group nhsuk-u-width-one-half">
+                <label class="nhsuk-label" for="example">
+                  First name
+                </label>
+                <input class="nhsuk-input" id="example" name="example" type="text">
+              </div>
+
+              <div class="nhsuk-form-group nhsuk-u-width-one-half">
+                <label class="nhsuk-label" for="example">
+                  Last name
+                </label>
+                <input class="nhsuk-input" id="example" name="example" type="text">
+              </div>
+
+              <div class="nhsuk-form-group nhsuk-u-width-one-half">
+                <label class="nhsuk-label" for="example">
+                  Organisation or location of work
+                </label>
+                <input class="nhsuk-input" id="example" name="example" type="text">
+              </div>
+
+              <div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset nhsuk-u-width-one-half" aria-describedby="contact-hint">
+                  <legend class="nhsuk-fieldset__legend">
+                    <h1 class="nhsuk-fieldset__heading">
+                      Primary contact method
+                    </h1>
+                  </legend>
+              
+                  <div class="nhsuk-hint" id="contact-hint">
+                    Do not provide and on-call contact information
+                  </div>
+              
+                  <div class="nhsuk-radios nhsuk-radios--conditional">
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                        Phone
+                      </label>
+                    </div>
+              
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+              
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="email">
+                          Phone number
+                        </label>
+                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                      </div>
+              
+                    </div>
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                       Bleep
+                      </label>
+                    </div>
+              
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+              
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="phone">
+                          Bleep number
+                        </label>
+                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
+                      </div>
+              
+                    </div>
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+                        Email
+                      </label>
+                    </div>
+              
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-3">
+              
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="mobile">
+                          Email address
+                        </label>
+                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+                      </div>
+              
+                    </div>
+              
+                  </div>
+                </fieldset>
+
+                <div class="nhsuk-form-group nhsuk-u-width-one-half">
+                    <label class="nhsuk-label" for="example">
+                      Enter other contact details or availability here (optional)
+                    </label>
+
+                    <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                  </div>
+              
+              </div>
+              <a class="nhsuk-button" href="care-team-added" draggable="false">
+                Save and continue
+            </a>
+        
+        </div>
+
+
+	<div class="nhsuk-u-width-one-half">
+		<a href="care-team">Return to previous page without saving</a>
+	</div>
+</div>
+</div>
+{% endblock %}
