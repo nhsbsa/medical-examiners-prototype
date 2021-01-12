@@ -48,4 +48,34 @@ router.post('/contact-handler', function (req, res) {
     res.redirect('conversation-log-no')
   }
 })
+
+router.post('/qap-handler', function (req, res) {
+  // Make a variable and give it the value from 'know-nhs-number'
+  var deathLoc = req.session.data['qap-discussion']
+
+  // Check whether the variable matches a condition
+  if (deathLoc == "yes"){
+    // Send user to next page
+    res.redirect('discussion-QAP-yes')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('discussion-QAP-no')
+  }
+})
+
+router.post('/qap-handler-yes', function (req, res) {
+  // Make a variable and give it the value from 'know-nhs-number'
+  var deathLoc = req.session.data['qap-discussion-yes']
+
+  // Check whether the variable matches a condition
+  if (deathLoc == "new-cause"){
+    // Send user to next page
+    res.redirect('discussion-QAP-new-cause')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('case-overview')
+  }
+})
 module.exports = router;
