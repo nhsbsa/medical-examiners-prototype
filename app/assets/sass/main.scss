@@ -41,6 +41,9 @@
 }
 
 .inactive {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
   color: #768692 !important;
 }
 
