@@ -41,6 +41,9 @@
 }
 
 .inactive {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
   color: #768692 !important;
 }
 
@@ -1080,4 +1083,8 @@ div.editable {
 
 .landing-details {
   background: none!important;
+}
+
+textarea {
+  resize: none!important;
 }

@@ -7092,6 +7092,9 @@ ul.grid-grid {
   color: #768692 !important; }
 
 .inactive {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
   color: #768692 !important; }
 
 .inactive a {
@@ -7971,3 +7974,6 @@ div.editable {
 
 .landing-details {
   background: none !important; }
+
+textarea {
+  resize: none !important; }
