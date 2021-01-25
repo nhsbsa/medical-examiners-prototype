@@ -7977,3 +7977,9 @@ div.editable {
 
 textarea {
   resize: none !important; }
+
+.multi-textarea:focus {
+  border: none !important;
+  box-shadow: 0 0 0 4px #ffeb3b;
+  outline: 4px solid black;
+  outline-offset: -4px; }
