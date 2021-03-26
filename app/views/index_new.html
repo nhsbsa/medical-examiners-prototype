@@ -1,0 +1,411 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+          Medical Examiner Service
+        <!--  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>-->
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">
+          A Prepayment Certificate lets you get as many NHS prescriptions as you need for a set price.
+      </p>
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Sharing this prototype
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>To give others access to this prototype:</p>
+            <ul>
+              <li>Username : ppc_30 </li>
+              <li>Password : ppc_30</li>
+            </ul>
+          </div>
+        </details>
+
+      <hr>
+
+      <h2>
+        Sprint work - Continuous improvement
+      </h2>
+
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary" >
+            <span class="nhsuk-details__summary-text">Sprint 2 Q3</span>
+      </summary>
+      <div class="nhsuk-details__text">
+      <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text"><small>Error pages</small></span>
+         </summary>
+      
+      <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+      <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that redesigining PPC online with the NHSUK Front end Kit
+         <strong>will be a useful feature for</strong>
+      users <strong>as it will</strong> create familiarity and trust with users with the NHS branding. It is also up to date with the 
+      accessiblity point of view as well as being more recognisable and trustworthy to end users. <strong>This will</strong> help users to confidently use the service.</p>
+      <hr>
+      
+      
+      <h3 class="nhsuk-heading-m">What we reviewed:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      
+      <li>Content : Payment declined</li>
+      <li>Content : Payment cancelled</li>
+      
+      </ul>
+      <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      
+      
+      <li>..</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">What we found:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>...</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">Any known issues?</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>...</li>
+      </ul>
+      <hr>
+     
+      
+      
+     <p> <a href="ppc/iteration_4/payment-cancelled">Payment cancelled</a></p>
+
+      
+      
+       <p> <a href="ppc/iteration_4/payment-declined">Payment declined</a> </p>
+
+          <p><a href="ppc/iteration_4/payment-declined-cardfault">
+            Payment Declined (user card fault) </a></p>
+      
+            <p><a href="ppc/iteration_4/DD-not_authorised">DD not authorised </a></p>
+      
+
+            <p><a href="ppc/iteration_4/Service_not-available">
+              Service not available </a></p>
+
+              <p><a href="ppc/iteration_4/time-out/timing-out">
+                Timeout pop up </a></p>
+
+                <p><a href="ppc/iteration_4/time-out/timed-out">
+                  Timeout screen (during application) </a></p>
+
+
+                <p><a href="ppc/iteration_4/time-out/timed-out_complete-app">
+                  Timeout screen (after completing the application)</a></p>
+    
+
+      </details>
+      </details>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary" >
+            <span class="nhsuk-details__summary-text">Sprint 1 Q3</span>
+      </summary>
+      <div class="nhsuk-details__text">
+      <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text"><small>PPC Bank Payment & Full journey</small></span>
+         </summary>
+      
+      <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+      <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that redesigining PPC online with the NHSUK Front end Kit
+         <strong>will be a useful feature for</strong>
+      users <strong>as it will</strong> create familiarity and trust with users with the NHS branding. It is also up to date with the 
+      accessiblity point of view as well as being more recognisable and trustworthy to end users. <strong>This will</strong> help users to confidently use the service.</p>
+      <hr>
+      
+      
+      <h3 class="nhsuk-heading-m">What we reviewed:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      
+      <li>Content : Review the Done page</li>
+      
+      </ul>
+      <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      
+      
+      <li>..</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">What we found:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>...</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">Any known issues?</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>...</li>
+      </ul>
+      <hr>
+      <p>Use this card number to test a successful payment. </p>
+      
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Card details </span>
+        <p>4000 0566 5566 5556</p>
+      </div>
+      <p class="nhsuk-u-margin-bottom-0"><a href="ppc/iteration_2/buy/start-page"><button class="nhsuk-button"
+        type="submit">Buy an NHS Prescription Prepayment Certificate</button></a></p>
+      
+      
+      
+      
+      </details>
+      </details>
+      
+
+
+
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary" >
+            <span class="nhsuk-details__summary-text">Sprint 7 Q2</span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text"><small>PPC DD Payment </small></span>
+         </summary>
+    
+    <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+    <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that redesigining PPC online with the NHSUK Front end Kit
+         <strong>will be a useful feature for</strong>
+     users <strong>as it will</strong> create familiarity and trust with users with the NHS branding. It is also up to date with the 
+     accessiblity point of view as well as being more recognisable and trustworthy to end users. <strong>This will</strong> help users to confidently use the service.</p>
+    <hr>
+    
+    <h3 class="nhsuk-heading-m">Hypothesis B</h3>
+    <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that allowing users to still get their PPC when All Pay failed
+      to process the payment due to system being down (after user's bank details been checked)
+         <strong>will be a useful feature for</strong>
+     users <strong>as it will</strong> allow them to get help with their health costs and start purchasing their 
+     prescriptions.</p>
+    <hr>
+    
+    
+    
+    
+    <h3 class="nhsuk-heading-m">What we reviewed:</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+     
+     <li>Content : Review the Done page</li>
+     <li>New page: Done page when All Pay failed to set up a DD</li>
+     <li>Further review on FP57 - refund receipt</li>
+     <li>Review on whether it is needed to move DD details (on when payment will be taken) to Bank Details (Set up DD) screen from the current  screen to avoid 
+         cognitive overload & to avoid long information in an conditional reveal</li>
+    <li> Content : Information on renewal for users who choose to pay via DD</li>
+    <li> Review on any other alternative option for users to save keep their cert.User feedback : User can't print because they don't have a printer and they don't have an email. </li>
+    <li>Review : DD Guarantee and DD Instructions; on where and is it needed to have this in the service </li>
+    <li>Following user feedback about calling in to change their DD date : Review the process (Moved to future iteration)</li>
+    <li>Used the 'Warning card' from NHS service manual to display the DD payment Terms and condition</li>
+    </ul>
+    <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+     <li>Done page for different scenarios</li>
+     <li>Save Certificate option - is it useful for users?</li>
+     <li>Following extensive investigation about DD Guarantee & DD Instruction (this is a legal requirement) - decided to put DD in an expander and AB tested the DD Instruction both in an expander and display </li>
+     <li>Whether or not the usage of 'Warning Card' in the CYA was appropriate</li>
+    
+    
+    
+    </ul>
+    <h3 class="nhsuk-heading-m">What we found:</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+     <li> Participants found the payment summary with DD Details in "Set up DD" page to very useful </li>
+    <li>1 participant found that information about DD and auto renewal in 'How do you want to pay for your PPC?' page to be useful </li>
+    <li>2 participants expressed and questioned about the 10 payments ('Would it not be better if it is made 12 - it will bring down the cost further') - the rule behind 10 monthly payments is stipulated in the legislation. The team agreed to 
+      further investigate this</li>
+      <li>2 participants welcomed the choice to print the certificate although 1 was confused with the symbol of save; he thought it was an email.</li>
+      <li>No participant read the DD Guarantee & no participant read the DD Instruction in the explander; but acknowledged the displayed DD Instruction</li>
+      <li>Although the CYA page was long - participants accepted it and stop to read the 'yellow box'(Warning Card)</li>
+    </ul>
+    <h3 class="nhsuk-heading-m">Any known issues?</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>No error messages </li>
+        <li>Some dummy data used in ' Check your answer' screen</li>
+    </ul>
+    <hr>
+    <p class="nhsuk-u-margin-bottom-0"><a href="ppc/iteration_2/set-up-dd"><button class="nhsuk-button"
+      type="submit">Set up DD</button></a></p>
+    
+      <p class="nhsuk-u-margin-bottom-0"><a href="ppc/iteration_2/DD-confirmation-Allpay-email"><button class="nhsuk-button"
+        type="submit">All Pay Done (email)</button></a></p>
+    
+        <p class="nhsuk-u-margin-bottom-0"><a href="ppc/iteration_2/DD-confirmation-Allpay-print"><button class="nhsuk-button"
+          type="submit">All Pay Done (print)</button></a></p>
+    
+    
+    
+    </details>
+    </details>
+    </hr>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary" >
+                    <span class="nhsuk-details__summary-text">Sprint 4 Q2</span>
+           </summary>
+           <div class="nhsuk-details__text">
+              <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+                 <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text"><small>Version 1</small></span>
+                 </summary>
+         
+          <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+          <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that redesigining PPC online with the NHSUK Front end Kit
+                 <strong>will be a useful feature for</strong>
+             users <strong>as it will</strong> create familiarity and trust with users with the NHS branding. It is also up to date with the 
+             accessiblity point of view as well as being more recognisable and trustworthy to end users. <strong>This will</strong> help users to confidently use the service.</p>
+          <hr>
+
+          <h3 class="nhsuk-heading-m">Hypothesis B</h3>
+          <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that redesigining PPC online user flow based on pain points & user feedback
+                 <strong>will be a useful feature for</strong>
+             users <strong>as it will</strong> create a better user experience while purchasing a PPC. <strong>This will</strong> help users to quickly and easily obtain help with health costs.</p>
+          <hr>
+          <h3 class="nhsuk-heading-m">What we reviewed:</h3>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+             <li>Created a back link </li>
+             <li>Removed the cancel link </li>
+             <li>Content in the Start page</li>
+             <li>Following GDS guidance changed 'Next' label to 'Continue'</li>
+             <li>Re-designed 'How long do you want your PPC to last?' screen : broke it into several screens 
+               (to follow GDS guidance of 1 question per page)</li>
+               <li>Re-designed : When do you want your PPC to start? This screen has been split into 3 different screens to cater 3 different users (New user, User with expiring certificate,
+                 User with expired cert) - we believe by displaying information relevant to this type user might be useful to them to ease their user experience (This is following the implementation of the new API Exemtption Search)</li>
+               <li>Following user research  a user need been identified (link) : added information about Prescription payment refund</li>
+               <li>Following user feedback on how many screens it takes to key in address - this has been shortened & simplified</li>
+             <li> (MOVED TO NEXT SPRINT / ITERATION)Moved DD details (on when payment will be taken) to Bank Details screen from the above screen to avoid 
+               cognitive overload & to avoid long information in an conditional reveal</li>
+               <li>(MOVED TO NEXT SPRINT / ITERATION)Information on renewal for users who chose to pay via DD</li>
+          </ul>
+          <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+             <li>Whether or not users finding it easy to manoeuvre the new user journey </li>
+             <li>How do users fill up the new address screen</li>
+             <li>How do users find information about 'What option is best for me' in 'How long do you want your PPC to last?' screen </li>
+             <li>Do users find it useful having information about their current PPC - is it expired? when is it expiring?</li>
+             <li> 2 different screens for 'How would you like to receive your PPC'/ 'Would you like to receive your certificate by email?'</li>
+             <li>FP57 - the refund receipts : Do users know this? is it a helpful information to them?</li>
+          </ul>
+          <h3 class="nhsuk-heading-m">What we found:</h3>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>2 participants welcomed the opening line about saving money</li>
+             <li>Start page : 'How it works' section is it a right title?</li>
+             <li>New address screen : no partcipant had any issue with the new journey - they all managed to go through it without any problem</li>
+             <li> The 3 months option explanation was queried by 2 participants. Both felt it wasn’t clear how much you would save / what your break even point is</li>
+              <li>One participant said that it is a pain to have to phone up to change the regular dates. They and another said that many people want to set their outgoing dates 
+                to suit their salary dates, so why do we make people phone up to do it? </li>
+                <li>The screen - 'Would you like to receive your certificate by email?'- was welcomed by all participants</li>
+                  
+          </ul>
+          <h3 class="nhsuk-heading-m">Known issues</h3>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+             <li>No error messages </li>
+             <li>Some dummy data used in ' Check your answer' screen</li>
+            
+          </ul>
+          <hr>
+          <p class="nhsuk-u-margin-bottom-0"><a href="ppc/start-page"><button class="nhsuk-button"
+            type="submit">Buy an NHS Prescription Prepayment Certificate</button></a></p>
+        </details>
+</details>
+      
+
+      </hr>
+     
+
+
+    <!--   <h2>
+        Documentation
+      </h2>
+
+      <ul>
+        <li>
+          Get started with <a href="/docs">how to guides and page templates</a>
+        </li>
+        <li>
+          Copy and paste styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
+        </li>
+      </ul>
+
+      End of content -->
+
+    </div>
+  </div>
+{% endblock %}
