@@ -41,43 +41,62 @@
 	  
 			  <div class="nhsuk-card nhsuk-card--grey-1 nhsuk-u-margin-top-4">
 				<div class="nhsuk-card__content">
-	  
-	  
-				<!--
-				<div class="nhsuk-grid-row">
-					<div class="nhsuk-grid-column-full">
-						<h2 class="nhsuk-u-margin-bottom-4">Search for applications</h2>
-					</div>
-				</div>
-				-->
-			
-				
+	  		
 				 
 				<form novalidate="novalidate" action="search_results" method="post">
 	  
 				  <div class="nhsuk-grid-row">
-					<div class="nhsuk-grid-column-one-half">
+					<div class="nhsuk-grid-column-one-quarter">
 					  <div class="nhsuk-form-group">
-						<label class="nhsuk-label" for="searchlastname">
-						  Last name
+						<label class="nhsuk-label" for="searchfirstname"><strong class ='bold'>
+						  First name</strong>
 						</label>
-						<input class="nhsuk-input nhsuk-u-width-full" id="searchlastname" name="searchlastname" type="text">
-					  </div>
+						<input class="nhsuk-input nhsuk-u-width-full" id="searchfirstname" name="searchfirstname" type="text">		
+						</div>
 					</div>
-					<div class="nhsuk-grid-column-one-half">
+
+
+					<div class="nhsuk-grid-column-one-quarter">
+							<div class="nhsuk-form-group">
+							  <label class="nhsuk-label" for="searchlasttname"><strong class ='bold'>
+								Last name</strong>
+							  </label>
+							  <input class="nhsuk-input nhsuk-u-width-full" id="searchlastname" name="searchlastname" type="text">
+							  
+						  
+						  </div>
+						  </div>
+					
+					<div class="nhsuk-grid-column-one-quarter">
 					  <div class="nhsuk-form-group">
-						<label class="nhsuk-label" for="nhsnumber">
-						  NHS Number
+						<label class="nhsuk-label" for="nhsnumber"><strong class ='bold'>
+						  NHS Number</strong>
 						</label>
 						<input class="nhsuk-input nhsuk-u-width-full" id="nhsnumber" name="nhsnumber" type="text">
+
+						
 					  </div>
 					</div>
 				  
 				 
-				  <div class="nhsuk-grid-column-one-half">
+					<div class="nhsuk-grid-column-one-quarter">
+							<div class="nhsuk-form-group">
+							  <label class="nhsuk-label" for="hospnumber"><strong class ='bold'>
+								Hospital Number</strong>
+							  </label>
+							  <input class="nhsuk-input nhsuk-u-width-full" id="hospnumber" name="hospnumber" type="text">
+	  
+							  
+							</div>
+						  </div>
+
+
+
+
+				  <div class="nhsuk-grid-column-one-third">
 					<div class="nhsuk-form-group">
-					  <label class="nhsuk-label" for="nhsnumber">
-						Date of death
+					  <label class="nhsuk-label" for="nhsnumber"><strong class ='bold'>
+						Date of birth</strong>
 					  </label>
 
 
@@ -108,67 +127,124 @@
 								<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="duedateyear"
 								  name="duedateyear" type="number" pattern="[0-9]*">
 							  </div>
+
+
+
+							  
 							</div>
 						  </div>
+<br>
+
+
+
+						  <label class="nhsuk-label" for="nhsnumber"><strong class ='bold'>
+								Date of death</strong>
+							  </label>
+							  <div class="nhsuk-date-input">
+									<div class="nhsuk-date-input__item">
+									  <div class="nhsuk-form-group">
+										<label class="nhsuk-label nhsuk-date-input__label" for="duedateday">
+										  Day
+										</label>
+										<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="duedateday"
+										  name="duedateday" type="number" pattern="[0-9]*">
+									  </div>
+									</div>
+									<div class="nhsuk-date-input__item">
+									  <div class="nhsuk-form-group">
+										<label class="nhsuk-label nhsuk-date-input__label" for="duedatemonth">
+										  Month
+										</label>
+										<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="duedatemonth"
+										  name="duedatemonth" type="number" pattern="[0-9]*">
+									  </div>
+									</div>
+									<div class="nhsuk-date-input__item">
+									  <div class="nhsuk-form-group">
+										<label class="nhsuk-label nhsuk-date-input__label" for="duedateyear">
+										  Year
+										</label>
+										<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="duedateyear"
+										  name="duedateyear" type="number" pattern="[0-9]*">
+									  </div>
+		
+		
+		
+									  
+									</div>
+								  </div>
 
 
 
 
+
+
+								</div>
+								  </div>
 
 
 					  
-					</div>
-				  </div>
-				  <div class="nhsuk-form-group">
-					<div class="nhsuk-grid-column-one-half">
-					<fieldset class="nhsuk-fieldset">
-					 
-						<p>Case types</p>
-						  
-						
 					
-				  
-					  <div class="nhsuk-radios nhsuk-radios-multiple-choice nhsuk-radios--inline" >
-				  
-						<div class="nhsuk-radios__item">
-						  <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="urgent">
-						  <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1" >
-							Urgent
-						  </label>
-						</div>
+				 
+
+				
+					
+				 
 				  
 
-						<div class="nhsuk-radios__item">
-						  <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="routine">
-						  <label class="nhsuk-label nhsuk-radios__label nhsuk-radios--inline" for="example-inline-2">
-							Routine
-						  </label>
-						</div>
+				  <div class="nhsuk-form-group">
+						<div class="nhsuk-grid-column-one-third">
+						<fieldset class="nhsuk-fieldset"><strong class ='bold'>
+						 
+							<p>Case types</p></strong>
+							  
+							
 						
-						<div class="nhsuk-radios__item" >
-							<input class="nhsuk-radios__input"   id="example-inline-3" name="example-inline" type="radio" value="routine">
-							<label class="nhsuk-label nhsuk-radios__label nhsuk-radios--inline" style="line-height:1.415789477;" for="example-inline-2">
-							  Over due
-							</label>
+					  
+						  <div class="nhsuk-radios nhsuk-radios-multiple-choice nhsuk-radios--inline" >
+					  
+							<div class="nhsuk-radios__item">
+							  <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="urgent">
+							  <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1" >
+								Urgent
+							  </label>
+							</div>
+					  
+	
+							<div class="nhsuk-radios__item">
+							  <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="routine">
+							  <label class="nhsuk-label nhsuk-radios__label nhsuk-radios--inline" for="example-inline-2">
+								Routine
+							  </label>
+							</div>
+							
+							<div class="nhsuk-radios__item" >
+								<input class="nhsuk-radios__input"   id="example-inline-3" name="example-inline" type="radio" value="routine">
+								<label class="nhsuk-label nhsuk-radios__label nhsuk-radios--inline" style="line-height:1.415789477;" for="example-inline-2">
+								  Over due
+								</label>
+							  </div>
+							  <div class="nhsuk-radios__item">
+								<input class="nhsuk-radios__input" id="example-inline-4" name="example-inline" type="radio" value="routine">
+								<label class="nhsuk-label nhsuk-radios__label nhsuk-radios--inline" for="example-inline-2">
+								  Due date
+								</label>
+							  </div>
+							  
+	
+							  </div>
+							</fieldset>
 						  </div>
-						  <div class="nhsuk-radios__item">
-							<input class="nhsuk-radios__input" id="example-inline-4" name="example-inline" type="radio" value="routine">
-							<label class="nhsuk-label nhsuk-radios__label nhsuk-radios--inline" for="example-inline-2">
-							  Due date
-							</label>
-						  </div>
-						  
+						</div>
 
-						  </div>
-					  </div>
+					</div>
+					</div>
 					</div>
 				
-					</fieldset>
-				  </div>
-				  </div>
+
 				  <div class="nhsuk-grid-row">
 	  
-					<div class="nhsuk-grid-column-full">
+					<div class="nhsuk-grid-column-one-third">
 	  
 					  <div class="nhsuk-form-group">
 						<button class="nhsuk-button nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0" type="submit">
@@ -188,6 +264,7 @@
 					</div>
 				
 				  </div>
+				</div>
 				
 				</form>
 			
