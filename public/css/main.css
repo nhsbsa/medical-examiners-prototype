@@ -7983,3 +7983,14 @@ textarea {
   box-shadow: 0 0 0 4px #ffeb3b;
   outline: 4px solid black;
   outline-offset: -4px; }
+
+.login-details {
+  float: right;
+  padding-left: 20px; }
+
+.nhsuk-icon__search {
+  fill: white !important;
+  margin-bottom: -10px; }
+
+.nhsuk-header__navigation-link {
+  display: inline-block; }
