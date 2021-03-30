@@ -103,14 +103,17 @@
 			<div class="nhsuk-header__content" id="content-header">
 				<nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="primary navigation">
 					<ul class="nhsuk-header__navigation-list" style="border:0">
-						<li class="nhsuk-header__navigation-item">
+					<!--	<li class="nhsuk-header__navigation-item">
 							<a class="nhsuk-header__navigation-link" href="#">
 								joe.bloggs@nhs.net					
 							</a>
 						</li>
 						<li class="nhsuk-header__navigation-item">
 							<a class="nhsuk-header__navigation-link" href="/">Sign out</a>
-						</li>
+						</li>-->
+						<li class="nhsuk-header__navigation-item">
+								<a class="nhsuk-header__navigation-link" href="search">Search</a>
+							</li>
 					</ul>
 				</nav>
 			</div>
@@ -130,7 +133,15 @@
 							<a class="nhsuk-secondary-navigation__link" {% if activesub == "closed" %}aria-current="page"{% endif %} href="closed-cases">Closed cases</a>
 						</li>
 					
-					
+						<li class="nhsuk-secondary-navigation__item">
+								<a class="nhsuk-secondary-navigation__link"href= "#">joe.bloggs@nhs.net</a>
+							</li>
+							<li class="nhsuk-secondary-navigation__item">
+									<a class="nhsuk-secondary-navigation__link"href= "#">Sign out</a>
+								</li>
+
+
+
 					</ul>
       			</nav>
 			</div>
