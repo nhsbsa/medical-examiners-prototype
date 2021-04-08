@@ -7112,22 +7112,6 @@ ul.grid-grid {
 .nav-active a {
   color: white !important; }
 
-.nhsuk-details__summary:before {
-  bottom: 0;
-  content: "";
-  left: 0;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent;
-  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-  border-width: 7px 0 7px 12.124px;
-  border-left-color: inherit; }
-
 .nhsuk-details__above--third {
   width: 33%;
   display: inline-block; }
@@ -7193,9 +7177,6 @@ ul.grid-grid {
 .nhsuk-expander .nhsuk-details__summary {
   padding: 0px !important; }
 
-.nhsuk-expander .nhsuk-details__summary-text {
-  background: none !important; }
-
 .nhsuk-expander .nhsuk-details__summary:focus .nhsuk-details__summary-text {
   background-color: #ffeb3b !important;
   box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
@@ -7203,22 +7184,6 @@ ul.grid-grid {
   outline: 4px solid transparent;
   text-decoration: none;
   background: #ffeb3b; }
-
-.nhsuk-expander .nhsuk-details__summary-text:before {
-  bottom: 0;
-  content: "";
-  left: 0;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent;
-  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-  border-width: 7px 0 7px 12.124px;
-  border-left-color: inherit; }
 
 .nhsuk-expander[open] .nhsuk-details__summary:focus .nhsuk-details__summary-text {
   background-color: #ffeb3b !important;
