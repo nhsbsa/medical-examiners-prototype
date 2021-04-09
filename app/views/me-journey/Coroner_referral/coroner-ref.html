@@ -39,8 +39,8 @@
 				</ul>
 			  </nav>
 			
-
-			
+</div>
+			<div class="nhsuk-grid-column-three-quarters">
             <h1>
                 Coroner referral
 			</h1>
@@ -54,12 +54,7 @@
 			</div>
 	
 
-			<div class="nhsuk-form-group">
-				<label class="nhsuk-label" for="input-width-10">
-					GMC Number 
-				</label>
-				<input class="nhsuk-input nhsuk-input--width-10" id="gmc" name="gmc" type="number" >
-			</div>
+		
 
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="contact">
@@ -67,6 +62,46 @@
 				</label>
 				<input class="nhsuk-input nhsuk-u-width-one-half" id="contact" name="contact" type="text" >
 			</div>
+
+			<div class="nhsuk-form-group">
+					<label class="nhsuk-label" for="input-width-10">
+						GMC Number 
+					</label>
+					<input class="nhsuk-input nhsuk-input--width-10" id="gmc" name="gmc" type="number" >
+				</div>
+
+				<div class="nhsuk-form-group">
+						<fieldset class="nhsuk-fieldset">
+							<legend class="nhsuk-fieldset__legend">
+								<p class="nhsuk-fieldset__heading">
+									Was the deceased attended to by the reporting doctor in the last 28 days?
+								</p>
+							</legend>
+						
+							<div class="nhsuk-radios nhsuk-radios--conditional">
+								<div class="nhsuk-radios__item">
+									<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
+									<label class="nhsuk-label nhsuk-radios__label" for="yes">
+										Yes
+									</label>
+								</div>
+								<div class="nhsuk-radios__item">
+									<input class="nhsuk-radios__input" id="no" name="case" type="radio" value="no">
+									<label class="nhsuk-label nhsuk-radios__label" for="no">
+										No
+									</label>
+								</div>
+				
+								
+							</div>
+						</fieldset>
+					</div>
+
+
+
+
+
+
 
 
 			<h3>Referral to the coroner</h3>
@@ -93,7 +128,7 @@
 		<fieldset class="nhsuk-fieldset">
 			<legend class="nhsuk-fieldset__legend">
 				<p class="nhsuk-fieldset__heading">
-					The case reported to the police?
+					Has the case been reported to the police?
 				</p>
 			</legend>
 		
@@ -116,12 +151,133 @@
 		</fieldset>
 	</div>
 
-	<h3>Next of kin</h3>
+	<h3>Deceased details</h3>
+	<div class="nhsuk-form-group">
+			<label class="nhsuk-label" for="surname">
+				Reason for admission
+			</label>
+			<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="4">
+					
+				</textarea>
+		</div>
+		
+
+		<div class="nhsuk-form-group">
+				<fieldset class="nhsuk-fieldset">
+					<legend class="nhsuk-fieldset__legend">
+						<p class="nhsuk-fieldset__heading">
+							Did the deceased suffer from mental health issues?
+						</p>
+					</legend>
+				
+					<div class="nhsuk-radios nhsuk-radios--conditional">
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
+							<label class="nhsuk-label nhsuk-radios__label" for="yes">
+								Yes
+							</label>
+						</div>
+						<div class="nhsuk-radios__item">
+							<input class="nhsuk-radios__input" id="no" name="case" type="radio" value="no">
+							<label class="nhsuk-label nhsuk-radios__label" for="no">
+								No
+							</label>
+						</div>
+		
+						
+					</div>
+				</fieldset>
+			</div>
+			
+
+			<div class="nhsuk-form-group">
+					<fieldset class="nhsuk-fieldset">
+						<legend class="nhsuk-fieldset__legend">
+							<p class="nhsuk-fieldset__heading">
+								Did the deceased have any medical devices?
+							</p>
+						</legend>
+					
+						<div class="nhsuk-radios nhsuk-radios--conditional">
+							<div class="nhsuk-radios__item">
+								<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
+								<label class="nhsuk-label nhsuk-radios__label" for="yes">
+									Yes
+								</label>
+							</div>
+							<div class="nhsuk-radios__item">
+								<input class="nhsuk-radios__input" id="no" name="case" type="radio" value="no">
+								<label class="nhsuk-label nhsuk-radios__label" for="no">
+									No
+								</label>
+							</div>
+			
+							
+						</div>
+					</fieldset>
+				</div>
+				
+			
+					<div class="nhsuk-form-group">
+
+							<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+									<legend class="nhsuk-fieldset__legend">
+									<p class="nhsuk-fieldset__heading">
+											Did the deceased suffer from any communicable infections below?
+										</p>
+							  </legend>
+						  
+							 
+						  
+							  <div class="nhsuk-checkboxes">
+						  
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+										Inoculation/splash (blood-borne)
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+										Aerosol (air-borne)
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+										Ingestion
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__item">
+										<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+										<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+												Contact
+										</label>
+									  </div>
+									  <div class="nhsuk-checkboxes__item">
+											<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+											<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+													None
+											</label>
+										  </div>
+
+							  </div>
+							</fieldset>
+						  
+						  </div>
+
+
+
+<!--	<h3>Main contact</h3>
 
 
 	<div class="nhsuk-form-group">
 			<label class="nhsuk-label" for="surname">
-				Name of next of kin/guardian/local authority
+				Name of main contact/guardian/local authority
 			</label>
 			<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
 		</div>
@@ -220,48 +376,28 @@
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="nhs-number" name="nhs-number" type="text" >
 	</div>
 		
+-->
 
 
-	<h3>Other</h3>
 	
-	<div class="nhsuk-form-group">
-		<fieldset class="nhsuk-fieldset">
-			<legend class="nhsuk-fieldset__legend">
-				<p class="nhsuk-fieldset__heading">
-					Did the deceased suffer from mental health issues?
-				</p>
-			</legend>
-		
-			<div class="nhsuk-radios nhsuk-radios--conditional">
-				<div class="nhsuk-radios__item">
-					<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
-					<label class="nhsuk-label nhsuk-radios__label" for="yes">
-						Yes
-					</label>
-				</div>
-				<div class="nhsuk-radios__item">
-					<input class="nhsuk-radios__input" id="no" name="case" type="radio" value="no">
-					<label class="nhsuk-label nhsuk-radios__label" for="no">
-						No
-					</label>
-				</div>
+</div>
 
-				
-			</div>
-		</fieldset>
-	</div>
 
-<hr>
 
 <div class="nhsuk-grid-column-full">
+	<hr>
 	<h3>Other information</h3>
 	
 	<div class="nhsuk-inset-text">
 		<span class="nhsuk-u-visually-hidden">Information: </span>
-		<p>Information below have been added from other sections within the system </p>
+		<p>Information below has been added from other sections within the system </p>
 	  </div>
 	</div>
+
+
 	  <div class="nhsuk-grid-column-two-thirds">
+
+
 	<details class="nhsuk-details nhsuk-expander">
 		<summary class="nhsuk-details__summary">
 		  <span class="nhsuk-details__summary-text">
@@ -291,9 +427,24 @@
 						  2 November 1935
 						</dd>
 					
-				  
 					
 					  </div>
+
+					 
+					  <div class="nhsuk-summary-list__row">
+							<dt class="nhsuk-summary-list__key">
+							  NHS number
+							</dt>
+							<dd class="nhsuk-summary-list__value">
+									9975360025
+							</dd>
+						
+						
+						  </div>
+
+
+
+
 					  <div class="nhsuk-summary-list__row">
 						<dt class="nhsuk-summary-list__key">
 						  Sex
@@ -381,6 +532,66 @@
 	  </details>
 
 
+<details class="nhsuk-details nhsuk-expander">
+		<summary class="nhsuk-details__summary">
+		  <span class="nhsuk-details__summary-text">
+			GP details
+		  </span>
+		</summary>
+		<div class="nhsuk-details__text">
+			  <dl class="nhsuk-summary-list">
+
+					  <div class="nhsuk-summary-list__row">
+						<dt class="nhsuk-summary-list__key">
+						  Name
+						</dt>
+						<dd class="nhsuk-summary-list__value">
+						 Dr. Martin Lincoln
+						</dd>
+					
+					   
+					
+					  </div>
+					
+				
+
+					
+					  <div class="nhsuk-summary-list__row">
+						<dt class="nhsuk-summary-list__key">
+						 Address
+						</dt>
+						<dd class="nhsuk-summary-list__value">
+						  73 Roman Rd<br>Leeds<br> LS2 5ZN
+						</dd>
+					  </div>
+					
+					
+					  <div class="nhsuk-summary-list__row">
+							<dt class="nhsuk-summary-list__key">
+							 Phone number
+							</dt>
+							<dd class="nhsuk-summary-list__value">
+							  0191 2233445
+							</dd>
+						  </div>
+
+				
+
+
+
+
+
+					</dl>
+		</div>
+	  </details>
+
+
+
+
+
+
+
+	  
 	  <details class="nhsuk-details nhsuk-expander">
 		<summary class="nhsuk-details__summary">
 		  <span class="nhsuk-details__summary-text">
