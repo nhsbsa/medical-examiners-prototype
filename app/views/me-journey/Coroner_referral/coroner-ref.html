@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-	Coroner Referel
+	Coroner referral
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -59,6 +59,8 @@
 			<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="contact">
 					Contact details
+					<div class="nhsuk-hint">
+						You can enter a phone number or email address </div>
 				</label>
 				<input class="nhsuk-input nhsuk-u-width-one-half" id="contact" name="contact" type="text" >
 			</div>
@@ -66,6 +68,8 @@
 			<div class="nhsuk-form-group">
 					<label class="nhsuk-label" for="input-width-10">
 						GMC Number 
+						<div class="nhsuk-hint">
+							You can enter a phone or bleep number or email address </div>
 					</label>
 					<input class="nhsuk-input nhsuk-input--width-10" id="gmc" name="gmc" type="number" >
 				</div>
@@ -151,7 +155,7 @@
 		</fieldset>
 	</div>
 
-	<h3>Deceased details</h3>
+	<h3>Additional information</h3>
 	<div class="nhsuk-form-group">
 			<label class="nhsuk-label" for="surname">
 				Reason for admission
@@ -166,7 +170,7 @@
 				<fieldset class="nhsuk-fieldset">
 					<legend class="nhsuk-fieldset__legend">
 						<p class="nhsuk-fieldset__heading">
-							Did the deceased suffer from mental health issues?
+							Did the person who died suffer from mental health issues?
 						</p>
 					</legend>
 				
@@ -194,7 +198,7 @@
 					<fieldset class="nhsuk-fieldset">
 						<legend class="nhsuk-fieldset__legend">
 							<p class="nhsuk-fieldset__heading">
-								Did the deceased have any medical devices?
+								Did the person who died have any medical devices?
 							</p>
 						</legend>
 					
@@ -223,8 +227,10 @@
 							<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
 									<legend class="nhsuk-fieldset__legend">
 									<p class="nhsuk-fieldset__heading">
-											Did the deceased suffer from any communicable infections below?
+											Did the person who died suffer from any communicable infections?
 										</p>
+										<div class="nhsuk-hint">
+											Select all that apply </div>
 							  </legend>
 						  
 							 
@@ -390,7 +396,7 @@
 	
 	<div class="nhsuk-inset-text">
 		<span class="nhsuk-u-visually-hidden">Information: </span>
-		<p>Information below has been added from other sections within the system </p>
+		<p>Information taken from elsewhere in the system appaears in the following sections. </p>
 	  </div>
 	</div>
 
@@ -401,7 +407,7 @@
 	<details class="nhsuk-details nhsuk-expander">
 		<summary class="nhsuk-details__summary">
 		  <span class="nhsuk-details__summary-text">
-			Deceased details
+			Deceased person's details
 		  </span>
 		</summary>
 		<div class="nhsuk-details__text">
@@ -546,7 +552,7 @@
 						  Name
 						</dt>
 						<dd class="nhsuk-summary-list__value">
-						 Dr. Martin Lincoln
+						 Dr. Abdul Malik
 						</dd>
 					
 					   
@@ -595,7 +601,7 @@
 	  <details class="nhsuk-details nhsuk-expander">
 		<summary class="nhsuk-details__summary">
 		  <span class="nhsuk-details__summary-text">
-			Cause of death
+			Proposed cause of death
 		  </span>
 		</summary>
 		<div class="nhsuk-details__text">
@@ -611,7 +617,7 @@
 	  <details class="nhsuk-details nhsuk-expander">
 		<summary class="nhsuk-details__summary">
 		  <span class="nhsuk-details__summary-text">
-			Case concern
+			Case concerns
 		  </span>
 		</summary>
 		<div class="nhsuk-details__text">
