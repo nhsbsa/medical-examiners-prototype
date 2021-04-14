@@ -1,0 +1,348 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "cases" %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Case concerns
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+ 
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		
+		<div class="nhsuk-grid-column-full">
+			<nav class="nhsuk-red-background patient-info">
+				<ul role="navigation">
+				  <li><span><strong>Case type: </strong> Urgent</span></li>
+				  <li><span><strong> Forename(s): </strong> Martin</span></li>
+				  <li><span><strong>Surname: </strong> Lincoln</span></li>
+				  <li><span><strong>Date of birth: </strong> 02/11/1935</span></li>
+				  <li><span><strong>NHS Number: </strong> 9975360025</span></li>
+				</ul>
+			  </nav>
+			
+</div>
+			<div class="nhsuk-grid-column-three-quarters">
+            <h1>
+                Case concerns
+			</h1>
+			
+
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="surname">
+					Name of the person raising concern 
+				</label>
+				<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
+			</div>
+	
+
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="surname">
+					Role or relevance of the person to the case
+					<div class="nhsuk-hint">
+						For example,family member,or person involved in case </div>
+				</label>
+				<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
+			</div>
+
+<br>
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="surname">
+					Date the concern was raised
+					
+				</label>
+				<div class="nhsuk-form-group">
+					<fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+					 
+					  <div class="nhsuk-hint" id="example-hint">
+						For example, 22 3 2021
+					  </div>
+				  
+					  <div class="nhsuk-date-input" id="example">
+						<div class="nhsuk-date-input__item">
+						  <div class="nhsuk-form-group">
+							<label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+							  Day
+							</label>
+							<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+						  </div>
+						</div>
+						<div class="nhsuk-date-input__item">
+						  <div class="nhsuk-form-group">
+							<label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+							  Month
+							</label>
+							<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+						  </div>
+						</div>
+						<div class="nhsuk-date-input__item">
+						  <div class="nhsuk-form-group">
+							<label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+							  Year
+							</label>
+							<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+						  </div>
+						</div>
+					  </div>
+					</fieldset>
+				  
+				  </div>
+			</div>
+
+			<br>
+			<div class="nhsuk-form-group">
+				<label class="nhsuk-label" for="surname">
+					Time the concern was raised
+					
+				</label>
+				<div class="nhsuk-form-group">
+					<fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+					 
+					  <div class="nhsuk-hint" id="example-hint">
+						Use 24 hour format. For example, 16 23
+					  </div>
+				  
+					  <div class="nhsuk-date-input" id="example">
+						<div class="nhsuk-date-input__item">
+						  <div class="nhsuk-form-group">
+							<label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+							  Hour
+							</label>
+							<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+						  </div>
+						</div>
+						<div class="nhsuk-date-input__item">
+						  <div class="nhsuk-form-group">
+							<label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+							  Minutes
+							</label>
+							<input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+						  </div>
+						</div>
+					
+					  </div>
+					</fieldset>
+				  
+				  </div>
+			</div>
+
+			<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+				<legend class="nhsuk-fieldset__legend">
+				<p class="nhsuk-fieldset__heading">
+						Category of concern
+					</p>
+					
+		  </legend>
+	  
+		 
+	  
+		  <div class="nhsuk-checkboxes">
+	  
+			<div class="nhsuk-checkboxes__item">
+			  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+			  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+					Care concern raised by bereaved family and carers
+			  </label>
+			</div>
+	  
+			<div class="nhsuk-checkboxes__item">
+			  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+			  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+					Care concern raised by medical examiner or staff
+			  </label>
+			</div>
+	  
+			<div class="nhsuk-checkboxes__item">
+				<input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+				<label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+					  Deceased person had learning disabilities and severe mental illness
+				</label>
+			  </div>
+			<div class="nhsuk-checkboxes__item">
+			  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+			  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+					Death occured in a service speciality, particular diagnosis or treatement group where an 'alarm' has been raised with the provider
+			  </label>
+			</div>
+	  
+			<div class="nhsuk-checkboxes__item">
+					<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+					<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+							Death occured in an area where people are not expected to die
+					</label>
+				  </div>
+
+				  <div class="nhsuk-checkboxes__item">
+					<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+					<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+							Death where learning will inform exisiting or planned improvement work 
+					</label>
+				  </div>
+
+				  
+
+				 
+				
+
+					  <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+						<div class="nhsuk-checkboxes__item">
+						  <input class="nhsuk-checkboxes__input" id="contact-1" name="contact" type="checkbox" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+						  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-1">
+							Other
+						  </label>
+						</div>
+				  
+						<div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-1">
+				  
+						  <div class="nhsuk-form-group">
+							<label class="nhsuk-label" for="email">
+							  Details
+							</label>
+							<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="4">
+
+							</textarea>
+						  </div>
+				  
+						</div>
+				  
+		  </div>
+		</fieldset>
+
+		<br>
+		
+					<div class="nhsuk-form-group">
+
+							<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+									<legend class="nhsuk-fieldset__legend">
+									<p class="nhsuk-fieldset__heading">
+											Select which organisation this concern relates to
+										</p>
+										
+							  </legend>
+						  
+							 
+						  
+							  <div class="nhsuk-checkboxes">
+						  
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+										NHS acute hospital where the death occured
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+										Other NHS acute hospital
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__item">
+									<input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+									<label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+										  Primary care (GP)
+									</label>
+								  </div>
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+										NHS community hospital
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__item">
+										<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+										<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+												NHS mental health trust provider
+										</label>
+									  </div>
+
+									  <div class="nhsuk-checkboxes__item">
+										<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+										<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+												NHS ambulance service
+										</label>
+									  </div>
+
+									  <div class="nhsuk-checkboxes__item">
+										<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+										<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+												Local authority (for example,social care provision)
+										</label>
+									  </div>
+
+									  <div class="nhsuk-checkboxes__item">
+										<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+										<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+												Independent provider
+										</label>
+									  </div>
+									  <div class="nhsuk-checkboxes__item">
+											<input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+											<label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+													None
+											</label>
+										  </div>
+
+										  <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+											<div class="nhsuk-checkboxes__item">
+											  <input class="nhsuk-checkboxes__input" id="contact-1" name="contact" type="checkbox" value="email" aria-controls="conditional-contact-2" aria-expanded="false">
+											  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-1">
+												Other
+											  </label>
+											</div>
+									  
+											<div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+									  
+											  <div class="nhsuk-form-group">
+												<label class="nhsuk-label" for="email">
+												  Details
+												</label>
+												<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="4">
+					
+												</textarea>
+											  </div>
+									  
+											</div>
+									  
+							  </div>
+							</fieldset>
+						  
+						  </div>
+
+
+	
+
+		<div class="nhsuk-u-width-one-half">
+			<a class="nhsuk-button" hroverview" draggable="false" href='case_concern_2'>
+				Save and continue
+			</a>
+		</div>
+			<div class="nhsuk-u-width-one-half">
+				<a href="../case-overview">Return to previous page without saving</a>
+			</div>
+		
+	</div>
+{% endblock %}
+
