@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Confirmation page 
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+     
+
+          <div class="nhsuk-panel nhsuk-u-margin-bottom-5" style="background: #005EB8; margin-top: 0;">
+              <h1 class="nhsuk-panel__title" style="color: white;">Your account is set up</h1><span class="nhsuk-caption-l nhsuk-caption--bottom" style="text-align: center; color: white;">
+                You can use your authentication app to sign in to the Medical Examiner System </span>
+                </div>
+       
+
+      
+      <h2>
+          What happens next:
+        </h2>
+        <p>
+          Use Authy to generate 6 digit code when you log in in to the system next time.
+          </p>
+
+       
+          <p>
+            To begin select Continue.
+            </p>
+        
+       
+ 
+    
+{{ button({
+  "text": "Continue",
+  "href": "#"
+}) }}
+
+
+
+
+
+
+
+  
+    
+    </div>
+
+
+
+
+
+   
+  </div>
+{% endblock %}
