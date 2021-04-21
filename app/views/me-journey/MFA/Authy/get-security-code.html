@@ -34,42 +34,45 @@ NHS Medical Examiners - Get security code
 
   <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="surname">
-          Open the Authy app and scan the QR code.
          
+         
+          <ol>
+              <li>  Scan the QR code displayed on screen using the Authy app on your mobile phone.</li>
+             
+              <div class="nhsuk-inset-text">
+                  <span class="nhsuk-u-visually-hidden">Information: </span>
+                  <p>  I am using <a href = "#">Authy on my computer.</a></p>
+                </div>
+               
+
+                <div class="nhsuk-form-group">
+   
+                    <figure class="nhsuk-image">
+                      <img class="nhsuk-image__img" src="/images/QR_code.jpg"  alt="QR Codes">
+                      
+                      </figure>
+                 
+                
+                </div>
+
+                <li>  Enter the code that appears on your mobile phone.</li>
+                <div class="nhsuk-hint">
+                    Enter code. This is a 6 digit code, like 123456.  </div>
+                    <input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
+            </ol> 
+            
+
          </label> </div>
 
 
-    <div class="nhsuk-inset-text">
-        <span class="nhsuk-u-visually-hidden">Information: </span>
-        <p>  I have a <a href = "#">desktop Authy application.</a></p>
-      </div>
-   
+  
  
-  <div class="nhsuk-form-group">
-   
-    <figure class="nhsuk-image">
-      <img class="nhsuk-image__img" src="/images/QR_code.jpg"  alt="QR Codes">
+ 
       
-      </figure>
-    
-   
+       
+       
+
      
-
-</div>
-      
-       
-       
-
-       <div class="nhsuk-form-group">
-				<label class="nhsuk-label" for="surname">
-					Enter the code that appears on your mobile phone.
-					
-    <div class="nhsuk-hint">
-        This is a 6 digit code, like 123456.  </div>
-					
-				</label>
-				<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
-        </div>
         
 
         {{ button({
