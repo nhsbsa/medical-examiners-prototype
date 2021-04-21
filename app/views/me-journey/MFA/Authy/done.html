@@ -1,15 +1,23 @@
-{% extends 'layout.html' %}
+{% extends 'layout-sidebar-no-login.html' %}
 
 {% block pageTitle %}
-  Confirmation page 
+NHS Medical Examiners - Confirmation page 
 {% endblock %}
 
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}{% endblock %}
+
+
 {% block content %}
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper--s" id="maincontent" role="main">
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-
+        {% from 'fieldset/macro.njk' import fieldset %}
+        {% from "input/macro.njk" import input %}
      
-
+        <div class="nhsuk-grid-column-two-thirds">
           <div class="nhsuk-panel nhsuk-u-margin-bottom-5" style="background: #005EB8; margin-top: 0;">
               <h1 class="nhsuk-panel__title" style="color: white;">Your account is set up</h1><span class="nhsuk-caption-l nhsuk-caption--bottom" style="text-align: center; color: white;">
                 You can use your authentication app to sign in to the Medical Examiner System </span>
@@ -52,5 +60,8 @@
 
 
    
+  
   </div>
+</div>
+</main>
 {% endblock %}
