@@ -51,6 +51,19 @@ NHS Medical Examiners - Home
   </label>
   <input class="nhsuk-input nhsuk-!-width-two-thirds" id="password" name="password" type="password" data-validate="required" autocomplete="current-password">
 </div>
+<br>
+
+<div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <span class="govuk-warning-text__text">
+      <span class="visually-hidden">  </span>
+      Your session will time out after 60 minutes of inactivity.
+    </span>
+  </div>
+
+
+
+
 
 {{ button({
   "text": "Sign in",
@@ -58,13 +71,7 @@ NHS Medical Examiners - Home
 }) }}
 
   </form>
-  <div class="govuk-warning-text">
-    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-    <strong class="govuk-warning-text__text">
-      <span class="govuk-warning-text__assistive"></span>
-      Your session will time out after 60 minutes of inactivity.
-    </strong>
-  </div>
+
 </div>
   </div>
 </div>
