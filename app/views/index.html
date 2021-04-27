@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'template.html' %}
+{% extends 'layout.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-	Medical Examiners Prototype
+  NHS.UK prototype kit
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -22,42 +22,272 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-	<div class="nhsuk-grid-row">
-		<div class="nhsuk-grid-column-full">
-			<h1>
-				Medical Examiners Prototype
-			</h1>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
 
-			<div class="nhsuk-action-link">
-				<a class="nhsuk-action-link__link" href="/me-journey">
-				  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-					<path d="M0 0h24v24H0z" fill="none"></path>
-					<path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-				  </svg>
-				  <span class="nhsuk-action-link__text">ME Journey</span>
-				</a>
-			</div>
+      <!-- Change the page title here -->
+      <h1>
+          Medical Examiner Service -Manage my caseload
+        <!--  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>-->
+      </h1>
 
-			<div class="nhsuk-action-link">
-				<a class="nhsuk-action-link__link" href="/meo-journey">
-					<svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-					<path d="M0 0h24v24H0z" fill="none"></path>
-					<path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-					</svg>
-					<span class="nhsuk-action-link__text">MEO Journey</span>
-				</a>
-			</div>
-		</div>
-	</div>
-{% endblock %}
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
-{% block footer %}
-{{ footer({
-	"links": [
-	  {
-		"URL": "/",
-		"label": "Home"
-	  }
-	]
-  })}}
+      <p class="nhsuk-lede-text">
+          Medical Examiners and Medical Examiner Officers and Attending Practitioners will use to log cases, record their scrutiny of non-coronial deaths, and refer to a coroner if necessary.
+      </p>
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Sharing this prototype
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>To give others access to this prototype:</p>
+            <ul>
+              <li>Username : medex </li>
+              <li>Password : medex</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Previous work
+            </span>
+          </summary>
+          <br>
+          <p>Prototype developed by FE Dev - Lee Bodak
+          <div class="nhsuk-details__text">
+            <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/index"><button class="nhsuk-button"
+              type="submit">Start</button></a></p>
+
+             <p> For iteration work - refer <a href = "https://bsa2468.atlassian.net/wiki/spaces/ME/pages/2516287503/Prototype+References">here </a></p>
+          </div>
+        </details>
+      <hr>
+
+      <h2>
+        Sprint work - Private Beta
+      </h2>
+
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary" >
+          <span class="nhsuk-details__summary-text">Sprint 14 - Multi factor authentication</span>
+    </summary>
+    <div class="nhsuk-details__text">
+    <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+       <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text"><small>MFA</small></span>
+       </summary>
+    
+    <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+    <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a MFA
+       <strong>will be a useful feature for</strong>
+    users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger authentication.
+     <strong>This will</strong> reduce the risk of security threat.</p>
+    <hr>
+    
+    <p>Took learning from MOT Testing's MFA user journey.</p>
+    
+    <h3 class="nhsuk-heading-m">What we changed:</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+    
+    <li>Added few screens to the journey to take users through on how to set the authentication app login</li>
+   
+   
+   
+    
+    </ul>
+    <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+        <li> Are users able to follow the steps to fully set the authentication app </li>
+        <li></li>
+    
+    <li>..</li>
+    </ul>
+    <h3 class="nhsuk-heading-m">What we found:</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+    <li></li>
+    <li></li>
+    </ul>
+    <h3 class="nhsuk-heading-m">Any known issues?</h3>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+    <li>No validation errors</li>
+    <li></li>
+    </ul>
+    <hr>
+   
+    
+    
+    <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Authy/login-page"><button class="nhsuk-button"
+      type="submit">First time logging in - set up Authy</button></a></p>
+
+      <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Sign_in/login-page"><button class="nhsuk-button"
+        type="submit">User signing in once Authy been set up </button></a></p>
+    
+    
+    
+
+    </details>
+    </details>
+
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary" >
+            <span class="nhsuk-details__summary-text">Sprint 13 & 14 - Case concerns</span>
+      </summary>
+      <div class="nhsuk-details__text">
+      <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text"><small>Case concerns</small></span>
+         </summary>
+      
+      <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+      <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a case concern
+         <strong>will be a useful feature for</strong>
+      users <strong>as it will</strong> help users to add concerns to a case & to be able to produce report for the quarterly report. 
+       <strong>This will</strong> help users to complete their tasks.</p>
+      <hr>
+      
+      
+      <h3 class="nhsuk-heading-m">What we changed:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      
+      <li>Add a concern</li>
+      <li>Ability for users to record any concerns pertaining to a case</li>
+      <li>Edit facility to edit details of concern</li>
+      <li>Cateogary of concerns are all based on the required data for the Quarterly Report</li>
+     
+     
+      
+      </ul>
+      <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+          <li> Are the provided fields sufficient for users to record a concern</li>
+          <li>Are users able to complete their task</li>
+          <li>User need identified to add free text box to allow users to key in the name of the Organisation the concern relates to (this was added after the UR session)</li>
+          <li>Using exclamation mark to to flag cases with concerns - this was identified as a user need</li>
+          <li>Are users able to produce QR report with all the relevant fields asked</li>
+      
+      <li>..</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">What we found:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>Recorded here : https://miro.com/app/board/o9J_kgGxF1o=/</li>
+      <li>Fields are sufficient and seem to go down well with users</li>
+      <li>Exclamation mark (for cases with case concern) - was received well</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">Any known issues?</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>No validation errors</li>
+      <li></li>
+      </ul>
+      <hr>
+     
+      
+      
+      <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/add_concern"><button class="nhsuk-button"
+        type="submit">Add a concen</button></a></p>
+
+      
+       
+      
+        <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/open-cases_concern"><button class="nhsuk-button"
+          type="submit">Flagging case concern</button></a></p>
+
+      </details>
+      </details>
+      
+
+
+
+
+
+
+
+
+      <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary" >
+            <span class="nhsuk-details__summary-text">Sprint 14 - Search </span>
+      </summary>
+      <div class="nhsuk-details__text">
+      <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text"><small>Search functionality</small></span>
+         </summary>
+      
+      <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+      <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding the Search functionality
+         <strong>will be a useful feature for</strong>
+      users <strong>as it will</strong> help users to locate cases already in the system so users can provide updates to others, add additional information
+      within a case & this was identified as a key user need.  <strong>This will</strong> help users to confidently use the service.</p>
+      <hr>
+      
+      
+      <h3 class="nhsuk-heading-m">What we changed:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      
+      <li>Added a search link on the header</li>
+      <li>Search criterias added based on User need : First & Last name, Case types, NHS & hosp number</li>
+      <li>Search result page</li>
+     
+      
+      </ul>
+      <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>Whether or not user able to find the icon to search </li>
+          <li>Are the search criterias sufficient</li>
+          <li>Usability level of the search form</li>
+      
+      <li>..</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">What we found:</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>Users found this feature to be useful</li>
+      </ul>
+      <h3 class="nhsuk-heading-m">Any known issues?</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>No validation errors</li>
+      <li></li>
+      </ul>
+      <hr>
+     
+      
+      
+      <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/search"><button class="nhsuk-button"
+        type="submit">Search</button></a></p>
+
+      
+      
+      
+      
+
+      </details>
+      </details>
+      
+
+
+     
+
+    <!--   <h2>
+        Documentation
+      </h2>
+
+      <ul>
+        <li>
+          Get started with <a href="/docs">how to guides and page templates</a>
+        </li>
+        <li>
+          Copy and paste styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
+        </li>
+      </ul>
+
+      End of content -->
+
+    </div>
+  </div>
 {% endblock %}
