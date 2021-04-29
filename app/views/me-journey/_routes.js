@@ -81,7 +81,7 @@ router.post('/qap-handler-yes', function (req, res) {
 
 //Coroner Ref
 
-router.post('/portal-handler', function (req, res) {
+router.post(/portal-handler/, function (req, res) {
   // Make a variable and give it the value from 'know-nhs-number'
   var portal = req.session.data['portal']
 
