@@ -78,4 +78,32 @@ router.post('/qap-handler-yes', function (req, res) {
     res.redirect('case-overview')
   }
 })
+
+//Coroner Ref
+
+router.post('/portal-handler', function (req, res) {
+  // Make a variable and give it the value from 'know-nhs-number'
+  var portal = req.session.data['portal']
+
+  // Check whether the variable matches a condition
+  if (portal == "yes"){
+    // Send user to next page
+    res.redirect('#')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('coroner-ref_iteration-2')
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
 module.exports = router;

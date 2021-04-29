@@ -152,13 +152,13 @@
 						
 							<div class="nhsuk-radios nhsuk-radios--conditional">
 								<div class="nhsuk-radios__item">
-									<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
+									<input class="nhsuk-radios__input" id="yes" name="life" type="radio" value="yes">
 									<label class="nhsuk-label nhsuk-radios__label" for="yes">
 										Yes
 									</label>
 								</div>
 								<div class="nhsuk-radios__item">
-									<input class="nhsuk-radios__input" id="no" name="case" type="radio" value="no">
+									<input class="nhsuk-radios__input" id="no" name="life" type="radio" value="no">
 									<label class="nhsuk-label nhsuk-radios__label" for="no">
 										No
 									</label>
@@ -265,14 +265,7 @@
 			<h3>Referral to the coroner</h3>
 				
 			
-			<div class="nhsuk-form-group">
-					<label class="nhsuk-label" for="surname">
-						Reason for admission
-					</label>
-					<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="4">
-							
-						</textarea>
-				</div>
+		
 				
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="forename">
@@ -311,13 +304,13 @@
 	
 		<div class="nhsuk-radios nhsuk-radios--conditional">
 			<div class="nhsuk-radios__item">
-				<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
+				<input class="nhsuk-radios__input" id="yes" name="sex" type="radio" value="yes">
 				<label class="nhsuk-label nhsuk-radios__label" for="yes">
 					Male
 				</label>
 			</div>
 			<div class="nhsuk-radios__item">
-				<input class="nhsuk-radios__input" id="no" name="case" type="radio" value="no">
+				<input class="nhsuk-radios__input" id="no" name="sex" type="radio" value="no">
 				<label class="nhsuk-label nhsuk-radios__label" for="no">
 					Female
 				</label>
@@ -372,6 +365,107 @@
 						</div>
 
 
+						<h3>Main contact's details</h3>
+
+						<div class="nhsuk-form-group">
+							<label class="nhsuk-label" for="surname">
+								First name 
+							</label>
+							<input class="nhsuk-input nhsuk-u-width-one-half" id="firstname" name="firstname" type="text" >
+			
+							<label class="nhsuk-label" for="surname">
+									Last name 
+								</label>
+								<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
+						</div>
+				
+
+						<div class="nhsuk-form-group">
+							<label class="nhsuk-label" for="surname">
+								Relationship to the deceased person
+							</label>
+							<input class="nhsuk-input nhsuk-u-width-one-half" id="relationship" name="relationship" type="text" >
+			
+							
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="nhsuk-form-group">
+
+							<label class="nhsuk-label" for="contact">
+									Contact details
+									<div class="nhsuk-hint">
+										Select all that apply. </div>
+									
+								</label>
+							
+						  
+							  <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+						  
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="contact-7" name="contact" type="checkbox" value="email" aria-controls="conditional-contact-7" aria-expanded="false">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-7">
+									Email
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-7">
+						  
+								  <div class="nhsuk-form-group">
+									<label class="nhsuk-label" for="email">
+									  Email address
+									</label>
+									<input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+								  </div>
+						  
+								</div>
+						  
+								<div class="nhsuk-checkboxes__item">
+								  <input class="nhsuk-checkboxes__input" id="contact-8" name="contact" type="checkbox" value="phone" aria-controls="conditional-contact-8" aria-expanded="false">
+								  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-8">
+									Phone
+								  </label>
+								</div>
+						  
+								<div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-8">
+						  
+								  <div class="nhsuk-form-group">
+									<label class="nhsuk-label" for="phone">
+									  Phone number
+									</label>
+									<input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
+								  </div>
+						  
+								</div>
+						  
+							
+						  
+						  
+							  </div>
+			  
+						  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 	<h3>Additional information</h3>
 	
 
@@ -385,13 +479,13 @@
 				
 					<div class="nhsuk-radios nhsuk-radios--conditional">
 						<div class="nhsuk-radios__item">
-							<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
+							<input class="nhsuk-radios__input" id="yes" name="mental" type="radio" value="yes">
 							<label class="nhsuk-label nhsuk-radios__label" for="yes">
 								Yes
 							</label>
 						</div>
 						<div class="nhsuk-radios__item">
-							<input class="nhsuk-radios__input" id="no" name="case" type="radio" value="no">
+							<input class="nhsuk-radios__input" id="no" name="mental" type="radio" value="no">
 							<label class="nhsuk-label nhsuk-radios__label" for="no">
 								No
 							</label>
@@ -774,58 +868,7 @@
 	  </details>
 
 
-<details class="nhsuk-details nhsuk-expander">
-		<summary class="nhsuk-details__summary">
-		  <span class="nhsuk-details__summary-text">
-			GP details
-		  </span>
-		</summary>
-		<div class="nhsuk-details__text">
-			  <dl class="nhsuk-summary-list">
 
-					  <div class="nhsuk-summary-list__row">
-						<dt class="nhsuk-summary-list__key">
-						  Name
-						</dt>
-						<dd class="nhsuk-summary-list__value">
-						 Dr. Abdul Malik
-						</dd>
-					
-					   
-					
-					  </div>
-					
-				
-
-					
-					  <div class="nhsuk-summary-list__row">
-						<dt class="nhsuk-summary-list__key">
-						 Place of work
-						</dt>
-						<dd class="nhsuk-summary-list__value">
-						  Gateshead Central Medical Centre
-						</dd>
-					  </div>
-					
-					
-					  <div class="nhsuk-summary-list__row">
-							<dt class="nhsuk-summary-list__key">
-							 Contact details
-							</dt>
-							<dd class="nhsuk-summary-list__value">
-							  0191 2233445
-							</dd>
-						  </div>
-
-				
-
-
-
-
-
-					</dl>
-		</div>
-	  </details>
 
 
 
@@ -834,19 +877,7 @@
 
 
 	  
-	  <details class="nhsuk-details nhsuk-expander">
-		<summary class="nhsuk-details__summary">
-		  <span class="nhsuk-details__summary-text">
-			Proposed cause of death
-		  </span>
-		</summary>
-		<div class="nhsuk-details__text">
-			<p>Summary of death: Information derived from 'QAP proposed death'</p>
-			
-			<p>This helps you understand the summary of cause of death</p>
-	  
-		  </div>
-	  </details>
+
 
 	 
 			
