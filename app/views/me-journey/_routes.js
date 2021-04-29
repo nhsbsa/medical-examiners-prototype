@@ -88,7 +88,7 @@ router.post(/portal-handler/, function (req, res) {
   // Check whether the variable matches a condition
   if (portal == "yes"){
     // Send user to next page
-    res.redirect('#')
+    res.redirect('case-overview')
   }
   else {
     // Send user to ineligible page
