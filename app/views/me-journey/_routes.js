@@ -97,8 +97,22 @@ router.post(/portal-handler/, function (req, res) {
 })
 
 
+//MFA Iteration 2
 
+router.post(/download-handler/, function (req, res) {
+  // Make a variable and give it the value from 'know-nhs-number'
+  var download = req.session.data['download']
 
+  // Check whether the variable matches a condition
+  if (download == "desktop"){
+    // Send user to next page
+    res.redirect('enter-key')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('get-security-code')
+  }
+})
 
 
 
