@@ -43,7 +43,41 @@ NHS Medical Examiners - Set up an authentication app
   
   <p>Use the app to generate a 6 digit security code each time you sign in.</p>
 
+  <h3>Which device do you want to download an authentication app onto?</h3>
    
+  <form action="download-handler" method="post">
+
+      <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+             
+          </legend>
+  ​
+          <div class="nhsuk-radios">
+           
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="desktop" name="download" type="radio" value="desktop">
+                          
+                      <label class="nhsuk-label nhsuk-radios__label" for="desktop">
+                          Dekstop (including laptop)
+                      </label>
+                  </div>
+  ​
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="smartphone" name="download" type="radio" value="smartphone">
+                      <label class="nhsuk-label nhsuk-radios__label" for="smartphone">
+                         Smartphone
+                      </label>
+                  </div>
+  ​
+  ​
+  ​
+          </div>
+      </fieldset>
+      <br>
+      <button class="nhsuk-button" type="submit">
+          Continue
+      </button>
+      </form>
        
        </div>
   
@@ -58,11 +92,7 @@ NHS Medical Examiners - Set up an authentication app
 </div>
   </div>
 
-  <div class="nhsuk-u-width-one-half">
-    <a class="nhsuk-button" hroverview" draggable="false" href='download'>
-      Continue
-    </a>
-    </div>
+ 
 </div>
 
 
