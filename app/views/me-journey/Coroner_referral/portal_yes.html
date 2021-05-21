@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "cases" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -23,7 +23,7 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
- 
+
 
 {% block content %}
 	<div class="nhsuk-grid-row">
@@ -43,22 +43,28 @@
 				Coroner referral
             </h1>
 
-            
+
             <div class="nhsuk-form-group">
-               
+
                     <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-two-thirds">
                                     <p>If you are no longer referring via the coroner's portal, select <strong>Change</strong> to complete
                                     the referral here.</p>
 <hr>
 
-<p style="text-align:left"><span class="govuk-warning-text__icon" aria-hidden="true">! </span> </p>
-<strong class="govuk-warning-text__text">
-    <span class="govuk-warning-text__assistive"></span>
-    Before making a change, check that the case has not already been referred via the portal.
-  </strong>
 
-<!-- 
+
+	<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Before making a change
+    </span>
+  </h3>
+  <p>Check that the case has not already been referred via the portal</p>
+</div>
+
+<!--
   <div class="nhsuk-warning-callout">
       <h3 class="nhsuk-warning-callout__label">
         <span role="text">
@@ -76,39 +82,39 @@
                                                 Referring via the coroner's portal
                                               </dt>
                                               <dd class="nhsuk-summary-list__value" >
-                                                <p style="text-align:center">Yes</p> 
+                                                <p style="text-align:center">Yes</p>
                                               </dd>
-                                          
+
                                               <dd class="nhsuk-summary-list__actions">
-                                          
+
                                                 <a href="portal">
                                                   Change<span class="nhsuk-u-visually-hidden"> name</span>
                                                 </a>
-                                          
+
                                               </dd>
-                                          
+
                                             </div>
-                                          
-                                            
-                                          
-                                            
-                                          
-                                           
-                                          
+
+
+
+
+
+
+
                                           </dl>
 
 
                             </div>
-                          </div>   
-
-              
+                          </div>
 
 
 
 
 
 
-             
+
+
+
                           <div class="nhsuk-u-width-one-half">
                                 <a class="nhsuk-button" hroverview" draggable="false" href='case-overview'>
                                     Save and continue

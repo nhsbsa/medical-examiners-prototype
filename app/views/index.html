@@ -4,9 +4,9 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -84,39 +84,39 @@
        <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text"><small>Coroner Referral</small></span>
        </summary>
-    
+
     <h3 class="nhsuk-heading-m">Hypothesis A</h3>
     <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a Coroner Referral section
        <strong>will be a useful feature for</strong>
-    users <strong>as this will ensure users record information that can be transferred to the Coroner.</strong> Users need to fill this section if they are not filling up the Coroner's web portal. 
+    users <strong>as this will ensure users record information that can be transferred to the Coroner.</strong> Users need to fill this section if they are not filling up the Coroner's web portal.
      <strong>This will</strong> enable a case to be referred to a coroner so that further independent scrutiny can take place.</p>
     <hr>
-    
-  
-    
+
+
+
     <h3 class="nhsuk-heading-m">What we changed:</h3>
     <ul class="nhsuk-list nhsuk-list--bullet">
-    
+
     <li>Information will be derived from several parts of the system to be transferred to the Coroner (so that we are not asking the same question twice)</li>
    <li>There are two types of scenario : Scenario 1 - this is the best case scenario & Scenario 2 - worst case scenario</li>
    <li>Scenario 1 - where all the fields in the other sections (incl the optional ones) are filled up</li>
    <li>Scenario 2 - where none of the optional fields been filled</li>
-   
-    
+
+
     </ul>
     <h3 class="nhsuk-heading-m">What we plan to test:</h3>
     <ul class="nhsuk-list nhsuk-list--bullet">
         <li> Are users able to follow the user journey to complete the referral </li>
         <li> Whether users understand that some information has been filled in other sections within MES
            will be pull through to this section</li>
-           
-    
+
+
     <li>..</li>
     </ul>
     <h3 class="nhsuk-heading-m">What we found:</h3>
     <ul class="nhsuk-list nhsuk-list--bullet">
     <li>Users never had to provide Communicable infections to the Coroner - although this is something that the Stakeholder requested; Following UR - we decided to remove this question</li>
-    <li> Medical Device : users were confused with this term; further discussion within the team we 
+    <li> Medical Device : users were confused with this term; further discussion within the team we
       found that this ques is for the FD therefore removed it and will be added to the MCCD service</li>
       <li>UR indicated cases referred to the Coroner are usually made by the MEO (with the advice from ME); Users were inputting the MEO's name in Reporting person fields
          - this was changed to Referring doctor as Coroner wants details of someone with the GMC number and not the MEO</li>
@@ -128,17 +128,17 @@
     <li></li>
     </ul>
     <hr>
-   
-    
-    
+
+
+
     <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral/portal"><button class="nhsuk-button"
       type="submit">Scenario 2</button></a></p>
 
       <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral/coroner-ref"><button class="nhsuk-button"
         type="submit">Scenario 1 </button></a></p>
-    
-    
-    
+
+
+
 
     </details>
     </details>
@@ -156,36 +156,36 @@
         <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
             <summary class="nhsuk-details__summary">
                <span class="nhsuk-details__summary-text"><small>MFA - Iteration 2</small></span>
-               
+
             </summary>
-         
+
          <h3 class="nhsuk-heading-m">Hypothesis A</h3>
          <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a MFA
             <strong>will be a useful feature for</strong>
          users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger authentication.
           <strong>This will</strong> reduce the risk of security threat.</p>
          <hr>
-         
+
          <p>Took learning from MOT Testing's MFA user journey.</p>
-         
+
          <h3 class="nhsuk-heading-m">What we changed:</h3>
          <ul class="nhsuk-list nhsuk-list--bullet">
-         
+
          <li>Added few more suggestions of authentication apps and letting users decide which app to download</li>
          <li>Changed the display of 'Key to enter' from Inset text to warning call out</li>
          <li>To provide better UX; added a screen asking user how are they going to download the app</li>
-         
+
          <li></li>
-        
-        
-        
-         
+
+
+
+
          </ul>
          <h3 class="nhsuk-heading-m">What we plan to test:</h3>
          <ul class="nhsuk-list nhsuk-list--bullet">
              <li> Are users able to follow the steps to fully set the authentication app </li>
              <li></li>
-         
+
          <li>..</li>
          </ul>
          <h3 class="nhsuk-heading-m">What we found:</h3>
@@ -198,48 +198,48 @@
          <li></li>
          </ul>
          <hr>
-        
-         
-         
+
+
+
          <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Authy/iteration-2/login-page"><button class="nhsuk-button"
            type="submit">Iteration2 - set up Authy</button></a></p>
-     
+
            <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Sign_in/login-page"><button class="nhsuk-button"
              type="submit">User signing in once Authy been set up </button></a></p>
-         
-         
-         
-     
+
+
+
+
          </details>
     <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
        <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text"><small>MFA - Iteration 1</small></span>
-          
+
        </summary>
-    
+
     <h3 class="nhsuk-heading-m">Hypothesis A</h3>
     <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a MFA
        <strong>will be a useful feature for</strong>
     users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger authentication.
      <strong>This will</strong> reduce the risk of security threat.</p>
     <hr>
-    
+
     <p>Took learning from MOT Testing's MFA user journey.</p>
-    
+
     <h3 class="nhsuk-heading-m">What we changed:</h3>
     <ul class="nhsuk-list nhsuk-list--bullet">
-    
+
     <li>Added few screens to the journey to take users through on how to set the authentication app login</li>
-   
-   
-   
-    
+
+
+
+
     </ul>
     <h3 class="nhsuk-heading-m">What we plan to test:</h3>
     <ul class="nhsuk-list nhsuk-list--bullet">
         <li> Are users able to follow the steps to fully set the authentication app </li>
         <li></li>
-    
+
     <li>..</li>
     </ul>
     <h3 class="nhsuk-heading-m">What we found:</h3>
@@ -247,7 +247,7 @@
     <li>Participants understood the need of MFA and was ok to download the app</li>
     <li>However, participants found difficulities in navigating 3rd party website (Authy) once they have downloaded the app</li>
     <li>Participant was unsure on how to progress once they have downloaded the app back to our service</li>
-    <li>Participant did not see the key to be entered and went straight to the 2nd point on entering the 
+    <li>Participant did not see the key to be entered and went straight to the 2nd point on entering the
       code & got confused on what to do and did not know how to get the code</li>
       <li>Participant got confused between the  smartphone and desktop app download journey</li>
     </ul>
@@ -257,20 +257,20 @@
     <li></li>
     </ul>
     <hr>
-   
-    
-    
+
+
+
     <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Authy/login-page"><button class="nhsuk-button"
       type="submit">First time logging in - set up Authy</button></a></p>
 
       <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Sign_in/login-page"><button class="nhsuk-button"
         type="submit">User signing in once Authy been set up </button></a></p>
-    
-    
-    
+
+
+
 
     </details>
-   
+
     </details>
 
 
@@ -283,25 +283,25 @@
          <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text"><small>Case concerns</small></span>
          </summary>
-      
+
       <h3 class="nhsuk-heading-m">Hypothesis A</h3>
       <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a case concern
          <strong>will be a useful feature for</strong>
-      users <strong>as it will</strong> help users to add concerns to a case & to be able to produce report for the quarterly report. 
+      users <strong>as it will</strong> help users to add concerns to a case & to be able to produce report for the quarterly report.
        <strong>This will</strong> help users to complete their tasks.</p>
       <hr>
-      
-      
+
+
       <h3 class="nhsuk-heading-m">What we changed:</h3>
       <ul class="nhsuk-list nhsuk-list--bullet">
-      
+
       <li>Add a concern</li>
       <li>Ability for users to record any concerns pertaining to a case</li>
       <li>Edit facility to edit details of concern</li>
       <li>Cateogary of concerns are all based on the required data for the Quarterly Report</li>
-     
-     
-      
+
+
+
       </ul>
       <h3 class="nhsuk-heading-m">What we plan to test:</h3>
       <ul class="nhsuk-list nhsuk-list--bullet">
@@ -310,7 +310,7 @@
           <li>User need identified to add free text box to allow users to key in the name of the Organisation the concern relates to (this was added after the UR session)</li>
           <li>Using exclamation mark to to flag cases with concerns - this was identified as a user need</li>
           <li>Are users able to produce QR report with all the relevant fields asked</li>
-      
+
       <li>..</li>
       </ul>
       <h3 class="nhsuk-heading-m">What we found:</h3>
@@ -325,21 +325,21 @@
       <li></li>
       </ul>
       <hr>
-     
-      
-      
+
+
+
       <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/add_concern"><button class="nhsuk-button"
         type="submit">Add a concen</button></a></p>
 
-      
-       
-      
+
+
+
         <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/open-cases_concern"><button class="nhsuk-button"
           type="submit">Flagging case concern</button></a></p>
 
       </details>
       </details>
-      
+
 
 
 
@@ -357,30 +357,30 @@
          <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text"><small>Search functionality</small></span>
          </summary>
-      
+
       <h3 class="nhsuk-heading-m">Hypothesis A</h3>
       <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding the Search functionality
          <strong>will be a useful feature for</strong>
       users <strong>as it will</strong> help users to locate cases already in the system so users can provide updates to others, add additional information
       within a case & this was identified as a key user need.  <strong>This will</strong> help users to confidently use the service.</p>
       <hr>
-      
-      
+
+
       <h3 class="nhsuk-heading-m">What we changed:</h3>
       <ul class="nhsuk-list nhsuk-list--bullet">
-      
+
       <li>Added a search link on the header</li>
       <li>Search criterias added based on User need : First & Last name, Case types, NHS & hosp number</li>
       <li>Search result page</li>
-     
-      
+
+
       </ul>
       <h3 class="nhsuk-heading-m">What we plan to test:</h3>
       <ul class="nhsuk-list nhsuk-list--bullet">
           <li>Whether or not user able to find the icon to search </li>
           <li>Are the search criterias sufficient</li>
           <li>Usability level of the search form</li>
-      
+
       <li>..</li>
       </ul>
       <h3 class="nhsuk-heading-m">What we found:</h3>
@@ -393,23 +393,23 @@
       <li></li>
       </ul>
       <hr>
-     
-      
-      
+
+
+
       <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/search"><button class="nhsuk-button"
         type="submit">Search</button></a></p>
 
-      
-      
-      
-      
+
+
+
+
 
       </details>
       </details>
-      
 
 
-     
+
+
 
     <!--   <h2>
         Documentation
