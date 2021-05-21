@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "cases" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -23,7 +23,7 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
- 
+
 
 {% block content %}
 	<div class="nhsuk-grid-row">
@@ -39,9 +39,11 @@
 				</ul>
 			  </nav>
 
-			<h1>
-				Coroner referral
-            </h1>
+				<header class="page-header">
+				                          <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Coroner notification</span>
+				                          <h1 class="nhsuk-heading-xl">Notification method</h1>
+				                        </header>
+
             <div class="nhsuk-form-group">
 
               <form action="portal-handler" method="post">
@@ -49,32 +51,35 @@
               <fieldset class="nhsuk-fieldset">
                   <legend class="nhsuk-fieldset__legend">
                       <p class="nhsuk-fieldset__heading">
-                          Are you referring this case via the coroner's portal?
+                          Select the notification method</p>
                           <div class="nhsuk-hint">
-                                If you select yes, make sure that the case is referred via the portal promptly to avoid delays. </div>
-                      </p>
+                                If you select coroner’s portal or other external method, make sure that the coroner is notified promptly to avoid delays.​ </div>
+
                   </legend>
           ​
-                  <div class="nhsuk-radios">
-                   
-                          <div class="nhsuk-radios__item">
-                              <input class="nhsuk-radios__input" id="yes" name="portal" type="radio" value="yes">
-                                  
-                              <label class="nhsuk-label nhsuk-radios__label" for="yes">
-                                  Yes
-                              </label>
-                          </div>
-          ​
-                          <div class="nhsuk-radios__item">
-                              <input class="nhsuk-radios__input" id="no" name="portal" type="radio" value="no">
-                              <label class="nhsuk-label nhsuk-radios__label" for="no">
-                                 No
-                              </label>
-                          </div>
-          ​
-          ​
-          ​
-                  </div>
+					<div class="nhsuk-radios">
+
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="gateway" aria-describedby="example-hints-1-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+	External notification​
+</label>
+<div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+For example, via the coroner’s portal​
+</div>
+</div>
+
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+Medical Examiner Office – Manage my caseload (this service)​
+</label>
+<div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+	This will generate a PDF that can be emailed to the coroner’s office
+</div>
+</div>
+
+</div>
               </fieldset>
               <br>
               <button class="nhsuk-button" type="submit">
