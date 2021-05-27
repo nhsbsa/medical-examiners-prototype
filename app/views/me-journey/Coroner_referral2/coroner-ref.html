@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "cases" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -23,11 +23,11 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
- 
+
 
 {% block content %}
 	<div class="nhsuk-grid-row">
-		
+
 		<div class="nhsuk-grid-column-full">
 			<nav class="nhsuk-red-background patient-info">
 				<ul role="navigation">
@@ -38,117 +38,118 @@
 				  <li><span><strong>NHS Number: </strong> 9975360025</span></li>
 				</ul>
 			  </nav>
-			
+
 </div>
 			<div class="nhsuk-grid-column-three-quarters">
+				<span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Coroner notification</span>
             <h1>
-                Coroner referral
+                Notification form
 			</h1>
-			<h3>Referring doctor</h3>
+			<h3>Notifying doctor</h3>
 
 			<div class="nhsuk-form-group">
 					<label class="nhsuk-label" for="surname">
-						First name 
+						First name
 					</label>
 					<input class="nhsuk-input nhsuk-u-width-one-half" id="firstname" name="firstname" type="text" >
-	
+
 					<label class="nhsuk-label" for="surname">
-							Last name 
+							Last name
 						</label>
 						<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
 				</div>
 
 				<div class="nhsuk-form-group">
 						<label class="nhsuk-label" for="input-width-10">
-							GMC Number 
-							
+							GMC Number
+
 						</label>
 						<input class="nhsuk-input nhsuk-input--width-10" id="gmc" name="gmc" type="number" >
 					</div>
-	
-	
+
+
 					<div class="nhsuk-form-group">
 
 							<label class="nhsuk-label" for="contact">
 									Contact details
 									<div class="nhsuk-hint">
 										Select all that apply. </div>
-									
+
 								</label>
-							
-						  
+
+
 							  <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
-						  
+
 								<div class="nhsuk-checkboxes__item">
 								  <input class="nhsuk-checkboxes__input" id="contact-1" name="contact" type="checkbox" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
 								  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-1">
 									Email
 								  </label>
 								</div>
-						  
+
 								<div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-1">
-						  
+
 								  <div class="nhsuk-form-group">
 									<label class="nhsuk-label" for="email">
 									  Email address
 									</label>
 									<input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
 								  </div>
-						  
+
 								</div>
-						  
+
 								<div class="nhsuk-checkboxes__item">
 								  <input class="nhsuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
 								  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
 									Phone
 								  </label>
 								</div>
-						  
+
 								<div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-2">
-						  
+
 								  <div class="nhsuk-form-group">
 									<label class="nhsuk-label" for="phone">
 									  Phone number
 									</label>
 									<input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
 								  </div>
-						  
+
 								</div>
-						  
+
 								<div class="nhsuk-checkboxes__item">
 								  <input class="nhsuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
 								  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
 									Bleep number
 								  </label>
 								</div>
-						  
+
 								<div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-3">
-						  
+
 								  <div class="nhsuk-form-group">
 									<label class="nhsuk-label" for="mobile">
 									  Bleep number
 									</label>
 									<input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
 								  </div>
-						  
-								</div>
-						  
-							  </div>
-			  
-						  </div>
-			
-			
 
-			
+								</div>
+
+							  </div>
+
+						  </div>
+
+
+
+
 
 				<div class="nhsuk-form-group">
 						<fieldset class="nhsuk-fieldset">
 							<legend class="nhsuk-fieldset__legend">
 								<p class="nhsuk-fieldset__heading">
-										Did the referring doctor see the deceased person alive within the last 28 days?
+										Did the notifying doctor see the deceased person alive within the last 28 days?
 								</p>
 							</legend>
-						
+
 							<div class="nhsuk-radios nhsuk-radios--conditional">
 								<div class="nhsuk-radios__item">
 									<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
@@ -162,8 +163,8 @@
 										No
 									</label>
 								</div>
-				
-								
+
+
 							</div>
 						</fieldset>
 					</div>
@@ -175,24 +176,24 @@
 
 
 
-			<h3>Referral to the coroner</h3>
-							
+			<h3>Notification to the coroner</h3>
+
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="forename">
-				Reason for referral, and brief medical and medication history
+				Reason for notification, and brief medical and medication history
 		</label>
 		<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="4">
-				
+
 						</textarea>
 	</div>
-		
 
-	
-	
+
+
+
 
 	<h3>Additional information</h3>
-	
-		
+
+
 
 		<div class="nhsuk-form-group">
 				<fieldset class="nhsuk-fieldset">
@@ -201,7 +202,7 @@
 								Did the deceased person suffer from mental health issues?
 						</p>
 					</legend>
-				
+
 					<div class="nhsuk-radios nhsuk-radios--conditional">
 						<div class="nhsuk-radios__item">
 							<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
@@ -215,12 +216,12 @@
 								No
 							</label>
 						</div>
-		
-						
+
+
 					</div>
 				</fieldset>
 			</div>
-			
+
 			<div class="nhsuk-form-group">
 					<fieldset class="nhsuk-fieldset">
 						<legend class="nhsuk-fieldset__legend">
@@ -228,7 +229,7 @@
 								Has the case been reported to the police?
 							</p>
 						</legend>
-					
+
 						<div class="nhsuk-radios nhsuk-radios--conditional">
 							<div class="nhsuk-radios__item">
 								<input class="nhsuk-radios__input" id="yes" name="case" type="radio" value="yes">
@@ -242,15 +243,15 @@
 									No
 								</label>
 							</div>
-			
-							
+
+
 						</div>
 					</fieldset>
 				</div>
-		
-				
-			
-					
+
+
+
+
 
 
 
@@ -271,21 +272,21 @@
 						Address
 					</p>
 				</legend>
-			
+
 				<div class="nhsuk-form-group">
 					<label class="nhsuk-label" for="address-line-1">
 						Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
 					</label>
 					<input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" >
 				</div>
-			
+
 				<div class="nhsuk-form-group">
 					<label class="nhsuk-label" for="address-line-2">
 						<span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
 					</label>
 					<input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
 				</div>
-			
+
 				<div class="nhsuk-form-group">
 				<label class="nhsuk-label" for="address-postcode">
 					Postcode
@@ -302,7 +303,7 @@
 						Name of deceased's GP
 					</label>
 
-					
+
 					<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
 				</div>
 
@@ -312,8 +313,8 @@
 						<label class="nhsuk-label" for="surname">
 							 GMC number
 						</label>
-	
-						
+
+
 						<input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
 					</div>
 
@@ -325,21 +326,21 @@
 								Address
 							</p>
 						</legend>
-					
+
 						<div class="nhsuk-form-group">
 							<label class="nhsuk-label" for="address-line-1">
 								Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
 							</label>
 							<input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" >
 						</div>
-					
+
 						<div class="nhsuk-form-group">
 							<label class="nhsuk-label" for="address-line-2">
 								<span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
 							</label>
 							<input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
 						</div>
-					
+
 						<div class="nhsuk-form-group">
 						<label class="nhsuk-label" for="address-postcode">
 							Postcode
@@ -357,11 +358,11 @@
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="nhs-number" name="nhs-number" type="text" >
 	</div>
-		
+
 -->
 
 
-	
+
 </div>
 
 
@@ -369,7 +370,7 @@
 <div class="nhsuk-grid-column-full">
 	<hr>
 	<h3>Additional information</h3>
-	
+
 	<div class="nhsuk-inset-text">
 		<span class="nhsuk-u-visually-hidden">Information: </span>
 		<p>Information taken from elsewhere in the system appears in the following sections. </p>
@@ -396,11 +397,11 @@
 						<dd class="nhsuk-summary-list__value">
 						  Martin Lincoln
 						</dd>
-					
-					   
-					
+
+
+
 					  </div>
-					
+
 					  <div class="nhsuk-summary-list__row">
 						<dt class="nhsuk-summary-list__key">
 						  Date of birth
@@ -408,11 +409,11 @@
 						<dd class="nhsuk-summary-list__value">
 						  2 November 1935
 						</dd>
-					
-					
+
+
 					  </div>
 
-					 
+
 					  <div class="nhsuk-summary-list__row">
 							<dt class="nhsuk-summary-list__key">
 							  NHS number
@@ -420,8 +421,8 @@
 							<dd class="nhsuk-summary-list__value">
 									9975360025
 							</dd>
-						
-						
+
+
 						  </div>
 
 
@@ -434,9 +435,9 @@
 						<dd class="nhsuk-summary-list__value">
 						  Male
 						</dd>
-					
-				  
-					
+
+
+
 					  </div>
 					  <div class="nhsuk-summary-list__row">
 						<dt class="nhsuk-summary-list__key">
@@ -445,8 +446,8 @@
 						<dd class="nhsuk-summary-list__value">
 						  73 Roman Rd<br>Leeds<br> LS2 5ZN
 						</dd>
-					
-					  
+
+
 					  </div>
 					  <div class="nhsuk-summary-list__row">
 						<dt class="nhsuk-summary-list__key">
@@ -455,9 +456,9 @@
 						<dd class="nhsuk-summary-list__value">
 						  <p>123456</p>
 						</dd>
-					
-					  
-					
+
+
+
 					  </div>
 					  <div class="nhsuk-summary-list__row">
 						<dt class="nhsuk-summary-list__key">
@@ -466,11 +467,11 @@
 						<dd class="nhsuk-summary-list__value">
 						  <p>Dr. Karen Francis</p>
 						</dd>
-					
-					  
-					
+
+
+
 					  </div>
-					
+
 
 					  <div class="nhsuk-summary-list__row">
 						<dt class="nhsuk-summary-list__key">
@@ -479,8 +480,8 @@
 						<dd class="nhsuk-summary-list__value">
 						  <p>02:45</p>
 						</dd>
-					
-					
+
+
 					  </div>
 
 					  <div class="nhsuk-summary-list__row">
@@ -490,8 +491,8 @@
 						<dd class="nhsuk-summary-list__value">
 						  <p>23 March 2021</p>
 						</dd>
-					
-					
+
+
 					  </div>
 
 					  <div class="nhsuk-summary-list__row">
@@ -501,8 +502,8 @@
 						<dd class="nhsuk-summary-list__value">
 						  <p>Hospital</p>
 						</dd>
-					
-					
+
+
 					  </div>
 
 
@@ -530,14 +531,14 @@
 						<dd class="nhsuk-summary-list__value">
 						 Dr. Abdul Malik
 						</dd>
-					
-					   
-					
-					  </div>
-					
-				
 
-					
+
+
+					  </div>
+
+
+
+
 					  <div class="nhsuk-summary-list__row">
 						<dt class="nhsuk-summary-list__key">
 						 Address
@@ -546,8 +547,8 @@
 						  73 Roman Rd<br>Leeds<br> LS2 5ZN
 						</dd>
 					  </div>
-					
-					
+
+
 					  <div class="nhsuk-summary-list__row">
 							<dt class="nhsuk-summary-list__key">
 							 Phone number
@@ -557,7 +558,7 @@
 							</dd>
 						  </div>
 
-				
+
 
 
 
@@ -573,7 +574,7 @@
 
 
 
-	  
+
 	  <details class="nhsuk-details nhsuk-expander">
 		<summary class="nhsuk-details__summary">
 		  <span class="nhsuk-details__summary-text">
@@ -582,14 +583,14 @@
 		</summary>
 		<div class="nhsuk-details__text">
 			<p>Summary of death: Information derived from 'QAP proposed death'</p>
-			
+
 			<p>This helps you understand the summary of cause of death</p>
-	  
+
 		  </div>
 	  </details>
 
-	 
-			
+
+
 	  <details class="nhsuk-details nhsuk-expander">
 		<summary class="nhsuk-details__summary">
 		  <span class="nhsuk-details__summary-text">
@@ -607,12 +608,12 @@ Concern raised by deceased brother.....</textarea>
 
 <textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="4" >
 Concern raised by deceased brother.....</textarea>
-				
-		
-	  
+
+
+
 		  </div>
 	  </details>
-	
+
 	</div>
 
 		<div class="nhsuk-u-width-one-half">
@@ -623,7 +624,6 @@ Concern raised by deceased brother.....</textarea>
 			<div class="nhsuk-u-width-one-half">
 				<a href="../case-overview">Return to previous page without saving</a>
 			</div>
-		
+
 	</div>
 {% endblock %}
-
