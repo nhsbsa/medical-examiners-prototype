@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "cases" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -23,11 +23,11 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
- 
+
 
 {% block content %}
 	<div class="nhsuk-grid-row">
-		
+
 		<div class="nhsuk-grid-column-full">
 			<nav class="nhsuk-red-background patient-info">
 				<ul role="navigation">
@@ -38,18 +38,18 @@
 				  <li><span><strong>NHS Number: </strong> 9975360025</span></li>
 				</ul>
 			  </nav>
-			
+
             <h1>
                 Deceased person's details
 			</h1>
-						
+
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="forename">
 			First name(s)
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="forename" name="forename" type="text" value="Martin">
 	</div>
-		
+
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="surname">
 			Last name
@@ -69,7 +69,7 @@
 					Sex
 				</p>
 			</legend>
-		
+
 			<div class="nhsuk-radios nhsuk-radios--conditional">
 				<div class="nhsuk-radios__item">
 					<input class="nhsuk-radios__input" id="gender-female" name="gender" type="radio" value="female">
@@ -84,7 +84,7 @@
 					</label>
 				</div>
 
-				
+
 			</div>
 		</fieldset>
 	</div>
@@ -99,7 +99,7 @@
 			<span class="nhsuk-hint" id="dob-hint">
 				For example, 15 3 1984
 			</span>
-		
+
 			<div class="nhsuk-date-input" id="dob">
 				<div class="nhsuk-date-input__item">
 					<div class="nhsuk-form-group">
@@ -126,7 +126,7 @@
 					</div>
 				</div>
 			</div>
-		</fieldset>	  
+		</fieldset>
 	</div>
 
 	<div class="nhsuk-form-group">
@@ -135,14 +135,14 @@
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="nhs-number" name="nhs-number" type="text" value="9975360025">
 	</div>
-		
+
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="hospital-number">
 			Hospital number <span class="optional-span">(optional)</span>
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-one-half" id="hospital-number" name="hospital-number" type="text" value="66543">
 	</div>
-		
+
 	<div class="nhsuk-form-group">
 		<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
 			<legend class="nhsuk-fieldset__legend">
@@ -153,7 +153,7 @@
 			<span class="nhsuk-hint" id="dob-hint">
 				For example, 15 3 1984
 			</span>
-		
+
 			<div class="nhsuk-date-input" id="dob">
 				<div class="nhsuk-date-input__item">
 					<div class="nhsuk-form-group">
@@ -180,7 +180,7 @@
 					</div>
 				</div>
 			</div>
-		</fieldset>	  
+		</fieldset>
 	</div>
 
 	<div class="nhsuk-form-group">
@@ -193,7 +193,7 @@
 			<span class="nhsuk-hint" id="dob-hint">
 				Please use 24 hour format. For example, 16 03
 			</span>
-		
+
 			<div class="nhsuk-date-input" id="dob">
 				<div class="nhsuk-date-input__item">
 					<div class="nhsuk-form-group">
@@ -212,7 +212,7 @@
 					</div>
 				</div>
 			</div>
-		</fieldset>	  
+		</fieldset>
 	</div>
 
 	<div class="nhsuk-form-group">
@@ -222,31 +222,31 @@
 					Request for rapid release?
 				</p>
 			</legend>
-		
+
 			<div class="nhsuk-radios nhsuk-radios--conditional">
-		
+
 				<div class="nhsuk-radios nhsuk-radios--conditional">
-		
+
 					<div class="nhsuk-radios__item">
 						<input class="nhsuk-radios__input" id="rapid-release-yes" name="rapid-release" type="radio" value="yes" checked="true" aria-controls="rapid-yes" aria-expanded="false">
 						<label class="nhsuk-label nhsuk-radios__label" for="apid-release-yes">
 							Yes
 						</label>
 					</div>
-	
-	
-	
+
+
+
 						<div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="rapid-yes">
-				  
+
 						  <div class="nhsuk-form-group">
 							<label class="nhsuk-label" for="email">
 							  Please specify why
 							</label>
 							<input class="nhsuk-input nhsuk-u-width-one-third" id="email" name="email" type="text">
 						  </div>
-				  
+
 						</div>
-	
+
 					<div class="nhsuk-radios__item">
 						<input class="nhsuk-radios__input" id="apid-release-no" name="rapid-release" type="radio" value="no">
 						<label class="nhsuk-label nhsuk-radios__label" for="apid-release-no">
@@ -256,42 +256,42 @@
 				</div>
 		</fieldset>
 	</div>
-		
+
 	<fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
 		<legend class="nhsuk-fieldset__legend">
 			<p class="nhsuk-fieldset__heading nhsuk-u-font-weight-bold">
 				Home address
 			</p>
 		</legend>
-	
+
 		<div class="nhsuk-form-group">
 			<label class="nhsuk-label" for="address-line-1">
 				Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
 			</label>
 			<input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" value="6, Abbey Farm">
 		</div>
-	
+
 		<div class="nhsuk-form-group">
 			<label class="nhsuk-label" for="address-line-2">
 				<span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
 			</label>
 			<input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
 		</div>
-	
+
 		<div class="nhsuk-form-group">
 			<label class="nhsuk-label" for="address-town">
 				Town or city <span class="optional-span">(optional)</span>
 			</label>
 			<input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" value="Winchester">
 		</div>
-	
+
 		<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="address-county">
 			County <span class="optional-span">(optional)</span>
 		</label>
 		<input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
 		</div>
-	
+
 		<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="address-postcode">
 			Postcode
@@ -309,7 +309,7 @@
 
 	<div class="nhsuk-form-group">
 			<div class="nhsuk-checkboxes">
-		
+
 			<div class="nhsuk-checkboxes__item">
 				<input class="nhsuk-checkboxes__input" id="occupation-unknown" name="occupation-unknown" type="checkbox" value="unknown">
 				<label class="nhsuk-label nhsuk-checkboxes__label" for="occupation-unknown">
@@ -321,7 +321,7 @@
 
 	<div class="nhsuk-form-group">
 		<label class="nhsuk-label" for="additional-info">
-			You can list details about past jobs here. For example, if the person worked with harmful chemicals. 
+			You can list details about past jobs here. For example, if the person worked with harmful chemicals.
 		</label>
 		<textarea class="nhsuk-textarea" id="additional-info" name="additional-info" rows="5">
 Went down into pits for 36 years
@@ -338,4 +338,3 @@ Went down into pits for 36 years
 		</div>
 	</div>
 {% endblock %}
-
