@@ -7746,9 +7746,7 @@ ul.grid-grid {
   background-color: white;
   color: black; }
 
-nav.patient-info {
-  background-color: #d8dde0; }
-
+/*<<<<<<< HEAD*/
 nav.patient-info li {
   display: flex;
   justify-content: space-between; }
