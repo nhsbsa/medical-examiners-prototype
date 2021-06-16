@@ -41,28 +41,48 @@
 
 				<header class="page-header">
 				                          <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Coroner notification</span>
-				                          <h1 class="nhsuk-heading-xl">External coroner notification</h1>
+				                          <h1 class="nhsuk-heading-xl">Notification method</h1>
 				                        </header>
 
+            <div class="nhsuk-form-group">
 
+              <form action="coronerNotification" method="get">
 
+              <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend">
+                      <p class="nhsuk-fieldset__heading">
+                          Are you notifying the coroner about this case?</p>
+                  </legend>
+          ​
+					<div class="nhsuk-radios">
 
-                      <p class="nhsuk-body">
-                          There are several ways to complete an external coroner notification, including:​</p>
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="Yes" aria-describedby="example-hints-1-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup1">
+	Yes
+</label>
+</div>
 
-													<ul class="nhsuk-list nhsuk-list--bullet">
-															<li> using your local coroner’s portal </li>
-															<li> emailing a form​</li>
-															</ul>
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="No" aria-describedby="example-hints-2-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
+No​
+</label>
+</div>
 
-															<div class="nhsuk-inset-text">
-															  <span class="nhsuk-u-visually-hidden">Information: </span>
-															  <p>Ensure that the coroner is notified promptly to avoid delays.​</p>
-															</div>
+</div>
+              </fieldset>
+              <br>
+              <button class="nhsuk-button" type="submit">
+                  Save and continue
+              </button>
+              </form>
+          </div>
 
-															<p class="nhsuk-u-margin-bottom-0">
-											          <a href="case-overview3" class="nhsuk-link"">Return to Case overview</a></p>
+	<div class="nhsuk-u-width-one-half">
 
+		<a href="../case-overview">Return to previous page without saving</a>
+	</div>
 </div>
 </div>
 {% endblock %}
