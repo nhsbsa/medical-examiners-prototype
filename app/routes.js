@@ -33,7 +33,13 @@ router.get(/coronerAccept/, function (req, res) {
   }
 });
 
-
+router.get(/reOpenOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('location-of-death-hospital'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('location-of-death-community'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
 
 
 
