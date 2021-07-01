@@ -1,0 +1,114 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "cases" %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Case concerns
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+<nav class="nhsuk-red-background patient-info">
+    <ul role="navigation">
+      <li><span><strong>Case type: </strong> Urgent</span></li>
+      <li><span><strong> Forename(s): </strong> John</span></li>
+      <li><span><strong>Surname: </strong> Johnson</span></li>
+      <li><span><strong>Date of birth: </strong> 30/07/1961</span></li>
+      <li><span><strong>NHS Number: </strong> 9975360026</span></li>
+    </ul>
+  </nav>
+
+	<div class="nhsuk-grid-row">
+        
+		<div class="nhsuk-grid-column-full">
+            <div class="nhsuk-grid-row">
+          
+			
+				<div class="nhsuk-grid-column-two-thirds">
+					<h1 class="nhsuk-heading-xl">
+						Case concerns
+                    </h1>
+                    
+					
+
+				</div>
+				
+				<div class="nhsuk-grid-column-one-third">
+					<a href="case_concern_iteration2" class="nhsuk-button" style="float:right">
+					Add a concern
+					</a>
+          
+				</div>
+        <div class="nhsuk-grid-column-one-third">
+					<a href="close-concern-notify-coroner" class="nhsuk-button" style="float:right">
+					Save and continue
+					</a>
+				</div>
+			</div>
+            <div class="nhsuk-form-group">
+                <hr style="border-bottom:4px solid #005eb8; margin:0">
+            </div>
+        
+          
+            <div class="nhsuk-form-group">
+              
+                <label class="nhsuk-label" for="example">
+                  Concern raised by Augusta Willis (girlfriend)
+                </label>
+                
+                <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint" >Girfriend advised John her boyfriend (the deceased), had penicilin allergy which hasn't been mentioned previously.</textarea>
+                <span class="time-date-span">13/02/2021, 11:14</span>
+              </div>
+            
+
+
+              <a class="nhsuk-button nhsuk-button--secondary" href='case_concern_iteration2' type="submit">
+                  Edit concern
+              </a>
+
+              <div class="nhsuk-form-group">
+              
+                  <label class="nhsuk-label" for="example">
+                    Concern raised by Joseph Johnson (father)
+                  </label>
+                  
+                  <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint" >Father called and said that he haven't received any information about his son's death yet and unsure about further procedure.</textarea>
+                  <span class="time-date-span">14/02/2021, 11:38</span>
+                </div>
+        
+            
+
+                <a class="nhsuk-button nhsuk-button--secondary" href='case_concern_iteration2' type="submit">
+                    Edit concern
+                </a>
+
+
+
+
+            <div class="nhsuk-u-width-one-half">
+
+                <a href="../Re-open_re-close_case/re-open">Return to Case overview</a>
+            </div>
+			</div>
+
+			
+	</div>
+{% endblock %}
+

@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-	Location of death for closed case
+Close concern or notify the coroner
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -35,38 +35,36 @@
 				  <li><span><strong> Forename(s): </strong> John</span></li>
 				  <li><span><strong>Surname: </strong> Johnson</span></li>
 				  <li><span><strong>Date of birth: </strong> 30/07/1961</span></li>
-				  <li><span><strong>NHS number: </strong> 9975360026</span></li>
+				  <li><span><strong>NHS Number: </strong> 9975360026</span></li>
 				</ul>
 			  </nav>
-
-			<h1>
-				Location of death
-            </h1>
-            <div class="nhsuk-form-group">
-              <form action="reOpenOne" method="get">
+<h1>Case concerns</h1>
+			
+<div class="nhsuk-form-group">
+    <form action="caseConcerns" method="get">
                   
               <fieldset class="nhsuk-fieldset">
                   <legend class="nhsuk-fieldset__legend">
-                      <p class="nhsuk-fieldset__heading">
-                          Select where the person died
-                      </p>
+                      <h1 class="nhsuk-fieldset__heading">
+                          Would you like to
+                      </h1>
                   </legend>
           ​
                   <div class="nhsuk-radios">
                    
                           <div class="nhsuk-radios__item">
-                              <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio"
-                                  value="Yes">
-                              <label class="nhsuk-label nhsuk-radios__label" for="hospital">
-                                  Hospital or acute setting
+                            <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio"
+                                  value="yes">
+                              <label class="nhsuk-label nhsuk-radios__label" for="close-case">
+                                  Close the case
                               </label>
                           </div>
           ​
                           <div class="nhsuk-radios__item">
-                              <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio"
-                                  value="community">
-                              <label class="nhsuk-label nhsuk-radios__label" for="death-community">
-                                  Community or non-acute setting
+                            <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio"
+                                  value="no">
+                              <label class="nhsuk-label nhsuk-radios__label" for="notify the coroner">
+                                  Notify the coroner
                               </label>
                           </div>
           ​
@@ -75,7 +73,6 @@
                   </div>
               </fieldset>
               <br>
-              
               <button class="nhsuk-button" type="submit">
                   Save and continue
               </button>
@@ -84,7 +81,7 @@
 
 	<div class="nhsuk-u-width-one-half">
 
-		<a href="case-overview_closed-cases">Return to Case overview</a>
+		<a href="case_concern_overview">Return to Case overview without saving</a>
 	</div>
 </div>
 </div>

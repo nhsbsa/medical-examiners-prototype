@@ -41,7 +41,13 @@ router.get(/reOpenOne/, function (req, res) {
   }
 });
 
-
+router.get(/caseConcerns/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('case-overview_closed-cases'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('Coroner_referral/portal'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
 
 
 
