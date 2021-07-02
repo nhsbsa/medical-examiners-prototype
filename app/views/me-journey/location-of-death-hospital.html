@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "cases" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -23,7 +23,7 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
- 
+
 
 {% block content %}
 	<div class="nhsuk-grid-row">
@@ -42,17 +42,38 @@
 			<h1>
 				Location of the death
             </h1>
+							<label class="nhsuk-label" for="my-autocomplete">Healthcare provider</label>
+							<div id="my-autocomplete-container"></div>
+							<br><br>
 
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="example">
-                Healthcare provider
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-one-half" id="example" name="example" type="text">
-            </div>
+
+							{# <div class="autocomplete-wrapper">
+							          <div><div class="autocomplete__wrapper">
+													<div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+														<div id="last-location__status--A" role="status" aria-atomic="true" aria-live="polite">
+														</div>
+														<div id="last-location__status--B" role="status" aria-atomic="true" aria-live="polite">
+														</div>
+													</div>
+													<input aria-expanded="false" aria-owns="last-location__listbox" aria-autocomplete="both" aria-describedby="last-location__assistiveHint" autocomplete="off" class="autocomplete__input autocomplete__input--default" id="last-location" name="" placeholder="" type="text" role="combobox">
+													<ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="last-location__listbox" role="listbox">
+													</ul>
+													<span id="last-location__assistiveHint" style="display: none;">When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.</span>
+												</div>
+											</div>
+											<select name="last-location" id="last-location-select" style="display: none;">
+							            <option value="">Select a country</option>
+							            <option value="hospitalone">Hospital 1</option>
+							            <option value="hospitaltwo">Hospital 2</option>
+							            <option value="hospitalthree">Hospital 3</option>
+							            <option value="hospitalfour">Hospital 4</option>
+							            <option value="hospitalfive">Hospital 5</option>
+							          </select>
+							        </div> #}
 
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="example">
-                  Location details 
+                  Location details
                 </label>
                 <div class="nhsuk-hint" id="example-with-hint-text-hint">
                   For example, Ward 2B, or A&E
@@ -70,7 +91,7 @@
                   <span class="nhsuk-hint" id="dob-hint">
                     For example, 15 3 1984
                   </span>
-                
+
                   <div class="nhsuk-date-input" id="dob">
                     <div class="nhsuk-date-input__item">
                       <div class="nhsuk-form-group">
@@ -97,16 +118,16 @@
                       </div>
                     </div>
                   </div>
-                </fieldset>	  
+                </fieldset>
               </div>
-            
+
 
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="example">
                   Admission details (optional)
                 </label>
                 <div class="nhsuk-hint" id="example-with-hint-text-hint">
-                For example, the admission time, method and reason               
+                For example, the admission time, method and reason
                 </div>
                 <textarea class="nhsuk-textarea nhsuk-u-width-two-thirds" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
               </div>
@@ -120,4 +141,40 @@
 	</div>
 </div>
 </div>
+
+<!-- selector -->
+<script type="text/javascript" src="https://alphagov.github.io/accessible-autocomplete/dist/accessible-autocomplete.min.js"></script>
+<script type="text/javascript">
+      const countries = [
+      'Hospital 1',
+      'Hospital 2',
+      'Hospital 3',
+      'Hospital 4',
+      'Hospital 5'
+      ]
+
+      accessibleAutocomplete({
+        element: document.querySelector('#my-autocomplete-container'),
+        id: 'my-autocomplete', // To match it to the existing <label>.
+        source: countries
+      })
+
+      /*var selectEl = document.querySelector('#last-location')
+      accessibleAutocomplete.enhanceSelectElement({
+        autoselect: true,
+        confirmOnBlur: true,
+        defaultValue: "",
+        minLength: 2,
+        selectElement: selectEl
+      })
+
+      var queryStringParameters = window.location.search
+      var previouslySubmitted = queryStringParameters.length > 0
+      if (previouslySubmitted) {
+        var submittedEl = document.querySelector('.submitted')
+        submittedEl.classList.remove('submitted--hidden')
+        var params = new URLSearchParams(document.location.search.split('?')[1])
+        document.querySelector('.submitted__last-location').innerHTML = params.get('last-location')
+      }*/
+  </script>
 {% endblock %}
