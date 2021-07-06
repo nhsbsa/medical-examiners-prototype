@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "cases" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -23,7 +23,7 @@
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
- 
+
 
 {% block content %}
 	<div class="nhsuk-grid-row">
@@ -50,7 +50,7 @@
                     Important
                   </span>
                 </h3>
-                <p>You must ensure that the proposed cause of death entered here matches the copy provided by the QAP (quaified attending practitioner). This section 
+                <p>You must ensure that the proposed cause of death entered here matches the copy provided by the QAP (quaified attending practitioner). This section
                     should not be an interpretation of what the QAP has written.
                 </p>
               </div>
@@ -59,46 +59,60 @@
                 <label class="nhsuk-label" for="select-1">
                   Select the name of the QAP who proposed the cause of death
                 </label>
-                <select class="nhsuk-select nhsuk-u-width-one-half" id="select-1" name="select-1">
-                  <option value="1">QAP 1</option>
-                  <option value="2" selected>QAP 2</option>
-                </select>
+
               </div>
+							<div class="nhsuk-radios">
+
+								<div class="nhsuk-radios__item">
+									<input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+									<label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+										QAP 1
+									</label>
+								</div>
+
+								<div class="nhsuk-radios__item">
+									<input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+									<label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+										QAP 2
+									</label>
+								</div>
+								</div>
+
 
               <div class="nhsuk-inset-text nhsuk-u-width-one-half">
                 <span class="nhsuk-u-visually-hidden">Information: </span>
-                <p> <a href="/" title="Add a person"> Add a person</a> to the key people involved in care seciton if they do not appear in the drop-down list.</p>
+                <p> <a href="/" title="Add a person"> Add a person</a> to the key people involved in care section if they do not appear in the drop-down list.</p>
               </div>
 
               <div class="nhsuk-form-group">
 
                 <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
                   <legend class="nhsuk-fieldset__legend">
-              
+
                       Before submission, the QAP has discussed their proposed cause of death with:
-                    
+
                   </legend>
-              
+
                   <div class="nhsuk-hint" id="example-hint">
                     Select all options that apply.
                   </div>
-              
+
                   <div class="nhsuk-checkboxes">
-              
+
                     <div class="nhsuk-checkboxes__item">
                       <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
                         Another doctor or specialist
                       </label>
                     </div>
-              
+
                     <div class="nhsuk-checkboxes__item">
                       <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
                         Consultant
                       </label>
                     </div>
-              
+
                   </div>
                 </fieldset>
             </div>
@@ -117,7 +131,7 @@
                   </div>
 
                   <div class="nhsuk-form-group">
-              
+
                   {% include "includes/multi-grid-form-input.html" %}
 
                   </div>
@@ -134,10 +148,10 @@
                   <div class="nhsuk-form-group">
 
                     <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                  
-                  
+
+
                       <div class="nhsuk-checkboxes">
-                  
+
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
@@ -150,29 +164,29 @@
                             </span>
                           </label>
                         </div>
-                  
+
                       </div>
                     </fieldset>
-                  
+
                   </div>
 
                   <div class="nhsuk-form-group">
 
                     <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                  
-                  
+
+
                       <div class="nhsuk-checkboxes">
-                  
+
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
                             This section is complete and ready for the discussion between the medical examiner or medical examiner officer, and the QAP
                           </label>
                         </div>
-                  
+
                       </div>
                     </fieldset>
-                  
+
                   </div>
 
 	<a class="nhsuk-button" href="case-overview" draggable="false">
