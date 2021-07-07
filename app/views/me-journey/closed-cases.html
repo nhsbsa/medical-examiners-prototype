@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "closed" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -34,9 +34,9 @@
 					Closed cases
 				</h1>
 
-		
+
 				<button class="nhsuk-button nhsuk-button--secondary toggle-checkbox" onclick="toggleCheckbox()">
-					Reset table order       
+					Reset table order
 				  </button>
 				  <div class="checkbox-list" id="checkbox-toggle">
 					<div class="nhsuk-checkboxes">
@@ -120,7 +120,7 @@
 
 						<tbody class="nhsuk-table__body">
 							<tr class="nhsuk-table__row">
-								<td class="nhsuk-table__cell"><a href="Re-open_re-close_case/case-overview_closed-cases">John Johnson</a></td>
+								<td class="nhsuk-table__cell"><a href="Re-open_re-close_case/closed-case-overview">John Johnson</a></td>
 								<td class="nhsuk-table__cell">01/01/1980</td>
 								<td class="nhsuk-table__cell">01/01/2020</td>
 								<td class="nhsuk-table__cell">1234567890</td>
@@ -171,4 +171,3 @@
 		</div>
 	</div>
 {% endblock %}
-

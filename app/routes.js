@@ -33,19 +33,41 @@ router.get(/coronerAccept/, function (req, res) {
   }
 });
 
+// Re-open/close case routes //
+
 router.get(/reOpenOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
-    res.redirect('location-of-death-hospital'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('location-of-death-hospital');
   } else {
-    res.redirect('location-of-death-community'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('location-of-death-community');
   }
 });
 
-router.get(/caseConcerns/, function (req, res) {
+router.get(/reOpenTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "amend") {
+    res.redirect('re-open'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "concern") {
+    res.redirect('add_concern'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "amendCoD") {
+    res.redirect('QAP-proposed'); // if both input values are "Yes" - redirect to 'page-name' //
+  }else {
+    res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+router.get(/reOpenThree/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
-    res.redirect('case-overview_closed-cases'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('case-overview_closed-cases');
   } else {
-    res.redirect('Coroner_referral/portal'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('Coroner_referral/portal');
+  }
+});
+
+router.get(/reOpenFour/, function (req, res) {
+  if (req.query.radioInlineGroup === "coroner") {
+    res.redirect('../Coroner_referral2/coroner-notification');
+  } else {
+    res.redirect('QAP-proposed');
   }
 });
 

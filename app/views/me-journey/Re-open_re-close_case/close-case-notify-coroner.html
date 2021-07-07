@@ -6,9 +6,9 @@
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
 {% set activesub = "cases" %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -23,7 +23,7 @@ Close concern or notify the coroner
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
- 
+
 
 {% block content %}
 	<div class="nhsuk-grid-row">
@@ -39,19 +39,19 @@ Close concern or notify the coroner
 				</ul>
 			  </nav>
 <h1>Case concerns</h1>
-			
+
 <div class="nhsuk-form-group">
-    <form action="caseConcerns" method="get">
-                  
+    <form action="reOpenThree" method="get">
+
               <fieldset class="nhsuk-fieldset">
                   <legend class="nhsuk-fieldset__legend">
                       <h1 class="nhsuk-fieldset__heading">
-                          Would you like to
+                          Before you close this case, do you need to notify the coroner?
                       </h1>
                   </legend>
           ​
                   <div class="nhsuk-radios">
-                   
+
                           <div class="nhsuk-radios__item">
                             <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio"
                                   value="yes">
@@ -81,7 +81,7 @@ Close concern or notify the coroner
 
 	<div class="nhsuk-u-width-one-half">
 
-		<a href="case_concern_overview">Return to Case overview without saving</a>
+		<a href="re-open-concerns">Return to Case overview without saving</a>
 	</div>
 </div>
 </div>
