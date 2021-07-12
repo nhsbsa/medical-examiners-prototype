@@ -56,10 +56,10 @@ router.get(/reOpenTwo/, function (req, res) {
 });
 
 router.get(/reOpenThree/, function (req, res) {
-  if (req.query.radioInlineGroup === "yes") {
-    res.redirect('closed-case-overview');
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('case-overview_closed-cases');
   } else {
-    res.redirect('portal');
+    res.redirect('Coroner_referral/portal');
   }
 });
 
@@ -71,6 +71,7 @@ router.get(/reOpenFour/, function (req, res) {
   }
 });
 
+
 router.get(/caseProgress/, function (req, res) {
   if (req.query.radioInlineGroup === "personal") {
     res.redirect('personal-contact'); // if both input values are "Yes" - redirect to 'page-name' //
@@ -79,7 +80,11 @@ router.get(/caseProgress/, function (req, res) {
   } else if (req.query.radioInlineGroup === "note") {
     res.redirect('note'); // if both input values are "Yes" - redirect to 'page-name' //
   
+}
 });
+
+
+
 
 
 module.exports = router;
