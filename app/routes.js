@@ -59,13 +59,13 @@ router.get(/reOpenThree/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
     res.redirect('case-overview_closed-cases');
   } else {
-    res.redirect('Coroner_referral/portal');
+    res.redirect('../Coroner_referral2/internal-referral');
   }
 });
 
 router.get(/reOpenFour/, function (req, res) {
   if (req.query.radioInlineGroup === "coroner") {
-    res.redirect('../Coroner_referral2/coroner-notification');
+    res.redirect('../Coroner_referral2/internal-referral');
   } else {
     res.redirect('QAP-proposed');
   }
