@@ -1,0 +1,97 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "cases" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Coroner referral
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+
+			<nav class="nhsuk-red-background patient-info">
+				<ul role="navigation">
+				  <li><span><strong>Case type: </strong> Urgent</span></li>
+				  <li><span><strong> Forename(s): </strong> John</span></li>
+				  <li><span><strong>Surname: </strong> Johnson</span></li>
+				  <li><span><strong>Date of birth: </strong> 30/07/1961</span></li>
+				  <li><span><strong>NHS Number: </strong> 9975360026</span></li>
+				</ul>
+			  </nav>
+
+				<header class="page-header">
+				                          <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Coroner notification</span>
+				                          <h1 class="nhsuk-heading-xl">Notification method</h1>
+				                        </header>
+
+            <div class="nhsuk-form-group">
+
+              <form action="portal-handler" method="post">
+
+              <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend">
+                      <p class="nhsuk-fieldset__heading">
+                          Select the notification method</p>
+                          <div class="nhsuk-hint">
+                                If you select coroner’s portal or other external method, make sure that the coroner is notified promptly to avoid delays.​ </div>
+
+                  </legend>
+          ​
+					<div class="nhsuk-radios">
+
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="gateway" aria-describedby="example-hints-1-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+	External notification​
+</label>
+<div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+For example, via the coroner’s portal​
+</div>
+</div>
+
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+Medical Examiner Office – Manage my caseload (this service)​
+</label>
+<div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+	This will generate a PDF that can be emailed to the coroner’s office
+</div>
+</div>
+
+</div>
+              </fieldset>
+              <br>
+              <button class="nhsuk-button" type="submit">
+                  Save and continue
+              </button>
+              </form>
+          </div>
+
+	<div class="nhsuk-u-width-one-half">
+
+		<a href="../case-overview">Return to previous page without saving</a>
+	</div>
+</div>
+</div>
+{% endblock %}
