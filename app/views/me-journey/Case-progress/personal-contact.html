@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-	Case overview
+	Personal
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -43,7 +43,7 @@
                 <span class="nhsuk-caption-m nhsuk-caption--bottom ">
                     Create a contact
                     </span>
-				Contacts
+			Personal contact
             </h1>
 
             <div class="nhsuk-form-group">
@@ -110,51 +110,136 @@
                   
                   <div class="nhsuk-radios nhsuk-radios--conditional">
 
-                    <div class="nhsuk-radios__item">
-                        <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
-                        <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-                          Phone
-                        </label>
-                      </div>
-                
-                      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
-                
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label" for="phone">
-                            Phone number
-                          </label>
-                          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
-                        </div>
-                
-                      </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
-                      <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                        Email
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-              
-                      <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="email">
-                          Email address
-                        </label>
-                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-                      </div>
-              
-                    </div>
+                   
+          
               
                     <div class="nhsuk-form-group">
                         <label class="nhsuk-label" for="example">
-                          Enter other contact details or availability here
+                          Enter contact details or availability here
                         </label>
         
                         <textarea class="nhsuk-textarea nhsuk-u-width-full" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
                       </div>
               
-              
+                      <div class="nhsuk-form-group">
+                        <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+                            <legend class="nhsuk-fieldset__legend">
+                                <p class="nhsuk-fieldset__heading">
+                                    Date of communication
+                                </p>
+                            </legend>
+                            <span class="nhsuk-hint" id="dob-hint">
+                                For example, 15 3 1984
+                            </span>
+        
+                            <div class="nhsuk-date-input" id="dob">
+                                <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                                            Day
+                                        </label>
+                                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                                            Month
+                                        </label>
+                                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                                            Year
+                                        </label>
+                                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+        
+                    <div class="nhsuk-form-group">
+                        <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+                            <legend class="nhsuk-fieldset__legend">
+                                <p class="nhsuk-fieldset__heading">
+                                    Time of communication
+                                </p>
+                            </legend>
+                            <span class="nhsuk-hint" id="dob-hint">
+                            For example, 16 03
+                            </span>
+        
+                            <div class="nhsuk-date-input" id="dob">
+                                <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                                            Hour
+                                        </label>
+                                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                                            Minutes
+                                        </label>
+                                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+        
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="select-1">
+                          Select the method of communication
+                        </label>
+                        <div class="nhsuk-form-group">
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                  In person conversation
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                  Phone call
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                  Email
+                </label>
+              </div>
+        
+            </div>
+                      </div>
+        
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                          Enter details of what was discussed
+                        </label>
+        
+                        <textarea class="nhsuk-textarea nhsuk-u-width-full" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                      </div>
+        
+        
+        
+        
+        
+          <a class="nhsuk-button" href="event-overview" draggable="false">
+            Save and continue
+            </a>
               
                   </div>
                 </fieldset>
@@ -164,12 +249,10 @@
              
 
 
-	<a class="nhsuk-button" href="informant-contact-added" draggable="false">
-		Save and continue
-    </a>
+
 
 	<div class="nhsuk-u-width-one-half">
-		<a href="case-overview">Return to previous page without saving</a>
+		<a href="create-new-event">Return to previous page without saving</a>
 	</div>
 </div>
 </div>

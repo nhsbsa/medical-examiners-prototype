@@ -5,7 +5,7 @@
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
-{% set activesub = "closed" %}
+{% set activesub = "cases" %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Re-open
+create new event
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -42,7 +42,7 @@ Re-open
 			<h1>
 				Create new event
             </h1>
-						<form action="reOpenTwo" method="get">
+						<form action="caseProgress" method="get">
 
 						<fieldset class="nhsuk-fieldset">
 								<legend class="nhsuk-fieldset__legend">
@@ -53,21 +53,21 @@ Re-open
 				<div class="nhsuk-radios">
 
 <div class="nhsuk-radios__item">
-<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="amend" aria-describedby="example-hints-1-item-hint">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="personal" aria-describedby="example-hints-1-item-hint">
 <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup1">
 Personal contact
 </label>
 </div>
 
 <div class="nhsuk-radios__item">
-<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="concern" aria-describedby="example-hints-2-item-hint">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="professional" aria-describedby="example-hints-2-item-hint">
 <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
 Professional contact
 </label>
 </div>
 
 <div class="nhsuk-radios__item">
-<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="amendCoD" aria-describedby="example-hints-2-item-hint">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="note" aria-describedby="example-hints-2-item-hint">
 <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup3">
 Note
 </label>

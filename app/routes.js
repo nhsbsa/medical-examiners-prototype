@@ -76,7 +76,7 @@ router.get(/caseProgress/, function (req, res) {
   if (req.query.radioInlineGroup === "personal") {
     res.redirect('personal-contact'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "professional") {
-    res.redirect('proffesional-contact'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('professional-contact'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "note") {
     res.redirect('note'); // if both input values are "Yes" - redirect to 'page-name' //
   
