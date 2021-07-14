@@ -39,42 +39,53 @@ Re-open
 				</ul>
 			  </nav>
 
-				<header class="page-header">
-				                          <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Re-open case</span>
-				                          <h1 class="nhsuk-heading-xl">Coroner notification requirement?</h1>
-				                        </header>
-						<form action="reOpenFour" method="get">
+			<h1>
+				Case overview
+            </h1>
+            <div class="nhsuk-grid-column-full">
+            </div>
+			<div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s case-stage-title">
+					Section
+				</p>
+			</div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s status-title">
+					Stage
+				</p>
+			</div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s edit-title">
+					Edit
+				</p>
+			</div>
+			</div>
 
-						<fieldset class="nhsuk-fieldset">
-								<legend class="nhsuk-fieldset__legend">
-										<p class="nhsuk-fieldset__heading">
-												Do you need to notify the coroner about this case?</p>
-								</legend>
-				​
-				<div class="nhsuk-radios">
+			<div class="nhsuk-expander-group">
 
-<div class="nhsuk-radios__item">
-<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="coroner" aria-describedby="example-hints-1-item-hint">
-<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup">
-Yes
-</label>
-</div>
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text--third">
+							Case concerns
+						</span>
 
-<div class="nhsuk-radios__item">
-<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="amendcod" aria-describedby="example-hints-2-item-hint">
-<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
-No, I just need to amend the cause of death
-</label>
-</div>
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-tag nhsuk-tag--yellow">
+									In progress
+								</p>
+							</div>
+						</div>
 
+						<div class="nhsuk-details__summary-text--third">
+							<a href="case_concern_overview">
+								Edit
+							</a>
+						</div>
+					</summary>
 
-</div>
-						</fieldset>
-						<br>
-						<button class="nhsuk-button" type="submit">
-								Save and continue
-						</button>
-						</form>
+				</details>
 		</div>
 	</div>
 
