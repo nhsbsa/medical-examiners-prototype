@@ -1,0 +1,220 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "cases" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Reopen
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+
+			<nav class="nhsuk-red-background patient-info">
+				<ul role="navigation">
+				  <li><span><strong>Case type: </strong> Urgent</span></li>
+				  <li><span><strong> First name(s): </strong> John</span></li>
+				  <li><span><strong>Last name: </strong> Johnson</span></li>
+				  <li><span><strong>Date of birth: </strong> 30/07/1961</span></li>
+				  <li><span><strong>NHS number: </strong> 9975360026</span></li>
+				</ul>
+			  </nav>
+
+			<h1>
+				Case overview
+            </h1>
+            <div class="nhsuk-grid-column-full">
+                <a href="/me-journey/closed-cases" class="nhsuk-button" style="float:right">
+                Save and close
+                </a>
+            </div>
+			<div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s case-stage-title">
+					Section
+				</p>
+			</div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s status-title">
+					Stage
+				</p>
+			</div>
+			<div class="nhsuk-details__above--third">
+				<p class="nhsuk-heading-s edit-title">
+					Edit
+				</p>
+			</div>
+			</div>
+
+			<div class="nhsuk-expander-group">
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text--third">
+							Deceased person's details
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-tag nhsuk-tag--green">
+									Complete
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="patinents-details2">
+								Edit
+							</a>
+						</div>
+					</summary>
+					<div class="nhsuk-details__text">
+						<div class="nhsuk-table-responsive">
+							<table class="nhsuk-table">
+							  <caption class="nhsuk-table__caption">caption</caption>
+							  <thead class="nhsuk-table__head">
+							</thead>
+							<tbody>
+								<tr class="nhsuk-table__row">
+									<th class="nhsuk-table__header"scope="row" width="50%">Forename(s)</th>
+									<td class="nhsuk-table__cell " width="35%">John</td>
+									<td class="nhsuk-table__cell table-text-small" width="20%">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								  </tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header"  scope="row">Surname</th>
+								  <td class="nhsuk-table__cell ">Johnson</td>
+								  <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+
+								</tr>
+								<tr class="nhsuk-table__row">
+									<th class="nhsuk-table__header" scope="row">Known as</th>
+									<td class="nhsuk-table__cell ">John</td>
+									 <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								  </tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header" scope="row">Sex</th>
+								  <td class="nhsuk-table__cell ">Male</td>
+								   <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header" scope="row">Date of birth</th>
+								  <td class="nhsuk-table__cell ">30/07/1961</td>
+								  <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header" scope="row">NHS number</th>
+								  <td class="nhsuk-table__cell ">9975360026</td>
+								   <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header" scope="row">Hospital number</th>
+								  <td class="nhsuk-table__cell ">66543</td>
+								   <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+									<th class="nhsuk-table__header" scope="row">Date of death</th>
+									<td class="nhsuk-table__cell ">28/05/2021</td>
+									<td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								  </tr>
+								  <tr class="nhsuk-table__row">
+									<th class="nhsuk-table__header" scope="row">Time of death</th>
+									<td class="nhsuk-table__cell ">6:15</td>
+									<td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								  </tr>
+								  <tr class="nhsuk-table__row">
+									<th class="nhsuk-table__header" scope="row">Rapid release</th>
+									<td class="nhsuk-table__cell ">Yes</td>
+									<td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								  </tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header" scope="row">Home address</th>
+								  <td class="nhsuk-table__cell "> 44 Springfield Road, <br>Oxford,<br>OX8 7LJ</td>
+								   <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header" scope="row">Main job</th>
+								  <td class="nhsuk-table__cell ">Journalist</td>
+								   <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+								<tr class="nhsuk-table__row">
+								  <th class="nhsuk-table__header" scope="row">You can list details about past jobs here. For example, if the person worked with harmful chemicals. </th>
+								  <td class="nhsuk-table__cell ">
+								  </td>
+								   <td class="nhsuk-table__cell table-text-small" >Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+					</div>
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text--third">
+							Location of death
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-tag nhsuk-tag--yellow">
+									In progress
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third ">
+							<a href="location-of-death-closed" >
+								Edit
+							</a>
+						</div>
+					</summary>
+
+				</details>
+
+				<details class="nhsuk-details nhsuk-expander">
+					<summary class="nhsuk-details__summary">
+						<span class="nhsuk-details__summary-text--third">
+							Contacts
+						</span>
+
+						<div class="nhsuk-details__summary-text--third">
+							<div class="case-type-center">
+								<p class="nhsuk-tag nhsuk-tag--grey">
+									Not Started
+								</p>
+							</div>
+						</div>
+
+						<div class="nhsuk-details__summary-text--third">
+							<a href="informant-contact-yes">
+								Edit
+							</a>
+						</div>
+					</summary>
+
+				</details>
+
+		</div>
+	</div>
+
+
+
+{% endblock %}
