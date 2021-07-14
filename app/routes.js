@@ -72,6 +72,19 @@ router.get(/reOpenFour/, function (req, res) {
 });
 
 
+router.get(/caseProgress/, function (req, res) {
+  if (req.query.radioInlineGroup === "personal") {
+    res.redirect('personal-contact'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "professional") {
+    res.redirect('professional-contact'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "note") {
+    res.redirect('note'); // if both input values are "Yes" - redirect to 'page-name' //
+  
+}
+});
+
+
+
 
 
 module.exports = router;
