@@ -40,30 +40,30 @@ Re-open
 			  </nav>
 
 				<header class="page-header">
-				                          <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Re-open case</span>
-				                          <h1 class="nhsuk-heading-xl">Coroner notification requirement?</h1>
+				                          <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Reopen case</span>
+				                          <h1 class="nhsuk-heading-xl">Reason for rejection</h1>
 				                        </header>
-						<form action="reOpenFour" method="get">
+						<form action="reopen-notify-coroner" method="get">
 
 						<fieldset class="nhsuk-fieldset">
 								<legend class="nhsuk-fieldset__legend">
 										<p class="nhsuk-fieldset__heading">
-												Do you need to notify the coroner about this case?</p>
+												The MCCD (medical certificate of cause of death) was rejected because the cause of death is:​</p>
 								</legend>
 				​
 				<div class="nhsuk-radios">
 
 <div class="nhsuk-radios__item">
-<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="coroner" aria-describedby="example-hints-1-item-hint">
-<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup">
-Yes
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="unhappycod" aria-describedby="example-hints-1-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup1">
+not accepted by the bereaved​
 </label>
 </div>
 
 <div class="nhsuk-radios__item">
-<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="amendcod" aria-describedby="example-hints-2-item-hint">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="invalidcod" aria-describedby="example-hints-2-item-hint">
 <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
-No, I just need to amend the cause of death
+not on the official list​
 </label>
 </div>
 
@@ -75,6 +75,9 @@ No, I just need to amend the cause of death
 								Save and continue
 						</button>
 						</form>
+
+						<a href="closed-case-overview">Return to previous page without saving</a>
+
 		</div>
 	</div>
 

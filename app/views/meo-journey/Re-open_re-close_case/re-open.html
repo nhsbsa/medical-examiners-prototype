@@ -5,7 +5,7 @@
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'main-template.html' %}
 {% set active = "me-user" %}
-{% set activesub = "closed" %}
+{% set activesub = "cases" %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Case overview-Closed cases
+Reopen
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -42,18 +42,11 @@ Case overview-Closed cases
 			<h1>
 				Case overview
             </h1>
-
-        </div>
-			 </div>
-
-             <div class="nhsuk-grid-column-full">
-                <a href="re-open-why" class="nhsuk-button" style="float:right">
-                Re-open case
+            <div class="nhsuk-grid-column-full">
+                <a href="/me-journey/closed-cases" class="nhsuk-button" style="float:right">
+                Save and close
                 </a>
             </div>
-
-
-    </div>
 			<div>
 			<div class="nhsuk-details__above--third">
 				<p class="nhsuk-heading-s case-stage-title">
@@ -66,7 +59,9 @@ Case overview-Closed cases
 				</p>
 			</div>
 			<div class="nhsuk-details__above--third">
-
+				<p class="nhsuk-heading-s edit-title">
+					Edit
+				</p>
 			</div>
 			</div>
 
@@ -79,14 +74,16 @@ Case overview-Closed cases
 
 						<div class="nhsuk-details__summary-text--third">
 							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--purple">
-									Data entered
+								<p class="nhsuk-tag nhsuk-tag--green">
+									Complete
 								</p>
 							</div>
 						</div>
 
 						<div class="nhsuk-details__summary-text--third">
-
+							<a href="patinents-details2">
+								Edit
+							</a>
 						</div>
 					</summary>
 					<div class="nhsuk-details__text">
@@ -119,7 +116,7 @@ Case overview-Closed cases
 								</tr>
 								<tr class="nhsuk-table__row">
 								  <th class="nhsuk-table__header" scope="row">Date of birth</th>
-								  <td class="nhsuk-table__cell ">0/07/1961</td>
+								  <td class="nhsuk-table__cell ">30/07/1961</td>
 								  <td class="nhsuk-table__cell table-text-small">Test User <p class="table-text-small">21/02/2020 11:31:07 </p></td>
 								</tr>
 								<tr class="nhsuk-table__row">
@@ -177,14 +174,16 @@ Case overview-Closed cases
 
 						<div class="nhsuk-details__summary-text--third">
 							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--purple">
-									Data entered
+								<p class="nhsuk-tag nhsuk-tag--yellow">
+									In progress
 								</p>
 							</div>
 						</div>
 
 						<div class="nhsuk-details__summary-text--third ">
-
+							<a href="location-of-death-closed" >
+								Edit
+							</a>
 						</div>
 					</summary>
 
@@ -198,245 +197,16 @@ Case overview-Closed cases
 
 						<div class="nhsuk-details__summary-text--third">
 							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
+								<p class="nhsuk-tag nhsuk-tag--grey">
+									Not Started
 								</p>
 							</div>
 						</div>
 
 						<div class="nhsuk-details__summary-text--third">
-
-						</div>
-					</summary>
-
-				</details>
-
-				<details class="nhsuk-details nhsuk-expander">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Communication log
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-				<details class="nhsuk-details nhsuk-expander">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Pre-scrutiny notes
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-
-				<details class="nhsuk-details nhsuk-expander">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Key people involved in care
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-				<details class="nhsuk-details nhsuk-expander" >
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							QAP's proposed Cause of Death
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-
-				<details class="nhsuk-details nhsuk-expander">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Medical record review
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-				<details class="nhsuk-details nhsuk-expander">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Discussion with the QAP
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-				<details class="nhsuk-details nhsuk-expander disable-dropdown">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Informant discussion about scrutiny
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-
-				<details class="nhsuk-details nhsuk-expander">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Case concerns
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-				<details class="nhsuk-details nhsuk-expander">
-						<summary class="nhsuk-details__summary">
-								<span class="nhsuk-details__summary-text--third">
-						<!--	<span class="nhsuk-details__summary-text nhsuk-details__summary-text--third">-->
-								Coroner referral
-							</span>
-
-							<div class="nhsuk-details__summary-text--third">
-								<div class="case-type-center">
-									<p class="nhsuk-tag nhsuk-tag--white">
-										No data
-									</p>
-								</div>
-							</div>
-
-							<div class="nhsuk-details__summary-text--third">
-								</div>
-						</summary>
-
-					</details>
-
-
-
-
-
-
-
-
-				<details class="nhsuk-details nhsuk-expander disable-dropdown">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Supporting documentation
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
-						</div>
-					</summary>
-
-				</details>
-
-				<details class="nhsuk-details nhsuk-expander disable-dropdown">
-					<summary class="nhsuk-details__summary">
-						<span class="nhsuk-details__summary-text--third">
-							Feedback or learning
-						</span>
-
-						<div class="nhsuk-details__summary-text--third">
-							<div class="case-type-center">
-								<p class="nhsuk-tag nhsuk-tag--white">
-									No data
-								</p>
-							</div>
-						</div>
-
-						<div class="nhsuk-details__summary-text--third">
+							<a href="informant-contact-yes">
+								Edit
+							</a>
 						</div>
 					</summary>
 
