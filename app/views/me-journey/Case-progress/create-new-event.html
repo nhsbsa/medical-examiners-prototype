@@ -39,15 +39,19 @@ create new event
 				</ul>
 			  </nav>
 
-			<h1>
-				Create  new event
+			  <h1> 
+			  <span class="nhsuk-caption-m nhsuk-caption--bottom ">
+				Case progress log
+				</span>
+				
+				Create a new entry
             </h1>
 						<form action="caseProgress" method="get">
 
 						<fieldset class="nhsuk-fieldset">
 								<legend class="nhsuk-fieldset__legend">
 										<p class="nhsuk-fieldset__heading">
-												What kind of event is this?</p>
+												Select the type of entry</p>
 								</legend>
 				​
 				<div class="nhsuk-radios">
@@ -55,15 +59,18 @@ create new event
 <div class="nhsuk-radios__item">
 <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="personal" aria-describedby="example-hints-1-item-hint">
 <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup1">
-Personal contact
+Personal or other contact
 </label>
 </div>
 
 <div class="nhsuk-radios__item">
 <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="professional" aria-describedby="example-hints-2-item-hint">
 <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
-Professional contact
+Healthcare contact
 </label>
+<span class="nhsuk-caption-m nhsuk-caption--bottom ">
+	For example, next of kin, solicitor,funeral director.
+	</span>
 </div>
 
 <div class="nhsuk-radios__item">
@@ -82,6 +89,9 @@ Note
 								Save and continue
 						</button>
 						</form>
+						<div class="nhsuk-u-width-one-half">
+							<a href="case-overview">Return to Case overview</a>
+						</div>
 		</div>
 	</div>
 

@@ -83,7 +83,15 @@ router.get(/caseProgress/, function (req, res) {
 }
 });
 
-
+// Create quick case //
+router.get(/createCase/, function (req, res) {
+  if (req.query.radioInlineGroup === "new") {
+    res.redirect('create-case'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "quick") {
+    res.redirect('create-case-quick'); // if both input values are "Yes" - redirect to 'page-name' //
+  
+}
+});
 
 
 
