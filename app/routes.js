@@ -71,6 +71,14 @@ router.get(/reOpenFour/, function (req, res) {
   }
 });
 
+router.get(/reOpenFive/, function (req, res) {
+  if (req.query.radioInlineGroup === "coroner") {
+    res.redirect('../Coroner_referral2/internal-referral');
+  } else {
+    res.redirect('../closed-cases');
+  }
+});
+
 
 router.get(/caseProgress/, function (req, res) {
   if (req.query.radioInlineGroup === "personal") {
