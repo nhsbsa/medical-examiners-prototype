@@ -7124,7 +7124,29 @@ ul.grid-grid {
     .nhsuk-details__above--third p.status-title {
       margin-bottom: 32px;
       text-align: center; }
+    .nhsuk-details__above--third p.extra-title {
+      margin-bottom: 32px;
+      text-align: center; }
     .nhsuk-details__above--third p.edit-title {
+      margin-bottom: 32px;
+      text-align: right; }
+
+.nhsuk-details__above--quarter {
+  width: 25%;
+  display: inline-block; }
+  .nhsuk-details__above--quarter .case-type-center {
+    text-align: center; }
+  .nhsuk-details__above--quarter p {
+    margin-bottom: 0px; }
+    .nhsuk-details__above--quarter p.case-stage-title {
+      margin-bottom: 32px; }
+    .nhsuk-details__above--quarter p.status-title {
+      margin-bottom: 32px;
+      text-align: center; }
+    .nhsuk-details__above--quarter p.extra-title {
+      margin-bottom: 32px;
+      text-align: center; }
+    .nhsuk-details__above--quarter p.edit-title {
       margin-bottom: 32px;
       text-align: right; }
 
@@ -7136,6 +7158,18 @@ ul.grid-grid {
   .nhsuk-details__summary-text--third p {
     margin-bottom: 0px; }
   .nhsuk-details__summary-text--third a {
+    line-height: 15px;
+    float: right;
+    margin-bottom: 0px; }
+
+.nhsuk-details__summary-text--quarter {
+  width: calc(25% - 20px);
+  display: inline-block; }
+  .nhsuk-details__summary-text--quarter .case-type-center {
+    text-align: center; }
+  .nhsuk-details__summary-text--quarter p {
+    margin-bottom: 0px; }
+  .nhsuk-details__summary-text--quarter a {
     line-height: 15px;
     float: right;
     margin-bottom: 0px; }
