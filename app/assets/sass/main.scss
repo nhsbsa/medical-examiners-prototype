@@ -84,6 +84,36 @@
       margin-bottom: 32px;
       text-align: center;
     }
+    &.extra-title {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    &.edit-title {
+      margin-bottom: 32px;
+      text-align: right;
+    }
+  }
+}
+
+.nhsuk-details__above--quarter {
+  width: 25%;
+  display: inline-block;
+  .case-type-center {
+    text-align: center;
+  }
+  p {
+    margin-bottom: 0px;
+    &.case-stage-title {
+      margin-bottom: 32px;
+    }
+    &.status-title {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    &.extra-title {
+      margin-bottom: 32px;
+      text-align: center;
+    }
     &.edit-title {
       margin-bottom: 32px;
       text-align: right;
@@ -93,6 +123,22 @@
 
 .nhsuk-details__summary-text--third {
   width: calc(33.33% - 20px);
+  display: inline-block;
+  .case-type-center {
+    text-align: center;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  a {
+    line-height: 15px;
+    float: right;
+    margin-bottom: 0px;
+  }
+}
+
+.nhsuk-details__summary-text--quarter {
+  width: calc(25% - 20px);
   display: inline-block;
   .case-type-center {
     text-align: center;

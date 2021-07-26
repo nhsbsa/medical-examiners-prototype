@@ -11,7 +11,11 @@
     - change the header and footer
     - add custom CSS and JavaScript
 -->
-
+<style>
+.nhsuk-details__summary {
+	color: #212b32;
+}
+</style>
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
 Re-open
@@ -48,7 +52,7 @@ Re-open
 						<fieldset class="nhsuk-fieldset">
 								<legend class="nhsuk-fieldset__legend">
 										<p class="nhsuk-fieldset__heading">
-												Do you need to notify the coroner about this case?</p>
+												Does this case need to be notified to the coroner?</p>
 								</legend>
 				​
 				<div class="nhsuk-radios">
@@ -64,6 +68,13 @@ Yes
 <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="amendcod" aria-describedby="example-hints-2-item-hint">
 <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
 No, I just need to amend the cause of death
+</label>
+</div>
+
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="amendcod" aria-describedby="example-hints-2-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
+No, I just need to close this case
 </label>
 </div>
 
