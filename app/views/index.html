@@ -5,83 +5,85 @@
 <head>
 
   <style>
-  .autocomplete-wrapper {
-    max-width: 20em;
-    margin-bottom: 4rem;
-  }
-  .autocomplete__wrapper {
-    position: relative;
-  }
-  .autocomplete__hint, .autocomplete__input, .autocomplete__option {
-    font-size: 19px;
-    line-height: 1.31579;
-  }
-  .autocomplete__input--default {
-    padding: 5px;
-  }
-  .autocomplete__input {
-    position: relative;
-  }
-  .autocomplete__input {
-    -webkit-appearance: none;
-    border: 2px solid #0b0c0c;
-    border-radius: 0;
-    -webkit-box-sizing: border-box;
-    margin-bottom: 0;
-    width: 100%;
-  }
-  .autocomplete__menu--inline {
-    position: relative;
-  }
-  .autocomplete__menu--hidden {
-    display: none;
-  }
-  .autocomplete__menu {
-    background-color: #fff;
-    border: 2px solid #0b0c0c;
-    border-top: 0;
-    color: #0b0c0c;
-    margin: 0;
-    max-height: 342px;
-    overflow-x: hidden;
-    padding: 0;
-    width: calc(100% - 4px);
-  }
-  select:not(:-internal-list-box) {
-    overflow: visible !important;
-  }
-  select {
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: -internal-light-dark-color(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: start;
-    -webkit-appearance: menulist;
-    box-sizing: border-box;
-    align-items: center;
-    white-space: pre;
-    -webkit-rtl-ordering: logical;
-    background-color: rgb(248, 248, 248);
-    cursor: default;
-    margin: 0em;
-    font: 400 11px system-ui;
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(166, 166, 166);
-    border-image: initial;
-  }
-  option {
-    font-weight: normal;
-    display: block;
-    white-space: pre;
-    min-height: 1.2em;
-    padding: 0px 2px 1px;
-  }
+      .autocomplete-wrapper {
+        max-width: 20em;
+        margin-bottom: 4rem;
+      }
+      .autocomplete__wrapper {
+        position: relative;
+      }
+      .autocomplete__hint,
+      .autocomplete__input,
+      .autocomplete__option {
+        font-size: 19px;
+        line-height: 1.31579;
+      }
+      .autocomplete__input--default {
+        padding: 5px;
+      }
+      .autocomplete__input {
+        position: relative;
+      }
+      .autocomplete__input {
+        -webkit-appearance: none;
+        border: 2px solid #0b0c0c;
+        border-radius: 0;
+        -webkit-box-sizing: border-box;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      .autocomplete__menu--inline {
+        position: relative;
+      }
+      .autocomplete__menu--hidden {
+        display: none;
+      }
+      .autocomplete__menu {
+        background-color: #fff;
+        border: 2px solid #0b0c0c;
+        border-top: 0;
+        color: #0b0c0c;
+        margin: 0;
+        max-height: 342px;
+        overflow-x: hidden;
+        padding: 0;
+        width: calc(100% - 4px);
+      }
+      select:not(:-internal-list-box) {
+        overflow: visible !important;
+      }
+      select {
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        color: -internal-light-dark-color(black, white);
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        text-align: start;
+        -webkit-appearance: menulist;
+        box-sizing: border-box;
+        align-items: center;
+        white-space: pre;
+        -webkit-rtl-ordering: logical;
+        background-color: rgb(248, 248, 248);
+        cursor: default;
+        margin: 0em;
+        font: 400 11px system-ui;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(166, 166, 166);
+        border-image: initial;
+      }
+      option {
+        font-weight: normal;
+        display: block;
+        white-space: pre;
+        min-height: 1.2em;
+        padding: 0px 2px 1px;
+      }
   </style><!-- Extends the layout from /views/layout.html -->
   <title></title>
 </head>
@@ -129,6 +131,41 @@
       <h2>Sprint work - Private Beta</h2>
       <details class="nhsuk-details nhsuk-expander">
         <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">Sprint 21</span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">Case management</span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+              <h3 class="nhsuk-heading-m">What we added:</h3>
+              <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+              <h3 class="nhsuk-heading-m">What we found:</h3>
+              <h3 class="nhsuk-heading-m">Any known issues?</h3>
+              <p class="nhsuk-u-margin-bottom-0"><a href="Case-management/case-overview"><button class="nhsuk-button"
+                      type="submit">Case overview</button></a></p>
+            </div>
+          </details>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">Case overview - improvements</span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+              <h3 class="nhsuk-heading-m">What we added:</h3>
+              <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+              <h3 class="nhsuk-heading-m">What we found:</h3>
+              <h3 class="nhsuk-heading-m">Any known issues?</h3>
+              <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/case-overview-improved"><button class="nhsuk-button"
+                      type="submit">Case overview</button></a></p>
+            </div>
+          </details>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">Sprint 20</span>
         </summary>
         <div class="nhsuk-details__text">
@@ -151,25 +188,13 @@
               <span class="nhsuk-details__summary-text">Case progress</span>
             </summary>
             <div class="nhsuk-details__text">
-              <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
-                <summary class="nhsuk-details__summary">
-                  <span class="nhsuk-details__summary-text"><small>Case progress</small></span>
-                </summary><span class="nhsuk-details__summary-text">Sprint 20 - Quick-create case</span>
-              </details>
-              <details class="nhsuk-details nhsuk-expander">
-                <summary class="nhsuk-details__summary">
-                  <span class="nhsuk-details__summary-text">Case progress</span>
-                </summary>
-                <div class="nhsuk-details__text">
-                  <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                  <h3 class="nhsuk-heading-m">What we added:</h3>
-                  <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-                  <h3 class="nhsuk-heading-m">What we found:</h3>
-                  <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case-progress/case-overview"><button class="nhsuk-button"
-                          type="submit">Case progress</button></a></p>
-                </div>
-              </details>
+              <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+              <h3 class="nhsuk-heading-m">What we added:</h3>
+              <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+              <h3 class="nhsuk-heading-m">What we found:</h3>
+              <h3 class="nhsuk-heading-m">Any known issues?</h3>
+              <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case-progress/case-overview"><button class="nhsuk-button"
+                      type="submit">Case progress</button></a></p>
             </div>
           </details>
         <hr>
@@ -288,6 +313,7 @@
   
   </div>
   </details>
+  </div>
   
   
       </details>
@@ -324,7 +350,7 @@
               <span class="nhsuk-details__summary-text"><small>60 min timeout</small></span>
             </summary>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> Adding a timeout warning is an essential feature for users, as it will allow them to extend their session if they need to and be aware of the time limit users
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> Adding a timeout warning is an essential feature for users, as it will allow them to extend their session if they need to and be aware of the time limit users
             <strong>as this will allow us to comply with data security requirements by having a 60 minute timeout</strong></p>
             <h3 class="nhsuk-heading-m">What we added:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
@@ -366,7 +392,7 @@
               <span class="nhsuk-details__summary-text"><small>Coroner Notification - Iteration 2</small></span>
             </summary>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a Coroner Notification section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record information that can be
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a Coroner Notification section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record information that can be
             transferred to the Coroner.</strong> Users need to fill this section if they are not filling up the Coroner's web portal. <strong>This will</strong> enable a case to be referred to a coroner so that further independent scrutiny can take
             place.</p>
             <hr>
@@ -399,7 +425,7 @@
               <span class="nhsuk-details__summary-text"><small>Coroner Referral - Iteration 1</small></span>
             </summary>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a Coroner Referral section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record information that can be transferred
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a Coroner Referral section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record information that can be transferred
             to the Coroner.</strong> Users need to fill this section if they are not filling up the Coroner's web portal. <strong>This will</strong> enable a case to be referred to a coroner so that further independent scrutiny can take place.</p>
             <hr>
             <h3 class="nhsuk-heading-m">What we changed:</h3>
@@ -421,7 +447,7 @@
               <li>Medical Device : users were confused with this term; further discussion within the team we found that this ques is for the FD therefore removed it and will be added to the MCCD service</li>
               <li>UR indicated cases referred to the Coroner are usually made by the MEO (with the advice from ME); Users were inputting the MEO's name in Reporting person fields - this was changed to Referring doctor as Coroner wants details of
               someone with the GMC number and not the MEO</li>
-              <li>Further research finding can be found <a href='https://miro.com/app/board/o9J_kgGxF1o=/'>here</a>
+              <li>Further research finding can be found <a href="https://miro.com/app/board/o9J_kgGxF1o=/">here</a>
               </li>
             </ul>
             <h3 class="nhsuk-heading-m">Any known issues?</h3>
@@ -446,7 +472,7 @@
               <span class="nhsuk-details__summary-text"><small>MFA - Iteration 2</small></span>
             </summary>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a MFA <strong>will be a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger
             authentication. <strong>This will</strong> reduce the risk of security threat.</p>
             <hr>
             <p>Took learning from MOT Testing's MFA user journey.</p>
@@ -478,7 +504,7 @@
               <span class="nhsuk-details__summary-text"><small>MFA - Iteration 1</small></span>
             </summary>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a MFA <strong>will be a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger
             authentication. <strong>This will</strong> reduce the risk of security threat.</p>
             <hr>
             <p>Took learning from MOT Testing's MFA user journey.</p>
@@ -521,7 +547,7 @@
               <span class="nhsuk-details__summary-text"><small>Case concerns</small></span>
             </summary>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding a case concern <strong>will be a useful feature for</strong> users <strong>as it will</strong> help users to add concerns to a case & to be able to produce
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a case concern <strong>will be a useful feature for</strong> users <strong>as it will</strong> help users to add concerns to a case & to be able to produce
             report for the quarterly report. <strong>This will</strong> help users to complete their tasks.</p>
             <hr>
             <h3 class="nhsuk-heading-m">What we changed:</h3>
@@ -568,8 +594,8 @@
               <span class="nhsuk-details__summary-text"><small>Search functionality</small></span>
             </summary>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding the Search functionality <strong>will be a useful feature for</strong> users <strong>as it will</strong> help users to locate cases already in the system
-            so users can provide updates to others, add additional information within a case & this was identified as a key user need. <strong>This will</strong> help users to confidently use the service.</p>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding the Search functionality <strong>will be a useful feature for</strong> users <strong>as it will</strong> help users to locate cases already in the system so
+            users can provide updates to others, add additional information within a case & this was identified as a key user need. <strong>This will</strong> help users to confidently use the service.</p>
             <hr>
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">

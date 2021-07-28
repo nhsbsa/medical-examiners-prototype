@@ -7895,7 +7895,7 @@ div.editable {
     display: none; } }
 
 .govuk-warning-text__icon {
-  font-family: 'GDS Transport', arial, sans-serif;
+  font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
@@ -7920,7 +7920,7 @@ div.editable {
   user-select: none; }
 
 .govuk-warning-text__text {
-  font-family: 'GDS Transport', arial, sans-serif;
+  font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
