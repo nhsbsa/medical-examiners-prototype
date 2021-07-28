@@ -84,17 +84,15 @@
       margin-bottom: 32px;
       text-align: center;
     }
-    &.extra-title {
-      margin-bottom: 32px;
-      text-align: center;
-    }
     &.edit-title {
       margin-bottom: 32px;
       text-align: right;
     }
   }
 }
-
+.nhsuk-details__summary_flex {
+  display: flex;
+}
 
 .nhsuk-details__summary-text--third {
   width: calc(33.33% - 20px);
@@ -113,19 +111,18 @@
 }
 
 .nhsuk-details__summary-text--quarter {
-  width: calc(25% - 20px);
-  display: inline-block;
-  .case-type-center {
-    text-align: center;
+  width: 25%;
+  text-align: center;
+  &:first-child{
+    text-align: left;
   }
-  p {
-    margin-bottom: 0px;
+  &:last-child {
+    text-align: right;
   }
-  a {
-    line-height: 15px;
-    float: right;
-    margin-bottom: 0px;
-  }
+}
+
+.flex-set{
+  display: flex!important;
 }
 
 .nhsuk-details__summary-text-center {
@@ -560,7 +557,6 @@
 
 /*
     original patient info bar styles
-
   nav.patient-info {
     display: flex;
     flex-wrap: nowrap;
@@ -582,7 +578,6 @@
       color: #f0f4f5; }
     nav.patient-info a {
       padding: 0; }
-
 */
 
 .search-strip {

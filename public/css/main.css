@@ -7124,12 +7124,12 @@ ul.grid-grid {
     .nhsuk-details__above--third p.status-title {
       margin-bottom: 32px;
       text-align: center; }
-    .nhsuk-details__above--third p.extra-title {
-      margin-bottom: 32px;
-      text-align: center; }
     .nhsuk-details__above--third p.edit-title {
       margin-bottom: 32px;
       text-align: right; }
+
+.nhsuk-details__summary_flex {
+  display: flex; }
 
 .nhsuk-details__summary-text--third {
   width: calc(33.33% - 20px);
@@ -7144,16 +7144,15 @@ ul.grid-grid {
     margin-bottom: 0px; }
 
 .nhsuk-details__summary-text--quarter {
-  width: calc(25% - 20px);
-  display: inline-block; }
-  .nhsuk-details__summary-text--quarter .case-type-center {
-    text-align: center; }
-  .nhsuk-details__summary-text--quarter p {
-    margin-bottom: 0px; }
-  .nhsuk-details__summary-text--quarter a {
-    line-height: 15px;
-    float: right;
-    margin-bottom: 0px; }
+  width: 25%;
+  text-align: center; }
+  .nhsuk-details__summary-text--quarter:first-child {
+    text-align: left; }
+  .nhsuk-details__summary-text--quarter:last-child {
+    text-align: right; }
+
+.flex-set {
+  display: flex !important; }
 
 .nhsuk-details__summary-text-center {
   text-align: center; }
@@ -7503,7 +7502,6 @@ ul.grid-grid {
 
 /*
     original patient info bar styles
-
   nav.patient-info {
     display: flex;
     flex-wrap: nowrap;
@@ -7525,7 +7523,6 @@ ul.grid-grid {
       color: #f0f4f5; }
     nav.patient-info a {
       padding: 0; }
-
 */
 .search-strip {
   position: relative;
