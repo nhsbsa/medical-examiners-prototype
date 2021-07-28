@@ -7131,6 +7131,25 @@ ul.grid-grid {
       margin-bottom: 32px;
       text-align: right; }
 
+.nhsuk-details__above--quarter {
+  width: 25%;
+  display: inline-block; }
+  .nhsuk-details__above--quarter .case-type-center {
+    text-align: center; }
+  .nhsuk-details__above--quarter p {
+    margin-bottom: 0px; }
+    .nhsuk-details__above--quarter p.case-stage-title {
+      margin-bottom: 32px; }
+    .nhsuk-details__above--quarter p.status-title {
+      margin-bottom: 32px;
+      text-align: center; }
+    .nhsuk-details__above--quarter p.extra-title {
+      margin-bottom: 32px;
+      text-align: center; }
+    .nhsuk-details__above--quarter p.edit-title {
+      margin-bottom: 32px;
+      text-align: right; }
+
 .nhsuk-details__summary-text--third {
   width: calc(33.33% - 20px);
   display: inline-block; }
@@ -7898,7 +7917,7 @@ div.editable {
     display: none; } }
 
 .govuk-warning-text__icon {
-  font-family: 'GDS Transport', arial, sans-serif;
+  font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
@@ -7923,7 +7942,7 @@ div.editable {
   user-select: none; }
 
 .govuk-warning-text__text {
-  font-family: 'GDS Transport', arial, sans-serif;
+  font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
