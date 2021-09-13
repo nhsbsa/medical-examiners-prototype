@@ -101,6 +101,13 @@ router.get(/createCase/, function (req, res) {
 }
 });
 
-
-
+// Side nav //
+router.get(/MEreview/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('re-open-cod_inprogress_done');
+  } else {
+    res.redirect('../Coroner_referral2/internal-referral');
+  }
+});
+  
 module.exports = router;
