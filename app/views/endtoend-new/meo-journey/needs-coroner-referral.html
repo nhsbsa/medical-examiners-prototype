@@ -13,8 +13,8 @@
     - add custom CSS and JavaScript
 -->
    <!-- Set the page title inside the pageTitle block -->
-   {% block pageTitle %} Open cases {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
-   {% block beforeContent %}
+  {% block pageTitle %} Needs coroner referral {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %}
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
@@ -25,11 +25,11 @@
               <div class="nhsuk-grid-column-full">
                 <div class="nhsuk-grid-row">
                   <div class="nhsuk-grid-column-two-thirds">
-                    <h1 class="nhsuk-heading-xl">Open cases</h1>
+                    <h1 class="nhsuk-heading-xl">Awaiting coroner's outcome</h1>
                   </div>
                   <div class="nhsuk-grid-column-one-third">
                     <a class="nhsuk-button"
-                         href="create-case-quick"
+                         href="create-case"
                          style="float:right">Create new case</a>
                   </div>
                 </div>
@@ -55,8 +55,7 @@
                 <div class="options"
                      id="options"></div>
                 <li>
-                  <a class="active"
-                      href="open-cases">Open cases</a>
+                  <a href="open-cases">Open cases</a>
                 </li>
                 <li>
                   <a href="awaitingAP'sCOD">Awaiting attending practitioner's cause of death</a>
@@ -65,19 +64,22 @@
                   <a href="awaitingME's-review">Awaiting medical examiner's independent review</a>
                 </li>
                 <li>
-                  <a href="needs-coroner-referral">Awaiting coroner's outcome</a>
+                  <a class="active"
+                      href="needs-coroner-referral">Awaiting coroner's outcome</a>
                 </li>
                 <li>
                   <a href="closed-cases">Closed cases</a>
                 </li>
               </ul>
             </div>
-          </ul>
+          </ul><!-- <div class="action-buttons">
+                <button class="nhsuk-button nhsuk-button==secondary" type="submit">Add note</button>
+            </div> -->
         </div>
       </div>
     </div>
   </div>{% endblock %} <!-- Your page content goes inside the content block -->
-   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
    {% block content %} {% endblock %}
 </body>
 </html>

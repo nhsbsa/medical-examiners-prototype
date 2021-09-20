@@ -65,6 +65,20 @@
   <meta content="/nhsuk-frontend/assets/favicons/largetile-310x310.png"
         name="msapplication-square310x310logo">{% endblock %} 
   <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script> {% block bodyStart %}{% endblock %} {% block skipLink %} {{ skipLink({ href: '#maincontent', text: 'Skip to main content' }) }} {% endblock %} {% block header %}
   <header class="nhsuk-header"
@@ -95,14 +109,6 @@
              role="navigation">
           <ul class="nhsuk-header__navigation-list"
               style="border:0">
-            <!--    <li class="nhsuk-header__navigation-item">
-                                                        <a class="nhsuk-header__navigation-link" href="#">
-                                                                joe.bloggs@nhs.net                                      
-                                                        </a>
-                                                </li>
-                                                <li class="nhsuk-header__navigation-item">
-                                                        <a class="nhsuk-header__navigation-link" href="/">Sign out</a>
-                                                </li>-->
             <li class="nhsuk-header__navigation-item">
               <div class="nhsuk-header__search">
                 <a class="nhsuk-header__navigation-link"
@@ -114,62 +120,66 @@
                 <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path></svg> Search</a>
               </div>
             </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link"
+                  href="#">joe.bloggs@nhs.net</a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link"
+                  href="/">Sign out</a>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-  <div class="nhsuk-secondary-navigation">
-    <div class="nhsuk-secondary-navigation__container">
-      <div class="nhsuk-secondary-navigation__nav"
-           style="width: 100%">
-        <nav aria-label="Primary navigation"
-             class="nhsuk-secondary-navigation">
-          <ul class="nhsuk-secondary-navigation__list">
-            <li class="nhsuk-secondary-navigation__item">
-              <a activesub="="
-                  class="nhsuk-secondary-navigation__link"
-                  endif=""
-                  if="">Newcastle NHS Foundation Trust</a>
+  <nav aria-label="Breadcrumb"
+       class="nhsuk-breadcrumb nhsBSA-breadcrumb">
+    <div class="nhsuk-width-container-fluid">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item">
+              <a class="nhsuk-breadcrumb__link"
+                  href="open-cases-2">Open cases</a>
             </li>
-            <li class="nhsuk-secondary-navigation__item login-details">
-              <a class="nhsuk-secondary-navigation__link"
-                  href="#">Sign out</a>
-            </li>
-            <li class="nhsuk-secondary-navigation__item login-details">
-              <a class="nhsuk-secondary-navigation__link">joe.bloggs@nhs.net</a>
-            </li>
-          </ul>
-        </nav>
+            <li class="nhsuk-breadcrumb__item">Martin Lincoln (Personal details)</li>
+          </ol>
+        </div>
       </div>
+      <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink"
+         href="search-results">Back to search results</a></p>
     </div>
-  </div>{% endblock %} {% block beforeContent %}{% endblock %} {% block main %} {% endblock %} {% block footer %}
-  <footer role="contentinfo">
-    <div class="nhsuk-footer"
-         id="nhsuk-footer">
-      <div class="nhsuk-width-container-fluid">
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-full">
-            <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-            <ul class="nhsuk-footer__list">
-              <li class="nhsuk-footer__list-item">
-                <a class="nhsuk-footer__list-item-link"
-                    href="/">Home</a>
-              </li>
-              <li class="nhsuk-footer__list-item">
-                <a class="nhsuk-footer__list-item-link"
-                    href="/">Privacy</a>
-              </li>
-              <li class="nhsuk-footer__list-item">
-                <a class="nhsuk-footer__list-item-link"
-                    href="/">Accessibility</a>
-              </li>
-            </ul>
-            <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+  </nav>
+  <div class="nhsuk-secondary-navigation">
+    {% endblock %} {% block beforeContent %}{% endblock %} {% block main %} {% endblock %} {% block footer %}
+    <footer role="contentinfo">
+      <div class="nhsuk-footer"
+           id="nhsuk-footer">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+              <ul class="nhsuk-footer__list">
+                <li class="nhsuk-footer__list-item">
+                  <a class="nhsuk-footer__list-item-link"
+                      href="/">Home</a>
+                </li>
+                <li class="nhsuk-footer__list-item">
+                  <a class="nhsuk-footer__list-item-link"
+                      href="/">Privacy</a>
+                </li>
+                <li class="nhsuk-footer__list-item">
+                  <a class="nhsuk-footer__list-item-link"
+                      href="/">Accessibility</a>
+                </li>
+              </ul>
+              <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>{% endblock %} {% block bodyEnd %}{% endblock %}
+    </footer>{% endblock %} {% block bodyEnd %}{% endblock %}
+  </div>
 </body>
 </html>
