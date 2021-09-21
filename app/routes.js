@@ -109,5 +109,14 @@ router.get(/MEreview/, function (req, res) {
     res.redirect('../Coroner_referral2/internal-referral');
   }
 });
+
+// Location of death //
+router.get(/locationOfDeath/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('acute-death-martin-lincoln');
+  } else {
+    res.redirect('community-death-martin-lincoln');
+  }
+});
   
 module.exports = router;

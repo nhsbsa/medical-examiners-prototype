@@ -1,0 +1,123 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'main-template.html' %}
+{% set active = "me-user" %}
+{% set activesub = "cases" %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+	Case overview
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+ 
+
+{% block content %}
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+
+			<nav class="nhsuk-red-background patient-info">
+				<ul role="navigation">
+				  <li><span><strong>Case type: </strong> Urgent</span></li>
+				  <li><span><strong> Forename(s): </strong> Martin</span></li>
+				  <li><span><strong>Surname: </strong> Lincoln</span></li>
+				  <li><span><strong>Date of birth: </strong> 02/11/1935</span></li>
+				  <li><span><strong>NHS Number: </strong> 9975360025</span></li>
+				</ul>
+			  </nav>
+
+			<h1>
+				Location of the death
+            </h1>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+                Healthcare provider
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-half" id="example" name="example" type="text">
+            </div>
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="example">
+                  Location details 
+                </label>
+                <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                  For example, Ward 2B, or A&E
+                </div>
+                <input class="nhsuk-input nhsuk-u-width-one-half" id="example" name="example" type="text">
+              </div>
+
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+                  <legend class="nhsuk-fieldset__legend">
+                    <p class="nhsuk-fieldset__heading">
+                      Date of admission
+                    </p>
+                  </legend>
+                  <span class="nhsuk-hint" id="dob-hint">
+                    For example, 15 3 1984
+                  </span>
+                
+                  <div class="nhsuk-date-input" id="dob">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>	  
+              </div>
+            
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="example">
+                  Admission details (optional)
+                </label>
+                <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                For example, the admission time, method and reason               
+                </div>
+                <textarea class="nhsuk-textarea nhsuk-u-width-two-thirds" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+              </div>
+
+
+	<a class="nhsuk-button" href="case-overview" draggable="false">
+		Save and continue
+	</a>
+	<div class="nhsuk-u-width-one-half">
+		<a href="case-overview">Return to case overview without saving</a>
+	</div>
+</div>
+</div>
+{% endblock %}
