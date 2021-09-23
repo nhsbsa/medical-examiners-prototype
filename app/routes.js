@@ -119,4 +119,36 @@ router.get(/locationOfDeath/, function (req, res) {
   }
 });
   
+router.get(/qapHandler/, function (req, res) {
+
+  if (req.query.radioInlineGroup === "Acute") {
+  
+  res.redirect('discussion-QAP-yes');
+  
+  } else {
+  
+  res.redirect('discussion-QAP-no');
+  
+  }
+  
+  });
+
+  router.get(/deceasedPerson-handler/, function (req, res) {
+
+    if (req.query.radioInlineGroup === "Acute") {
+    
+    res.redirect('medical-record-proposed-cause');
+    
+    } else {
+    
+    res.redirect('AP-added4');
+    
+    }
+    
+    });
+  
+     
+
+
+  
 module.exports = router;
