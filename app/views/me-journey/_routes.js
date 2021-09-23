@@ -64,6 +64,7 @@ router.post('/qap-handler', function (req, res) {
   }
 })
 
+
 router.post('/qap-handler-yes', function (req, res) {
   // Make a variable and give it the value from 'know-nhs-number'
   var deathLoc = req.session.data['qap-discussion-yes']

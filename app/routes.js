@@ -136,7 +136,6 @@ router.get(/addConvo/, function (req, res) {
   }
 });
 
-module.exports = router;
 
 // Coroner notification //
 router.get(/coronerRequired/, function (req, res) {
@@ -147,3 +146,21 @@ router.get(/coronerRequired/, function (req, res) {
   }
 });
 
+ // AP's proposed CoD // 
+router.get(/qapHandler/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('discussion-QAP-yes');
+  } else {
+    res.redirect('discussion-QAP-no');
+  }
+  });
+
+router.get(/deceasedPerson-handler/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('medical-record-proposed-cause');
+  } else {
+    res.redirect('AP-added4');
+  }
+});
+  
+     
