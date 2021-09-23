@@ -21,43 +21,22 @@
         <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-            <h1>Location of the death</h1>
-            <div class="nhsuk-form-group">
-              <form action="locationOfDeath"
-                    method="get">
-                <fieldset class="nhsuk-fieldset">
-                  <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Select where the person died</legend></p>​
-                  <div class="nhsuk-radios">
-                    <div class="nhsuk-radios__item">
-                      <input aria-describedby="example-hints-1-item-hint"
-                           class="nhsuk-radios__input"
-                           id="radioInlineGroup"
-                           name="radioInlineGroup"
-                           type="radio"
-                           value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup1">Hospital or acute setting</label>
-                    </div>
-                    <div class="nhsuk-radios__item">
-                      <input aria-describedby="example-hints-2-item-hint"
-                           class="nhsuk-radios__input"
-                           id="radioInlineGroup"
-                           name="radioInlineGroup"
-                           type="radio"
-                           value="Community"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup2">Community or non-acute setting</label>
-                    </div>
-                  </div>
-                </fieldset><br>
-                <button class="nhsuk-button"
-                      type="submit">Save and continue</button>
-              </form>
-              <div class="nhsuk-u-width-one-half">
-                <a href="case-overview-martin-lincoln">Return to previous page without saving</a>
-              </div>
+            <h1>Coroner notification</h1>
+            <p class="nhsuk-body">There are several ways to complete an external coroner notification, including:&ZeroWidthSpace;</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>using your local coroner’s portal</li>
+              <li>emailing a form&ZeroWidthSpace; the coroner has provided</li>
+            </ul>
+            <div class="nhsuk-inset-text">
+              <span class="nhsuk-u-visually-hidden">Information:</span>
+              <p>Ensure that the coroner is notified promptly to avoid delays.&ZeroWidthSpace;</p>
             </div>
+            <p class="nhsuk-u-margin-bottom-0"><a class="nhsuk-link"
+               href="coroner-notification-martin-lincoln3">Return to Case overview</a></p>
           </div>
         </div>
-      </div><!--<div class="nhsBSA-sidebar-nav">
+      </div>
+    </div><!--<div class="nhsBSA-sidebar-nav">
         <div class="side-nav">
           <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption==bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS No. 123 456 7890</span></h3>
           <ul>
@@ -84,7 +63,6 @@
           </ul>
         </div>
       </div>-->
-    </div>
   </div>{% endblock %} <!-- Your page content goes inside the content block -->
    <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
    {% block content %} {% endblock %}
