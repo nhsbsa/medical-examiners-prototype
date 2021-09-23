@@ -118,5 +118,32 @@ router.get(/locationOfDeath/, function (req, res) {
     res.redirect('community-death-martin-lincoln');
   }
 });
-  
+
+// Case history //
+router.get(/addEvent/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('add-contact-martin-lincoln');
+  } else {
+    res.redirect('add-kpic-martin-lincoln');
+  }
+});
+
+router.get(/addConvo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('personal-conversation-martin-lincoln');
+  } else {
+    res.redirect('case-history-martin-lincoln3');
+  }
+});
+
 module.exports = router;
+
+// Coroner notification //
+router.get(/coronerRequired/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('internal-referral'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('coroner-notification-martin-lincoln2'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+

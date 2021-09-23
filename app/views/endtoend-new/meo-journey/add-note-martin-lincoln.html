@@ -21,39 +21,20 @@
         <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-            <h1>Location of the death</h1>
+            <h1>Add case note</h1>
             <div class="nhsuk-form-group">
-              <form action="locationOfDeath"
-                    method="get">
-                <fieldset class="nhsuk-fieldset">
-                  <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Select where the person died</legend></p>​
-                  <div class="nhsuk-radios">
-                    <div class="nhsuk-radios__item">
-                      <input aria-describedby="example-hints-1-item-hint"
-                           class="nhsuk-radios__input"
-                           id="radioInlineGroup"
-                           name="radioInlineGroup"
-                           type="radio"
-                           value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup1">Hospital or acute setting</label>
-                    </div>
-                    <div class="nhsuk-radios__item">
-                      <input aria-describedby="example-hints-2-item-hint"
-                           class="nhsuk-radios__input"
-                           id="radioInlineGroup"
-                           name="radioInlineGroup"
-                           type="radio"
-                           value="Community"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup2">Community or non-acute setting</label>
-                    </div>
-                  </div>
-                </fieldset><br>
-                <button class="nhsuk-button"
-                      type="submit">Save and continue</button>
-              </form>
-              <div class="nhsuk-u-width-one-half">
-                <a href="case-overview-martin-lincoln">Return to previous page without saving</a>
-              </div>
+              <label class="nhsuk-label"
+                   for="example">Case note</label> 
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="5"></textarea>
+            </div><a class="nhsuk-button"
+                 draggable="false"
+                 href="case-history-martin-lincoln5">Save and continue</a>
+            <div class="nhsuk-u-width-one-half">
+              <a href="javascript:history.back()">Return to previous page without saving</a>
             </div>
           </div>
         </div>
@@ -84,9 +65,9 @@
           </ul>
         </div>
       </div>-->
-    </div>
-  </div>{% endblock %} <!-- Your page content goes inside the content block -->
-   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-   {% block content %} {% endblock %}
+    </div>{% endblock %} <!-- Your page content goes inside the content block -->
+     <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+     {% block content %} {% endblock %}
+  </div>
 </body>
 </html>
