@@ -163,4 +163,4 @@ router.get(/deceasedPerson-handler/, function (req, res) {
   }
 });
   
-     
+module.exports = router;
