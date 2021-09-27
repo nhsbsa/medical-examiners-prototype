@@ -171,7 +171,7 @@ router.get(/portalHandler/, function (req, res) {
 });
 router.get(/portalCoroner/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
-    res.redirect('date&time');
+    res.redirect('coroner-notification-date-time');
   } else {
     res.redirect('coroner-notification-martin-lincolnNotsent');
   }
