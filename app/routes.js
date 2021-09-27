@@ -162,5 +162,19 @@ router.get(/deceasedPerson-handler/, function (req, res) {
     res.redirect('AP-added4');
   }
 });
+router.get(/portalHandler/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('coroner-notification-martin-lincolnSent');
+  } else {
+    res.redirect('coroner-notification-martin-lincolnNotsent');
+  }
+});
+router.get(/portalCoroner/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('date&time');
+  } else {
+    res.redirect('coroner-notification-martin-lincolnNotsent');
+  }
+});
   
 module.exports = router;
