@@ -1,6 +1,6 @@
 <!-- Use this page as the index for your project -->
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-<!-- Extends the layout from /views/layout.html -->
+<!-- Extends the layout from /views/layout-sidebar.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +8,12 @@
 </head>
 <body>
   {% extends 'main-template-sidebar.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
-  In /views/layout-sidebar.html you can:
+  In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
 -->
    <!-- Set the page title inside the pageTitle block -->
-   {% block pageTitle %} Open cases {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block pageTitle %} Review cause of death {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
    {% block beforeContent %}
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
@@ -75,7 +75,7 @@
                                name="example"
                                type="checkbox"
                                value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
-                               for="example-1">Status</label>
+                               for="example-1">Case types</label>
                         </div>
                       </div>
                     </div>
@@ -86,7 +86,7 @@
                          style="float:right">Create new case</a>
                   </div>
                 </div>
-                <hr style="border-bottom:4px solid #005EB8; margin:0">
+                <hr style="border-bottom:4px solid #005eb8; margin:0">
                 <div class="table-scroll"
                      id="table-scroll">
                   <div class="nhsuk-table-responsive nhsuk-u-margin-top-0 table-wrap">
@@ -117,9 +117,9 @@
                               class="nhsuk-table__header"
                               scope="col"><button data-index="0"
                                   onclick="sortTable()"
-                                  type="button">Hospital number</button></th><!--<th class="nhsuk-table__header" aria-sort="none" scope="col">
-                                                                                <button onclick="sortTable()" type="button" data-index="0">Action</button>
-                                                                        </th>-->
+                                  type="button">Hospital number</button></th><!--<th class="nhsuk-table__header fixed-side" aria-sort="none" scope="col">
+                                                                        <button onclick="sortTable()" type="button" data-index="0">Action</button>
+                                                                </th>-->
                           <th aria-sort="none"
                               class="nhsuk-table__header fixed-side"
                               scope="col"><button data-index="0"
@@ -130,12 +130,12 @@
                       <tbody class="nhsuk-table__body">
                         <tr class="nhsuk-table__row">
                           <td class="nhsuk-table__cell">
-                            <a href="case-overview-martin-lincoln">Martin Lincoln</a>
+                            <a href="case-overview-martin-lincoln3">Martin Lincoln</a>
                           </td>
                           <td class="nhsuk-table__cell">02/11/1935</td>
                           <td class="nhsuk-table__cell">28/08/2020</td>
                           <td class="nhsuk-table__cell">9975360025</td>
-                          <td class="nhsuk-table__cell">66543</td>
+                          <td class="nhsuk-table__cell">66543</td><!--<td class="nhsuk-table__cell">Review attending practitioner's proposed cause of death</td>-->
                           <td><span class="nhsuk-tag nhsuk-tag--red case-tag">Urgent</span></td>
                         </tr>
                       </tbody>
@@ -151,28 +151,17 @@
         <div class="side-nav">
           <ul>
             <div class="options"
-                 id="options">
-              <ul>
-                <div class="options"
-                     id="options"></div>
-                <li>
-                  <a class="active"
-                      href="open-cases">Open cases</a>
-                </li>
-                <li>
-                  <a href="awaiting-ap-cod">Awaiting attending practitioner's cause of death</a>
-                </li>
-                <li>
-                  <a href="awaiting-me-review">Awaiting medical examiner's independent review</a>
-                </li>
-                <li>
-                  <a href="needs-coroner-referral">Awaiting coroner's outcome</a>
-                </li>
-                <li>
-                  <a href="closed-cases">Closed cases</a>
-                </li>
-              </ul>
-            </div>
+                 id="options"></div>
+            <li>
+              <a class="active"
+                  href="me-case-list-reviewconcerns">Open cases</a>
+            </li><!--<li><a href="me-case-list-reviewcod">Review cause of death</a></li>-->
+            <li>
+              <a href="me-case-list-awaitscrutiny">Awaiting medical examiner's scrutiny</a>
+            </li>
+            <li>
+              <a href="me-case-list-closed">Closed cases</a>
+            </li>
           </ul>
         </div>
       </div>

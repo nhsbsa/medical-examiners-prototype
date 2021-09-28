@@ -1,81 +1,66 @@
 <!-- Use this page as the index for your project -->
-
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-sidebar-no-login.html' %}
-<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-sidebar-no-login.html' %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
 -->
-
-<!-- Set the page title inside the pageTitle block -->
-{% block pageTitle %}
-NHS Medical Examiners - Home
-{% endblock %}
-
-<!-- Breadcrumb goes inside the beforeContent block -->
-{% block beforeContent %}{% endblock %}
-
-<!-- Your page content goes inside the content block -->
-<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
-{% block content %}
-<div class="nhsuk-width-container-fluid">
-  <main class="nhsuk-main-wrapper--s" id="maincontent" role="main">
-    <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    {% from 'fieldset/macro.njk' import fieldset %}
-{% from "input/macro.njk" import input %}
-
-<div class="nhsuk-grid-column-two-thirds">
-
-  <h1 class="nhsuk-heading-l page-title">Sign in</h1>
-
- <!-- <p class="nhsuk-body">If you do not have an account, you can <a href="/create-service/register" class="register-link nhsuk-link">create one now</a>.</p> -->
-
-  <form action="/login" method="post" name="userLoginForm" data-validate="">
-    <input id="csrf" name="csrfToken" type="hidden" value="VhScXKYF-zVsqVF2dkBdaDYE6BwZMnASjufY">
-
-
-    <div class="nhsuk-form-group">
-  <label class="nhsuk-label nhsuk-!-width-two-thirds" for="username">
-    Email address
-  </label>
-  <input class="nhsuk-input nhsuk-!-width-two-thirds" id="username" name="username" type="email" data-validate="required">
-</div>
-
-    <div class="nhsuk-form-group">
-  <label class="nhsuk-label nhsuk-!-width-two-thirds" for="password">
-    Password
-  </label>
-  <input class="nhsuk-input nhsuk-!-width-two-thirds" id="password" name="password" type="password" data-validate="required" autocomplete="current-password">
-</div>
-<br>
-<div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
-    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-    <span class="govuk-warning-text__text">
-      <span class="visually-hidden">  </span>
-      Your session will time out after 60 minutes of inactivity.
-    </span>
-  </div>
-
-
-
-{{ button({
-  "text": "Sign in",
-  "href": "me-case-list-reviewcod"
-}) }}
-
-
-
-
-  </form>
- 
-</div>
-  </div>
-</div>
-  </main>
-</div>
-
-{% endblock %}
+   <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} NHS Medical Examiners - Home {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %}{% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+  {% block content %}
+  <div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper--s"
+          id="maincontent"
+          role="main">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          {% from 'fieldset/macro.njk' import fieldset %} {% from "input/macro.njk" import input %}
+          <div class="nhsuk-grid-column-two-thirds">
+            <h1 class="nhsuk-heading-l page-title">Sign in</h1><!-- <p class="nhsuk-body">If you do not have an account, you can <a href="/create-service/register" class="register-link nhsuk-link">create one now</a>.</p> -->
+            <form action="/login"
+                  data-validate=""
+                  id="userLoginForm"
+                  method="post"
+                  name="userLoginForm">
+              <input id="csrf"
+                    name="csrfToken"
+                    type="hidden"
+                    value="VhScXKYF-zVsqVF2dkBdaDYE6BwZMnASjufY">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-!-width-two-thirds"
+                     for="username">Email address</label> <input class="nhsuk-input nhsuk-!-width-two-thirds"
+                     data-validate="required"
+                     id="username"
+                     name="username"
+                     type="email">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-!-width-two-thirds"
+                     for="password">Password</label> <input autocomplete="current-password"
+                     class="nhsuk-input nhsuk-!-width-two-thirds"
+                     data-validate="required"
+                     id="password"
+                     name="password"
+                     type="password">
+              </div><br>
+              <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
+                <span aria-hidden="true"
+                     class="govuk-warning-text__icon">!</span> <span class="govuk-warning-text__text"> Your session will time out after 60 minutes of inactivity.</span>
+              </div>{{ button({ "text": "Sign in", "href": "me-open-cases" }) }}
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>{% endblock %}
+</body>
+</html>
