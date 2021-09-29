@@ -236,5 +236,14 @@ router.get(/apCodKnown/, function (req, res) {
     });
   
 
-  
+     // Close cases // 
+
+ router.get(/closeCase/, function (req, res) {
+  if (req.query.radioGroup === "yes") {
+    res.redirect('Open-cases');
+  } else {
+    res.redirect('case-overview-martin-lincoln4');
+  }
+  });
+
 module.exports = router;
