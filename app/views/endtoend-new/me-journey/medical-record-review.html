@@ -21,122 +21,79 @@
         <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-
-			<h1>
-				Medical record review
-            </h1>
-
-    
-
-              <div class="nhsuk-form-group">
-
-                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                  <legend class="nhsuk-fieldset__legend">
-              
-Have you had access to all documentation you requested to scruitinise the case?                    
-                  </legend>
-              
-                  
-              
-                  <div class="nhsuk-radios">
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                        Yes
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                        No
-                      </label>
-                    </div>
-
-                    
-              
-                  </div>
-                </fieldset>
-            </div>
-
+            <h1>Medical record review</h1>
             <div class="nhsuk-form-group">
-              
-                <label class="nhsuk-label" for="example">
-                  Enter the details of what you have reviewed
-                </label>
-                <div class="nhsuk-hint" id="example-hint">
-                  If you select no, record any issues you had accessing the information.
+              <fieldset aria-describedby="example-hint"
+                        class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend">Have you had access to all documentation you requested to scruitinise the case?</legend>
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input"
+                         id="example-1"
+                         name="example"
+                         type="radio"
+                         value="yes"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="example-1">Yes</label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input"
+                         id="example-2"
+                         name="example"
+                         type="radio"
+                         value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="example-2">No</label>
+                  </div>
                 </div>
-                <textarea class="nhsuk-textarea nhsuk-u-width-two-thirds" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-              </div>
-
-              
-
-              <div class="nhsuk-form-group">
-                <form action="deceasedPerson-handler" method="get">
-                <fieldset class="nhsuk-fieldset">
-                    <legend class="nhsuk-fieldset__legend">
-                        <p class="nhsuk-fieldset__heading">
-                          Is the cause of death known?  
-                        </p>
-                    </legend>
-            ​
-            <div class="nhsuk-radios">
-  
-              <div class="nhsuk-radios__item">
-              
-              <input aria-describedby="example-hints-1-item-hint"
-              
-              class="nhsuk-radios__input"
-              
-              id="radioInlineGroup"
-              
-              name="radioInlineGroup"
-              
-              type="radio"
-              
-              value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
-              
-              for="radioInlineGroup1">Yes</label>
-              
-              </div>
-              
-              <div class="nhsuk-radios__item">
-              
-              <input aria-describedby="example-hints-2-item-hint"
-              
-              class="nhsuk-radios__input"
-              
-              id="radioInlineGroup"
-              
-              name="radioInlineGroup"
-              
-              type="radio"
-              
-              value="Community"> <label class="nhsuk-label nhsuk-radios__label"
-              
-              for="radioInlineGroup2">No</label>
-              
-              </div>
-              
-              </div>
-                </fieldset>
-                <br>
-                <button class="nhsuk-button" type="submit">
-                    Save and continue
-                </button>
-                </form>
+              </fieldset>
             </div>
-
-
-              
-        
-
-	
-	<div class="nhsuk-u-width-one-half">
-		<a href="case-overview">Return to case overview without saving</a>
-	</div>
-</div>
-</div>
-{% endblock %}
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label"
+                   for="example">Enter the details of what you have reviewed</label>
+              <div class="nhsuk-hint"
+                   id="example-hint">
+                If you select no, record any issues you had accessing the information.
+              </div>
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="5"></textarea>
+            </div>
+            <form action="meScrutiny"
+                  method="get">
+              <fieldset class="nhsuk-fieldset">
+                <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Is the cause of death known?</legend></p>​
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input aria-describedby="example-hints-1-item-hint"
+                         class="nhsuk-radios__input"
+                         id="radioInlineGroup"
+                         name="radioInlineGroup"
+                         type="radio"
+                         value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="radioInlineGroup1">Yes</label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input aria-describedby="example-hints-2-item-hint"
+                         class="nhsuk-radios__input"
+                         id="radioInlineGroup"
+                         name="radioInlineGroup"
+                         type="radio"
+                         value="No"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="radioInlineGroup2">No</label>
+                  </div>
+                </div>
+              </fieldset><br>
+              <button class="nhsuk-button"
+                    type="submit">Save and continue</button>
+            </form>
+            <div class="nhsuk-u-width-one-half">
+              <a href="case-overview">Return to case overview without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

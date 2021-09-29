@@ -199,6 +199,16 @@ router.get(/deceasedPerson-handler/, function (req, res) {
   });
 
 
-   
+ // ME Scrutiny // 
+
+ router.get(/meScrutiny/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('medical-record-proposed-cause');
+  } else {
+    res.redirect('case-scrutiny-martin-lincoln4');
+  }
+  });
+
+  
   
 module.exports = router;

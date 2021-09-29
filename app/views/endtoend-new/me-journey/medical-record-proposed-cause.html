@@ -21,63 +21,46 @@
         <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-
-			<h1>
-				Medical examiner's proposed cause of death
-            </h1>
-
-
+            <h1>Medical examiner's proposed cause of death</h1>
             <div class="nhsuk-form-group">
-              
-                {% include "includes/multi-grid-form-input.html" %}
-
+              {% include "includes/multi-grid-form-input.html" %}
+            </div>
+            <div class="nhsuk-form-group">
+              <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
+                <span aria-hidden="true"
+                     class="govuk-warning-text__icon">!</span> <span class="govuk-warning-text__text"><span class="visually-hidden">Warning</span> You must agree to the declaratio in order to close the case</span>
+              </div>
+            </div>
+            <div class="nhsuk-form-group">
+              <fieldset aria-describedby="example-hint"
+                        class="nhsuk-fieldset">
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input"
+                         id="example-1"
+                         name="example"
+                         type="checkbox"
+                         value="email"> <label class="nhsuk-label nhsuk-checkboxes__label"
+                         for="example-1">I confirm that i have:</label>
+                    <ul>
+                      <li><label class="nhsuk-label nhsuk-checkboxes__label"
+                             for="example-1"><span>carried out an independent and proportionate scrutiny of this death</span></label></li>
+                      <li><label class="nhsuk-label nhsuk-checkboxes__label"
+                             for="example-1"><span>complied with the relevant standards and procedures</span></label></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="nhsuk-form-group">
-                <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
-                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                  <span class="govuk-warning-text__text">
-                    <span class="visually-hidden"> Warning </span>
-                    You must agree to the declaratio in order to close the case
-                  </span>
-                </div>
-                </div>
-
-                <div class="nhsuk-form-group">
-
-                  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                
-                
-                    <div class="nhsuk-checkboxes">
-                
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                          I confirm that i have:
-                          <span>
-                              <ul>
-                                  <li>carried out an independent and proportionate scrutiny of this death</li>
-                                  <li>complied with the relevant standards and procedures</li>
-                              </ul>
-                          </span>
-                        </label>
-                      </div>
-                
-                    </div>
-                  </fieldset>
-                
-                </div>
-
-
-    
-
-    
-
-	<a class="nhsuk-button" href="AP-added3" draggable="false">
-		Save and continue
-	</a>
-	<div class="nhsuk-u-width-one-half">
-		<a href="medical-record-review">Return to previous page without saving</a>
-	</div>
-</div>
-</div>
-{% endblock %}
+              </fieldset>
+            </div><a class="nhsuk-button"
+                 draggable="false"
+                 href="case-scrutiny-martin-lincoln5">Save and continue</a>
+            <div class="nhsuk-u-width-one-half">
+              <a href="medical-record-review">Return to previous page without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
