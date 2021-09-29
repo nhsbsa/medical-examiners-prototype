@@ -188,4 +188,17 @@ router.get(/deceasedPerson-handler/, function (req, res) {
   }
 });
   
+
+ // Discussion with AP // 
+ router.get(/apDiscussion/, function (req, res) {
+  if (req.query.qapDiscussionYes === "new-cause") {
+    res.redirect('discussion-QAP-new-cause');
+  } else {
+    res.redirect('case-scrutiny-martin-lincoln4');
+  }
+  });
+
+
+   
+  
 module.exports = router;
