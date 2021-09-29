@@ -18,7 +18,7 @@
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
             <h1>Additional details</h1>
@@ -64,7 +64,7 @@
                         class="nhsuk-fieldset"
                         role="group">
                 <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Date of death <span class="optional-span">(optional)</span></legend></p><span class="nhsuk-hint"
-                          id="dob-hint">For example, 15 3 1984</span>
+                          id="dob-hint">For example, 15 3 2021</span>
                 <div class="nhsuk-date-input"
                      id="dob">
                   <div class="nhsuk-date-input__item">
@@ -105,7 +105,7 @@
                         class="nhsuk-fieldset"
                         role="group">
                 <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Time of death <span class="optional-span">(optional)</span></legend></p><span class="nhsuk-hint"
-                          id="dob-hint">Please use 24 hour format. For example, 16 03</span>
+                          id="dob-hint">Use 24 hour format. For example, 16 03</span>
                 <div class="nhsuk-date-input"
                      id="dob">
                   <div class="nhsuk-date-input__item">
@@ -150,7 +150,7 @@
                          id="rapid-yes">
                       <div class="nhsuk-form-group">
                         <label class="nhsuk-label"
-                             for="email">Please specify why</label> <input class="nhsuk-input nhsuk-u-width-one-third"
+                             for="email">Enter the reason why</label> <input class="nhsuk-input nhsuk-u-width-one-third"
                              id="email"
                              name="email"
                              type="text">
@@ -214,20 +214,9 @@
                    type="text">
             </div>
             <div class="nhsuk-form-group">
-              <div class="nhsuk-checkboxes">
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input"
-                       id="occupation-unknown"
-                       name="occupation-unknown"
-                       type="checkbox"
-                       value="unknown"> <label class="nhsuk-label nhsuk-checkboxes__label"
-                       for="occupation-unknown">Unknown</label>
-                </div>
-              </div>
-            </div>
-            <div class="nhsuk-form-group">
               <label class="nhsuk-label"
-                   for="additional-info">You can list details about past jobs here. For example, if the person worked with harmful chemicals.</label> 
+                   for="additional-info">Details about past jobs <span class="optional-span">(optional)</span></label> <span class="nhsuk-hint"
+                   id="dob-hint">For example, if the person worked with harmful chemicals.</span> 
               <textarea class="nhsuk-textarea"
                    id="additional-info"
                    name="additional-info"
