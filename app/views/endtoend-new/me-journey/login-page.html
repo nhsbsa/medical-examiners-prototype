@@ -13,10 +13,10 @@
     - add custom CSS and JavaScript
 -->
    <!-- Set the page title inside the pageTitle block -->
-  {% block pageTitle %} NHS Medical Examiners - Home {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
-  {% block beforeContent %}{% endblock %} <!-- Your page content goes inside the content block -->
-  <!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
-  {% block content %}
+   {% block pageTitle %} NHS Medical Examiners - Home {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+   {% block content %}
   <div class="nhsuk-width-container-fluid">
     <main class="nhsuk-main-wrapper--s"
           id="maincontent"
@@ -54,8 +54,8 @@
               </div><br>
               <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
                 <span aria-hidden="true"
-                     class="govuk-warning-text__icon">!</span> <span class="govuk-warning-text__text"> Your session will time out after 60 minutes of inactivity.</span>
-              </div>{{ button({ "text": "Sign in", "href": "me-open-cases" }) }}
+                     class="govuk-warning-text__icon">!</span> <span class="govuk-warning-text__text">Your session will time out after 60 minutes of inactivity.</span>
+              </div>{{ button({ "text": "Sign in", "href": "me-case-list-awaitscrutiny" }) }}
             </form>
           </div>
         </div>

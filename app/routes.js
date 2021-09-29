@@ -136,6 +136,14 @@ router.get(/addConvo/, function (req, res) {
   }
 });
 
+router.get(/addKeyPersonConvo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('kpic-conversation-martin-lincoln');
+  } else {
+    res.redirect('case-history-martin-lincoln3');
+  }
+});
+
 
 // Coroner notification //
 router.get(/coronerRequired/, function (req, res) {
@@ -145,6 +153,23 @@ router.get(/coronerRequired/, function (req, res) {
     res.redirect('coroner-notification-martin-lincoln2'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+router.get(/portalHandler/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('coroner-notification-martin-lincolnSent');
+  } else {
+    res.redirect('coroner-notification-martin-lincolnNotsent');
+  }
+});
+
+router.get(/portalCoroner/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('coroner-notification-date-time');
+  } else {
+    res.redirect('coroner-notification-martin-lincoln-not-sent');
+  }
+});
+
 
  // AP's proposed CoD // 
 router.get(/qapHandler/, function (req, res) {
@@ -160,20 +185,6 @@ router.get(/deceasedPerson-handler/, function (req, res) {
     res.redirect('medical-record-proposed-cause');
   } else {
     res.redirect('AP-added4');
-  }
-});
-router.get(/portalHandler/, function (req, res) {
-  if (req.query.radioInlineGroup === "Acute") {
-    res.redirect('coroner-notification-martin-lincolnSent');
-  } else {
-    res.redirect('coroner-notification-martin-lincolnNotsent');
-  }
-});
-router.get(/portalCoroner/, function (req, res) {
-  if (req.query.radioInlineGroup === "Acute") {
-    res.redirect('coroner-notification-date-time');
-  } else {
-    res.redirect('coroner-notification-martin-lincoln-not-sent');
   }
 });
   

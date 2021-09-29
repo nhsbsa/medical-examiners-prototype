@@ -18,74 +18,47 @@
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-
-			<h1>
-				Discussion with the AP
-            </h1>
-    
+            <h1>Discussion with the AP</h1>
             <div class="nhsuk-form-group">
-              <form action="qapHandler" method="get">
-              <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend">
-                      <p class="nhsuk-fieldset__heading">
-                          Is a disussion with the QAP required for this case?
-                      </p>
-                  </legend>
-          ​
-          <div class="nhsuk-radios">
-
-            <div class="nhsuk-radios__item">
-            
-            <input aria-describedby="example-hints-1-item-hint"
-            
-            class="nhsuk-radios__input"
-            
-            id="radioInlineGroup"
-            
-            name="radioInlineGroup"
-            
-            type="radio"
-            
-            value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
-            
-            for="radioInlineGroup1">Yes</label>
-            
-            </div>
-            
-            <div class="nhsuk-radios__item">
-            
-            <input aria-describedby="example-hints-2-item-hint"
-            
-            class="nhsuk-radios__input"
-            
-            id="radioInlineGroup"
-            
-            name="radioInlineGroup"
-            
-            type="radio"
-            
-            value="Community"> <label class="nhsuk-label nhsuk-radios__label"
-            
-            for="radioInlineGroup2">No</label>
-            
-            </div>
-            
-            </div>
-              </fieldset>
-              <br>
-              <button class="nhsuk-button" type="submit">
-                  Save and continue
-              </button>
+              <form action="qapHandler"
+                    method="get">
+                <fieldset class="nhsuk-fieldset">
+                  <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Is a disussion with the QAP required for this case?</legend></p>​
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input aria-describedby="example-hints-1-item-hint"
+                           class="nhsuk-radios__input"
+                           id="radioInlineGroup"
+                           name="radioInlineGroup"
+                           type="radio"
+                           value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup1">Yes</label>
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <input aria-describedby="example-hints-2-item-hint"
+                           class="nhsuk-radios__input"
+                           id="radioInlineGroup"
+                           name="radioInlineGroup"
+                           type="radio"
+                           value="Community"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup2">No</label>
+                    </div>
+                  </div>
+                </fieldset><br>
+                <button class="nhsuk-button"
+                      type="submit">Save and continue</button>
               </form>
+            </div>
+            <div class="nhsuk-u-width-one-half">
+              <a href="case-overview">Return to previous page without saving</a>
+            </div>
           </div>
-
-	<div class="nhsuk-u-width-one-half">
-
-		<a href="case-overview">Return to previous page without saving</a>
-	</div>
-</div>
-</div>
-{% endblock %}
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
