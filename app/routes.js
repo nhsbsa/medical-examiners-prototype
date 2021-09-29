@@ -188,6 +188,13 @@ router.get(/deceasedPerson-handler/, function (req, res) {
   }
 });
   
+router.get(/apCodKnown/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('qap-proposed2');
+  } else {
+    res.redirect('case-scrutiny-martin-lincoln3');
+  }
+});
 
  // Discussion with AP // 
  router.get(/apDiscussion/, function (req, res) {
@@ -209,6 +216,25 @@ router.get(/deceasedPerson-handler/, function (req, res) {
   }
   });
 
+
+   // MFA // 
+
+ router.get(/authMethod/, function (req, res) {
+  if (req.query.radioGroup === "totp") {
+    res.redirect('set-up-authenticator');
+  } else {
+    res.redirect('enter-mobile');
+  }
+  });
+
+  router.get(/downloadHandler/, function (req, res) {
+    if (req.query.radioGroup === "desktop") {
+      res.redirect('enter-key');
+    } else {
+      res.redirect('get-security-code');
+    }
+    });
   
+
   
 module.exports = router;
