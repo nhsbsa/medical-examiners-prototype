@@ -174,9 +174,9 @@ router.get(/portalCoroner/, function (req, res) {
  // AP's proposed CoD // 
 router.get(/qapHandler/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
-    res.redirect('discussion-QAP-yes');
+    res.redirect('discussion-qap-yes');
   } else {
-    res.redirect('discussion-QAP-no');
+    res.redirect('discussion-qap-no');
   }
   });
 
@@ -240,7 +240,7 @@ router.get(/apCodKnown/, function (req, res) {
 
  router.get(/closeCase/, function (req, res) {
   if (req.query.radioGroup === "yes") {
-    res.redirect('Open-cases-3');
+    res.redirect('open-cases-3');
   } else {
     res.redirect('case-overview-martin-lincoln4');
   }
