@@ -7226,10 +7226,10 @@ ul.grid-grid {
     .nhsBSA-sidebar-container {
       min-height: calc(100vh - 80px); } }
   .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper {
-    flex: 1 0 auto;
+    flex: 1 0;
     display: flex; }
     .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content {
-      flex: 1 0 auto;
+      flex: 1 0;
       background-color: #f0f4f5;
       padding: 0px;
       margin: 0px; }
