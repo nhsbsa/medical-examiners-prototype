@@ -66,6 +66,8 @@
         name="msapplication-square310x310logo">{% endblock %} 
   <script>
 
+
+
   document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script> {% block bodyStart %}{% endblock %} {% block skipLink %} {{ skipLink({ href: '#maincontent', text: 'Skip to main content' }) }} {% endblock %} {% block header %}
   <header class="nhsuk-header"
@@ -113,7 +115,7 @@
             </li>
             <li class="nhsuk-header__navigation-item">
               <a class="nhsuk-header__navigation-link"
-                  href="/">Sign out</a>
+                  href="signed-out">Sign out</a>
             </li>
           </ul>
         </nav>
@@ -128,7 +130,7 @@
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item">
               <a class="nhsuk-breadcrumb__link"
-                  href="search-results">Open cases</a>
+                  href="open-cases">Open cases</a>
             </li>
             <li class="nhsuk-breadcrumb__item">Create new case</li>
           </ol>

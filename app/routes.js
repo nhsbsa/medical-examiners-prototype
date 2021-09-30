@@ -240,7 +240,7 @@ router.get(/apCodKnown/, function (req, res) {
 
  router.get(/closeCase/, function (req, res) {
   if (req.query.radioGroup === "yes") {
-    res.redirect('Open-cases');
+    res.redirect('Open-cases-3');
   } else {
     res.redirect('case-overview-martin-lincoln4');
   }
