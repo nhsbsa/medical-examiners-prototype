@@ -174,9 +174,9 @@ router.get(/portalCoroner/, function (req, res) {
  // AP's proposed CoD // 
 router.get(/qapHandler/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
-    res.redirect('discussion-qap-yes');
+    res.redirect('ap-discussion-yes');
   } else {
-    res.redirect('discussion-qap-no');
+    res.redirect('ap-discussion-no');
   }
   });
 
