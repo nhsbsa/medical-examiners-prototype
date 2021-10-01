@@ -140,7 +140,7 @@ router.get(/addKeyPersonConvo/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
     res.redirect('kpic-conversation-martin-lincoln');
   } else {
-    res.redirect('case-history-martin-lincoln3');
+    res.redirect('case-history-martin-lincoln7');
   }
 });
 
