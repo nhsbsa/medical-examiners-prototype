@@ -1,0 +1,77 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar-bc-task-copy.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+					<h1 class="nhsuk-heading-xl">
+						Pre-scrutiny notes
+                    </h1>
+                    
+					
+
+				</div>
+				
+				<div class="nhsuk-grid-column-one-third">
+					<a href="add-conversation" class="nhsuk-button" style="float:right">
+					Add a note
+					</a>
+				</div>
+			</div>
+            <div class="nhsuk-form-group">
+                <hr style="border-bottom:4px solid #005eb8; margin:0">
+            </div>
+        
+            <div class="nhsuk-form-group disable-dropdown nhsuk-u-width-two-thirds">
+                <label class="nhsuk-label" for="example">
+                  Note added by  <span><strong>Test user</strong></span>
+                </label>
+                
+                <textarea class="nhsuk-textarea nhsuk-u-width-full" id="example" name="example" rows="5" aria-describedby="example-hint">
+
+Example content here
+                </textarea>
+                <span class="time-date-span">28/11/2020, 11:38</span>
+              </div>
+
+              <div class="nhsuk-form-group disable-dropdown nhsuk-u-width-two-thirds">
+                <label class="nhsuk-label" for="example">
+                    Note added by  <span><strong>Test user</strong></span>
+                </label>
+
+                <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint">
+Example content here
+                </textarea>
+                <span class="time-date-span">28/11/2020, 11:38</span>
+              </div>
+
+			<div class="nhsuk-u-width-one-half">
+
+                <a href="case-overview">Return to case overview</a>
+            </div>
+				
+			</div>
+
+			
+	</div>
+{% endblock %}
+

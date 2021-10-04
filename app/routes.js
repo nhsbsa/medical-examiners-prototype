@@ -119,6 +119,15 @@ router.get(/locationOfDeath/, function (req, res) {
   }
 });
 
+router.get(/locationDeathTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('acute-death-martin-lincoln2');
+  } else {
+    res.redirect('community-death-martin-lincoln2');
+  }
+});
+
+
 // Case history //
 router.get(/addEvent/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
@@ -193,6 +202,14 @@ router.get(/apCodKnown/, function (req, res) {
     res.redirect('qap-proposed2');
   } else {
     res.redirect('case-scrutiny-martin-lincoln3');
+  }
+});
+
+router.get(/apKnown/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('qap-proposed3');
+  } else {
+    res.redirect('checkanswers-coroner-notification');
   }
 });
 
