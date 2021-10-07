@@ -128,6 +128,14 @@ router.get(/locationDeathTwo/, function (req, res) {
 });
 
 
+router.get(/unknown/, function (req, res) {
+  if (req.query.radioInlineGroup === "Hospital") {
+    res.redirect('acute-death-martin-lincoln3');
+  } else {
+    res.redirect('community-death-martin-lincoln3');
+  }
+});
+
 // Case history //
 router.get(/addEvent/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
@@ -202,6 +210,13 @@ router.get(/apCodKnown/, function (req, res) {
     res.redirect('qap-proposed2');
   } else {
     res.redirect('case-scrutiny-martin-lincoln3');
+  }
+});
+router.get(/apCodnoinput/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('qap-proposed2-noinput');
+  } else {
+    res.redirect('checkanswers-coroner-notification-noinput');
   }
 });
 
