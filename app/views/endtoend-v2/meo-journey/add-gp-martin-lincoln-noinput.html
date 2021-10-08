@@ -18,13 +18,45 @@
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-            <h1>Location of the death</h1>
+            <header class="page-header">
+              <h1 class="nhsuk-heading-xl">Add GP details</h1>
+            </header>
+            <div class="nhsuk-form-group nhsuk-u-width-one-half">
+              <label class="nhsuk-label"
+                   for="example">First name</label> <input class="nhsuk-input"
+                   id="example"
+                   name="example"
+                   type="text">
+            </div>
+            <div class="nhsuk-form-group nhsuk-u-width-one-half">
+              <label class="nhsuk-label"
+                   for="example">Last name</label> <input class="nhsuk-input"
+                   id="example"
+                   name="example"
+                   type="text">
+            </div>
+            <div class="nhsuk-form-group nhsuk-u-width-one-half">
+              <label class="nhsuk-label"
+                   for="example">Place of work</label>
+              <div class="nhsuk-hint"
+                   id="contact-hint">
+                For example, Croston Manor Hospital, Sutton Lane Surgery, Parkside Nursing home, HMP Rowley Hall
+              </div><input class="nhsuk-input"
+                   id="example"
+                   name="example"
+                   type="text">
+            </div>
             <div class="nhsuk-form-group">
               <fieldset aria-describedby="contact-hint"
-                        class="nhsuk-fieldset">
+                        class="nhsuk-fieldset nhsuk-u-width-one-half">
+                <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Primary contact method</legend></h1>
+                <div class="nhsuk-hint"
+                     id="contact-hint">
+                  Do not provide and on-call contact information
+                </div>
                 <div class="nhsuk-radios nhsuk-radios--conditional">
                   <div class="nhsuk-radios__item">
                     <input aria-controls="conditional-contact-1"
@@ -34,7 +66,17 @@
                          name="contact"
                          type="radio"
                          value="email"> <label class="nhsuk-label nhsuk-radios__label"
-                         for="contact-1">Same as home address</label>
+                         for="contact-1">Phone</label>
+                  </div>
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
+                       id="conditional-contact-1">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label"
+                           for="email">Phone number</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
+                           id="email"
+                           name="email"
+                           type="text">
+                    </div>
                   </div>
                   <div class="nhsuk-radios__item">
                     <input aria-controls="conditional-contact-2"
@@ -44,51 +86,19 @@
                          name="contact"
                          type="radio"
                          value="phone"> <label class="nhsuk-label nhsuk-radios__label"
-                         for="contact-2">Other address</label>
+                         for="contact-2">Bleep</label>
                   </div>
                   <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
                        id="conditional-contact-2">
-                    <div class="nhsuk-form-group nhsuk-u-width-one-half">
-                      <fieldset class="nhsuk-fieldset">
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="address-line-1">Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span></label> <input class="nhsuk-input"
-                               id="address-line-1"
-                               name="address-line-1"
-                               type="text">
-                        </div>
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="address-line-2"><span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span></label> <input class="nhsuk-input"
-                               id="address-line-2"
-                               name="address-line-2"
-                               type="text">
-                        </div>
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="address-town">Town or city</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
-                               id="address-town"
-                               name="address-town"
-                               type="text">
-                        </div>
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="address-county">County</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
-                               id="address-county"
-                               name="address-county"
-                               type="text">
-                        </div>
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="address-postcode">Postcode</label> <input class="nhsuk-input nhsuk-input--width-10"
-                               id="address-postcode"
-                               name="address-postcode"
-                               type="text">
-                        </div>
-                      </fieldset>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label"
+                           for="phone">Bleep number</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
+                           id="phone"
+                           name="phone"
+                           type="text">
                     </div>
                   </div>
-                  <div class="nhsuk-radios__item nhsuk-u-width-one-half">
+                  <div class="nhsuk-radios__item">
                     <input aria-controls="conditional-contact-3"
                          aria-expanded="false"
                          class="nhsuk-radios__input"
@@ -96,13 +106,13 @@
                          name="contact"
                          type="radio"
                          value="text"> <label class="nhsuk-label nhsuk-radios__label"
-                         for="contact-3">Location with no specific address</label>
+                         for="contact-3">Email</label>
                   </div>
                   <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
                        id="conditional-contact-3">
                     <div class="nhsuk-form-group">
                       <label class="nhsuk-label"
-                           for="mobile">Please specify</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
+                           for="mobile">Email address</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
                            id="mobile"
                            name="mobile"
                            type="text">
@@ -110,9 +120,18 @@
                   </div>
                 </div>
               </fieldset>
+              <div class="nhsuk-form-group nhsuk-u-width-one-half">
+                <label class="nhsuk-label"
+                     for="example">Enter other contact details or availability here (optional)</label> 
+                <textarea aria-describedby="example-hint"
+                     class="nhsuk-textarea"
+                     id="example"
+                     name="example"
+                     rows="5"></textarea>
+              </div>
             </div><a class="nhsuk-button"
                  draggable="false"
-                 href="add-gp-martin-lincoln-noinput">Save and continue</a>
+                 href="add-consultant-martin-lincoln-noinput">Save and continue</a>
             <div class="nhsuk-u-width-one-half">
               <a href="javascript:history.back()">Return to previous page without saving</a>
             </div>
@@ -145,9 +164,9 @@
           </ul>
         </div>
       </div>-->
-    </div>{% endblock %} <!-- Your page content goes inside the content block -->
-     <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-     {% block content %} {% endblock %}
-  </div>
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
 </body>
 </html>
