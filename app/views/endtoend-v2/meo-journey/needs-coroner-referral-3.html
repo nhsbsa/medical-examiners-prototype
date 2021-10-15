@@ -13,7 +13,7 @@
     - add custom CSS and JavaScript
 -->
    <!-- Set the page title inside the pageTitle block -->
-   {% block pageTitle %} Open cases {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block pageTitle %}Needs coroner notification {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
    {% block beforeContent %}
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
@@ -25,68 +25,19 @@
               <div class="nhsuk-grid-column-full">
                 <div class="nhsuk-grid-row">
                   <div class="nhsuk-grid-column-two-thirds">
-                    <h1 class="nhsuk-heading-xl">Open cases</h1>
-                    <div class="checkbox-list"
-                         id="checkbox-toggle">
-                      <div class="nhsuk-checkboxes">
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input"
-                               id="example-1"
-                               name="example"
-                               type="checkbox"
-                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
-                               for="example-1">Name</label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input"
-                               id="example-1"
-                               name="example"
-                               type="checkbox"
-                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
-                               for="example-1">Date of birth</label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input"
-                               id="example-1"
-                               name="example"
-                               type="checkbox"
-                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
-                               for="example-1">Date of death</label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input"
-                               id="example-1"
-                               name="example"
-                               type="checkbox"
-                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
-                               for="example-1">NHS number</label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input"
-                               id="example-1"
-                               name="example"
-                               type="checkbox"
-                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
-                               for="example-1">Hospital number</label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input"
-                               id="example-1"
-                               name="example"
-                               type="checkbox"
-                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
-                               for="example-1">Status</label>
-                        </div>
-                      </div>
-                    </div>
+                    <h1 class="nhsuk-heading-xl">Needs coroner notification</h1>
                   </div>
                   <div class="nhsuk-grid-column-one-third">
                     <a class="nhsuk-button"
-                         href="create-case"
+                         href="create-case-quick"
                          style="float:right">Create new case</a>
                   </div>
                 </div>
                 <hr style="border-bottom:4px solid #005EB8; margin:0">
+                <div class="nhsuk-grid-row">
+                  <div class="nhsuk-grid-column-full">
+                    <br>
+                    <br>
                 <div class="table-scroll"
                      id="table-scroll">
                   <div class="nhsuk-table-responsive nhsuk-u-margin-top-0 table-wrap">
@@ -130,7 +81,7 @@
                       <tbody class="nhsuk-table__body">
                         <tr class="nhsuk-table__row">
                           <td class="nhsuk-table__cell">
-                            <a href="case-overview-martin-lincoln">Martin Lincoln</a>
+                            <a href="case-overview-martin-lincoln5">Martin Lincoln</a>
                           </td>
                           <td class="nhsuk-table__cell">02/11/1935</td>
                           <td class="nhsuk-table__cell">28/08/2020</td>
@@ -140,6 +91,8 @@
                         </tr>
                       </tbody>
                     </table>
+                  </div>
+                </div>
                   </div>
                 </div>
               </div>
@@ -156,14 +109,14 @@
                 <div class="options"
                      id="options"></div>
                 <li>
-                  <a class="active"
-                      href="open-cases-2">Open cases</a>
+                  <a
+                      href="open-cases-4">Open cases</a>
                 </li>
                 <li>
-                  <a href="needs-coroner-referral">Needs coroner notification</a>
+                  <a class="active" href="needs-coroner-referral-3">Needs coroner notification</a>
                 </li>
                 <li>
-                  <a href="closed-cases">Closed cases</a>
+                  <a href="closed-cases-2">Closed cases</a>
                 </li>              </ul>
             </div>
           </ul>
