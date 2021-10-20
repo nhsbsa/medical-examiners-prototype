@@ -188,7 +188,7 @@ router.get(/portalCoroner/, function (req, res) {
 });
 
 router.get(/coronerFeedback/, function (req, res) {
-  if (req.query.radioInlineGroup === "Acute") {
+  if (req.query.radioInlineGroup === "Yes") {
     res.redirect('coroner-notification-complete-martin-lincoln');
   } else {
     res.redirect('coroner-notification-complete-martin-lincoln2');
