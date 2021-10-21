@@ -91,6 +91,18 @@ router.get(/caseProgress/, function (req, res) {
 }
 });
 
+router.get(/reOpenSix/, function (req, res) {
+  if (req.query.radioInlineGroup === "add") {
+    res.redirect('add-concern-martin-lincoln'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "new") {
+    res.redirect('QAP-proposed'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "other") {
+    res.redirect('case-overview-martin-lincoln-change'); // if both input values are "Yes" - redirect to 'page-name' //
+  }else {
+    res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
 // Create quick case //
 router.get(/createCase/, function (req, res) {
   if (req.query.radioInlineGroup === "new") {
