@@ -4,6 +4,7 @@ const router = express.Router();
 // Add your routes here - above the module.exports line
 router.use('/me-journey', require('./views/me-journey/_routes'));
 router.use('/meo-journey', require('./views/meo-journey/_routes'));
+
 // Coroner notification routes //
 router.get(/referralMethod/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
@@ -36,11 +37,11 @@ router.get(/reOpenOne/, function (req, res) {
 });
 router.get(/reOpenTwo/, function (req, res) {
   if (req.query.radioInlineGroup === "amend") {
-    res.redirect('re-open'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else if (req.query.radioInlineGroup === "concern") {
     res.redirect('add_concern'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else if (req.query.radioInlineGroup === "amendCoD") {
+  } else if (req.query.radioInlineGroup === "concern") {
     res.redirect('QAP-proposed'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "amendCoD") {
+    res.redirect('re-open'); // if both input values are "Yes" - redirect to 'page-name' //
   }else {
     res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
   }
@@ -87,6 +88,31 @@ router.get(/reOpenSix/, function (req, res) {
     res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+router.get(/reOpenSeven/, function (req, res) {
+  if (req.query.radioInlineGroup === "add") {
+    res.redirect('add-concern-martin-lincoln'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "new") {
+    res.redirect('qap-proposed2'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "other") {
+    res.redirect('case-overview-martin-lincoln-change'); // if both input values are "Yes" - redirect to 'page-name' //
+  }else {
+    res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+router.get(/reOpenEight/, function (req, res) {
+  if (req.query.radioInlineGroup === "yes") {
+    res.redirect('internal-referral'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "amend") {
+    res.redirect('qap-proposed2'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "close") {
+    res.redirect('open-cases-3'); // if both input values are "Yes" - redirect to 'page-name' //
+  
+}
+});
+
+
 // Create quick case //
 router.get(/createCase/, function (req, res) {
   if (req.query.radioInlineGroup === "new") {
@@ -258,6 +284,13 @@ router.get(/apKnown/, function (req, res) {
   }
   });
 
-  
+  router.get(/reclose/, function (req, res) {
+    if (req.query.radioGroup === "yes") {
+      res.redirect('open-cases-3');
+    } else {
+      res.redirect('case-overview-martin-lincoln-change');
+    }
+    });
+
 
 module.exports = router;

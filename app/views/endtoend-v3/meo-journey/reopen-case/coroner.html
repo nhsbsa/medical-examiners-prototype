@@ -18,39 +18,42 @@
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container">
+        <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-            <h1>Close case</h1>
-            <form action="MEclose"
-                  method="get">
-              <div class="nhsuk-form-group">
+            <h1>Coroner notification</h1>
+            <div class="nhsuk-form-group">
+              <form action="referralMethod"
+                    method="get">
                 <fieldset class="nhsuk-fieldset">
-                  <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">Are you sure you want to close this case?</legend></h1>
+                  <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Are you using this service to notify the coroner?</legend></p>
+                  <div class="nhsuk-hint">
+                    <legend class="nhsuk-fieldset__legend">If you’re using this service, select yes. The coroner notification form will appear on the next page.</legend>
+                  </div>&ZeroWidthSpace;
                   <div class="nhsuk-radios">
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input"
-                           id="example-1"
-                           name="radioGroup"
+                      <input aria-describedby="example-hints-1-item-hint"
+                           class="nhsuk-radios__input"
+                           id="radioInlineGroup"
+                           name="radioInlineGroup"
                            type="radio"
-                           value="yes"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="example-1">Yes</label>
+                           value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup1">Yes</label>
                     </div>
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input"
-                           id="example-2"
-                           name="radioGroup"
+                      <input aria-describedby="example-hints-2-item-hint"
+                           class="nhsuk-radios__input"
+                           id="radioInlineGroup"
+                           name="radioInlineGroup"
                            type="radio"
-                           value="no"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="example-2">No</label>
+                           value="No"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup2">No&ZeroWidthSpace;</label>
                     </div>
                   </div>
-                </fieldset>
-              </div><button class="nhsuk-button"
-                    type="submit">Save and continue</button>
-            </form>
-            <div class="nhsuk-u-width-one-half">
-              <a href="javascript:history.back()">Return to previous page without saving</a>
+                </fieldset><br>
+                <button class="nhsuk-button"
+                      type="submit">Save and continue</button>
+              </form>
             </div>
           </div>
         </div>
@@ -81,9 +84,9 @@
           </ul>
         </div>
       </div>-->
-    </div>{% endblock %} <!-- Your page content goes inside the content block -->
-     <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-     {% block content %} {% endblock %}
-  </div>
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
 </body>
 </html>
