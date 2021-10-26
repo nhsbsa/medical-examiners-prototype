@@ -54,8 +54,8 @@ router.get(/reOpenThree/, function (req, res) {
   }
 });
 router.get(/reOpenFour/, function (req, res) {
-  if (req.query.radioInlineGroup === "coroner") {
-    res.redirect('../Coroner_referral2/internal-referral');
+  if (req.query.radioInlineGroup === "yes") {
+    res.redirect('../coroner-notification-martin-lincoln');
   } else {
     res.redirect('QAP-proposed');
   }
@@ -111,6 +111,7 @@ router.get(/reOpenEight/, function (req, res) {
   
 }
 });
+
 
 
 // Create quick case //
