@@ -112,7 +112,13 @@ router.get(/reOpenEight/, function (req, res) {
 }
 });
 
-
+router.get(/reOpenNine/, function (req, res) {
+  if (req.query.radioInlineGroup === "yes") {
+    res.redirect('../coroner-notification-martin-lincoln');
+  } else {
+    res.redirect('qap-proposed2');
+  }
+});
 
 // Create quick case //
 router.get(/createCase/, function (req, res) {
