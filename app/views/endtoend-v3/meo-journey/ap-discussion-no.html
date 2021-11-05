@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  n<!-- Use this page as the index for your project -->
+   <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+   <!-- Extends the layout from /views/layout.html -->
+  <head>
+    <title></title>
+  </head>{% extends 'main-template-sidebar-bc-task-copy3.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <h1>Discussion with the attending practitioner (AP)</h1>
+            <p class="nhsuk-u-width-two-thirds">You are choosing not to discuss the case with the AP. you should only continue with this option if you accept the cause of death they have proposed without change. The cause of death that appears on
+            the MCCD will be exactly as written by the AP. This section will now be marked as complete.</p>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label"
+                   for="example">Explain why you have chosen not to have a discussion with the QAP</label> 
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="5"></textarea>
+            </div><br>
+            <a class="nhsuk-button"
+                 href="case-scrutiny-martin-lincoln4"
+                 type="submit">Save and continue</a>
+            <div class="nhsuk-u-width-one-half">
+              <a href="javascript:history.back()">Return to previous page without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

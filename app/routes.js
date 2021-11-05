@@ -114,7 +114,7 @@ router.get(/reOpenEight/, function (req, res) {
 
 router.get(/reOpenNine/, function (req, res) {
   if (req.query.radioInlineGroup === "yes") {
-    res.redirect('../coroner-notification-martin-lincoln');
+    res.redirect('coroner-notification-martin-lincoln');
   } else {
     res.redirect('qap-proposed2');
   }

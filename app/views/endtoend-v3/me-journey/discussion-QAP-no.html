@@ -1,0 +1,63 @@
+n
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  {% extends 'main-template-sidebar-bc-task-copy3.html' %} {% set active = "me-user" %} {% set activesub = "cases" %}
+  <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Create a case {% endblock %}
+  <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper" id="maincontent">
+
+            <h1>
+              Discussion with the QAP
+            </h1>
+
+            <p class="nhsuk-u-width-two-thirds">
+              You are choosing not to discuss the case with the QAP. you should only continue with this option if you
+              accept the cause of
+              death they have proposed without change. This cause of death that appears on the MCCD will be exactly as
+              written by the QAP.
+              This section will now be marked as complete.
+            </p>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+                Explain why you have chosen not to have a discussion with the QAP
+              </label>
+              <textarea class="nhsuk-textarea nhsuk-u-width-two-thirds" id="example" name="example" rows="5"
+                aria-describedby="example-hint"></textarea>
+            </div>
+
+            <br>
+            <a class="nhsuk-button" type="submit" href="case-scrutiny-martin-lincoln4">
+              Save and continue
+            </a>
+
+          </div>
+
+          <div class="nhsuk-u-width-one-half">
+
+            <a href="discussion-QAP">Return to previous page without saving</a>
+          </div>
+        </div>
+      </div>
+
+      {% endblock %}
