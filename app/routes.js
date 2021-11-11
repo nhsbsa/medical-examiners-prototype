@@ -181,7 +181,9 @@ router.get(/addKeyPersonConvo/, function (req, res) {
     res.redirect('case-history-martin-lincoln7');
   }
 });
+
 // Coroner notification //
+
 router.get(/coronerRequired/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('internal-referral'); // if both input values are "Yes" - redirect to 'page-name' //
@@ -189,6 +191,7 @@ router.get(/coronerRequired/, function (req, res) {
     res.redirect('coroner-notification-martin-lincoln2'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
 router.get(/portalHandler/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
     res.redirect('coroner-notification-martin-lincolnSent');
@@ -196,6 +199,7 @@ router.get(/portalHandler/, function (req, res) {
     res.redirect('coroner-notification-martin-lincolnNotsent');
   }
 });
+
 router.get(/portalCoroner/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
     res.redirect('coroner-notification-date-time');
@@ -203,11 +207,20 @@ router.get(/portalCoroner/, function (req, res) {
     res.redirect('coroner-notification-martin-lincoln-not-sent');
   }
 });
+
 router.get(/coronerFeedback/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
     res.redirect('coroner-notification-complete-martin-lincoln');
   } else {
     res.redirect('coroner-notification-complete-martin-lincoln2');
+  }
+});
+
+router.get(/internalReferral/, function (req, res) {
+  if (req.query.radioGroup === "Yes") {
+    res.redirect('internal-referral');
+  } else {
+    res.redirect('coroner-notification-date-time');
   }
 });
 
