@@ -216,8 +216,8 @@ router.get(/coronerFeedback/, function (req, res) {
   }
 });
 
-router.get(/internalReferral/, function (req, res) {
-  if (req.query.radioGroup === "Yes") {
+router.get(/internalReferralTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
     res.redirect('internal-referral');
   } else {
     res.redirect('coroner-notification-date-time');
