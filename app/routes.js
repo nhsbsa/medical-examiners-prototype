@@ -85,7 +85,7 @@ router.get(/reOpenSix/, function (req, res) {
   } else if (req.query.radioInlineGroup === "other") {
     res.redirect('case-overview-martin-lincoln-change'); // if both input values are "Yes" - redirect to 'page-name' //
   }else {
-    res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('QAP-proposed'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 
@@ -118,6 +118,16 @@ router.get(/reOpenNine/, function (req, res) {
   } else {
     res.redirect('qap-proposed2');
   }
+});
+
+router.get(/reOpenTen/, function (req, res) {
+  if (req.query.radioInlineGroup === "yes") {
+    res.redirect('coroner-notification-martin-lincoln');
+  } else if (req.query.radioInlineGroup === "amendcod") {
+    res.redirect('qap-proposed2');
+  } else if (req.query.radioInlineGroup === "closecase") {
+    res.redirect('case-scrutiny-martin-lincoln6');
+    }
 });
 
 // Create quick case //
