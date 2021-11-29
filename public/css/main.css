@@ -8727,3 +8727,11 @@ textarea {
 
 .moj-timeline__document-link:focus {
   color: #0b0c0c; }
+
+.notification-badge {
+  margin-left: 10px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: red;
+  color: white; }
