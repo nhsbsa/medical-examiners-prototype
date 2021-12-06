@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-task.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -60,9 +60,13 @@ No&ZeroWidthSpace;
                   Save and continue
               </button>
               </form>            </div>
+              <div class="nhsuk-u-width-one-half">
+                <a href="javascript:history.back()">Return to previous page without saving</a>
+              </div>
           </div>
         </div>
-      </div><!--<div class="nhsBSA-sidebar-nav">
+      </div>
+      <!--<div class="nhsBSA-sidebar-nav">
         <div class="side-nav">
           <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption==bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS No. 123 456 7890</span></h3>
           <ul>
