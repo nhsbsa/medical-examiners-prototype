@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-coroner.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  {% extends 'main-template-sidebar-bc-history.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
   In /views/layout.html you can:
     - change the header and footer
     - add custom CSS and JavaScript
@@ -18,28 +18,31 @@
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container">
+        <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h1 class="nhsuk-u-margin-bottom-4"><span role="text">Case communication</span></h1>
+              </div>
             <div class="nhsuk-grid-column-full">
-              <h1 class="nhsuk-u-margin-bottom-4"><span role="text">Coroner notification</span></h1>
-              <table class="nhsuk-table">
-                <tbody class="nhsuk-table__body">
-                  <tr class="nhsuk-table__row"
-                      role="row">
-                    <td class="nhsuk-table__cell"
-                        style="padding: 8px 24px 8px 0px;">Notification not required</td>
-                    <td class="nhsuk-table__cell"
-                        style="padding: 8px 24px 8px 0px;"></td>
-                    <td class="nhsuk-table__cell"
-                        style="text-align: right; padding: 8px 24px 8px 0px;">
-                      <a class="nhsuk-link"
-                          href="record-coroner-notification">Change</a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation" style="background-color:#f0f4f5;">
+              <ul class="nhsuk-secondary-navigation__list">
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" href="case-history-martin-lincoln5">Case concerns</a>
+                </li>
+
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" aria-current="page" href="case-communication-martin-lincoln">Other communication</a>
+                </li>
+      
+              </ul>
+            </nav> <hr style="border-bottom:1px solid #ccc; margin:0">
+            <br>             
+            <p class="nhsuk-body">No communication has been added to this case. <a class="nhsuk-link"
+                 href="add-event-martin-lincoln">Add a person or conversation</a></p>
+                 </div>           
+           </div>
           </div>
         </div>
       </div>
@@ -54,17 +57,17 @@
                 <div class="options"
                      id="options"></div>
                 <li>
-                  <a href="case-overview-martin-lincoln3">Case details</a>
+                  <a href="case-overview-martin-lincoln">Case details</a>
                 </li>
                 <li>
-                  <a href="case-scrutiny-martin-lincoln3">Case scrutiny</a>
-                </li>
-                <li>
-                  <a href="case-history-martin-lincoln5">Case communication</a>
+                  <a href="case-scrutiny-martin-lincoln">Case scrutiny</a>
                 </li>
                 <li>
                   <a class="active"
-                      href="coroner-notification-martin-lincoln">Coroner notification</a>
+                      href="case-history-martin-lincoln">Case communication</a>
+                </li>
+                <li>
+                  <a href="coroner-notification-martin-lincoln">Coroner notification</a>
                 </li>
               </ul>
             </div>
