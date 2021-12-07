@@ -177,6 +177,17 @@ router.get(/addEvent/, function (req, res) {
     res.redirect('add-kpic-martin-lincoln');
   }
 });
+
+router.get(/choosePerson/, function (req, res) {
+  if (req.query.radioInlineGroup === "Personal") {
+    res.redirect('personal-conversation-martin-lincoln');
+  } else if (req.query.radioInlineGroup === "Professional") {
+    res.redirect('kpic-conversation-martin-lincoln');
+  } else {
+    res.redirect('add-person-martin-lincoln');
+  }
+});
+
 router.get(/addConvo/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
     res.redirect('personal-conversation-martin-lincoln');

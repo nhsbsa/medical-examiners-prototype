@@ -7,8 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
-
+  {% extends 'main-template-sidebar-question-page.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -23,11 +22,12 @@
           <div class="nhsuk-main-wrapper"
                id="maincontent">
             <h1>Add a person or conversation</h1>
-            <div class="nhsuk-form-group">
-              <form action="addEvent"
+                        
+       <div class="nhsuk-form-group">
+              <form action="choosePerson"
                     method="get">
                 <fieldset class="nhsuk-fieldset">
-                  <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Select the type of person.</legend></p>​
+                  <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Select the person.</legend></p>​
                   <div class="nhsuk-radios">
                     <div class="nhsuk-radios__item">
                       <input aria-describedby="example-hints-1-item-hint"
@@ -35,8 +35,8 @@
                            id="radioInlineGroup"
                            name="radioInlineGroup"
                            type="radio"
-                           value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup1">Personal contact</label>
+                           value="Personal"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup1">Sheila Lincoln (spouse)</label>
                     </div>
                     <div class="nhsuk-radios__item">
                       <input aria-describedby="example-hints-2-item-hint"
@@ -44,8 +44,18 @@
                            id="radioInlineGroup"
                            name="radioInlineGroup"
                            type="radio"
-                           value="Community"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup2">Key person involved in care</label>
+                           value="Professional"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup2">Jane Smith (consultant involved in care)</label>
+                    </div>
+                    <div class="nhsuk-radios__divider">or</div>
+                    <div class="nhsuk-radios__item">
+                      <input aria-describedby="example-hints-2-item-hint"
+                           class="nhsuk-radios__input"
+                           id="radioInlineGroup"
+                           name="radioInlineGroup"
+                           type="radio"
+                           value="New"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup3">Add a new person</label>
                     </div>
                   </div>
                 </fieldset><br>
