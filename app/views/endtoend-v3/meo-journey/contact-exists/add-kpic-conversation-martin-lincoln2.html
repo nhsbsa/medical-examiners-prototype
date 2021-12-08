@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-task.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -20,8 +20,8 @@
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
-               id="maincontent">
-            <h1>Key person involved in care added</h1>
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case communication - Martin Lincoln</span>
+            <h1>Key person involved in care details - Dr Jane Smith</h1>
             <table class="nhsuk-table">
               <tbody class="nhsuk-table__body">
                 <tr class="nhsuk-table__row"
@@ -60,11 +60,23 @@
                         href="add-kpic-martin-lincoln">Change</a>
                   </td>
                 </tr>
+                <tr class="nhsuk-table__row"
+                    role="row">
+                  <td class="nhsuk-table__cell"
+                      style="font-weight:700; padding: 8px 24px 8px 0px;">Other details</td>
+                  <td class="nhsuk-table__cell"
+                      style="padding: 8px 24px 8px 0px;"></td>
+                  <td class="nhsuk-table__cell"
+                      style="text-align: right; padding: 8px 24px 8px 0px;">
+                    <a class="nhsuk-link"
+                        href="add-kpic-martin-lincoln"></a>
+                  </td>
+                </tr>
               </tbody>
             </table>
-            <h2 class="nhsuk-heading-l">Conversations</h2>
+            <h2 class="nhsuk-heading-l">Communication</h2>
             <p class="nhsuk-body"><a class="nhsuk-link"
-               href="add-event-martin-lincoln">Add a conversation</a></p>​
+               href="add-event-martin-lincoln">Record communication</a></p>​
             <table class="nhsuk-table">
               <thead class="nhsuk-table__head"
                      role="rowgroup">
@@ -101,6 +113,9 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="nhsuk-u-width-one-half">
+            <a href="javascript:history.back()">Return to previous page without saving</a>
           </div>
         </div>
       </div><!--<div class="nhsBSA-sidebar-nav">
