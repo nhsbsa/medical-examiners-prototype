@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-bc.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -19,7 +19,7 @@
    {% block content %}
    <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-   <header class="page-header">
+   <header class="page-header"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case scrutiny - Martin Lincoln</span>
    
     <h1 class="nhsuk-heading-xl">Add a note for the medical examiner​</h1>
   </header>
@@ -51,9 +51,9 @@
 <a class="nhsuk-button" href="case-scrutiny-martin-lincoln4" draggable="false">
 Save and continue
 </a>
-<!--<div class="nhsuk-u-width-one-half">
+<div class="nhsuk-u-width-one-half">
 <a href="case-overview">Return to previous page without saving</a>
-  </div>-->
+  </div>
   {% endblock %}
 </body>
 </html>

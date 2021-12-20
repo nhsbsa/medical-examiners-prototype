@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-task.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -64,8 +64,13 @@ No, I just need to close this case
 Save and continue
 </button>
 </form>
+<div class="nhsuk-u-width-one-half">
+  <a href="javascript:history.back()">Return to previous page without saving</a>
+</div>
             </div>
+            
           </div>
+          
         </div>
       </div>
       <!--<div class="nhsBSA-sidebar-nav">

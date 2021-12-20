@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-task2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -20,7 +20,7 @@
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
-               id="maincontent">
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case history - Martin Lincoln</span>
             <h1>Personal contact details</h1>
             <table class="nhsuk-table">
               <tbody class="nhsuk-table__body">
@@ -113,6 +113,9 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="nhsuk-u-width-one-half">
+            <a href="javascript:history.back()">Return to previous page without saving</a>
           </div>
         </div>
       </div><!--<div class="nhsBSA-sidebar-nav">

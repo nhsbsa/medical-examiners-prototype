@@ -18,37 +18,21 @@
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container">
+        <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
-               id="maincontent">
-            <h1>Close case</h1>
-            <form action="reclose"
-                  method="get">
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
-                  <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">Are you sure you want to close this case?</legend></h1>
-                  <div class="nhsuk-radios">
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input"
-                           id="example-1"
-                           name="radioGroup"
-                           type="radio"
-                           value="yes"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="example-1">Yes</label>
-                    </div>
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input"
-                           id="example-2"
-                           name="radioGroup"
-                           type="radio"
-                           value="no"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="example-2">No</label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div><button class="nhsuk-button"
-                    type="submit">Save and continue</button>
-            </form>
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case history - Martin Lincoln</span>
+            <h1>Add case note</h1>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label"
+                   for="example">Case note</label> 
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="5"></textarea>
+            </div><a class="nhsuk-button"
+                 draggable="false"
+                 href="case-history-martin-lincoln5">Save and continue</a>
             <div class="nhsuk-u-width-one-half">
               <a href="javascript:history.back()">Return to previous page without saving</a>
             </div>
