@@ -1,0 +1,71 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a quick case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %}
+   <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+   <header class="page-header">
+    <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Reopen case</span>
+    <h1 class="nhsuk-heading-xl">Add a note for the medical examiner (ME)​</h1>
+  </header>
+
+<div class="nhsuk-warning-callout">
+<h3 class="nhsuk-warning-callout__label">
+<span role="text">
+<span class="nhsuk-u-visually-hidden">Important: </span>
+Important
+</span>
+</h3>
+<p>Give a summary of what changes need to be made, so that the ME can take the right action.
+</p>
+</div>
+
+<div class="nhsuk-form-group">
+<label class="nhsuk-label" for="example">
+Enter details
+</label>
+<textarea class="nhsuk-textarea  nhsuk-u-width-two-thirds" id="example" name="example" rows="10" aria-describedby="example-hint"></textarea>
+</div>
+
+
+</div>
+
+<div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+
+
+<div class="nhsuk-checkboxes">
+
+
+</div>
+</fieldset>
+
+</div>
+
+<a class="nhsuk-button" href="case-scrutiny-martin-lincoln4" draggable="false">
+Save and continue
+</a>
+<div class="nhsuk-u-width-one-half">
+<a href="case-overview">Return to Case overview</a>
+  </div>{% endblock %}
+</body>
+</html>
+
+</div>
+</div>

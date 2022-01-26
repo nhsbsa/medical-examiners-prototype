@@ -1,0 +1,142 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar-bc.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h1 class="nhsuk-u-margin-bottom-4"><span role="text">Case history</span></h1>
+              </div>
+            </div>
+            <div class="nhsuk-grid-column-full">
+              <h2 class="nhsuk-heading-l"><span role="text">Case concerns</span></h2>
+              <p>Awaiting medical examiners review for the concern raised.</p>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Sheila Lincoln (spouse)</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">1 concern</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="view-concern-martin-lincoln">View or edit</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l"><span role="text">People and Conversations</span></h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Sheila Lincoln (spouse)</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">1 Conversation</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                     <!-- <a class="nhsuk-link"
+                          href="add-personal-conversation-martin-lincoln3">View or add a conversation</a>-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+             <!-- <p class="nhsuk-body"><a class="nhsuk-link"
+                 href="add-event-martin-lincoln">Add a new person or conversation</a></p>-->
+              <h2 class="nhsuk-heading-l"><span role="text">Case notes</span></h2>
+              <table class="nhsuk-table">
+                <thead class="nhsuk-table__head"
+                       role="rowgroup">
+                  <tr role="row">
+                    <th class=""
+                        role="columnheader"
+                        scope="col">Time and date</th>
+                    <th class=""
+                        role="columnheader"
+                        scope="col">Details</th>
+                    <th class=""
+                        role="columnheader"
+                        scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell">29/08/2020<br>
+                    08:46</td>
+                    <td class="nhsuk-table__cell">Wife called and said that she was unhappy with the way both she and her husband (the deceased) were spoken<br>
+                    to by one of the HCAs on the ward. She said that she felt she was quite rude and didn't seem to be listening<br>
+                    to them. She said the HCA kept referring to her husband by his full name (Martin) when she had told the ward<br>
+                    numerous times he goes by the name of Marty. Because her husband had dementia she said he was getting confused<br>
+                    when they were using the name Martin and it was causing him distress during his final days.</td>
+                    <td class="nhsuk-table__cell">
+                      <!--<a class="nhsuk-link"
+                          href="create-case-quick">Change</a>-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!--<p class="nhsuk-body"><a class="nhsuk-link"
+                 href="add-note-martin-lincoln">Add a note</a></p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption--bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS number 997 536 0025</span><span class="nhsuk-caption-m nhsuk-caption--bottom"><span class=
+          "nhsuk-u-visually-hidden">-</span> <strong class="nhsuk-tag nhsuk-tag--orange">Reopened</strong></span></h3>
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a href="case-overview-martin-lincoln3">Case details</a>
+                </li>
+                <li>
+                  <a href="case-scrutiny-martin-lincoln3">Case scrutiny</a>
+                </li>
+                <li>
+                  <a class="active"
+                      href="case-history-martin-lincoln5">Case history</a>
+                </li>
+                
+                <li>
+                  <a href="coroner-notification-martin-lincoln">Coroner notification</a>
+                </li>
+              </ul>
+            </div>
+          </ul><!-- <div class="action-buttons">
+                <button class="nhsuk-button nhsuk-button==secondary" type="submit">Add note</button>
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>
