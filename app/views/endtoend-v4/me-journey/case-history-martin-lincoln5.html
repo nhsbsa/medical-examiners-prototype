@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  {% extends 'main-template-sidebar-bc-history.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
   In /views/layout.html you can:
     - change the header and footer
     - add custom CSS and JavaScript
@@ -25,25 +25,78 @@
               <div class="nhsuk-grid-column-one-half">
                 <h1 class="nhsuk-u-margin-bottom-4"><span role="text">Case communication</span></h1>
               </div>
-            </div>
-            <div class="nhsuk-grid-column-full">
-              <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation" style="background-color:#f0f4f5;">
-                <ul class="nhsuk-secondary-navigation__list">
-                  <li class="nhsuk-secondary-navigation__item">
-                    <a class="nhsuk-secondary-navigation__link" aria-current="page" href="case-history-martin-lincoln5">Case concerns</a>
-                  </li>
-  
-                  <li class="nhsuk-secondary-navigation__item">
-                    <a class="nhsuk-secondary-navigation__link" href="case-communication-martin-lincoln">Other communication</a>
-                  </li>
-        
-                </ul>
-              </nav> <hr style="border-bottom:1px solid #ccc; margin:0">
-              <br>             
-              <p class="nhsuk-body">No concerns have been added to this case. <a class="nhsuk-link"
-                   href="add-concern-martin-lincoln">Add a concern</a></p>
-                   </div>      
-  
+            <div class="nhsuk-grid-column-two-thirds">
+            <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation" style="background-color:#f0f4f5;">
+              <ul class="nhsuk-secondary-navigation__list">
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" aria-current="page" href="case-history-martin-lincoln">Case concerns</a>
+                </li>
+
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" href="case-communication-martin-lincoln">Other communication</a>
+                </li>
+                      <!--<li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" href="case-contacts-martin-lincoln">Contacts</a>
+                </li>
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" href="case-kpics-martin-lincoln">Key people involved in care</a>
+                </li>-->
+
+              </ul>
+            </nav> <hr style="border-bottom:1px solid #ccc; margin:0">
+            <br>             
+            <p class="nhsuk-body"><a class="nhsuk-link"
+                 href="add-concern-martin-lincoln2">Add a concern</a></p>
+                 <table id="sortable" class="nhsuk-table  nhsuk-table-u-margin-0 nhsuk-table-clickable main-table sortable">
+
+                      <!-- TABLE START -->
+                      <thead class="nhsuk-table__head">
+                        <tr class="nhsuk-table__row">
+
+
+                          <th class="nhsuk-table__header" scope="col">
+                            Name
+ 
+                           </th>
+                        
+                          <th class="nhsuk-table__header" scope="col">
+                           Date
+
+                          </th>
+
+                           <th class="nhsuk-table__header" scope="col">
+                            Status
+ 
+                           </th>
+
+                          <th class="nhsuk-table__header" scope="col">
+                            Action
+
+                          </th>
+
+                        </tr>
+                      </thead>
+
+                      <tbody class="nhsuk-table__body ">
+
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">Sheila Lincoln</td>
+                          <td class="nhsuk-table__cell">29 August 2020</td>
+                          <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--green">reviewed</strong></td>
+                          <td class="nhsuk-table__cell"><a href="view-concern-martin-lincoln2">View<span class="nhsuk-u-visually-hidden">flagged treatment for Laura peteers</span></a></td>   
+                          </tr>
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">Sheila Lincoln</td>
+                          <td class="nhsuk-table__cell">29 August 2020</td>
+                          <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--green">reviewed</strong></td>
+                          <td class="nhsuk-table__cell"><a href="view-concern-martin-lincoln">View<span class="nhsuk-u-visually-hidden">flagged treatment for Laura peteers</span></a></td>   
+                          </tr>
+
+
+                      </tbody>
+                    </table>
+                 </div>           
+           </div>
           </div>
         </div>
       </div>
@@ -65,7 +118,7 @@
                 </li>
                 <li>
                   <a class="active"
-                      href="case-history-martin-lincoln5">Case communication</a>
+                      href="case-history-martin-lincoln">Concerns and communication</a>
                 </li>
                 <li>
                   <a href="coroner-notification-martin-lincoln">Coroner notification</a>
