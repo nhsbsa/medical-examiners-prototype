@@ -3,7 +3,7 @@
   "version": "3.0.10",
   "engines": {
     "node": "10.x"
-  }
+  },
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "scripts": {
