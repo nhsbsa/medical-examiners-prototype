@@ -333,5 +333,12 @@ router.get(/apKnown/, function (req, res) {
     }
     });
 
-
+// NOK discussion // 
+router.get(/mainHandler/, function (req, res) {
+  if (req.query.radioInlineGroup === "Acute") {
+    res.redirect('main-contact-discussion-yes');
+  } else {
+    res.redirect('main-contact-discussion-no');
+  }
+  });
 module.exports = router;

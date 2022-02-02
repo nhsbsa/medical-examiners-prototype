@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  n<!-- Use this page as the index for your project -->
+   <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+   <!-- Extends the layout from /views/layout.html -->
+  <head>
+    <title></title>
+  </head>{% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <h1>No discussion</h1>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Reason why no discussion  with a main contact has taken place
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">Declined interaction with medical office</option>
+                <option value="2" >No response from main contact or other contacts</option>
+                <option value="3" >No contacts listed</option>
+                <option value="4" >Other</option>
+              </select>
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label"
+                   for="example">Enter full details</label> 
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="5"></textarea>
+            </div><br>
+            <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__text">
+                
+                You must agree to the declaratio in order to close the case
+              </span>
+            </div>
+            <div class="nhsuk-form-group">
+
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+
+
+                <div class="nhsuk-checkboxes">
+
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                      I confirm that there has been no discussion with a main contact
+                      <span>
+                          
+                      </span>
+                    </label>
+                  </div>
+            <a class="nhsuk-button"
+                 href="case-scrutiny-martin-lincoln4"
+                 type="submit">Save and continue</a>
+            <div class="nhsuk-u-width-one-half">
+              <a href="javascript:history.back()">Return to previous page without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
