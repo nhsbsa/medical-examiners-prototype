@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-task-copy2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
   In /views/layout.html you can:
     - change the header and footer
     - add custom CSS and JavaScript
@@ -20,7 +20,7 @@
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
-               id="maincontent">
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case scrutiny - Martin Lincoln</span>
             <h1>Agreed new cause of death</h1>
             
             <div class="nhsuk-form-group">
@@ -35,39 +35,10 @@
             <div class="nhsuk-form-group">
               {% include "includes/multi-grid-form-input.html" %}
             </div>
-            <div class="nhsuk-form-group">
-              <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
-                <span aria-hidden="true"
-                     class="govuk-warning-text__icon">!</span> <span class="govuk-warning-text__text"><span class="visually-hidden">Warning</span> You must agree to the declaration in order to close the case</span>
-              </div>
-            </div>
-            <div class="nhsuk-form-group">
-              <fieldset aria-describedby="example-hint"
-                        class="nhsuk-fieldset">
-                <div class="nhsuk-checkboxes">
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input"
-                         id="example-1"
-                         name="example"
-                         type="checkbox"
-                         value="email"> <label class="nhsuk-label nhsuk-checkboxes__label"
-                         for="example-1">I confirm that i have:</label>
-                    <ul>
-                      <li><label class="nhsuk-label nhsuk-checkboxes__label"
-                             for="example-1"><span>Received electronic instruction from the AP proposing the cause of death</span></label></li>
-                      <li><label class="nhsuk-label nhsuk-checkboxes__label"
-                             for="example-1"><span>entered the cause of death proposed by the AP exactly as stated</span></label></li>
-                             <li><label class="nhsuk-label nhsuk-checkboxes__label"
-                              for="example-1"><span>this section is complete and ready for the discussion between the medical examiner or medical examiner officer, and the AP</span></label></li>
-                    </ul>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
             <a class="nhsuk-button"
                  draggable="false"
                  href="case-scrutiny-martin-lincoln5">Save and continue</a>
-            <div class="nhsuk-u-width-one-half">
+           <div class="nhsuk-u-width-one-half">
               <a href="javascript:history.back()">Return to previous page without saving</a>
             </div>
           </div>
