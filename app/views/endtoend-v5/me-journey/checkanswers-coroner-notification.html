@@ -1,0 +1,358 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <h1>Check your answers</h1>
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-inset-text">
+                <span class="nhsuk-u-visually-hidden">Information:</span>
+                <p>Check that all the case details are correct before you send this to the coroner.</p>
+              </div>
+              <h2 class="nhsuk-heading-l">Notification details</h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;"><span class="strong">Notifying doctor</span></td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Dr {{data['firstname']}} {{data['surname']}}</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a href="#">Change <span class="nhsuk-u-visually-hidden">date of birth</span></a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">GMC number</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">{{data['gmc']}}</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a href="#">Change <span class="nhsuk-u-visually-hidden">date of birth</span></a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Contact details</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">{{data['email']}} {{data['phone']}} {{data['mobile']}}</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a href="#">Change <span class="nhsuk-u-visually-hidden">date of birth</span></a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Did the notifying doctor see the deceased person alive within the last 28 days?</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">{{data['case']}}</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a href="#">Change <span class="nhsuk-u-visually-hidden">date of birth</span></a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Reason for notification to the coroner</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">{{data['additional-info']}}</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a href="#">Change <span class="nhsuk-u-visually-hidden">date of birth</span></a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Did the deceased suffer from mental health issues?</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">{{data['mental-health']}}</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a href="#">Change <span class="nhsuk-u-visually-hidden">date of birth</span></a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Has the case been reported to the police?</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">{{data['police']}}</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a href="#">Change <span class="nhsuk-u-visually-hidden">date of birth</span></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l">Deceased person's details</h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Name</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Martin Lincoln</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="create-case-quick2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Date of birth</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">2 November 1935</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="create-case-quick2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">NHS Number</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">997 536 0025</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="create-case-quick2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Hospital number</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">66543</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="additional-details-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Sex</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">male</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="additional-details-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Date and time of death</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">28/08/2020<br>
+                    16:03</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="additional-details-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Rapid release?</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Yes</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="additional-details-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Home address</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">6 Abbey farm<br>
+                    Winchester<br>
+                    WC4 6OJ</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="additional-details-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Job</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Coal Miner<br>
+                    Went down into pits for 36 years</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="additional-details-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l"><span role="text">Location of death</span></h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Location of death</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Hospital or acute setting<br>
+                    RVI newcastle</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="location-death-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Location details</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Ward 26</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="acute-death-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Date of admission</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">20/08/2020</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="acute-death-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l">AP's proposed cause of death</h2>
+              <table class="nhsuk-table">
+                <caption class="nhsuk-table__caption">
+                  Skin symptoms and possible causes
+                </caption>
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">AP who proposed cause of death</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Dr Andrew Nixon</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="ap-proposed-cod2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">AP has discussed cause of death with</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Consultant</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="ap-proposed-cod2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Cause of death summary</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Evidence of dust particles present within the lungs.  Known previous employment as a coal miner for 36yrs, and some evidence of pneumoconiosis, therefore there is an increased likelihood that Martins death occurred as a result of industrial disease.</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="ap-proposed-cod2">Change</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l">Key people involved in care</h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Consultant involved in care</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Dr Jane Smith<br>
+                    0191 123 4556</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="add-kpic-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="font-weight:700; padding: 8px 24px 8px 0px;">Usual GP</td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">Dr Abdul Malik<br>
+                    The hospital<br>
+                    Leeds<br>
+                    LS2 5ZN<br>
+                    0191 223 3445</td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="add-kpic-martin-lincoln2">Change</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table><a class="nhsuk-button"
+                   href="coroner-notification-sent">Accept and send</a><br>
+              <a href="javascript:history.back()">Return to previous page without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

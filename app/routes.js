@@ -341,4 +341,17 @@ router.get(/mainHandler/, function (req, res) {
     res.redirect('main-contact-discussion-no');
   }
   });
+
+  
+
+  // Concern // 
+router.get(/raiseConcern/, function (req, res) {
+  if (req.query.radioInlineGroup === "yes") {
+    res.redirect('add-concern-martin-lincoln');
+  } else {
+    res.redirect('case-history-martin-lincoln4');
+  }
+  });
+  
+  
 module.exports = router;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-sidebar-no-login.html' %} {% block pageTitle %} NHS Medical Examiners - Confirmation page {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}{% endblock %} {% block content %}
+  <div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper--s"
+          id="maincontent"
+          role="main">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          {% from 'fieldset/macro.njk' import fieldset %} {% from "input/macro.njk" import input %}
+          <div class="nhsuk-grid-column-two-thirds">
+            <div class="nhsuk-panel nhsuk-u-margin-bottom-5"
+                 style="background: #005EB8; margin-top: 0;">
+              <h1 class="nhsuk-panel__title"
+                  style="color: white;">Your account is set up</h1><span class="nhsuk-caption-l nhsuk-caption--bottom"
+                   style="text-align: center; color: white;">You can use your authentication app to sign in to the Medical Examiner Office - Manage my caseload service</span>
+            </div>
+            <h3>What happens next</h3>
+            <p>We'll send you a 6 digit code by SMS each time you sign in.</p>
+            <p>To access the service, select <strong>Continue</strong>.</p>{{ button({ "text": "Continue", "href": "me-open-cases" }) }}
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>{% endblock %}
+</body>
+</html>
