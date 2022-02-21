@@ -144,8 +144,35 @@
                    rows="5"></textarea>
             </div>
             
-            <a class="nhsuk-button"
-                 draggable="false" href="case-history-martin-lincoln8">Save and continue</a>
+            <form action="raiseConcern"
+                method="get">
+            <fieldset class="nhsuk-fieldset">
+              <h2> Do you want to raise it as a concern?</h2>​
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input aria-describedby="example-hints-1-item-hint"
+                       class="nhsuk-radios__input"
+                       id="radioInlineGroup"
+                       name="radioInlineGroup"
+                       type="radio"
+                       value="yes"> <label class="nhsuk-label nhsuk-radios__label"
+                       for="radioInlineGroup1">Yes</label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input aria-describedby="example-hints-2-item-hint"
+                       class="nhsuk-radios__input"
+                       id="radioInlineGroup"
+                       name="radioInlineGroup"
+                       type="radio"
+                       value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                       for="radioInlineGroup2">No</label>
+                </div>
+              </div>
+            </fieldset>
+            <br>
+            <button class="nhsuk-button"
+                  type="submit">Save and continue</button>
+          </form>
             <div class="nhsuk-u-width-one-half">
               <a href="javascript:history.back()">Return to previous page without saving</a>
             </div>
