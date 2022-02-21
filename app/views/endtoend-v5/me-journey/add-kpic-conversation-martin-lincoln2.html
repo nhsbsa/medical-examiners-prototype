@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-task.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -20,7 +20,7 @@
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
-               id="maincontent"> <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Communication and concerns - Martin Lincoln</span>
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case communication - Martin Lincoln</span>
             <h1>Key person involved in care added</h1>
             <table class="nhsuk-table">
               <tbody class="nhsuk-table__body">
@@ -62,39 +62,47 @@
                 </tr>
               </tbody>
             </table>
-            <div class="nhsuk-form-group">
-              <form action="addKeyPersonConvo"
-                    method="get">
-                <fieldset class="nhsuk-fieldset">
-                  <h2 class="nhsuk-heading-l">Do you want to record any communication with this person?</h2>​
-                  <div class="nhsuk-radios">
-                    <div class="nhsuk-radios__item">
-                      <input aria-describedby="example-hints-1-item-hint"
-                           class="nhsuk-radios__input"
-                           id="radioInlineGroup"
-                           name="radioInlineGroup"
-                           type="radio"
-                           value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup1">Yes</label>
-                    </div>
-                    <div class="nhsuk-radios__item">
-                      <input aria-describedby="example-hints-2-item-hint"
-                           class="nhsuk-radios__input"
-                           id="radioInlineGroup"
-                           name="radioInlineGroup"
-                           type="radio"
-                           value="Community"> <label class="nhsuk-label nhsuk-radios__label"
-                           for="radioInlineGroup2">No</label>
-                    </div>
-                  </div>
-                </fieldset><br>
-                <button class="nhsuk-button"
-                      type="submit">Save and continue</button>
-              </form>
-              <div class="nhsuk-u-width-one-half">
-                <a href="javascript:history.back()">Return to previous page without saving</a>
-              </div>
-            </div>
+            <h2 class="nhsuk-heading-l">Conversations</h2>
+            <p class="nhsuk-body"><a class="nhsuk-link"
+               href="add-event-martin-lincoln">Add a conversation</a></p>​
+            <table class="nhsuk-table">
+              <thead class="nhsuk-table__head"
+                     role="rowgroup">
+                <tr role="row">
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Time and date</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Staff member involved</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Method</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Details</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row"
+                    role="row">
+                  <td class="nhsuk-table__cell">29/08/2020<br>
+                  08:46</td>
+                  <td class="nhsuk-table__cell">Jenny Smith</td>
+                  <td class="nhsuk-table__cell">Phone call</td>
+                  <td class="nhsuk-table__cell"> Called to ask if there is an alternative AP we can contact to provide a proposed CoD as the AP identified from the patients' notes is not on shift today. Dr Smith informed that they will come down shortly to discuss the case.</td>
+                  <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link"
+                        href="personal-conversation-martin-lincoln">Change</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="nhsuk-body"><a class="nhsuk-link"
+              href="add-concern-martin-lincoln">Raise as a concern</a></p>
           </div>
         </div>
       </div><!--<div class="nhsBSA-sidebar-nav">

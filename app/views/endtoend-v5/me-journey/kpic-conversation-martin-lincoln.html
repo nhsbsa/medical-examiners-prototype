@@ -20,7 +20,7 @@
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
-               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case communication - Martin Lincoln</span>
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Communication and concerns - Martin Lincoln</span>
             <h1>Record communication with Dr Jane Smith</h1>
             <div class="nhsuk-form-group">
               <div class="nhsuk-form-group">
@@ -108,14 +108,7 @@
                  for="select-1">Select the method of communication</label>
             <div class="nhsuk-form-group">
               <div class="nhsuk-radios">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input"
-                       id="example-hints-1"
-                       name="example-hints"
-                       type="radio"
-                       value="yes"> <label class="nhsuk-label nhsuk-radios__label"
-                       for="example-hints-1">In person communication</label>
-                </div>
+                
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input"
                        id="example-hints-2"
@@ -123,6 +116,14 @@
                        type="radio"
                        value="no"> <label class="nhsuk-label nhsuk-radios__label"
                        for="example-hints-2">Phone call</label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input"
+                       id="example-hints-1"
+                       name="example-hints"
+                       type="radio"
+                       value="yes"> <label class="nhsuk-label nhsuk-radios__label"
+                       for="example-hints-1">In person communication</label>
                 </div>
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input"
@@ -144,8 +145,36 @@
                    rows="5"></textarea>
             </div>
             
-            <a class="nhsuk-button"
-                 draggable="false" href="case-history-martin-lincoln8">Save and continue</a>
+            <form action="raiseConcern"
+                method="get">
+            <fieldset class="nhsuk-fieldset">
+              <label class="nhsuk-label"
+                 for="select-1">Do you want to raise it as a concern</label>​
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input aria-describedby="example-hints-1-item-hint"
+                       class="nhsuk-radios__input"
+                       id="radioInlineGroup"
+                       name="radioInlineGroup"
+                       type="radio"
+                       value="yes"> <label class="nhsuk-label nhsuk-radios__label"
+                       for="radioInlineGroup1">Yes</label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input aria-describedby="example-hints-2-item-hint"
+                       class="nhsuk-radios__input"
+                       id="radioInlineGroup"
+                       name="radioInlineGroup"
+                       type="radio"
+                       value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                       for="radioInlineGroup2">No</label>
+                </div>
+              </div>
+            </fieldset>
+            <br>
+            <button class="nhsuk-button"
+                  type="submit">Save and continue</button>
+          </form>
             <div class="nhsuk-u-width-one-half">
               <a href="javascript:history.back()">Return to previous page without saving</a>
             </div>
