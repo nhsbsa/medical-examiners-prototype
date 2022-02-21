@@ -20,8 +20,8 @@
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-main-wrapper"
-               id="maincontent">
-            <h1>Discussion with the main contact</h1>
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Communication and concerns - Martin Lincoln</span>
+            <h1>Discussion with the main contact about scrutiny</h1>
             <div class="nhsuk-form-group">
               <form action="case-scrutiny-martin-lincoln4"
                     method="get">
@@ -41,7 +41,7 @@
                     <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Date of discussion</legend></p>
                     <div class="nhsuk-hint"
                          id="example-hint">
-                      For example, 15 3 1984
+                      For example, 15 8 2021
                     </div>
                     <div class="nhsuk-date-input"
                          id="example">
@@ -85,7 +85,7 @@
                     <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Time of discussion</legend></h1>
                     <div class="nhsuk-hint"
                          id="example-hint">
-                      Use 24 hour format. For example, 16 03.
+                      Use 24 hour format. For example, 16 23
                     </div>
                     <div class="nhsuk-date-input"
                          id="example">
@@ -122,13 +122,14 @@
                        rows="5"></textarea>
                 </div>
                 <br>
+                
                 <div class="nhsuk-warning-callout">
                   <h3 class="nhsuk-warning-callout__label">
                     <span role="text">
                       <span class="nhsuk-u-visually-hidden">Important:</span>
                       Important
                   </h3>
-                  <p>Record actionable concerns raised by the main contact in the Case concerns and communication section. You need to do this before agreeing to the declaration.</p>
+                  <p>Record actionable concerns raised by the main contact in the Communication and concerns tab. You need to do this before agreeing to the declaration.</p>
                 </div>
                 <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
                   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -158,18 +159,47 @@
                   </fieldset>
 
                 </div>
+                </form>
                 <br>
-                <a class="nhsuk-button"
-                href="case-history-martin-lincoln9"
-                type="submit">Save and continue</a>
-                
-              </form>
+                <div class="nhsuk-form-group">
+                  <form action="raiseConcern"
+                  method="get">
+              <fieldset class="nhsuk-fieldset">
+                <label class="nhsuk-label"
+                       for="example">Do yo want to raise it as a concern</label>​
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input aria-describedby="example-hints-1-item-hint"
+                         class="nhsuk-radios__input"
+                         id="radioInlineGroup"
+                         name="radioInlineGroup"
+                         type="radio"
+                         value="yes"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="radioInlineGroup1">Yes</label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input aria-describedby="example-hints-2-item-hint"
+                         class="nhsuk-radios__input"
+                         id="radioInlineGroup"
+                         name="radioInlineGroup"
+                         type="radio"
+                         value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="radioInlineGroup2">No</label>
+                  </div>
+                </div>
+              </fieldset>
+              <br>
+              <button class="nhsuk-button"
+                    type="submit">Save and continue</button>
+            </form>
+              <div class="nhsuk-u-width-one-half">
+                <a href="javascript:history.back()">Return to previous page without saving</a>
+              </div>
+             
             </div>
-          </div>
-          <div class="nhsuk-u-width-one-half">
-            <a href="javascript:history.back()">Return to previous page without saving</a>
-          </div><br>
+            <br>
         </div>
+      </div>
       </div>
     </div>
   </div>{% endblock %}
