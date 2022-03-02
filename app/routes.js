@@ -349,7 +349,7 @@ router.get(/raiseConcern/, function (req, res) {
   if (req.query.radioInlineGroup === "yes") {
     res.redirect('add-concern-martin-lincoln');
   } else {
-    res.redirect('cya-conversation-martin-lincoln');
+    res.redirect('cya-nok-convo-martin-lincoln');
   }
   });
 
