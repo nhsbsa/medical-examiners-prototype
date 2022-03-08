@@ -347,13 +347,28 @@ router.get(/mainHandler/, function (req, res) {
   // Concern // 
 router.get(/raiseConcern/, function (req, res) {
   if (req.query.radioInlineGroup === "yes") {
-    res.redirect('add-concern-martin-lincoln');
+    res.redirect('add-concern-martin-lincoln2');
   } else {
     res.redirect('cya-nok-convo-martin-lincoln');
   }
   });
 
-  
+  router.get(/raiseAnotherConcern/, function (req, res) {
+    if (req.query.radioInlineGroup === "yes") {
+      res.redirect('add-concern-martin-lincoln');
+    } else {
+      res.redirect('case-history-martin-lincoln3');
+    }
+    });
+    
+    router.get(/raiseAgainConcern/, function (req, res) {
+      if (req.query.radioInlineGroup === "yes") {
+        res.redirect('add-concern-martin-lincoln2');
+      } else {
+        res.redirect('case-history-martin-lincoln4');
+      }
+      });
+    
   
   
 module.exports = router;
