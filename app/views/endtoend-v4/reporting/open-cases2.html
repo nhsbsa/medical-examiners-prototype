@@ -1,0 +1,80 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout-sidebar.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Open cases {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+                <div class="nhsuk-grid-row">
+                  <div class="nhsuk-grid-column-two-thirds">
+                    <h1 class="nhsuk-heading-xl">Open cases</h1>
+                  </div>
+                  <div class="nhsuk-grid-column-one-third">
+                    <a class="nhsuk-button"
+                         href="create-case-quick"
+                         style="float:right">Create new case</a>
+                  </div>
+                </div>
+                <hr style="border-bottom:4px solid #005EB8; margin:0">
+                <div class="nhsuk-grid-row">
+                  <div class="nhsuk-grid-column-two-thirds">
+                    <br>
+                    <br>
+                    <p class="nhsuk-body">There are no open cases.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a class="active"
+                      href="open-cases">Open cases</a>
+                </li>
+                <li>
+                  <a href="needs-coroner-referral">Needs coroner notification</a>
+                </li>
+                <li>
+                  <a href="closed-cases">Closed cases</a>
+                </li>
+                <li>
+                  <a href="open-cases">Reporting</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>
