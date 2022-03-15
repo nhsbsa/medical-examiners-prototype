@@ -1,0 +1,172 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar-bc-history.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h1 class="nhsuk-u-margin-bottom-4"><span role="text">Communication and concerns</span></h1>
+              </div>
+              <!--<div class="nhsuk-grid-column-one-third">
+                <a class="nhsuk-button" href="close-case" style="float:right">Close case</a>
+              </div>-->
+            <div class="nhsuk-grid-column-two-thirds">
+           <!--<nav class="nhsuk-secondary-navigation" aria-label="Primary navigation" style="background-color:#f0f4f5;">
+              <ul class="nhsuk-secondary-navigation__list">
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" href="case-history-martin-lincoln2">Communication and concerns</a>
+                </li>
+
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" aria-current="page" href="case-communication-martin-lincoln">Discussion with main contact about scrutiny</a>
+                </li>
+      
+              </ul>
+            </nav> <hr style="border-bottom:1px solid #ccc; margin:0">-->
+            <br>             
+            <!--<p class="nhsuk-body"><a class="nhsuk-link"
+                 href="add-event-martin-lincoln">Add a person or conversation</a></p>
+                                  <table id="sortable" class="nhsuk-table  nhsuk-table-u-margin-0 nhsuk-table-clickable main-table sortable">
+
+                      
+                      <thead class="nhsuk-table__head">
+                        <tr class="nhsuk-table__row">
+
+
+                          <th class="nhsuk-table__header" scope="col">
+                            Name
+ 
+                           </th>
+                        
+                          <th class="nhsuk-table__header" scope="col">
+                           Type
+
+                          </th>
+                          <th class="nhsuk-table__header" scope="col">
+                           Date
+
+                          </th>
+
+
+                          <th class="nhsuk-table__header" scope="col">
+                            Action
+
+                          </th>
+
+                        </tr>
+                      </thead>
+
+                      <tbody class="nhsuk-table__body ">
+
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">Jane Smith</td>
+                          <td class="nhsuk-table__cell">Conversation</td>
+                          <td class="nhsuk-table__cell">29 August 2020</td>
+                          <td class="nhsuk-table__cell"><a href="add-kpic-conversation-martin-lincoln2">View or raise as a concern<span class="nhsuk-u-visually-hidden">details for sheila lincoln</span></a></td>   
+                          </tr>
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">Jane Smith</td>
+                          <td class="nhsuk-table__cell">Key person involved in care</td>
+                          <td class="nhsuk-table__cell">29 August 2020</td>
+                          <td class="nhsuk-table__cell"><a href="add-kpic-conversation-martin-lincoln">View<span class="nhsuk-u-visually-hidden">details for sheila lincoln</span></a></td>   
+                          </tr>
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">Sheila Lincoln</td>
+                          <td class="nhsuk-table__cell">Conversation</td>
+                          <td class="nhsuk-table__cell">29 August 2020</td>
+                          <td class="nhsuk-table__cell"><a href="add-personal-conversation-martin-lincoln3">View or raise as a concern<span class="nhsuk-u-visually-hidden">conversation with Sheila Lincoln</span></a></td>   
+                          </tr>
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">Sheila Lincoln</td>
+                          <td class="nhsuk-table__cell">Personal contact</td>
+                          <td class="nhsuk-table__cell">29 August 2020</td>
+                          <td class="nhsuk-table__cell"><a href="add-personal-conversation-martin-lincoln2">View<span class="nhsuk-u-visually-hidden">details for sheila lincoln</span></a></td>   
+                          </tr>
+
+
+                      </tbody>
+                    </table>-->
+                    <h2>Discussion with the next of kin about the cause of death</h2>   
+                    <table class="nhsuk-table">
+                      <tbody class="nhsuk-table__body">
+                        <tr class="nhsuk-table__row"
+                            role="row">
+                            <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Reason why no conversation with the next of kin has taken place </td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">Declined interaction with medical examiner office</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="main-contact-discussion-no">Change</a>
+                        </td>
+                        </tr>
+                        
+                        
+                
+              
+                      </tbody>
+                    </table>
+                    <h2>Other communication and concerns</h2>  
+
+                    <p class="nhsuk-body"> <a class="nhsuk-link"
+                      href="add-event-martin-lincoln">Add a person or record communication</a></p>
+                 </div>           
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption--bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS number 997 536 0025</span><span class="nhsuk-caption-m nhsuk-caption--bottom"><span class=
+          "nhsuk-u-visually-hidden">-</span> <strong class="nhsuk-tag nhsuk-tag--red">Urgent</strong></span></h3>
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a href="case-overview-martin-lincoln">Case details</a>
+                </li>
+                <li>
+                  <a href="case-scrutiny-martin-lincoln">Case scrutiny</a>
+                </li>
+                <li>
+                  <a class="active"
+                      href="case-history-martin-lincoln">Communication and concerns</a>
+                </li>
+                <li>
+                  <a href="coroner-notification-martin-lincoln">Coroner notification</a>
+                </li>
+              </ul>
+            </div>
+          </ul><!-- <div class="action-buttons">
+                <button class="nhsuk-button nhsuk-button==secondary" type="submit">Add note</button>
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>

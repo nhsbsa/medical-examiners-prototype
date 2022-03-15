@@ -1,0 +1,94 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar-bc-task-copy2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <h1>Attending practitioner's (AP) proposed cause of death</h1>
+            <div class="nhsuk-warning-callout">
+              <h3 class="nhsuk-warning-callout__label"><span role="text"><span class="nhsuk-u-visually-hidden">Important:</span> Important</span></h3>
+              <p>You must ensure that the proposed cause of death entered here matches the copy provided by the AP. This section should not be an interpretation of what the AP has written.</p>
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label"
+                   for="example">Cause of death summary</label> 
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="10"></textarea>
+            </div>
+            <div class="nhsuk-form-group">
+              {% include "includes/multi-grid-form-input.html" %}
+            </div>
+            <div class="nhsuk-form-group">
+              <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
+                <span aria-hidden="true"
+                     class="govuk-warning-text__icon">!</span> <span class="govuk-warning-text__text"><span class="visually-hidden">Warning</span> You must agree to the declaration in order to close the case</span>
+              </div>
+            </div>
+            <div class="nhsuk-form-group">
+              <fieldset aria-describedby="example-hint"
+                        class="nhsuk-fieldset">
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input"
+                         id="example-1"
+                         name="example"
+                         type="checkbox"
+                         value="email"> <label class="nhsuk-label nhsuk-checkboxes__label"
+                         for="example-1">I confirm that i have:</label>
+                    <ul>
+                      <li><label class="nhsuk-label nhsuk-checkboxes__label"
+                             for="example-1"><span>Received electronic instruction from the AP proposing the cause of death</span></label></li>
+                      <li><label class="nhsuk-label nhsuk-checkboxes__label"
+                             for="example-1"><span>entered the cause of death proposed by the AP exactly as stated</span></label></li>
+                    </ul>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="nhsuk-form-group">
+              <fieldset aria-describedby="example-hint"
+                        class="nhsuk-fieldset">
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input"
+                         id="example-1"
+                         name="example"
+                         type="checkbox"
+                         value="email"> <label class="nhsuk-label nhsuk-checkboxes__label"
+                         for="example-1">This section is complete and ready for the discussion between the medical examiner or medical examiner officer, and the AP</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div><a class="nhsuk-button"
+                 draggable="false"
+                 href="checkanswers-coroner-notification-noinput">Save and continue</a>
+            <div class="nhsuk-u-width-one-half">
+              <a href="javascript:history.back()">Return to previous page without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

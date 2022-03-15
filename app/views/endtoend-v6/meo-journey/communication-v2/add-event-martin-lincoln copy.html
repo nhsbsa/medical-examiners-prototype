@@ -1,0 +1,92 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Communication and concerns - Martin Lincoln</span>
+            <h1>Select the type of person</h1>
+            <div class="nhsuk-form-group">
+              <form action="addEvent"
+                    method="get">
+                <fieldset class="nhsuk-fieldset">
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input aria-describedby="example-hints-1-item-hint"
+                           class="nhsuk-radios__input"
+                           id="radioInlineGroup"
+                           name="radioInlineGroup"
+                           type="radio"
+                           value="Acute"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup1">Personal contact</label>
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <input aria-describedby="example-hints-2-item-hint"
+                           class="nhsuk-radios__input"
+                           id="radioInlineGroup"
+                           name="radioInlineGroup"
+                           type="radio"
+                           value="Community"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="radioInlineGroup2">Key person involved in care</label>
+                    </div>
+                  </div>
+                </fieldset><br>
+                <button class="nhsuk-button"
+                      type="submit">Save and continue</button>
+              </form>
+              <div class="nhsuk-u-width-one-half">
+                <a href="javascript:history.back()">Return to previous page without saving</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--<div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption==bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS No. 123 456 7890</span></h3>
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a class="active"
+                      href="Case-overview-martin-lincoln">Case details</a>
+                </li>
+                <li>
+                  <a href="Case-history-martin-lincoln">Case history</a>
+                </li>
+                <li>
+                  <a href="scrutiny-martin-lincoln">Case Scrutiny</a>
+                </li>
+                <li>
+                  <a href="coroner-notification-martin-lincoln">Coroner notification</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>-->
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>
