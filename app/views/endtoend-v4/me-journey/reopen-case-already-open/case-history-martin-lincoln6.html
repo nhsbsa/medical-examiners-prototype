@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  {% extends 'main-template-sidebar-bc-history.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
   In /views/layout.html you can:
     - change the header and footer
     - add custom CSS and JavaScript
@@ -23,110 +23,103 @@
                id="maincontent">
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-one-half">
-                <h1 class="nhsuk-u-margin-bottom-4"><span role="text">Case history</span></h1>
-              
+                <h1 class="nhsuk-u-margin-bottom-4"><span role="text">Communication and concerns</span></h1>
               </div>
               <div class="nhsuk-grid-column-one-third">
                 <a class="nhsuk-button"
-                     href="close-case2"
+                     href="close-case3"
                      style="float:right">Close case</a>
               </div>
-            </div>
-            
-            <div class="nhsuk-grid-column-full">
-              <h2 class="nhsuk-heading-l"><span role="text">Case concerns</span></h2>
+            <div class="nhsuk-grid-column-two-thirds">
               
-                <p>Medical examiner has reviewed the concern raised.</p>
-                <table class="nhsuk-table">
-                  <thead class="nhsuk-table__head"
-                         role="rowgroup">
-                    <tr role="row">
-                      <th class=""
-                          role="columnheader"
-                          scope="col">Time and date</th>
-                      <th class=""
-                          role="columnheader"
-                          scope="col">Details</th>
-                      <th class=""
-                          role="columnheader"
-                          scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody class="nhsuk-table__body">
-                    <tr class="nhsuk-table__row"
-                        role="row">
-                      <td class="nhsuk-table__cell">29/09/2021<br>
-                      08:46</td>
-                      <td class="nhsuk-table__cell">Wife called and said that she was unhappy with the way both she and her husband (the deceased) were spoken<br>
-                      to by one of the HCAs on the ward. She said that she felt she was quite rude and didn't seem to be listening<br>
-                      to them. She said the HCA kept referring to her husband by his full name (Martin) when she had told the ward<br>
-                      numerous times he goes by the name of Marty. Because her husband had dementia she said he was getting confused<br>
-                      when they were using the name Martin and it was causing him distress during his final days.</td>
-                      <td class="nhsuk-table__cell">
-                        <a class="nhsuk-link"
-                            href="add-concern-martin-lincoln">Change</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              
-            
-              <h2 class="nhsuk-heading-l"><span role="text">People and communication</span></h2>
+            <!--<nav class="nhsuk-secondary-navigation" aria-label="Primary navigation" style="background-color:#f0f4f5;">
+              <ul class="nhsuk-secondary-navigation__list">
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link" aria-current="page" href="case-history-martin-lincoln2">Communication and concerns</a>
+                </li>
+
+                <li class="nhsuk-secondary-navigation__item">
+                  <a class="nhsuk-secondary-navigation__link"  href="case-communication-martin-lincoln">Discussion with main contact about scrutiny</a>
+                </li>
+      
+              </ul>
+            </nav> <hr style="border-bottom:1px solid #ccc; margin:0">-->
+            <br>      
+            <h2>Discussion with the main contact about the cause of death</h2>  
+                  <div class="nhsuk-hint">
+                    The main contact is often the next of kin but does not have to be. </div>
+
+          </legend>
               <table class="nhsuk-table">
                 <tbody class="nhsuk-table__body">
                   <tr class="nhsuk-table__row"
                       role="row">
+                    
                     <td class="nhsuk-table__cell"
-                        style="padding: 8px 24px 8px 0px;">Sheila Lincoln (spouse)</td>
+                        style="padding: 8px 24px 8px 0px;">Discussion with main contact took place</td>
                     <td class="nhsuk-table__cell"
-                        style="padding: 8px 24px 8px 0px;">1 Conversation</td>
+                        style="padding: 8px 24px 8px 0px;"><a class="nhsuk-link"
+                          href="cya-nok-convo-martin-lincoln">View details</a></td>
                     <td class="nhsuk-table__cell"
                         style="text-align: right; padding: 8px 24px 8px 0px;">
-                     <!-- <a class="nhsuk-link"
-                          href="add-personal-conversation-martin-lincoln3">View or add a conversation</a>-->
+                      <a href="#"><strong class="nhsuk-tag">Completed</strong></a>
                     </td>
                   </tr>
                 </tbody>
               </table>
-             <!-- <p class="nhsuk-body"><a class="nhsuk-link"
-                 href="add-event-martin-lincoln">Add a new person or conversation</a>
-                </p>-->
-              <h2 class="nhsuk-heading-l"><span role="text">Case notes</span></h2>
-              <table class="nhsuk-table">
-                <thead class="nhsuk-table__head"
-                       role="rowgroup">
-                  <tr role="row">
-                    <th class=""
-                        role="columnheader"
-                        scope="col">Time and date</th>
-                    <th class=""
-                        role="columnheader"
-                        scope="col">Details</th>
-                    <th class=""
-                        role="columnheader"
-                        scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody class="nhsuk-table__body">
-                  <tr class="nhsuk-table__row"
-                      role="row">
-                    <td class="nhsuk-table__cell">29/08/2020<br>
-                    08:46</td>
-                    <td class="nhsuk-table__cell">Wife called and said that she was unhappy with the way both she and her husband (the deceased) were spoken<br>
-                    to by one of the HCAs on the ward. She said that she felt she was quite rude and didn't seem to be listening<br>
-                    to them. She said the HCA kept referring to her husband by his full name (Martin) when she had told the ward<br>
-                    numerous times he goes by the name of Marty. Because her husband had dementia she said he was getting confused<br>
-                    when they were using the name Martin and it was causing him distress during his final days.</td>
-                    <td class="nhsuk-table__cell">
-                      <!--<a class="nhsuk-link"
-                          href="create-case-quick">Change</a>-->
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <!--<p class="nhsuk-body"><a class="nhsuk-link"
-                 href="add-note-martin-lincoln">Add a note</a></p>-->
-            </div>
+            <h2>Other communication and concerns</h2> 
+            <p class="nhsuk-body"><a class="nhsuk-link"
+              href="personal-conversation-martin-lincoln">Record communication or a concern</a></p>
+           
+                                  <table id="sortable" class="nhsuk-table  nhsuk-table-u-margin-0 nhsuk-table-clickable main-table sortable">
+
+                      <!-- TABLE START -->
+                      <thead class="nhsuk-table__head">
+                        <tr class="nhsuk-table__row">
+
+
+                          <th class="nhsuk-table__header" scope="col">
+                            Name
+ 
+                           </th>
+                        
+                          <th class="nhsuk-table__header" scope="col">
+                           Type
+
+                          </th>
+                          <th class="nhsuk-table__header" scope="col">
+                           Date
+
+                          </th>
+
+
+                          <th class="nhsuk-table__header" scope="col">
+                            Action
+
+                          </th>
+
+                        </tr>
+                      </thead>
+
+                      <tbody class="nhsuk-table__body ">
+
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">Sheila Lincoln</td>
+                          <td class="nhsuk-table__cell">29 August 2020</td>
+                          
+                          <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--green">Reviewed</strong></td>
+                          <td class="nhsuk-table__cell"><a href="add-personal-conversation-martin-lincoln3">View or raise as a concern<span class="nhsuk-u-visually-hidden">conversation with Sheila Lincoln</span></a></td>   
+                          </tr>
+
+
+                      </tbody>
+                    </table>
+                    
+                   <!-- <h2>Communication with main contact about scrutiny</h2>
+                    <p class="nhsuk-body"><a class="nhsuk-link"
+                       href="main-contact-discussion">Add discussion with main contact about scrutiny</a></p>-->
+                 </div>           
+           </div>
           </div>
         </div>
       </div>
@@ -141,16 +134,15 @@
                 <div class="options"
                      id="options"></div>
                 <li>
-                  <a href="case-overview-martin-lincoln3">Case details</a>
+                  <a href="case-overview-martin-lincoln">Case details</a>
                 </li>
                 <li>
-                  <a href="case-scrutiny-martin-lincoln3">Case scrutiny</a>
+                  <a href="case-scrutiny-martin-lincoln">Case scrutiny</a>
                 </li>
                 <li>
                   <a class="active"
-                      href="case-history-martin-lincoln5">Case history</a>
+                      href="case-history-martin-lincoln">Communication and concerns</a>
                 </li>
-                
                 <li>
                   <a href="coroner-notification-martin-lincoln">Coroner notification</a>
                 </li>
