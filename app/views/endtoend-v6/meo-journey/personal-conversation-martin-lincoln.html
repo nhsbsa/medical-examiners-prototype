@@ -18,21 +18,33 @@
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
                <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Communication and concerns - Martin Lincoln</span>
-            <h1>Record communication with Sheila Lincoln</h1>
-            <div class="nhsuk-form-group">
+            <h1>Record communication or a concern</h1>
+
+              <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="surname">What's the name of the person the discussion was with?</label>
+                    <input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
+                  </div>              <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="surname">Role or relevance of the person to the case</label>
+                    <div class="nhsuk-hint">
+                      <label class="nhsuk-label" for="surname">For example, family member, or person involved in case.</label>
+                    </div><input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
+                  </div>
               <div class="nhsuk-form-group">
                 <h1><label class="nhsuk-label"
-                       for="forename">Enter the name of the team member involved</label> <input class="nhsuk-input nhsuk-u-width-one-half"
+                       for="forename">Which team member was the discussion with?</label>
+                       <div class="nhsuk-hint">
+                      <label class="nhsuk-label" for="surname">This could be yourself or a colleague.</label>
+                    </div> 
+                       <input class="nhsuk-input nhsuk-u-width-one-half"
                        id="forename"
                        name="forename"
                        type="text"></h1>
                 <div class="nhsuk-form-group"></div>
               </div>
-            </div>
             <fieldset aria-describedby="dob-hint"
                       class="nhsuk-fieldset"
                       role="group">
@@ -138,7 +150,7 @@
           </div>
             <div class="nhsuk-form-group">
               <label class="nhsuk-label"
-                   for="example">Enter details of what was discussed</label> 
+                   for="example">Enter details of the communication</label> 
               <textarea aria-describedby="example-hint"
                    class="nhsuk-textarea nhsuk-u-width-full"
                    id="example"
@@ -149,11 +161,14 @@
             
 
               <div class="nhsuk-form-group">
-                <form action="raiseConcern"
+                <form action="raiseAnotherConcern"
                 method="get">
             <fieldset class="nhsuk-fieldset">
               <label class="nhsuk-label"
-                       for="example">Do you want to raise it as a concern</label>​
+                       for="example">Do you want to record this as a concern?</label>​
+                       ​<div class="nhsuk-hint" id="contact-hint">
+                        A medical examiner will review concerns before any action is taken.
+                      </div>
               <div class="nhsuk-radios">
                 <div class="nhsuk-radios__item">
                   <input aria-describedby="example-hints-1-item-hint"
