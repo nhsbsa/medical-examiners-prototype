@@ -1,0 +1,201 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+                <div class="nhsuk-grid-column-three-quarters"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case communication - Martin Lincoln</span>
+                  <h1>Case concerns</h1>
+                  <table class="nhsuk-table">
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row"
+                          role="row">
+                        <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Raised by</td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">Sheila Lincoln</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="add-concern-martin-lincoln">Change</a>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row"
+                          role="row">
+                        <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Date and time raised</td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">29/08/2020<br>
+                        16:23</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="add-concern-martin-lincoln">Change</a>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row"
+                          role="row">
+                        <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Concern details</td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">Sheila feels that she was often left sitting at her husband's bedside alone and was unable to find any nurses to speak to about what was happening.  Although Sheila knew her husband's cancer was terminal, she is upset by the lack of support she received.</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="add-concern-martin-lincoln">Change</a>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row"
+                          role="row">
+                        <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Recommended for case record reviews?</td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">No</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="add-concern-martin-lincoln">Change</a>
+                        </td>
+                      </tr>
+                    <tr class="nhsuk-table__row"
+                          role="row">
+                        <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Recommended for other clinical governance reviews?</td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">No</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="add-concern-martin-lincoln">Change</a>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row"
+                          role="row">
+                        <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Patient safety incident?</td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">No</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="add-concern-martin-lincoln">Change</a>
+                        </td>
+                      </tr>
+                    <tr class="nhsuk-table__row"
+                          role="row">
+                        <td class="nhsuk-table__cell"
+                            style="font-weight:700; padding: 8px 24px 8px 0px;">Does this case need to be referred to Patient Advice and Liaison Service (PALS)??</td>
+                        <td class="nhsuk-table__cell"
+                            style="padding: 8px 24px 8px 0px;">No</td>
+                        <td class="nhsuk-table__cell"
+                            style="text-align: right; padding: 8px 24px 8px 0px;">
+                          <a class="nhsuk-link"
+                              href="add-concern-martin-lincoln">Change</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                  <form action="reOpenEight" method="get">
+
+                    <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend">
+                      <p class="nhsuk-fieldset__heading">
+                          Does this concern require any further action?</p>
+                    </legend>
+                    ​
+                    <div class="nhsuk-radios">
+                    
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="yes" aria-describedby="example-hints-1-item-hint">
+                    <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup">
+                    Yes, I would like to notify the coroner about it
+                    </label>
+                    </div>
+                    
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="amend" aria-describedby="example-hints-2-item-hint">
+                    <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
+                    No, I just need to amend the cause of death
+                    </label>
+                    </div>
+                    
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="close" aria-describedby="example-hints-2-item-hint">
+                    <label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
+                    No, I have reviewed the concern and just need to close this case
+                    </label>
+                    </div>
+                    
+                    
+                    </div>
+                    </fieldset>
+                    <br>
+                    <button class="nhsuk-button" type="submit">
+                    Save and continue
+                    </button>
+                    </form>
+                  <!--<div class="nhsuk-u-width-one-half">
+                    <a class="nhsuk-button"
+                         draggable="false"
+                         href="close-case2">Save and continue</a>
+                  </div>-->
+                  <div class="nhsuk-u-width-one-half">
+                    <a href="javascript:history.back()">Return to previous page</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--<div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption==bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS No. 997 536 0025</span></h3>
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a href="Case-overview-martin-lincoln">Case details</a>
+                </li>
+                <li>
+                  <a class="active"
+                      href="Case-history-martin-lincoln">Case history</a>
+                </li>
+                <li>
+                  <a href="scrutiny-martin-lincoln">Case Scrutiny</a>
+                </li>
+                <li>
+                  <a href="coroner-notification-martin-lincoln">Coroner notification</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>-->
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>

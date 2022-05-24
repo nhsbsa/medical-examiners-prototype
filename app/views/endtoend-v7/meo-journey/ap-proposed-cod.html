@@ -1,0 +1,112 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <h1>Attending practitioner's proposed cause of death</h1>
+            <div class="nhsuk-warning-callout">
+              <h3 class="nhsuk-warning-callout__label"><span role="text"><span class="nhsuk-u-visually-hidden">Important:</span> Important</span></h3>
+              <p>You must ensure that the proposed cause of death entered here matches the copy provided by the attending practitioner (AP). This section should not be an interpretation of what the AP has written.</p>
+            </div>
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label"
+                     for="example">Enter the name of the AP who proposed the cause of death</label> <input class="nhsuk-input"
+                     id="example"
+                     name="example"
+                     type="text">
+              </div>
+            </div>
+            <!--<div class="nhsuk-form-group">
+              <fieldset aria-describedby="example-hint"
+                        class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend">Before submission, the AP has discussed their proposed cause of death with:</legend>
+                <div class="nhsuk-hint"
+                     id="example-hint">
+                  Select all options that apply.
+                </div>
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input"
+                         id="example-1"
+                         name="example"
+                         type="checkbox"
+                         value="email"> <label class="nhsuk-label nhsuk-checkboxes__label"
+                         for="example-1">Another doctor or specialist</label>
+                  </div>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input"
+                         id="example-2"
+                         name="example"
+                         type="checkbox"
+                         value="phone"> <label class="nhsuk-label nhsuk-checkboxes__label"
+                         for="example-2">Consultant</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>-->
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label"
+                   for="example">Enter the details of anyone else the AP's proposed cause of death has been discussed with</label> 
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="5"></textarea>
+            </div>
+            <form action="apCodKnown"
+                  method="get">
+              <fieldset class="nhsuk-fieldset">
+                <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Is the cause of death known?</legend></p>&ZeroWidthSpace;
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input aria-describedby="example-hints-1-item-hint"
+                         class="nhsuk-radios__input"
+                         id="radioInlineGroup"
+                         name="radioInlineGroup"
+                         type="radio"
+                         value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="radioInlineGroup1">Yes</label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input aria-describedby="example-hints-2-item-hint"
+                         class="nhsuk-radios__input"
+                         id="radioInlineGroup"
+                         name="radioInlineGroup"
+                         type="radio"
+                         value="No"> <label class="nhsuk-label nhsuk-radios__label"
+                         for="radioInlineGroup2">No</label>
+                  </div>
+                </div>
+              </fieldset><br>
+              <button class="nhsuk-button"
+                    type="submit">Save and continue</button>
+            </form>
+            <div class="nhsuk-u-width-one-half">
+              <a href="javascript:history.back()">Return to previous page without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

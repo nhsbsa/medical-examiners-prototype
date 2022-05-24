@@ -7,11 +7,13 @@
   <title></title>
 </head>
 <body>
-  {% extends 'main-template-sidebar-bc-task.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
-  In /views/layout.html you can:
+
+  {% extends 'main-template-sidebar-bc-task-lookup.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /main-template-sidebar-bc-task-lookup.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
 -->
+
    <!-- Set the page title inside the pageTitle block -->
    {% block pageTitle %} Create a case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
    {% block beforeContent %}
@@ -19,6 +21,79 @@
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container">
+        <script>
+
+// hide postocode look up
+
+  function hidefinder() {
+  var x = document.getElementById("postcode-finder");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show postcode look up
+
+ function showfinder() {
+   var x = document.getElementById("postcode-finder");
+   if (x.style.display === "none") {
+     x.style.display = "block";
+   } else {
+     x.style.display = "block";
+   }
+ }
+
+// show select address section
+
+function showselect() {
+var x = document.getElementById("select-address");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "block";
+}
+}
+
+// hide select address section
+
+function hideselect() {
+var x = document.getElementById("select-address");
+if (x.style.display === "block") {
+  x.style.display = "none";
+} else {
+  x.style.display = "none";
+}
+}
+
+
+// shows manual address entry section
+
+function showmanual() {
+var x = document.getElementById("manual-address");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "block";
+}
+}
+
+// hide manual address entry section
+
+function hidemanual() {
+var x = document.getElementById("manual-address");
+if (x.style.display === "block") {
+  x.style.display = "none";
+} else {
+  x.style.display = "none";
+}
+}
+
+</script>
+
+
+
           <div class="nhsuk-main-wrapper"
                id="maincontent">
             <h1>Additional details</h1>
@@ -168,45 +243,73 @@
                 </div>
               </fieldset>
             </div>
-            <fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
-              <p class="nhsuk-fieldset__heading nhsuk-u-font-weight-bold"><legend class="nhsuk-fieldset__legend">Home address <span class="optional-span">(optional)</span></legend></p>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-line-1">Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span></label> <input class="nhsuk-input"
-                     id="address-line-1"
-                     name="address-line-1"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-line-2"><span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span></label> <input class="nhsuk-input"
-                     id="address-line-2"
-                     name="address-line-2"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-town">Town or city <span class="optional-span">(optional)</span></label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
-                     id="address-town"
-                     name="address-town"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-county">County <span class="optional-span">(optional)</span></label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
-                     id="address-county"
-                     name="address-county"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-postcode">Postcode <span class="optional-span">(optional)</span></label> <input class="nhsuk-input nhsuk-input--width-10"
-                     id="address-postcode"
-                     name="address-postcode"
-                     type="text">
-              </div>
-            </fieldset>
-            <div class="nhsuk-form-group">
+<!-- Postcode look up view -->
+                                               <div id="postcode-finder">
+                                                  <div class="form-group">
+                                                     <fieldset aria-label="Patient address">
+                                                        <legend class="heading-small">Address</legend>
+                                                        <div class="form-group">
+                                                           <label class="form-label" for="pharmacy-postcode-lookup">
+                                                           <br>Postcode
+                                                           </label>
+                                                           <input class="form-control form-control-1-4" name="pharmacy_postcode_lookup" id="pharmacy-postcode-lookup" type="text">
+                                                        </div>
+                                                        <p class="button" style="background-color: #005EA5" onclick="hidefinder(); showselect(); ">Find address</p>
+                                                     </fieldset>
+                                                  </div>
+                                               </div>
+
+                                               <!-- Select an address view -->
+                                               <div id="select-address">
+                                                  <div class="form-group">
+                                                     <fieldset aria-label="Pharmacy address">
+                                                        <legend class="heading-small">Address</legend>
+                                                        <div class="form-group">
+                                                           <label class="form-label" for="pharmacy-postcode">
+                                                           <span class="heading-small"><br>Postcode</span>
+                                                           </label>
+                                                           <p>NE12 8BD   <a href="javascript: showfinder(); hideselect();">Change</a></p>
+                                                        </div>
+                                                        <p class="heading-small">Select an address</p>
+                                                        <div class="form-group">
+                                                           <select class="form-control" id="select-box">
+                                                              <option>34 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
+                                                              <option>35 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
+                                                              <option>36 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
+                                                           </select>
+                                                        </div>
+                                                        <a href="javascript: hideselect(); showmanual();">Address not listed</a>
+                                                     </fieldset>
+                                                  </div>
+                                               </div>
+
+                                               <!-- Manual address entry view -->
+                                               <div id="manual-address">
+                                                  <div class="form-group">
+                                                     <fieldset aria-label="Pharmacy address">
+                                                     <legend class="heading-small">Address</legend>
+                                                     <div class="form-group">
+                                                        <label class="form-label" for="pharmacy-line-one">
+                                                        Building and street
+                                                        </label>
+                                                        <input class="form-control" id="lineone" name="pharmacy_line_one" type="text">
+                                                        <input class="form-control" id="linetwo" name="pharmacy_line_two" type="text" style="margin-top: 10px">
+                                                     </div>
+                                                     <div class="form-group">
+                                                        <label class="form-label" for="pharmacy_town">
+                                                        Town or city
+                                                        </label>
+                                                        <input class="form-control" id="pharmacy-town" name="pharmacy_town" type="text">
+                                                     </div>
+                                                     <div class="form-group">
+                                                        <label class="form-label" for="pharmacy-postcode">
+                                                        Postcode
+                                                        </label>
+                                                        <input class="form-control form-control-1-4" name="pharmacy_postcode" id="pharmacy-postcode" type="text">
+                                                     </div>
+                                                     <a href="javascript: hidemanual(); showfinder();">Find address for me</a>
+                                                  </fieldset></div>
+                                               </div>            <div class="nhsuk-form-group">
               <label class="nhsuk-label"
                    for="occupation">Main job <span class="optional-span">(optional)</span></label> <input class="nhsuk-input nhsuk-u-width-one-half"
                    id="occupation"
