@@ -297,7 +297,7 @@ router.get(/apKnown/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
     res.redirect('medical-record-proposed-cause');
   } else {
-    res.redirect('case-scrutiny-martin-lincoln4');
+    res.redirect('no-cod-martin-lincoln');
   }
   });
    // MFA // 

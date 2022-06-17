@@ -28,13 +28,13 @@
 {% block content %}
 	<h1>
 		<span class="nhsuk-caption-m nhsuk-caption--bottom ">
-			Details of death
+			Create new case
 			</span>
 		Date and time the death was verified
 		
 	</h1>
 			
-<div class="nhsuk-form-group">
+    <div class="nhsuk-form-group">
 		<fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
 			<legend class="nhsuk-fieldset__legend">
 				<p class="nhsuk-fieldset__heading">
@@ -105,9 +105,46 @@
 			</div>
 		</fieldset>	  
 	</div>
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset">
+                <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Request for rapid release?</legend></p>
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+                  <div class="nhsuk-radios nhsuk-radios--conditional">
+                    <div class="nhsuk-radios__item">
+                      <input aria-controls="rapid-yes"
+                           aria-expanded="false"
+                           class="nhsuk-radios__input"
+                           id="rapid-release-yes"
+                           name="rapid-release"
+                           type="radio"
+                           value="yes"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="apid-release-yes">Yes</label>
+                    </div>
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
+                         id="rapid-yes">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label"
+                             for="email">Enter the reason why</label> <input class="nhsuk-input nhsuk-u-width-one-third"
+                             id="email"
+                             name="email"
+                             type="text">
+                      </div>
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input"
+                           id="apid-release-no"
+                           name="rapid-release"
+                           type="radio"
+                           value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                           for="apid-release-no">No</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
 
 
-	<a class="nhsuk-button" href="location-death-martin-lincoln" draggable="false">
+	<a class="nhsuk-button" href="create-case-quick" draggable="false">
 		Save and continue
 	</a>
 	<div class="nhsuk-u-width-one-half">
