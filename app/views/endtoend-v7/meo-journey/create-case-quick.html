@@ -17,10 +17,14 @@
    {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
    <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
    {% block content %}
-  <h1><span class="nhsuk-caption-m nhsuk-caption--bottom">Create new case</span> Deceased person's name</h1>
+  <div class="nhsuk-u-width-one-half">
+    <a href="javascript:history.back()">Go back</a>
+  </div>  
+  <h1>Create a new case</h1>
+  <h2>Deceased person's name</h2>
   <div class="nhsuk-form-group">
     <label class="nhsuk-label"
-         for="forename">First name(s)</label> <input class="nhsuk-input nhsuk-u-width-one-half"
+         for="forename">First names</label> <input class="nhsuk-input nhsuk-u-width-one-half"
          id="forename"
          name="forename"
          type="text">
@@ -41,7 +45,7 @@
 				</p>
 			</legend>
 			<span class="nhsuk-hint" id="dob-hint">
-				For example, 15 3 1984
+				For example, 15 3 2022
 			</span>
 		
 			<div class="nhsuk-date-input" id="dob">
@@ -81,7 +85,7 @@
 				</p>
 			</legend>
 			<span class="nhsuk-hint" id="dob-hint">
-				Please use 24 hour format. For example, 16 03
+				Use 24-hour format. For example, enter 4:03 pm as 16 03
 			</span>
 		
 			<div class="nhsuk-date-input" id="dob">
@@ -144,8 +148,6 @@
   <a class="nhsuk-button"
         draggable="false"
         href="case-overview-martin-lincoln">Save and continue</a>
-  <div class="nhsuk-u-width-one-half">
-    <a href="javascript:history.back()">Return to previous page without saving</a>
-  </div>{% endblock %}
+{% endblock %}
 </body>
 </html>

@@ -21,51 +21,19 @@
         <div class="nhsuk-width-container">
           <div class="nhsuk-main-wrapper"
                id="maincontent">
-            <h1>Attending practitioner's proposed cause of death</h1>
-            <div class="nhsuk-warning-callout">
-              <h3 class="nhsuk-warning-callout__label"><span role="text"><span class="nhsuk-u-visually-hidden">Important:</span> Important</span></h3>
-              <p>You should ensure that the proposed cause of death entered here matches the copy provided by the attending practitioner (AP). This section should not be an interpretation of what the AP has written.</p>
-            </div>
+                  <a href="javascript:history.back()">Go back</a>
+                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">Case Scrutiny - Martin Lincoln</span>Attending practitioner's (AP) proposed cause of death</h1>
+
             <div class="nhsuk-form-group">
               <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="example">Enter the name of the AP who proposed the cause of death</label> <input class="nhsuk-input"
+                <h3>What is the name of the AP who proposed the cause of death?</h3> <input class="nhsuk-input"
                      id="example"
                      name="example"
                      type="text">
               </div>
             </div>
-            <!--<div class="nhsuk-form-group">
-              <fieldset aria-describedby="example-hint"
-                        class="nhsuk-fieldset">
-                <legend class="nhsuk-fieldset__legend">Before submission, the AP has discussed their proposed cause of death with:</legend>
-                <div class="nhsuk-hint"
-                     id="example-hint">
-                  Select all options that apply.
-                </div>
-                <div class="nhsuk-checkboxes">
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input"
-                         id="example-1"
-                         name="example"
-                         type="checkbox"
-                         value="email"> <label class="nhsuk-label nhsuk-checkboxes__label"
-                         for="example-1">Another doctor or specialist</label>
-                  </div>
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input"
-                         id="example-2"
-                         name="example"
-                         type="checkbox"
-                         value="phone"> <label class="nhsuk-label nhsuk-checkboxes__label"
-                         for="example-2">Consultant</label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>-->
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label"
-                   for="example">Enter the details of anyone else the AP's proposed cause of death has been discussed with</label> 
+              <h3>Enter the name and job title of anyone else who has discussed the AP’s proposed cause of death with them.</h3> 
               <textarea aria-describedby="example-hint"
                    class="nhsuk-textarea nhsuk-u-width-two-thirds"
                    id="example"
@@ -75,7 +43,7 @@
             <form action="apCodKnown"
                   method="get">
               <fieldset class="nhsuk-fieldset">
-                <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Is the cause of death known?</legend></p>&ZeroWidthSpace;
+                <h3>Is the cause of death known?</h3>&ZeroWidthSpace;
                 <div class="nhsuk-radios">
                   <div class="nhsuk-radios__item">
                     <input aria-describedby="example-hints-1-item-hint"
@@ -100,9 +68,6 @@
               <button class="nhsuk-button"
                     type="submit">Save and continue</button>
             </form>
-            <div class="nhsuk-u-width-one-half">
-              <a href="javascript:history.back()">Return to previous page without saving</a>
-            </div>
           </div>
         </div>{% endblock %}
       </div>

@@ -23,11 +23,11 @@
                id="maincontent">
                <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Communication and concerns - Martin Lincoln</span>
             <h1>Record communication or a concern</h1>
-
+<h3>What's the name of the person the discussion was with?</h3>
               <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="surname"><!--What's the name of the person the discussion was with?-->First name(s)</label>
+                    <label class="nhsuk-label" for="surname">First name(s)</label>
                     <div class="nhsuk-hint">
-                      <label class="nhsuk-label" for="surname">What's the name of the person the discussion was with?</label>
+                      
                     </div> 
                     <input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
                   </div>     
@@ -35,15 +35,17 @@
                     <label class="nhsuk-label" for="surname">Surname</label>
                     <input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
                   </div>              
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="surname">Role or relevance of the person to the case</label>
+                  <h3>What's the role or relevance of the person to the case?</h3>
+<div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="surname"></label>
                     <div class="nhsuk-hint">
                       <label class="nhsuk-label" for="surname">For example, family member, or person involved in case.</label>
                     </div><input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text">
                   </div>
-              <div class="nhsuk-form-group">
+                                <h3>Which team member was the discussion with?</h3>
+<div class="nhsuk-form-group">
                 <h1><label class="nhsuk-label"
-                       for="forename">Which team member was the discussion with?</label>
+                       for="forename"></label>
                        <div class="nhsuk-hint">
                       <label class="nhsuk-label" for="surname">This could be yourself or a colleague.</label>
                     </div> 
@@ -56,7 +58,7 @@
             <fieldset aria-describedby="dob-hint"
                       class="nhsuk-fieldset"
                       role="group">
-              <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Date of communication</legend></p><span class="nhsuk-hint"
+              <h3>Date of communication</h3><span class="nhsuk-hint"
                         id="dob-hint">For example, 28 2 2021</span>
               <div class="nhsuk-date-input"
                    id="dob">
@@ -97,8 +99,8 @@
             <fieldset aria-describedby="dob-hint"
                       class="nhsuk-fieldset"
                       role="group">
-              <p class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend">Time of communication</legend></p><span class="nhsuk-hint"
-                        id="dob-hint">Use 24 hour format. For example, 16 23</span>
+              <h3>Time of communication</h3><span class="nhsuk-hint"
+                        id="dob-hint">Use 24-hour format. For example, enter 4:03pm as 16 03</span>
               <div class="nhsuk-date-input"
                    id="dob">
                 <div class="nhsuk-date-input__item">
@@ -124,6 +126,7 @@
               </div>
             </fieldset>
           </div>
+          <h3>What was the method of communication?</h3>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label"
                  for="select-1">Select the method of communication</label>
@@ -168,12 +171,11 @@
 
             
 
-              <div class="nhsuk-form-group">
+              <br><div class="nhsuk-form-group">
                 <form action="raiseAnotherConcern"
                 method="get">
             <fieldset class="nhsuk-fieldset">
-              <label class="nhsuk-label"
-                       for="example">Do you want to record this as a concern?</label>​
+              <h3 style="margin:0">Do you want to raise a concern?</h3>​
                        ​<div class="nhsuk-hint" id="contact-hint">
                         A medical examiner will review concerns before any action is taken.
                       </div>
