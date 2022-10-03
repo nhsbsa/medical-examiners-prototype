@@ -51,83 +51,193 @@
       </div>
     </fieldset>
   </div>
-  <div class="nhsuk-form-group">
-    <h3>NHS number</h3> <span class="nhsuk-hint" id="dob-hint">NHS numbers are 10 digits long. For example, 485 777 3456.</span><input class="nhsuk-input nhsuk-u-width-one-half" id="nhs-number" name="nhs-number" type="text">
-  </div>
+ 
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset" aria-describedby="nhsnumber-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h3>
+            NHS number
+          </h3>
+        </legend>
+    
+        <div class="nhsuk-hint" id="contact-hint">
+          NHS numbers are 10 digits long. For example, 485 777 3456.
+        </div>
+    
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              Known
+            </label>
+          </div>
+    
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="phone">
+                Enter details
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
+            </div>
+    
+          </div>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+              Not known
+            </label>
+          </div>
+    
+          
+    
+          
+         
+    
+          
+    
+        </div>
+      </fieldset>
+    
+    </div>
+  
             <div class="nhsuk-form-group">
               <h3>Hospital number <span class="optional-span">(optional)</h3></label> <input class="nhsuk-input nhsuk-u-width-one-half"
                    id="hospital-number"
                    name="hospital-number"
                    type="text">
             </div>
-            <fieldset class="nhsuk-fieldset nhsuk-u-width-one-half">
-              <h3>Home address</h3>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-line-1">Address line 1</label> <input class="nhsuk-input"
-                     id="address-line-1"
-                     name="address-line-1"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-line-2">Address line 2 <span class="optional-span">(optional)</label> <input class="nhsuk-input"
-                     id="address-line-2"
-                     name="address-line-2"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-town">Town or city</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
-                     id="address-town"
-                     name="address-town"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-county">County</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
-                     id="address-county"
-                     name="address-county"
-                     type="text">
-              </div>
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label"
-                     for="address-postcode">Postcode</label> <input class="nhsuk-input nhsuk-input--width-10"
-                     id="address-postcode"
-                     name="address-postcode"
-                     type="text">
-              </div>
-            </fieldset>
             <div class="nhsuk-form-group">
-              <fieldset class="nhsuk-fieldset">
-                <h3>Sex</h3>
+
+              <fieldset class="nhsuk-fieldset" aria-describedby="address-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h3>
+                    Home address
+                  </h3>
+                </legend>
+            
+                
+            
                 <div class="nhsuk-radios nhsuk-radios--conditional">
                   <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios__input"
-                         id="gender-female"
-                         name="gender"
-                         type="radio"
-                         value="female"> <label class="nhsuk-label nhsuk-radios__label"
-                         for="gender-female">Female</label>
+                    <input class="nhsuk-radios__input" id="address-2" name="address" type="radio" value="phone" aria-controls="conditional-address-2" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="address-2">
+                      Known
+                    </label>
+                  </div>
+                  
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-address-2">
+            
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label"
+                           for="address-line-1">Address line 1</label> <input class="nhsuk-input"
+                           id="address-line-1"
+                           name="address-line-1"
+                           type="text">
+                    </div>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label"
+                           for="address-line-2">Address line 2 <span class="optional-span">(optional)</label> <input class="nhsuk-input"
+                           id="address-line-2"
+                           name="address-line-2"
+                           type="text">
+                    </div>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label"
+                           for="address-town">Town or city</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
+                           id="address-town"
+                           name="address-town"
+                           type="text">
+                    </div>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label"
+                           for="address-county">County</label> <input class="nhsuk-input nhsuk-u-width-two-thirds"
+                           id="address-county"
+                           name="address-county"
+                           type="text">
+                    </div>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label"
+                           for="address-postcode">Postcode</label> <input class="nhsuk-input nhsuk-input--width-10"
+                           id="address-postcode"
+                           name="address-postcode"
+                           type="text">
+                    </div>
+            
                   </div>
                   <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios__input"
-                         id="gender-male"
-                         name="gender"
-                         type="radio"
-                         value="male"> <label class="nhsuk-label nhsuk-radios__label"
-                         for="gender-male">Male</label>
+                    <input class="nhsuk-radios__input" id="address-1" name="address" type="radio" value="email" aria-controls="conditional-address-1" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="address-1">
+                      Not known
+                    </label>
                   </div>
+            
+                  
+            
+                  
+            
+                 
+            
+                 
+            
                 </div>
               </fieldset>
+            
             </div>
+            
+            
 
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label"
-                   for="occupation">Main job</label> <input class="nhsuk-input nhsuk-u-width-one-half"
-                   id="occupation"
-                   name="occupation"
-                   type="text">
+              <div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset" aria-describedby="job-hint">
+                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                    <h3>
+                      Main job
+                    </h3>
+                  </legend>
+              
+                  
+              
+                  <div class="nhsuk-radios nhsuk-radios--conditional">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="job-2" name="job" type="radio" value="phone" aria-controls="conditional-job-2" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="job-2">
+                        Known
+                      </label>
+                    </div>
+              
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-job-2">
+              
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="phone">
+                          Enter details
+                        </label>
+                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
+                      </div>
+              
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="job-1" name="job" type="radio" value="email" aria-controls="conditional-job-1" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="job-1">
+                        Not known
+                      </label>
+                    </div>
+              
+                    
+              
+                   
+              
+                    
+              
+                   
+              
+                  </div>
+                </fieldset>
+              
+              </div>
             </div>
             <div class="nhsuk-form-group">
               <label class="nhsuk-label"
@@ -137,7 +247,8 @@
                    id="additional-info"
                    name="additional-info"
                    rows="5"></textarea>
-            </div><a class="nhsuk-button"
+            </div>
+            <a class="nhsuk-button"
                  draggable="false"
                  href="case-overview-martin-lincoln2">Save and continue</a>
                  <a class="nhsuk-button nhsuk-button--secondary"
