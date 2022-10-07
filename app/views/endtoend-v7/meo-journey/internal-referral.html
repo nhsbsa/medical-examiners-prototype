@@ -22,6 +22,8 @@
           <div class="nhsuk-main-wrapper"
                id="maincontent">
             <a href="javascript:history.back()">Go back</a>
+            <br>
+
             <span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Coroner notification - Martin Lincoln</span>
             <h1>ME Communication to The Coroner </h1>
             <form action="enter-email-coroner-notification"
@@ -51,12 +53,34 @@
               </div>-->
               <h3>Reason for notification to the coroner</h3>
               <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="select-1">
+                  The registered medical practitioner
+                </label>
+                <select class="nhsuk-select" id="select-1" name="select-1">
+                  <option value="1">suspects person died due to poisoning, including by an otherwise benign substance</option>
+                  <option value="2" selected>suspects person died due to exposure to or contact with toxic substance</option>
+                  <option value="3" >suspects person died due to use of a medicinal product, controlled drug or psychoactive substance</option>
+                  <option value="4">suspects person died due to violence</option>
+                  <option value="5">suspects person died due to trauma or injury</option>
+                  <option value="6">suspects person died due to self-harm</option>
+                  <option value="7">suspects person died due to neglect or self-neglect</option>
+                  <option value="8">suspects person died due to person undergoing undergoing a treatment or medical procedure</option>
+                  <option value="9">suspects person died due to injury or disease attributable to any employment in person's lifetime</option>
+                  <option value="10">suspects the person’s death was unnatural but does not fall within any of the categories listed</option>
+                  <option value="11">required to sign an MCCD considers the cause of death unknown</option>
+                  <option value="12">suspects that the person died while in custody or state detention</option>
+                  <option value="13">believes there is no attending medical practitioner to sign an MCCD for this deceased person</option>
+                  <option value="14">believes there is no attending medical practitioner available to sign the MCCD within a reasonable time</option>
+                  <option value="15">is unable to ascertain the identity of the deceased person</option>
+                </select>
+              </div>
+             <!-- <div class="nhsuk-form-group">
                 <textarea class="nhsuk-textarea"
                      id="additional-info"
                      name="additional-info"
                      rows="4">
                                            </textarea>
-              </div>
+              </div>-->
               <div class="nhsuk-form-group">
                 <fieldset class="nhsuk-fieldset">
                   <h3>Did the deceased person suffer from mental health issues?</h3>
