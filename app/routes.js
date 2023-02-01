@@ -369,6 +369,20 @@ router.get(/raiseConcern/, function (req, res) {
       }
       });
     
-  
-  
+      router.post('/subjectArea/', function (req, res) {
+
+        // points to the name attribute name="incomesingle"
+        const incomeSingle = req.session.data['incomesingle']
+      
+        // checking the value of the variable (incomeSingle) and directing to pages based on that value
+        if (incomeSingle === 'gp-practice') {
+          res.redirect('creat-case-quick')
+        } else if (incomeSingle === 'primary-care-network') {
+          res.redirect('PAGE-2')
+        } else {
+          res.redirect('index')
+        }
+      
+      })
+
 module.exports = router;

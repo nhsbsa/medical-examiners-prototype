@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  n<!-- Use this page as the index for your project -->
+   <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+   <!-- Extends the layout from /views/layout.html -->
+  <head>
+    <title></title>
+  </head>{% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+                  <a href="javascript:history.back()">Go back</a>
+                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">Case scrutiny - Martin Lincoln</span>Why is a discussion with the attending practitioner (AP) not needed?</h1>
+<form>
+
+  <div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+      <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+            Agree with written correspondence received from AP
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+            Discussion has taken place between AP and MEO
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+            No AP available
+          </label>
+        </div>
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-4" name="example" type="checkbox" value="text message">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-4">
+            ME not available
+
+
+          </label>
+        </div>
+<div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+            Other
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="mobile">
+              Give details
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+          </div>
+
+        </div>
+      </div>
+    </fieldset>
+
+  </div>
+
+</form><br>
+            <a class="nhsuk-button"
+                 href="case-scrutiny-martin-lincoln4"
+                 type="submit">Save and continue</a>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
