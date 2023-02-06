@@ -7,21 +7,21 @@ router.use('/meo-journey', require('./views/meo-journey/_routes'));
 
 // Coroner notification routes //
 router.get(/referralMethod/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" ) {
+  if (req.query.radioInlineGroup === "Yes") {
     res.redirect('coroner-ref'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('external-referral'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/coronerNotification/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" ) {
+  if (req.query.radioInlineGroup === "Yes") {
     res.redirect('internal-referral'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('case-overview2'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/coronerAccept/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" ) {
+  if (req.query.radioInlineGroup === "Yes") {
     res.redirect('close-case'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('complete-mccd'); // if both input values are "Yes" - redirect to 'page-name' //
@@ -42,7 +42,7 @@ router.get(/reOpenTwo/, function (req, res) {
     res.redirect('QAP-proposed'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "amendCoD") {
     res.redirect('re-open'); // if both input values are "Yes" - redirect to 'page-name' //
-  }else {
+  } else {
     res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
@@ -74,8 +74,8 @@ router.get(/caseProgress/, function (req, res) {
     res.redirect('professional-contact'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "note") {
     res.redirect('note'); // if both input values are "Yes" - redirect to 'page-name' //
-  
-}
+
+  }
 });
 router.get(/reOpenSix/, function (req, res) {
   if (req.query.radioInlineGroup === "add") {
@@ -84,7 +84,7 @@ router.get(/reOpenSix/, function (req, res) {
     res.redirect('QAP-proposed'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "other") {
     res.redirect('case-overview-martin-lincoln-change'); // if both input values are "Yes" - redirect to 'page-name' //
-  }else {
+  } else {
     res.redirect('QAP-proposed'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
@@ -96,7 +96,7 @@ router.get(/reOpenSeven/, function (req, res) {
     res.redirect('qap-proposed2'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "other") {
     res.redirect('case-overview-martin-lincoln-change'); // if both input values are "Yes" - redirect to 'page-name' //
-  }else {
+  } else {
     res.redirect('why-registrar-reject'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
@@ -108,8 +108,8 @@ router.get(/reOpenEight/, function (req, res) {
     res.redirect('qap-proposed2'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "close") {
     res.redirect('open-cases-3'); // if both input values are "Yes" - redirect to 'page-name' //
-  
-}
+
+  }
 });
 
 router.get(/reOpenNine/, function (req, res) {
@@ -127,7 +127,7 @@ router.get(/reOpenTen/, function (req, res) {
     res.redirect('qap-proposed2');
   } else if (req.query.radioInlineGroup === "closecase") {
     res.redirect('case-scrutiny-martin-lincoln6');
-    }
+  }
 });
 
 // Create quick case //
@@ -136,8 +136,8 @@ router.get(/createCase/, function (req, res) {
     res.redirect('create-case'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "quick") {
     res.redirect('create-case-quick'); // if both input values are "Yes" - redirect to 'page-name' //
-  
-}
+
+  }
 });
 // Side nav //
 router.get(/MEreview/, function (req, res) {
@@ -206,7 +206,7 @@ router.get(/addKeyPersonConvo/, function (req, res) {
 // Coroner notification //
 
 router.get(/coronerRequired/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" ) {
+  if (req.query.radioInlineGroup === "Yes") {
     res.redirect('internal-referral'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('coroner-notification-martin-lincoln2'); // if both input values are "Yes" - redirect to 'page-name' //
@@ -247,14 +247,14 @@ router.get(/internalReferralTwo/, function (req, res) {
 
 
 
- // AP's proposed CoD // 
+// AP's proposed CoD // 
 router.get(/qapHandler/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
     res.redirect('ap-discussion-yes');
   } else {
     res.redirect('ap-discussion-no');
   }
-  });
+});
 router.get(/deceasedPerson-handler/, function (req, res) {
   if (req.query.radioInlineGroup === "Acute") {
     res.redirect('medical-record-proposed-cause');
@@ -262,7 +262,7 @@ router.get(/deceasedPerson-handler/, function (req, res) {
     res.redirect('AP-added4');
   }
 });
-  
+
 router.get(/apCodKnown/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
     res.redirect('qap-proposed2');
@@ -284,54 +284,54 @@ router.get(/apKnown/, function (req, res) {
     res.redirect('checkanswers-coroner-notification');
   }
 });
- // Discussion with AP // 
- router.get(/apDiscussion/, function (req, res) {
+// Discussion with AP // 
+router.get(/apDiscussion/, function (req, res) {
   if (req.query.qapDiscussionYes === "new-cause") {
     res.redirect('discussion-QAP-new-cause');
   } else {
     res.redirect('case-scrutiny-martin-lincoln4');
   }
-  });
- // ME Scrutiny // 
- router.get(/meScrutiny/, function (req, res) {
+});
+// ME Scrutiny // 
+router.get(/meScrutiny/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
     res.redirect('medical-record-proposed-cause');
   } else {
     res.redirect('me-outcomes-martin-lincoln');
   }
-  });
-   // MFA // 
- router.get(/authMethod/, function (req, res) {
+});
+// MFA // 
+router.get(/authMethod/, function (req, res) {
   if (req.query.radioGroup === "totp") {
     res.redirect('set-up-authenticator');
   } else {
     res.redirect('enter-mobile');
   }
-  });
-  router.get(/downloadHandler/, function (req, res) {
-    if (req.query.radioGroup === "desktop") {
-      res.redirect('enter-key');
-    } else {
-      res.redirect('get-security-code');
-    }
-    });
-  
-     // Close cases // 
- router.get(/closeCase/, function (req, res) {
+});
+router.get(/downloadHandler/, function (req, res) {
+  if (req.query.radioGroup === "desktop") {
+    res.redirect('enter-key');
+  } else {
+    res.redirect('get-security-code');
+  }
+});
+
+// Close cases // 
+router.get(/closeCase/, function (req, res) {
   if (req.query.radioGroup === "yes") {
     res.redirect('open-cases-3');
   } else {
     res.redirect('case-overview-martin-lincoln4');
   }
-  });
+});
 
-  router.get(/reclose/, function (req, res) {
-    if (req.query.radioGroup === "yes") {
-      res.redirect('open-cases-3');
-    } else {
-      res.redirect('case-overview-martin-lincoln-change');
-    }
-    });
+router.get(/reclose/, function (req, res) {
+  if (req.query.radioGroup === "yes") {
+    res.redirect('open-cases-3');
+  } else {
+    res.redirect('case-overview-martin-lincoln-change');
+  }
+});
 
 // NOK discussion // 
 router.get(/mainHandler/, function (req, res) {
@@ -340,49 +340,49 @@ router.get(/mainHandler/, function (req, res) {
   } else {
     res.redirect('main-contact-discussion-no');
   }
-  });
+});
 
-  
 
-  // Concern // 
+
+// Concern // 
 router.get(/raiseConcern/, function (req, res) {
   if (req.query.radioInlineGroup === "yes") {
     res.redirect('add-concern-martin-lincoln2');
   } else {
     res.redirect('cya-nok-convo-martin-lincoln');
   }
-  });
+});
 
-  router.get(/raiseAnotherConcern/, function (req, res) {
-    if (req.query.radioInlineGroup === "yes") {
-      res.redirect('add-concern-martin-lincoln');
-    } else {
-      res.redirect('case-history-martin-lincoln3');
-    }
-    });
-    
-    router.get(/raiseAgainConcern/, function (req, res) {
-      if (req.query.radioInlineGroup === "yes") {
-        res.redirect('add-concern-martin-lincoln2');
-      } else {
-        res.redirect('case-history-martin-lincoln4');
-      }
-      });
-    
-      router.post('/subjectArea/', function (req, res) {
+router.get(/raiseAnotherConcern/, function (req, res) {
+  if (req.query.radioInlineGroup === "yes") {
+    res.redirect('add-concern-martin-lincoln');
+  } else {
+    res.redirect('case-history-martin-lincoln3');
+  }
+});
 
-        // points to the name attribute name="incomesingle"
-        const incomeSingle = req.session.data['incomesingle']
-      
-        // checking the value of the variable (incomeSingle) and directing to pages based on that value
-        if (incomeSingle === 'gp-practice') {
-          res.redirect('creat-case-quick')
-        } else if (incomeSingle === 'primary-care-network') {
-          res.redirect('PAGE-2')
-        } else {
-          res.redirect('index')
-        }
-      
-      })
+router.get(/raiseAgainConcern/, function (req, res) {
+  if (req.query.radioInlineGroup === "yes") {
+    res.redirect('add-concern-martin-lincoln2');
+  } else {
+    res.redirect('case-history-martin-lincoln4');
+  }
+});
+
+router.post(/subjectArea/, function (req, res) {
+
+  // points to the name attribute name="incomesingle"
+  const incomeSingle = req.session.data['incomesingle']
+
+  // checking the value of the variable (incomeSingle) and directing to pages based on that value
+  if (incomeSingle === 'gp-practice') {
+    res.redirect('create-case-quick')
+  } else if (incomeSingle === 'primary-care-network') {
+    res.redirect('create-case-quick-under-28-days')
+  } else {
+    res.redirect('index')
+  }
+
+})
 
 module.exports = router;
