@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a quick case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %}
+  <div class="nhsuk-u-width-one-half">
+    <a href="javascript:history.back()">Go back</a>
+  </div>
+
+  <p style="padding-top: 20px;"> 
+  <FONT COLOR= #4c6272>
+    Deceased person's details
+  </FONT>
+  </p>
+ 
+    <h1>Was the death more than <br>
+    28 days after the birth?</h1>
+
+
+  <form class="form" action="subjectArea" method="POST"> <!-- wrapped both questions inside <form> -->
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input"
+              id="checkBoxOne" 
+              name="incomesingle" 
+              value="gp-practice" 
+              type="radio" 
+              aria-controls="medicineusereviews" 
+              aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" 
+              for="checkBoxOne">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" 
+              id="checkBoxTwo" 
+              name="incomesingle" 
+              value="primary-care-network"
+              type="radio" 
+              aria-controls="applianceusereviews" 
+              aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" 
+              for="checkBoxTwo">
+              No
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+    </fieldset>
+    <button class="nhsuk-button nhsuk-u-margin-top-8" type="submit">
+      Save and continue
+    </button>
+
+  </form>
+
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <h1>Personal contact details</h1>
+            <table class="nhsuk-table">
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row"
+                    role="row">
+                  <td class="nhsuk-table__cell"
+                      style="font-weight:700; padding: 8px 24px 8px 0px;">Name</td>
+                  <td class="nhsuk-table__cell"
+                      style="padding: 8px 24px 8px 0px;">Sheila Lincoln</td>
+                  <td class="nhsuk-table__cell"
+                      style="text-align: right; padding: 8px 24px 8px 0px;">
+                    <a class="nhsuk-link"
+                        href="add-contact-martin-lincoln">Change</a>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row"
+                    role="row">
+                  <td class="nhsuk-table__cell"
+                      style="font-weight:700; padding: 8px 24px 8px 0px;">Relationship</td>
+                  <td class="nhsuk-table__cell"
+                      style="padding: 8px 24px 8px 0px;">Spouse</td>
+                  <td class="nhsuk-table__cell"
+                      style="text-align: right; padding: 8px 24px 8px 0px;">
+                    <a class="nhsuk-link"
+                        href="add-contact-martin-lincoln">Change</a>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row"
+                    role="row">
+                  <td class="nhsuk-table__cell"
+                      style="font-weight:700; padding: 8px 24px 8px 0px;">Main contact?</td>
+                  <td class="nhsuk-table__cell"
+                      style="padding: 8px 24px 8px 0px;">Yes</td>
+                  <td class="nhsuk-table__cell"
+                      style="text-align: right; padding: 8px 24px 8px 0px;">
+                    <a class="nhsuk-link"
+                        href="add-contact-martin-lincoln">Change</a>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row"
+                    role="row">
+                  <td class="nhsuk-table__cell"
+                      style="font-weight:700; padding: 8px 24px 8px 0px;">Contact details</td>
+                  <td class="nhsuk-table__cell"
+                      style="padding: 8px 24px 8px 0px;">0796543212</td>
+                  <td class="nhsuk-table__cell"
+                      style="text-align: right; padding: 8px 24px 8px 0px;">
+                    <a class="nhsuk-link"
+                        href="add-contact-martin-lincoln">Change</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 class="nhsuk-heading-l">Conversation details</h2>
+            <p class="nhsuk-body"><a class="nhsuk-link"
+               href="personal-conversation-martin-lincoln">Add a conversation</a></p>​
+            <table class="nhsuk-table">
+              <thead class="nhsuk-table__head"
+                     role="rowgroup">
+                <tr role="row">
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Time and date</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Staff member involved</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Method</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col">Details</th>
+                  <th class=""
+                      role="columnheader"
+                      scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row"
+                    role="row">
+                  <td class="nhsuk-table__cell">29/08/2020<br>
+                  08:46</td>
+                  <td class="nhsuk-table__cell">Jenny Smith</td>
+                  <td class="nhsuk-table__cell">Phone call</td>
+                  <td class="nhsuk-table__cell">Contact is the NoK of Martin Lincoln who passed away the day previous.  She wanted some information about the next steps and was informed about the role of the ME Service.  The AP has not yet provided a cause of death so it was confirmed someone will be in touch very shortly to discuss the proposed cause of death.  Sheila advised the best number to ring her on is her mobile 0796543212.</td>
+                  <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link"
+                        href="personal-conversation-martin-lincoln">Change</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="nhsuk-body"><a class="nhsuk-link"
+              href="add-concern-martin-lincoln">Raise as a concern</a></p>
+          </div>
+          <div class="nhsuk-u-width-one-half">
+            <a href="javascript:history.back()">Return to previous page without saving</a>
+          </div>
+        </div>
+      </div><!--<div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption==bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS No. 123 456 7890</span></h3>
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a class="active"
+                      href="Case-overview-martin-lincoln">Case details</a>
+                </li>
+                <li>
+                  <a href="Case-history-martin-lincoln">Case history</a>
+                </li>
+                <li>
+                  <a href="scrutiny-martin-lincoln">Case Scrutiny</a>
+                </li>
+                <li>
+                  <a href="coroner-notification-martin-lincoln">Coroner notification</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>-->
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>

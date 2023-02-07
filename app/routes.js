@@ -376,11 +376,11 @@ router.post(/subjectArea/, function (req, res) {
 
   // checking the value of the variable (incomeSingle) and directing to pages based on that value
   if (incomeSingle === 'gp-practice') {
-    res.redirect('create-case-quick')
+    res.redirect('case-scrutiny-martin-lincoln')
   } else if (incomeSingle === 'primary-care-network') {
-    res.redirect('create-case-quick-under-28-days')
+    res.redirect('case-scrutiny-martin-lincoln')
   } else {
-    res.redirect('index')
+    res.redirect('#')
   }
 
 })
