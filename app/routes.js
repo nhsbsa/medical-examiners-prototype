@@ -378,7 +378,7 @@ router.post(/subjectArea/, function (req, res) {
   if (incomeSingle === 'gp-practice') {
     res.redirect('case-scrutiny-martin-lincoln')
   } else if (incomeSingle === 'primary-care-network') {
-    res.redirect('case-scrutiny-martin-lincoln')
+    res.redirect('case-scrutiny-martin-lincoln-u28')
   } else {
     res.redirect('#')
   }
