@@ -1,0 +1,143 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar-no-login.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+NHS Medical Examiners - Get Security Code
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-width-container-fluid">
+  <main class="nhsuk-main-wrapper--s" id="maincontent" role="main">
+    <div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    {% from 'fieldset/macro.njk' import fieldset %}
+{% from "input/macro.njk" import input %}
+
+<div class="nhsuk-grid-column-two-thirds">
+
+    <span class="nhsuk-caption-l">Authenticate using desktop or smartphone</span>
+    <h1 class="nhsuk-heading-l">Get security code</h1>
+
+
+
+  <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="surname">
+
+
+
+          <ol>
+
+              <li>Install one of these applications:</li>
+              <ul>
+                  <li>Authy</li>
+                  <li>FreeOTP</li>
+                  <li>Google Authenticator</li>
+                </ul>
+
+              <li> Open the application and enter the key:</li>
+
+
+
+
+                    <!-- <div class="nhsuk-inset-text">
+                        <span class="nhsuk-u-visually-hidden">Information: </span>
+                        <p>   Key:   BWRTYUJGYT890GHNGHTYR89JERTHGTYURIO</a></p>
+                      </div>-->
+
+                      <div class="nhsuk-warning-callout">
+                          <h3 class="nhsuk-warning-callout__label">
+                            <span role="text">
+                              <span class="nhsuk-u-visually-hidden">Key </span>
+                              Key
+                            </span>
+                          </h3>
+                          <p> BWRTYUJGYT890GHNGHTYR89JERTHGTYURIO</p>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    <p>  <a href = "get-security-code"> I want to scan a QR code using a smartphone</a></p>
+
+
+
+                <li>  Enter the code that appears on Authy.</li>
+                <div class="nhsuk-hint">
+                     This is a 6 digit code, like 123 456 </div>
+                    <input class="nhsuk-input nhsuk-u-width-one-half" id="surname" name="surname" type="text" >
+            </ol>
+            <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    You have 3 minutes to enter these details before your session times out.
+  </strong>
+</div>
+
+
+         </label> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        {{ button({
+          "text": "Continue",
+          "href": "done"
+        }) }}
+
+
+
+
+       </div>
+
+
+
+
+
+
+
+
+
+
+  </form>
+
+</div>
+  </div>
+
+
+</div>
+
+
+
+  </main>
+</div>
+
+{% endblock %}
