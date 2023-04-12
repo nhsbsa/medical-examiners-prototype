@@ -1,0 +1,50 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent"><span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Case scrutiny - Martin Lincoln</span>
+            <h1>Agreed new cause of death</h1>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label"
+                   for="example">Cause of death summary</label> 
+              <textarea aria-describedby="example-hint"
+                   class="nhsuk-textarea nhsuk-u-width-two-thirds"
+                   id="example"
+                   name="example"
+                   rows="10"></textarea>
+            </div>
+            <div class="nhsuk-form-group">
+              {% include "includes/multi-grid-form-input.html" %}
+            </div>
+            <a class="nhsuk-button"
+                 draggable="false"
+                 href="case-scrutiny-martin-lincoln5">Save and continue</a>
+           <div class="nhsuk-u-width-one-half">
+              <a href="javascript:history.back()">Return to previous page without saving</a>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

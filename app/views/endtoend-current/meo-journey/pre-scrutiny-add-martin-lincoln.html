@@ -1,0 +1,74 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+                  <a href="javascript:history.back()">Go back</a>
+                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">Case Scrutiny - Martin Lincoln</span>Pre-scrutiny notes</h1><label class="nhsuk-label"
+                     for="example">Provide case synopsis for the medical examiner to review</label>
+                <div class="nhsuk-hint"
+                     id="example-hint">
+                  Include previous medical, social, and drug histories, and details of:
+                  <ul>
+                  <li>recent surgery or treatment</li>
+                  <li>clinical investigations (CT, MRI, X-ray)</li>
+                  <li>falls</li>
+                  <li>pressure sores (including grade)</li>
+                  <li>learning difficulties</li>
+                  <li>end of life care documentation and DNAR</li>
+                  <li>ongoing registered concerns</li>
+                </div>
+                <textarea aria-describedby="example-hint"
+                     class="nhsuk-textarea"
+                     id="example"
+                     name="example"
+                     rows="20"></textarea><br>
+                <br>
+                <div class="nhsuk-form-group">
+                  <fieldset aria-describedby="example-hint"
+                            class="nhsuk-fieldset">
+                    <div class="nhsuk-checkboxes">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input"
+                             id="example-1"
+                             name="example"
+                             type="checkbox"
+                             value="email"> <label class="nhsuk-label nhsuk-checkboxes__label"
+                             for="example-1">I confirm this section is complete and ready for the medical examiner to review</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div><a class="nhsuk-button"
+                     draggable="false"
+                     href="case-scrutiny-martin-lincoln2">Save and continue</a>
+                <div class="nhsuk-u-width-one-half">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout-sidebar.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Open cases {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+   <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+                <div class="nhsuk-grid-row">
+                  <div class="nhsuk-grid-column-two-thirds">
+                    <h1 class="nhsuk-heading-xl">Open cases</h1>
+                    <div class="checkbox-list"
+                         id="checkbox-toggle">
+                      <div class="nhsuk-checkboxes">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">Name</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">Date of birth</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">Date of death</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">ME</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">MEO</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">AP information</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">Main contact</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">Scrutiny notes</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input"
+                               id="example-1"
+                               name="example"
+                               type="checkbox"
+                               value="email"> <label class="nhsuk-label nhsuk-checkboxes__label toggle-label"
+                               for="example-1">Status</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nhsuk-grid-column-one-third">
+                    <a class="nhsuk-button"
+                         href="create-case-quick"
+                         style="float:right">Create new case</a>
+                  </div>
+                </div>
+                <hr style="border-bottom:4px solid #005EB8; margin:0">
+                <div class="table-scroll"
+                     id="table-scroll">
+                  <div class="nhsuk-table-responsive nhsuk-u-margin-top-0 table-wrap">
+                    <table class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable main-table"
+                           id="sortable">
+                      <thead class="nhsuk-table__head">
+                        <tr class="nhsuk-table__row">
+                          <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  type="button">Name</button></th>
+                          <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">Date of birth</button></th>
+                          <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">Date of death</button></th>
+                                  <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">NHS Number</button></th>
+                          <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">ME</button></th>
+                          <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">MEO</button></th>
+                                  <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">Proposed COD</button></th>
+                                  <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">Main contact</button></th>
+                                  <th aria-sort="none"
+                              class="nhsuk-table__header"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">Scrutiny notes</button></th><!--<th class="nhsuk-table__header" aria-sort="none" scope="col">
+                                                                                <button onclick="sortTable()" type="button" data-index="0">Action</button>
+                                                                        </th>-->
+                          <th aria-sort="none"
+                              class="nhsuk-table__header fixed-side"
+                              scope="col"><button data-index="0"
+                                  onclick="sortTable()"
+                                  type="button">Case type</button></th>
+                        </tr>
+                      </thead>
+                      <tbody class="nhsuk-table__body">
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">
+                            <a href="case-overview-martin-lincoln">Martin Lincoln</a>
+                          </td>
+                          <td class="nhsuk-table__cell">02/11/1935</td>
+                          <td class="nhsuk-table__cell">28/08/2020</td>
+                          <td class="nhsuk-table__cell">123 456 7890</td>
+                          <td class="nhsuk-table__cell">ABCDE</td>
+                          <td class="nhsuk-table__cell">GHIJ</td>
+                          <td class="nhsuk-table__cell">Not started</td>
+                          <td class="nhsuk-table__cell">Not started</td>
+                          <td class="nhsuk-table__cell">Not started</td>
+                          <td><span class="nhsuk-tag nhsuk-tag--red case-tag">Urgent</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a class="active"
+                      href="open-cases-2">Open cases</a>
+                </li>
+                <li>
+                  <a href="needs-coroner-referral">Needs coroner notification</a>
+                </li>
+                <li>
+                  <a href="closed-cases">Closed cases</a>
+                </li>              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>

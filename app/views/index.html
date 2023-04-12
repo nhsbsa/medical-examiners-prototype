@@ -2,109 +2,124 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <style>
-      .autocomplete-wrapper {
-        max-width: 20em;
-        margin-bottom: 4rem;
-      }
-      .autocomplete__wrapper {
-        position: relative;
-      }
-      .autocomplete__hint,
-      .autocomplete__input,
-      .autocomplete__option {
-        font-size: 19px;
-        line-height: 1.31579;
-      }
-      .autocomplete__input--default {
-        padding: 5px;
-      }
-      .autocomplete__input {
-        position: relative;
-      }
-      .autocomplete__input {
-        -webkit-appearance: none;
-        border: 2px solid #0b0c0c;
-        border-radius: 0;
-        -webkit-box-sizing: border-box;
-        margin-bottom: 0;
-        width: 100%;
-      }
-      .autocomplete__menu--inline {
-        position: relative;
-      }
-      .autocomplete__menu--hidden {
-        display: none;
-      }
-      .autocomplete__menu {
-        background-color: #fff;
-        border: 2px solid #0b0c0c;
-        border-top: 0;
-        color: #0b0c0c;
-        margin: 0;
-        max-height: 342px;
-        overflow-x: hidden;
-        padding: 0;
-        width: calc(100% - 4px);
-      }
-      select:not(:-internal-list-box) {
-        overflow: visible !important;
-      }
-      select {
-        -webkit-writing-mode: horizontal-tb !important;
-        text-rendering: auto;
-        color: -internal-light-dark-color(black, white);
-        letter-spacing: normal;
-        word-spacing: normal;
-        text-transform: none;
-        text-indent: 0px;
-        text-shadow: none;
-        text-align: start;
-        -webkit-appearance: menulist;
-        box-sizing: border-box;
-        align-items: center;
-        white-space: pre;
-        -webkit-rtl-ordering: logical;
-        background-color: rgb(248, 248, 248);
-        cursor: default;
-        margin: 0em;
-        font: 400 11px system-ui;
-        border-radius: 5px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(166, 166, 166);
-        border-image: initial;
-      }
-      option {
-        font-weight: normal;
-        display: block;
-        white-space: pre;
-        min-height: 1.2em;
-        padding: 0px 2px 1px;
-      }
+    .autocomplete-wrapper {
+      max-width: 20em;
+      margin-bottom: 4rem;
+    }
 
+    .autocomplete__wrapper {
+      position: relative;
+    }
+
+    .autocomplete__hint,
+    .autocomplete__input,
+    .autocomplete__option {
+      font-size: 19px;
+      line-height: 1.31579;
+    }
+
+    .autocomplete__input--default {
+      padding: 5px;
+    }
+
+    .autocomplete__input {
+      position: relative;
+    }
+
+    .autocomplete__input {
+      -webkit-appearance: none;
+      border: 2px solid #0b0c0c;
+      border-radius: 0;
+      -webkit-box-sizing: border-box;
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    .autocomplete__menu--inline {
+      position: relative;
+    }
+
+    .autocomplete__menu--hidden {
+      display: none;
+    }
+
+    .autocomplete__menu {
+      background-color: #fff;
+      border: 2px solid #0b0c0c;
+      border-top: 0;
+      color: #0b0c0c;
+      margin: 0;
+      max-height: 342px;
+      overflow-x: hidden;
+      padding: 0;
+      width: calc(100% - 4px);
+    }
+
+    select:not(:-internal-list-box) {
+      overflow: visible !important;
+    }
+
+    select {
+      -webkit-writing-mode: horizontal-tb !important;
+      text-rendering: auto;
+      color: -internal-light-dark-color(black, white);
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-transform: none;
+      text-indent: 0px;
+      text-shadow: none;
+      text-align: start;
+      -webkit-appearance: menulist;
+      box-sizing: border-box;
+      align-items: center;
+      white-space: pre;
+      -webkit-rtl-ordering: logical;
+      background-color: rgb(248, 248, 248);
+      cursor: default;
+      margin: 0em;
+      font: 400 11px system-ui;
+      border-radius: 5px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(166, 166, 166);
+      border-image: initial;
+    }
+
+    option {
+      font-weight: normal;
+      display: block;
+      white-space: pre;
+      min-height: 1.2em;
+      padding: 0px 2px 1px;
+    }
   </style><!-- Extends the layout from /views/layout.html -->
   <title></title>
 </head>
+
 <body>
   {% extends 'layout.html' %} <!--
   In /views/layout.html you can:
     - change the header and footer
     - add custom CSS and JavaScript
 -->
-   <!-- Set the page title inside the pageTitle block -->
-   {% block pageTitle %} Medical Examiners {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
-   {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
-   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-   {% block content %}
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Medical Examiners {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
       <!-- Change the page title here -->
-      <h1>Medical Examiner Service -Manage my caseload <!--  <span class="nhsuk-caption-xl nhsuk-caption==bottom">Version {{version}}</span>--></h1><!-- Add your content here -->
+      <h1>Medical Examiner Service -Manage my caseload
+        <!--  <span class="nhsuk-caption-xl nhsuk-caption==bottom">Version {{version}}</span>--></h1>
+      <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-      <p class="nhsuk-lede-text">Medical Examiners and Medical Examiner Officers and Attending Practitioners will use to log cases, record their scrutiny of non-coronial deaths, and refer to a coroner if necessary.</p>
+      <p class="nhsuk-lede-text">Medical Examiners and Medical Examiner Officers and Attending Practitioners will use to
+        log cases, record their scrutiny of non-coronial deaths, and refer to a coroner if necessary.</p>
       <div class="nhsuk-inset-text">
         <span class="nhsuk-u-visually-hidden">Information:</span>
         <p>To give others access to this prototype:</p>
@@ -114,19 +129,62 @@
         </ul>
       </div>
 
+      <!-- ********************************* -->
+      <!-- ******** CURRENT JOURNEY ******** -->
+      <!-- ********************************* -->
+      
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">End to End Journey - Current</span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-u-margin-top-5">
+          
+          <p>This version of the prototype is built to be as close as possible to what is currently live</p>
+          
+          <hr>
+
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">MEO Journey</span>
+            </a>
+          </div>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">ME Journey</span>
+            </a>
+          </div>
+
+          <div class="nhsuk-hint" id="contact-hint">
+            Last updated: Not up to date
+          </div>
+        </div>
+      </details>
+
+      <!-- ********************************* -->
+
+      <hr class="nhsuk-u-margin-top-9 nhsuk-u-margin-bottom-9">
+
       <details class="nhsuk-details nhsuk-expander">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">End to end IT-11 - Feb 2023</span>
         </summary><br>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">End to End Journey - Iteration 11</span>
-  </summary>
-  <div class="nhsuk-details__text">
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey - Iteration 11</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
-            
-            
+
+
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>Case concerns output begun</li>
@@ -138,13 +196,13 @@
             </ul>
 
             <hr>
-                              
+
             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v11/meo-journey/index"><button class="nhsuk-button"
-              type="submit">MEO journey</button></a></p>
-      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v11/me-journey/index"><button class="nhsuk-button"
-              type="submit">ME journey</button></a></p>
-            </div>
-</details>
+                  type="submit">MEO journey</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v11/me-journey/index"><button class="nhsuk-button"
+                  type="submit">ME journey</button></a></p>
+          </div>
+        </details>
       </details>
 
       <details class="nhsuk-details nhsuk-expander">
@@ -152,14 +210,14 @@
           <span class="nhsuk-details__summary-text">End to end IT-10 - Feb 2023</span>
         </summary><br>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">End to End Journey - Iteration 10</span>
-  </summary>
-  <div class="nhsuk-details__text">
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey - Iteration 10</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
-            
-            
+
+
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>28 days before/after birth selection removed from create a case page.</li>
@@ -167,25 +225,31 @@
               <li>User's able to change 28 days before/after birth selection from case scrutiny (ME).</li>
               <li>Create a case page now matches live service.</li>
               <li>Medical examiner's independent review page now matches live service.</li>
-              <li>Update separate AP proposed COD form's based on user's 28 days before/after selection to include Req ID 1.02 and 1.03</li>
+              <li>Update separate AP proposed COD form's based on user's 28 days before/after selection to include Req
+                ID 1.02 and 1.03</li>
             </ul>
 
             <h3 class="nhsuk-heading-m">Topics to discuss:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>Pros and cons of current 28 days before/after birth selection solution. I.e. Will have to redo already completed forms should they need to change their selection. Possible difficulties with managing statuses of cross/linked sections.</li>
-              <li>Other possible solution is to have a 28 days before/after birth selection interstitial page prior to every form. This would improve status management but worsen user experience.</li>
-              <li>What is more valuable to stakeholders? Better UX or more straightforward and streamlined case management.</li>
-              <li>Senior Interaction Designer's opinion is that the sunk cost of poor case management is far more impactful.</li>
+              <li>Pros and cons of current 28 days before/after birth selection solution. I.e. Will have to redo already
+                completed forms should they need to change their selection. Possible difficulties with managing statuses
+                of cross/linked sections.</li>
+              <li>Other possible solution is to have a 28 days before/after birth selection interstitial page prior to
+                every form. This would improve status management but worsen user experience.</li>
+              <li>What is more valuable to stakeholders? Better UX or more straightforward and streamlined case
+                management.</li>
+              <li>Senior Interaction Designer's opinion is that the sunk cost of poor case management is far more
+                impactful.</li>
             </ul>
 
             <hr>
-                              
+
             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v10/meo-journey/index"><button class="nhsuk-button"
-              type="submit">MEO journey</button></a></p>
-      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v10/me-journey/index"><button class="nhsuk-button"
-              type="submit">ME journey</button></a></p>
-            </div>
-</details>
+                  type="submit">MEO journey</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v10/me-journey/index"><button class="nhsuk-button"
+                  type="submit">ME journey</button></a></p>
+          </div>
+        </details>
       </details>
 
       <details class="nhsuk-details nhsuk-expander">
@@ -193,104 +257,106 @@
           <span class="nhsuk-details__summary-text">End to end IT-9 - Feb 2023</span>
         </summary><br>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">End to End Journey - Iteration 9</span>
-  </summary>
-  <div class="nhsuk-details__text">
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey - Iteration 9</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
-            
-            
+
+
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>Removed independent screen for 28 day before/after birth selection as it was thought to be too extensive as per stakeholder meeting (06/02).</li>
+              <li>Removed independent screen for 28 day before/after birth selection as it was thought to be too
+                extensive as per stakeholder meeting (06/02).</li>
               <li>Removed separate routes for 28 day before/after selection.</li>
-              <li>Added 28 day before/after selection via radio menu within case information page in both MEO and ME user journeys.</li>
-             
+              <li>Added 28 day before/after selection via radio menu within case information page in both MEO and ME
+                user journeys.</li>
+
             </ul>
 
             <hr>
-                              
+
             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v9/meo-journey/index"><button class="nhsuk-button"
-              type="submit">MEO journey</button></a></p>
-      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v9/me-journey/index"><button class="nhsuk-button"
-              type="submit">ME journey</button></a></p>
-            </div>
-</details>
+                  type="submit">MEO journey</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v9/me-journey/index"><button class="nhsuk-button"
+                  type="submit">ME journey</button></a></p>
+          </div>
+        </details>
       </details>
 
       <details class="nhsuk-details nhsuk-expander">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">End to end IT-8 - Jan 2023</span>
         </summary><br>
-       
-       
 
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">End to End Journey - Iteration 8</span>
-  </summary>
-  <div class="nhsuk-details__text">
+
+
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey - Iteration 8</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
-            
-            
+
+
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>Enabled users to select whether a death took place before or after 28 days since birth</li>
               <li>Established seperate routes based on what selection users made from the 28 day post/pre birth prompt
                 that would take them to seperate case information forms
               </li>
-             
+
             </ul>
 
             <hr>
-                              
+
             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v8/meo-journey/index"><button class="nhsuk-button"
-              type="submit">MEO journey</button></a></p>
-      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v8/me-journey/index"><button class="nhsuk-button"
-              type="submit">ME journey</button></a></p>
-            </div>
-</details>
+                  type="submit">MEO journey</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v8/me-journey/index"><button class="nhsuk-button"
+                  type="submit">ME journey</button></a></p>
+          </div>
+        </details>
       </details>
 
 
       <details class="nhsuk-details nhsuk-expander">
         <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">End to end IT-7 - May  2022</span>
+          <span class="nhsuk-details__summary-text">End to end IT-7 - May 2022</span>
         </summary><br>
-       
-       
 
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">End to End Journey - Iteration 7</span>
-  </summary>
-  <div class="nhsuk-details__text">
+
+
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey - Iteration 7</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
-            
-            
+
+
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>Updated "case details" section based on stakeholder feedback </li>
-               <li>awaiting feedback clarification before any further changes </li>
-             
+              <li>awaiting feedback clarification before any further changes </li>
+
             </ul>
             <h3 class="nhsuk-heading-m">What we plan to test:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>Do users understand that they can save at any point?</li>
-              <li>Can users fill in mandatory fields before closing the case?  Do they understand why they have to?</li>
+              <li>Can users fill in mandatory fields before closing the case? Do they understand why they have to?</li>
             </ul>
 
             <hr>
-                              
+
             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v7/meo-journey/index"><button class="nhsuk-button"
-              type="submit">MEO journey</button></a></p>
-      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v7/me-journey/index"><button class="nhsuk-button"
-              type="submit">ME journey</button></a></p>
-            </div>
-</details>
+                  type="submit">MEO journey</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v7/me-journey/index"><button class="nhsuk-button"
+                  type="submit">ME journey</button></a></p>
+          </div>
+        </details>
       </details>
 
 
@@ -298,22 +364,23 @@
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">End to end IT-6 - March 2022</span>
         </summary><br>
-       
-       
-        
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">End to End Journey - Iteration 6</span>
-  </summary>
-  <div class="nhsuk-details__text">
+
+
+
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey - Iteration 6</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
-            
-            
+
+
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>Updated the prototype with the most recent versions of Communication and concerns section, Coroner referal and Discussion with main contact about cause of death. </li>
-              
+              <li>Updated the prototype with the most recent versions of Communication and concerns section, Coroner
+                referal and Discussion with main contact about cause of death. </li>
+
             </ul>
             <h3 class="nhsuk-heading-m">What we plan to test:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
@@ -323,25 +390,26 @@
             </ul>
 
             <hr>
-                              
+
             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v6/meo-journey/index"><button class="nhsuk-button"
-              type="submit">MEO journey</button></a></p>
-      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v6/me-journey/index"><button class="nhsuk-button"
-              type="submit">ME journey</button></a></p>
-            </div>
-</details>
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">Address lookup</span>
-  </summary>
-  <div class="nhsuk-details__text">
+                  type="submit">MEO journey</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v6/me-journey/index"><button class="nhsuk-button"
+                  type="submit">ME journey</button></a></p>
+          </div>
+        </details>
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Address lookup</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
-            
-            
+
+
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>Updated the prototype with the most recent versions of Communication and concerns section, Coroner referal and Discussion with main contact about cause of death. </li>
-              
+              <li>Updated the prototype with the most recent versions of Communication and concerns section, Coroner
+                referal and Discussion with main contact about cause of death. </li>
+
             </ul>
             <h3 class="nhsuk-heading-m">What we plan to test:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
@@ -351,60 +419,65 @@
             </ul>
 
             <hr>
-                              
-            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v6/address-lookup/additional-details-martin-lincoln"><button class="nhsuk-button"
-              type="submit">Address lookup</button></a></p>
-      
-            </div>
-</details>
+
+            <p class="nhsuk-u-margin-bottom-0"><a
+                href="endtoend-v6/address-lookup/additional-details-martin-lincoln"><button class="nhsuk-button"
+                  type="submit">Address lookup</button></a></p>
+
+          </div>
+        </details>
       </details>
       <details class="nhsuk-details nhsuk-expander">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">End to end IT-5 - February 2022</span>
         </summary><br>
-       
-       <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">Case concerns - Iteration 2</span>
-        </summary>
-        <div class="nhsuk-details__text">
-                  <br>
-                  <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record concerns and conversations.</p>
-                  <hr>
-                  <p>Took feedback from UR findings on iteration 1.</p>
-                  <h3 class="nhsuk-heading-m">What we changed:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Case history section redesigned and re-named</li>
-                    <li>Case concern added as part of communication</li>
-                    <li>Main contact discussion moved back to communication section</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Do users better understand the purpose of the case communication section?</li>
-                    <li>Will users be able to raise concerns as part of communication?</li>
-                    <li>Does having main contact discussion in communication better allow users to complete this part?</li>
-                  </ul>
 
-                  <hr>
-                                    <h3 class="nhsuk-heading-m">MEO Journey</h3>
-                  <p>Add concern</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v5/meo-journey/case-overview-martin-lincoln3"><button class="nhsuk-button"
-                  type="submit">Start</button></a></p>
-                                    <h3 class="nhsuk-heading-m">ME Journey</h3>
-                  <p>Review added concern</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v5/me-journey/open-cases-2"><button class="nhsuk-button"
-                  type="submit">Start</button></a></p>
-                  </div>
-</details>
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">Case concerns - Iteration 3</span>
-  </summary>
-  <div class="nhsuk-details__text">
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Case concerns - Iteration 2</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record concerns and conversations.</p>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this
+              section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record
+              concerns and conversations.</p>
+            <hr>
+            <p>Took feedback from UR findings on iteration 1.</p>
+            <h3 class="nhsuk-heading-m">What we changed:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Case history section redesigned and re-named</li>
+              <li>Case concern added as part of communication</li>
+              <li>Main contact discussion moved back to communication section</li>
+            </ul>
+            <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Do users better understand the purpose of the case communication section?</li>
+              <li>Will users be able to raise concerns as part of communication?</li>
+              <li>Does having main contact discussion in communication better allow users to complete this part?</li>
+            </ul>
+
+            <hr>
+            <h3 class="nhsuk-heading-m">MEO Journey</h3>
+            <p>Add concern</p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v5/meo-journey/case-overview-martin-lincoln3"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+            <h3 class="nhsuk-heading-m">ME Journey</h3>
+            <p>Review added concern</p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v5/me-journey/open-cases-2"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+          </div>
+        </details>
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Case concerns - Iteration 3</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <br>
+            <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this
+              section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record
+              concerns and conversations.</p>
             <hr>
             <p>Took feedback from UR findings on iteration 2.</p>
             <h3 class="nhsuk-heading-m">What we changed:</h3>
@@ -423,31 +496,34 @@
             </ul>
 
             <hr>
-                              <h3 class="nhsuk-heading-m">MEO Journey</h3>
+            <h3 class="nhsuk-heading-m">MEO Journey</h3>
             <p>Add concern</p>
-    <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v5/meo-journey/communication-v2/case-overview-martin-lincoln-new"><button class="nhsuk-button"
-            type="submit">Start</button></a></p>
-                             <h3 class="nhsuk-heading-m">ME Journey</h3>
+            <p class="nhsuk-u-margin-bottom-0"><a
+                href="endtoend-v5/meo-journey/communication-v2/case-overview-martin-lincoln-new"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+            <h3 class="nhsuk-heading-m">ME Journey</h3>
             <p>Review added concern</p>
-    <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v5/me-journey/communication/open-cases-2"><button class="nhsuk-button"
-            type="submit">Start</button></a></p>
-            </div>
-</details>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v5/me-journey/communication/open-cases-2"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+          </div>
+        </details>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">Reopen case-Iteration 2</span>
-  </summary>
-  <div class="nhsuk-details__text">
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Reopen case-Iteration 2</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> removing page that asks users to choose why they are reopening the case will work better for users.<strong>This will </strong>allow them to make few changes in one go. </p>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> removing page that asks users to
+              choose why they are reopening the case will work better for users.<strong>This will </strong>allow them to
+              make few changes in one go. </p>
             <hr>
             <p></p>
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>Removed the page where we ask users to select one reason why they are wanting to reopen the case </li>
-              
+
             </ul>
             <h3 class="nhsuk-heading-m">What we plan to test:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
@@ -457,68 +533,74 @@
             </ul>
 
             <hr>
-                              
-            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/meo-journey/reopen-case/open-cases"><button class="nhsuk-button"
-              type="submit">MEO journey</button></a></p>
-             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/me-journey/reopen-case-already-open/me-open-cases"><button class="nhsuk-button"
-                type="submit">ME journey - concern added</button></a></p>
-              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/me-journey/reopen-case-already-open/me-open-cases2"><button class="nhsuk-button"
-                type="submit">ME journey - review case note</button></a></p>
-            </div>
-</details>
+
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/meo-journey/reopen-case/open-cases"><button
+                  class="nhsuk-button" type="submit">MEO journey</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a
+                href="endtoend-v4/me-journey/reopen-case-already-open/me-open-cases"><button class="nhsuk-button"
+                  type="submit">ME journey - concern added</button></a></p>
+            <p class="nhsuk-u-margin-bottom-0"><a
+                href="endtoend-v4/me-journey/reopen-case-already-open/me-open-cases2"><button class="nhsuk-button"
+                  type="submit">ME journey - review case note</button></a></p>
+          </div>
+        </details>
       </details>
       <details class="nhsuk-details nhsuk-expander">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">End to end IT-4 - January 2022</span>
         </summary><br>
-       
-       <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">Case concerns</span>
-        </summary>
-        <div class="nhsuk-details__text">
-                  <br>
-                  <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record concerns and conversations.</p>
-                  <hr>
-                  <p>Took feedback from UR findings on iteration 1.</p>
-                  <h3 class="nhsuk-heading-m">What we changed:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Case history section redesigned and re-named</li>
-                    <li>Main contact discussion moved into case scrutiny section</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Do users better understand the purpose of the case communication section?</li>
-                    <li>Will users still duplicate conversations across different bits of the case?</li>
-                    <li>Does having main contact discussion in scrutiny better allow users to complete this part?</li>
-                  </ul>
 
-                  <hr>
-                                    <h3 class="nhsuk-heading-m">MEO Journey</h3>
-                  <p>Add concern</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/meo-journey/case-overview-martin-lincoln3"><button class="nhsuk-button"
-                  type="submit">Start</button></a></p>
-                                    <h3 class="nhsuk-heading-m">ME Journey</h3>
-                  <p>Review added concern</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/me-journey/open-cases-2"><button class="nhsuk-button"
-                  type="submit">Start</button></a></p>
-                  </div>
-</details>
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">Reporting</span>
-  </summary>
-  <div class="nhsuk-details__text">
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Case concerns</span>
+          </summary>
+          <div class="nhsuk-details__text">
             <br>
             <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding reporting function will allow users to track and monitor their numbers. </p>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this
+              section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record
+              concerns and conversations.</p>
+            <hr>
+            <p>Took feedback from UR findings on iteration 1.</p>
+            <h3 class="nhsuk-heading-m">What we changed:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Case history section redesigned and re-named</li>
+              <li>Main contact discussion moved into case scrutiny section</li>
+            </ul>
+            <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Do users better understand the purpose of the case communication section?</li>
+              <li>Will users still duplicate conversations across different bits of the case?</li>
+              <li>Does having main contact discussion in scrutiny better allow users to complete this part?</li>
+            </ul>
+
+            <hr>
+            <h3 class="nhsuk-heading-m">MEO Journey</h3>
+            <p>Add concern</p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/meo-journey/case-overview-martin-lincoln3"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+            <h3 class="nhsuk-heading-m">ME Journey</h3>
+            <p>Review added concern</p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/me-journey/open-cases-2"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+          </div>
+        </details>
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Reporting</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <br>
+            <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding reporting function will
+              allow users to track and monitor their numbers. </p>
             <hr>
             <p></p>
             <h3 class="nhsuk-heading-m">What we changed:</h3>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li> We added Reporting tab into side nav</li>
-              <li>Select element is letting users choose which report they would like to see, starting from the most recent one.</li>
+              <li>Select element is letting users choose which report they would like to see, starting from the most
+                recent one.</li>
               <li>Reports are divided by ME offices </li>
               <li>Reports can be viewed on the screen or emailed </li>
             </ul>
@@ -526,17 +608,17 @@
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>If users find Reporting useful</li>
               <li>If users find Reporting easy to access and use</li>
-              
+
             </ul>
 
             <hr>
-                              
-    <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/reporting/open-cases2"><button class="nhsuk-button"
-            type="submit">Reporting</button></a></p>
-                              
-            </div>
-</details>
-<!--<details class="nhsuk-details">
+
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v4/reporting/open-cases2"><button class="nhsuk-button"
+                  type="submit">Reporting</button></a></p>
+
+          </div>
+        </details>
+        <!--<details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">Reopen case-Iteration 2</span>
   </summary>
@@ -574,230 +656,256 @@
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">End to end IT-3 - December 2021</span>
         </summary><br>
-       
-       <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">Case communication section</span>
-        </summary>
-        <div class="nhsuk-details__text">
-                  <br>
-                  <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record concerns and conversations.</p>
-                  <hr>
-                  <p>Took feedback from UR findings on iteration 1.</p>
-                  <h3 class="nhsuk-heading-m">What we changed:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Case history section redesigned and re-named</li>
-                    <li>Main contact discussion moved into case scrutiny section</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Do users better understand the purpose of the case communication section?</li>
-                    <li>Will users still duplicate conversations across different bits of the case?</li>
-                    <li>Does having main contact discussion in scrutiny better allow users to complete this part?</li>
-                  </ul>
 
-                  <hr>
-                                    <h3 class="nhsuk-heading-m">Scenario 1</h3>
-                  <p>No contacts added</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/case-overview-martin-lincoln3"><button class="nhsuk-button"
-                  type="submit">Start</button></a></p>
-                                    <h3 class="nhsuk-heading-m">Scenario 2</h3>
-                  <p>Contacts already exist</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/case-overview-martin-lincoln6"><button class="nhsuk-button"
-                  type="submit">Start</button></a></p></div>
-</details>
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">End to End Journey - Iteration 3</span>
-        </summary>
-        <div class="nhsuk-details__text">
-                  <br>
-                  <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong><strong>This will</strong> ...</p>
-                  <hr>
-                  <p>Took feedback from UR findings on iteration 1.</p>
-                  <h3 class="nhsuk-heading-m">What we changed:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Case history section redesigned and re-named</li>
-                    <li>Main contact discussion moved into case scrutiny section</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>Do users better understand the purpose of the case communication section?</li>
-                    <li>Will users still duplicate conversations across different bits of the case?</li>
-                    <li>Does having main contact discussion in scrutiny better allow users to complete this part?</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">What we found:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>...</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>...</li>
-                  </ul>
-                  <hr>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/index"><button class="nhsuk-button"
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Case communication section</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <br>
+            <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing the design of this
+              section will be beneficial to users. <strong>This will</strong> reduce confusion around where to record
+              concerns and conversations.</p>
+            <hr>
+            <p>Took feedback from UR findings on iteration 1.</p>
+            <h3 class="nhsuk-heading-m">What we changed:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Case history section redesigned and re-named</li>
+              <li>Main contact discussion moved into case scrutiny section</li>
+            </ul>
+            <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Do users better understand the purpose of the case communication section?</li>
+              <li>Will users still duplicate conversations across different bits of the case?</li>
+              <li>Does having main contact discussion in scrutiny better allow users to complete this part?</li>
+            </ul>
+
+            <hr>
+            <h3 class="nhsuk-heading-m">Scenario 1</h3>
+            <p>No contacts added</p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/case-overview-martin-lincoln3"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+            <h3 class="nhsuk-heading-m">Scenario 2</h3>
+            <p>Contacts already exist</p>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/case-overview-martin-lincoln6"><button
+                  class="nhsuk-button" type="submit">Start</button></a></p>
+          </div>
+        </details>
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey - Iteration 3</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <br>
+            <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+            <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong><strong>This will</strong> ...</p>
+            <hr>
+            <p>Took feedback from UR findings on iteration 1.</p>
+            <h3 class="nhsuk-heading-m">What we changed:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Case history section redesigned and re-named</li>
+              <li>Main contact discussion moved into case scrutiny section</li>
+            </ul>
+            <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>Do users better understand the purpose of the case communication section?</li>
+              <li>Will users still duplicate conversations across different bits of the case?</li>
+              <li>Does having main contact discussion in scrutiny better allow users to complete this part?</li>
+            </ul>
+            <h3 class="nhsuk-heading-m">What we found:</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>...</li>
+            </ul>
+            <h3 class="nhsuk-heading-m">Any known issues?</h3>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>...</li>
+            </ul>
+            <hr>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/index"><button class="nhsuk-button"
                   type="submit">MEO journey</button></a></p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/me-journey/index"><button class="nhsuk-button"
-                  type="submit">ME journey</button></a></p></div>
-</details>
+            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/me-journey/index"><button class="nhsuk-button"
+                  type="submit">ME journey</button></a></p>
+          </div>
+        </details>
 
         <details class="nhsuk-details">
           <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">Coroner Notification - Iteration 2</span>
           </summary>
           <div class="nhsuk-details__text">
-    <div class="nhsuk-details__text">
-            <h3 class="nhsuk-heading-m">Scenario 1</h3>
-            <p>User has already filled in all other info required for a coroner notification. they fill in the notification form, and the system pulls though the info from other sections to complete the notification</p>
-            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/open-cases-4"><button class="nhsuk-button"
-                    type="submit">Scenario 1</button></a></p><!--
+            <div class="nhsuk-details__text">
+              <h3 class="nhsuk-heading-m">Scenario 1</h3>
+              <p>User has already filled in all other info required for a coroner notification. they fill in the
+                notification form, and the system pulls though the info from other sections to complete the notification
+              </p>
+              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/open-cases-4"><button
+                    class="nhsuk-button" type="submit">Scenario 1</button></a></p><!--
             <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/coroner-notification-martin-lincoln-error"><button class="nhsuk-button"
                     type="submit">Notification form with errors</button></a></p>-->
-           <h3 class="nhsuk-heading-m">Scenario 2 - Worst case scenario</h3>
-            <p>User has not filled in other info required for a coroner notification. they fill in the notification form, and are directed to the appropriate input pages to fill in the necessary info.</p>
-            <p>Filling this information in automatically completes the other sections. This info is recorded in a static page, to be viewed <strong>after</strong> it has been sent, and changing info elsewhere will not change it here.</p>
-            <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/coroner-notification-martin-lincoln-noinput"><button class="nhsuk-button"
-                    type="submit">Scenario 2</button></a></p></div>
-  </details>
-<<<<<<< Updated upstream
-  
-=======
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">End to End Journey Iteration 3</span>
-    </summary>
-    <div class="nhsuk-details__text">
-      <div class="nhsuk-details__text">
-        <br>
-        <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-        <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong><strong>This will</strong> ...</p>
-        <hr>
-        <p>Took feedback from UR findings on iteration 1.</p>
-        <h3 class="nhsuk-heading-m">What we changed:</h3>
-        <ul class="nhsuk-list nhsuk-list--bullet">
-          <li>...</li>
-        </ul>
-        <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-        <ul class="nhsuk-list nhsuk-list--bullet">
-          <li>..</li>
-        </ul>
-        <h3 class="nhsuk-heading-m">What we found:</h3>
-        <ul class="nhsuk-list nhsuk-list--bullet">
-          <li>...</li>
-        </ul>
-        <h3 class="nhsuk-heading-m">Any known issues?</h3>
-        <ul class="nhsuk-list nhsuk-list--bullet">
-          <li>...</li>
-        </ul>
-        <hr>
-<p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/index"><button class="nhsuk-button"
-        type="submit">MEO journey</button></a></p>
-<p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/me-journey/index"><button class="nhsuk-button"
-        type="submit">ME journey</button></a></p></div>
-</details>
->>>>>>> Stashed changes
+              <h3 class="nhsuk-heading-m">Scenario 2 - Worst case scenario</h3>
+              <p>User has not filled in other info required for a coroner notification. they fill in the notification
+                form, and are directed to the appropriate input pages to fill in the necessary info.</p>
+              <p>Filling this information in automatically completes the other sections. This info is recorded in a
+                static page, to be viewed <strong>after</strong> it has been sent, and changing info elsewhere will not
+                change it here.</p>
+              <p class="nhsuk-u-margin-bottom-0"><a
+                  href="endtoend-v3/meo-journey/coroner-notification-martin-lincoln-noinput"><button
+                    class="nhsuk-button" type="submit">Scenario 2</button></a></p>
+            </div>
+        </details>
+        <<<<<<< Updated upstream=======<details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">End to End Journey Iteration 3</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <div class="nhsuk-details__text">
+              <br>
+              <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+              <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong><strong>This will</strong> ...
+              </p>
+              <hr>
+              <p>Took feedback from UR findings on iteration 1.</p>
+              <h3 class="nhsuk-heading-m">What we changed:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>..</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">What we found:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">Any known issues?</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <hr>
+              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/meo-journey/index"><button class="nhsuk-button"
+                    type="submit">MEO journey</button></a></p>
+              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v3/me-journey/index"><button class="nhsuk-button"
+                    type="submit">ME journey</button></a></p>
+            </div>
+      </details>
+      >>>>>>> Stashed changes
       </details>
       <details class="nhsuk-details nhsuk-expander">
-        
+
         <summary class="nhsuk-details__summary">
-          
+
           <span class="nhsuk-details__summary-text">End to end IT-2 - October 2021</span>
         </summary><br>
         <div class="nhsuk-details__text">
-         
+
           <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
               <span class="nhsuk-details__summary-text">Reopen case - Iteration 1</span>
             </summary>
             <div class="nhsuk-details__text">
-                      <br>
-                      <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                      <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> Reopen case will function better with the new design as ME and MEO will be able to see the tasks clearer.<strong> This will</strong> enable them to communicate within the system.</p>
-                      <hr>
-                      
-                      <h3 class="nhsuk-heading-m">What we changed:</h3>
-                      <ul class="nhsuk-list nhsuk-list--bullet">
-                        <li>ME- Add concern and Amend CODsections now has 3 option instead of 2 in previous design when they decide to close the case.</li>
-                      <li>MEO- once MCCD rejected if they decide to amend COD MEO isn't able to close the case as they are waiting for ME.</li>
-                      <li>If MEO needs to amend the COD there is a new section within Case scrutiny called New cause of death.</li>
-                    </ul>
-                      <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-                      <ul class="nhsuk-list nhsuk-list--bullet">
-                        <li>If new design works better for users.</li>
-                        <li>if tasks are visible for ME if MEO reopens the case first.</li>
-                        <li>If users find new options sufficient.</li>
-                      </ul>
-                      <h3 class="nhsuk-heading-m">What we found:</h3>
-                      <ul class="nhsuk-list nhsuk-list--bullet">
-                        <li>...</li>
-                      </ul>
-                      <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                      <ul class="nhsuk-list nhsuk-list--bullet">
-                        <li>...</li>
-                      </ul>
-                      <hr>
-              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/reopen-case/open-cases"><button class="nhsuk-button"
-                      type="submit">MEO journey</button></a></p>
-                      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/me-journey/reopen-case-already-open/me-open-cases"><button class="nhsuk-button"
-                        type="submit">ME journey - concern added</button></a></p>
-                      <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/me-journey/reopen-case-already-open/me-open-cases2"><button class="nhsuk-button"
-                        type="submit">ME journey - review case note</button></a></p>
+              <br>
+              <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+              <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> Reopen case will function better
+                with the new design as ME and MEO will be able to see the tasks clearer.<strong> This will</strong>
+                enable them to communicate within the system.</p>
+              <hr>
+
+              <h3 class="nhsuk-heading-m">What we changed:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>ME- Add concern and Amend CODsections now has 3 option instead of 2 in previous design when they
+                  decide to close the case.</li>
+                <li>MEO- once MCCD rejected if they decide to amend COD MEO isn't able to close the case as they are
+                  waiting for ME.</li>
+                <li>If MEO needs to amend the COD there is a new section within Case scrutiny called New cause of death.
+                </li>
+              </ul>
+              <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>If new design works better for users.</li>
+                <li>if tasks are visible for ME if MEO reopens the case first.</li>
+                <li>If users find new options sufficient.</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">What we found:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">Any known issues?</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <hr>
+              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/reopen-case/open-cases"><button
+                    class="nhsuk-button" type="submit">MEO journey</button></a></p>
+              <p class="nhsuk-u-margin-bottom-0"><a
+                  href="endtoend-v2/me-journey/reopen-case-already-open/me-open-cases"><button class="nhsuk-button"
+                    type="submit">ME journey - concern added</button></a></p>
+              <p class="nhsuk-u-margin-bottom-0"><a
+                  href="endtoend-v2/me-journey/reopen-case-already-open/me-open-cases2"><button class="nhsuk-button"
+                    type="submit">ME journey - review case note</button></a></p>
               <!--<p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/me-journey/reopen-case/me-closed-cases"><button class="nhsuk-button"
                       type="submit">ME journey</button></a></p></div>-->
-    </details>
+          </details>
 
-<details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">End to End Journey - Iteration 2</span>
-        </summary>
-        <div class="nhsuk-details__text">
-                  <br>
-                  <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong><strong>This will</strong> ...</p>
-                  <hr>
-                  <p>Took feedback from UR findings on iteration 1.</p>
-                  <h3 class="nhsuk-heading-m">What we changed:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>...</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">What we plan to test:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>..</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">What we found:</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>...</li>
-                  </ul>
-                  <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>...</li>
-                  </ul>
-                  <hr>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/index"><button class="nhsuk-button"
-                  type="submit">MEO journey</button></a></p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/me-journey/index"><button class="nhsuk-button"
-                  type="submit">ME journey</button></a></p></div>
-</details>
-<details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">Coroner Notification - Iteration 1</span>
-        </summary>
-        <div class="nhsuk-details__text">
-  <div class="nhsuk-details__text">
-          <h3 class="nhsuk-heading-m">Scenario 1</h3>
-          <p>User has already filled in all other info required for a coroner notification. they fill in the notification form, and the system pulls though the info from other sections to complete the notification</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/open-cases-4"><button class="nhsuk-button"
-                  type="submit">Scenario 1</button></a></p><!--
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">End to End Journey - Iteration 2</span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <br>
+              <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+              <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong><strong>This will</strong> ...
+              </p>
+              <hr>
+              <p>Took feedback from UR findings on iteration 1.</p>
+              <h3 class="nhsuk-heading-m">What we changed:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>..</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">What we found:</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <h3 class="nhsuk-heading-m">Any known issues?</h3>
+              <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>...</li>
+              </ul>
+              <hr>
+              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/index"><button class="nhsuk-button"
+                    type="submit">MEO journey</button></a></p>
+              <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/me-journey/index"><button class="nhsuk-button"
+                    type="submit">ME journey</button></a></p>
+            </div>
+          </details>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">Coroner Notification - Iteration 1</span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-details__text">
+                <h3 class="nhsuk-heading-m">Scenario 1</h3>
+                <p>User has already filled in all other info required for a coroner notification. they fill in the
+                  notification form, and the system pulls though the info from other sections to complete the
+                  notification</p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/open-cases-4"><button
+                      class="nhsuk-button" type="submit">Scenario 1</button></a></p><!--
           <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/coroner-notification-martin-lincoln-error"><button class="nhsuk-button"
                   type="submit">Notification form with errors</button></a></p>-->
-          <h3 class="nhsuk-heading-m">Scenario 2 - Worst case scenario</h3>
-          <p>User has not filled in other info required for a coroner notification. they fill in the notification form, and are directed to the appropriate input pages to fill in the necessary info.</p>
-          <p>Filling this information in automatically completes the other sections. This info is recorded in a static page, to be viewed <strong>after</strong> it has been sent, and changing info elsewhere will not change it here.</p>
-          <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-v2/meo-journey/coroner-notification-martin-lincoln-noinput"><button class="nhsuk-button"
-                  type="submit">Scenario 2</button></a></p></div>
-</details>
+                <h3 class="nhsuk-heading-m">Scenario 2 - Worst case scenario</h3>
+                <p>User has not filled in other info required for a coroner notification. they fill in the notification
+                  form, and are directed to the appropriate input pages to fill in the necessary info.</p>
+                <p>Filling this information in automatically completes the other sections. This info is recorded in a
+                  static page, to be viewed <strong>after</strong> it has been sent, and changing info elsewhere will
+                  not change it here.</p>
+                <p class="nhsuk-u-margin-bottom-0"><a
+                    href="endtoend-v2/meo-journey/coroner-notification-martin-lincoln-noinput"><button
+                      class="nhsuk-button" type="submit">Scenario 2</button></a></p>
+              </div>
+          </details>
         </div>
       </details>
       <details class="nhsuk-details nhsuk-expander">
@@ -807,9 +915,9 @@
         <p>End to end journey - September 2021</p>
         <div class="nhsuk-details__text">
           <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-new/meo-journey/index"><button class="nhsuk-button"
-                  type="submit">MEO journey</button></a></p>
+                type="submit">MEO journey</button></a></p>
           <p class="nhsuk-u-margin-bottom-0"><a href="endtoend-new/me-journey/index"><button class="nhsuk-button"
-                  type="submit">ME journey</button></a></p>
+                type="submit">ME journey</button></a></p>
         </div>
       </details>
       <hr>
@@ -825,8 +933,9 @@
             <p>Prototype developed by FE Dev - Lee Bodak</p>
             <div class="nhsuk-details__text">
               <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/index"><button class="nhsuk-button"
-                      type="submit">Start</button></a></p>
-              <p>For iteration work - refer <a href="https://bsa2468.atlassian.net/wiki/spaces/ME/pages/2516287503/Prototype+References">here</a></p>
+                    type="submit">Start</button></a></p>
+              <p>For iteration work - refer <a
+                  href="https://bsa2468.atlassian.net/wiki/spaces/ME/pages/2516287503/Prototype+References">here</a></p>
             </div>
           </details>
           <details class="nhsuk-details nhsuk-expander">
@@ -840,23 +949,28 @@
                 </summary>
                 <div class="nhsuk-details__text">
                   <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing some of the categories in side nav <strong>will be a useful feature for</strong> users <strong>as it is closer to their ways of working</strong> and
-                  it is less complicated for users. <strong>This will</strong> help users work faster and more efficient.</p>
+                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> changing some of the
+                    categories in side nav <strong>will be a useful feature for</strong> users <strong>as it is closer
+                      to their ways of working</strong> and
+                    it is less complicated for users. <strong>This will</strong> help users work faster and more
+                    efficient.</p>
                   <h3 class="nhsuk-heading-m">What we changed:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
                     <li>removed Action tab as it was confusing users and making them feel micromanaged</li>
-                    <li>added All cases and Awaiting scrutiny for ME's, and Awaiting AP's proposed cod, Awaiting ME's review category and changed Needs coroner feedback to Awaiting coroner's outcome for MEO's.</li>
+                    <li>added All cases and Awaiting scrutiny for ME's, and Awaiting AP's proposed cod, Awaiting ME's
+                      review category and changed Needs coroner feedback to Awaiting coroner's outcome for MEO's.</li>
                   </ul>
                   <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>If users find side nav easy to use and if it allows users to adjust it to their way of working</li>
+                    <li>If users find side nav easy to use and if it allows users to adjust it to their way of working
+                    </li>
                   </ul>
                   <h3 class="nhsuk-heading-m">What we found:</h3>
                   <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav-iteration2/open-cases"><button class="nhsuk-button"
-                          type="submit">MEO view</button></a></p>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav-iteration2/me-case-list-reviewcod"><button class="nhsuk-button"
-                          type="submit">ME view</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav-iteration2/open-cases"><button
+                        class="nhsuk-button" type="submit">MEO view</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav-iteration2/me-case-list-reviewcod"><button
+                        class="nhsuk-button" type="submit">ME view</button></a></p>
                 </div>
               </details>
             </div>
@@ -876,12 +990,13 @@
                   <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                   <h3 class="nhsuk-heading-m">What we found:</h3>
                   <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/Cheryl-Tunt/me-case-list-reviewcod"><button class="nhsuk-button"
-                          type="submit">ME view-Cheryl Tunt</button></a></p>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/Dennis-Renolds/me-case-list-awaitscrutiny"><button class="nhsuk-button"
-                          type="submit">ME view-Dennis Renolds</button></a></p>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/MEO-Dennis-Renolds/open-cases"><button class="nhsuk-button"
-                          type="submit">MEO view-Dennis Renolds</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/Cheryl-Tunt/me-case-list-reviewcod"><button
+                        class="nhsuk-button" type="submit">ME view-Cheryl Tunt</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a
+                      href="side-nav/Dennis-Renolds/me-case-list-awaitscrutiny"><button class="nhsuk-button"
+                        type="submit">ME view-Dennis Renolds</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/MEO-Dennis-Renolds/open-cases"><button
+                        class="nhsuk-button" type="submit">MEO view-Dennis Renolds</button></a></p>
                 </div>
               </details>
             </div>
@@ -897,8 +1012,10 @@
                 </summary>
                 <div class="nhsuk-details__text">
                   <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security compliant and it enables
-                  stronger authentication. <strong>This will</strong> reduce the risk of security threat.</p>
+                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be
+                      a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security
+                    compliant and it enables
+                    stronger authentication. <strong>This will</strong> reduce the risk of security threat.</p>
                   <hr>
                   <p>Took feedback from TOTP MFA user journey from various sources.</p>
                   <h3 class="nhsuk-heading-m">What we changed:</h3>
@@ -919,9 +1036,9 @@
                   </ul>
                   <hr>
                   <p class="nhsuk-u-margin-bottom-0"><a href="MFA-it3/login-page"><button class="nhsuk-button"
-                          type="submit">Iteration 3 - first sign-on</button></a></p>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="MFA-it3/signin-email-only/login-page"><button class="nhsuk-button"
-                          type="submit">subsequent sign-on</button></a></p>
+                        type="submit">Iteration 3 - first sign-on</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="MFA-it3/signin-email-only/login-page"><button
+                        class="nhsuk-button" type="submit">subsequent sign-on</button></a></p>
                 </div>
               </details>
               <details class="nhsuk-details">
@@ -930,8 +1047,11 @@
                 </summary>
                 <div class="nhsuk-details__text">
                   <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding side nav to allow us to categorize the case lists <strong>will be a useful feature for</strong> users <strong>as it is a user need</strong> for them
-                  to be able to prioritise their caseload by task and urgency. <strong>This will</strong> allow them to more easily see what action they most imminently need to take.</p>
+                  <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding side nav to allow us
+                    to categorize the case lists <strong>will be a useful feature for</strong> users <strong>as it is a
+                      user need</strong> for them
+                    to be able to prioritise their caseload by task and urgency. <strong>This will</strong> allow them
+                    to more easily see what action they most imminently need to take.</p>
                   <hr>
                   <h3 class="nhsuk-heading-m">What we added:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
@@ -952,9 +1072,9 @@
                   </ul>
                   <h3 class="nhsuk-heading-m">Any known issues?</h3>
                   <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/open-cases"><button class="nhsuk-button"
-                          type="submit">MEO view</button></a></p>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/me-case-list-reviewconcerns"><button class="nhsuk-button"
-                          type="submit">ME view</button></a></p>
+                        type="submit">MEO view</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="side-nav/me-case-list-reviewconcerns"><button
+                        class="nhsuk-button" type="submit">ME view</button></a></p>
                 </div>
               </details>
             </div>
@@ -970,12 +1090,17 @@
                 </summary>
                 <div class="nhsuk-details__text">
                   <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that users will benefit from being able to see when others are editing cases <strong>This will mean</strong> that data edits are not accidentally
-                  overwritten if people are making edits at the same time. <strong>We will have demonstrated this</strong> when this no longer happens.</p>
+                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that users will benefit
+                    from being able to see when others are editing cases <strong>This will mean</strong> that data edits
+                    are not accidentally
+                    overwritten if people are making edits at the same time. <strong>We will have demonstrated
+                      this</strong> when this no longer happens.</p>
                   <h3 class="nhsuk-heading-m">What we added:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>inset text with notification to user that another user is editing the case, and they are unable to make edits</li>
-                    <li>removed edit links and changed text colour, to make it obvious that users are unable to make edits</li>
+                    <li>inset text with notification to user that another user is editing the case, and they are unable
+                      to make edits</li>
+                    <li>removed edit links and changed text colour, to make it obvious that users are unable to make
+                      edits</li>
                   </ul>
                   <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
@@ -985,11 +1110,12 @@
                   <h3 class="nhsuk-heading-m">What we found:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
                     <li>users understood the inset text</li>
-                    <li>they understood that they can't edit the case, but felt that this was too restrictive in some circumstances, particularly when paired with the 60 min timeout function.</li>
+                    <li>they understood that they can't edit the case, but felt that this was too restrictive in some
+                      circumstances, particularly when paired with the 60 min timeout function.</li>
                   </ul>
                   <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="Case-management/case-overview"><button class="nhsuk-button"
-                          type="submit">Case overview</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="Case-management/case-overview"><button
+                        class="nhsuk-button" type="submit">Case overview</button></a></p>
                 </div>
               </details>
               <details class="nhsuk-details">
@@ -998,13 +1124,18 @@
                 </summary>
                 <div class="nhsuk-details__text">
                   <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that users will benefit from being able to see more information on sections within an individual case. <strong>This will mean</strong> that users can see at
-                  a glance what stage a section is at, or whether any action is needed. <strong>We will have demonstrated this</strong> when users are no longer having to spend extra time and effort individually clicking into each section to find
-                  out what stage it is at.</p>
+                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> that users will benefit
+                    from being able to see more information on sections within an individual case. <strong>This will
+                      mean</strong> that users can see at
+                    a glance what stage a section is at, or whether any action is needed. <strong>We will have
+                      demonstrated this</strong> when users are no longer having to spend extra time and effort
+                    individually clicking into each section to find
+                    out what stage it is at.</p>
                   <h3 class="nhsuk-heading-m">What we added:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
                     <li>added an extra column with a summary of each section</li>
-                    <li>only certain sections have a summary; for some sections it isn't relevant and wouldn't add any value.</li>
+                    <li>only certain sections have a summary; for some sections it isn't relevant and wouldn't add any
+                      value.</li>
                   </ul>
                   <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
@@ -1015,11 +1146,12 @@
                   <ul class="nhsuk-list nhsuk-list--bullet">
                     <li>users find the additional column clear and easy to read</li>
                     <li>they find the extra info useful in certain scenarios</li>
-                    <li>Some users felt that this would be less useful than having the information available to them as part of a case list categorisation</li>
+                    <li>Some users felt that this would be less useful than having the information available to them as
+                      part of a case list categorisation</li>
                   </ul>
                   <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/case-overview-improved"><button class="nhsuk-button"
-                          type="submit">Case overview</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/case-overview-improved"><button
+                        class="nhsuk-button" type="submit">Case overview</button></a></p>
                 </div>
               </details>
             </div>
@@ -1035,11 +1167,14 @@
                 </summary>
                 <div class="nhsuk-details__text">
                   <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding create a quick case function will be useful for users. Users <strong>will be able to create a case with basic information which will save them time
-                  and allow more cases to be created.</strong></p>
+                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> adding create a quick case
+                    function will be useful for users. Users <strong>will be able to create a case with basic
+                      information which will save them time
+                      and allow more cases to be created.</strong></p>
                   <h3 class="nhsuk-heading-m">What we added:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>We added two journeys, longer and shorter one, and will test to see which one will the users prefer</li>
+                    <li>We added two journeys, longer and shorter one, and will test to see which one will the users
+                      prefer</li>
                   </ul>
                   <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
@@ -1047,10 +1182,10 @@
                   </ul>
                   <h3 class="nhsuk-heading-m">What we found:</h3>
                   <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/quickcreate-case/open-cases"><button class="nhsuk-button"
-                          type="submit">Quick-create option 1</button></a></p>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/quickcreate-case-option2/open-cases"><button class="nhsuk-button"
-                          type="submit">Quick-create option 2</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/quickcreate-case/open-cases"><button
+                        class="nhsuk-button" type="submit">Quick-create option 1</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/quickcreate-case-option2/open-cases"><button
+                        class="nhsuk-button" type="submit">Quick-create option 2</button></a></p>
                 </div>
               </details>
               <details class="nhsuk-details nhsuk-expander">
@@ -1059,11 +1194,16 @@
                 </summary>
                 <div class="nhsuk-details__text">
                   <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> amending Contacts, Communication and Key people involved in care is esential for user, as it will allow them to navigate through the system easier and
-                  complete the task faster. Users <strong>will be able to record actions within a case and this includes conversations with a variety of people without needing to add all their contact information.</strong></p>
+                  <p style="background: #DEE0E2; padding: 20px;"><strong>We believe</strong> amending Contacts,
+                    Communication and Key people involved in care is esential for user, as it will allow them to
+                    navigate through the system easier and
+                    complete the task faster. Users <strong>will be able to record actions within a case and this
+                      includes conversations with a variety of people without needing to add all their contact
+                      information.</strong></p>
                   <h3 class="nhsuk-heading-m">What we added:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>We changed Contact, Key people involved in care and Communication log pages to Case progress log</li>
+                    <li>We changed Contact, Key people involved in care and Communication log pages to Case progress log
+                    </li>
                   </ul>
                   <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                   <ul class="nhsuk-list nhsuk-list--bullet">
@@ -1071,8 +1211,8 @@
                   </ul>
                   <h3 class="nhsuk-heading-m">What we found:</h3>
                   <h3 class="nhsuk-heading-m">Any known issues?</h3>
-                  <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case-progress/case-overview"><button class="nhsuk-button"
-                          type="submit">Case progress</button></a></p>
+                  <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case-progress/case-overview"><button
+                        class="nhsuk-button" type="submit">Case progress</button></a></p>
                 </div>
               </details>
               <hr>
@@ -1088,8 +1228,11 @@
                   <span class="nhsuk-details__summary-text"><small>Re-open/Re-close case</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> Adding reopen buton is an essential feature for users, as it will allow users to reopen case that has previously been closed <strong>as this will allow users
-                to add a concern, amend the existing information, amend COD, or if registrar rejects it.</strong></p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> Adding reopen buton is an
+                  essential feature for users, as it will allow users to reopen case that has previously been closed
+                  <strong>as this will allow users
+                    to add a concern, amend the existing information, amend COD, or if registrar rejects it.</strong>
+                </p>
                 <h3 class="nhsuk-heading-m">What we added:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
                   <li>Added Reopen button</li>
@@ -1102,11 +1245,11 @@
                 <h3 class="nhsuk-heading-m">What we found:</h3>
                 <h3 class="nhsuk-heading-m">Any known issues?</h3>
                 <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/closed-cases"><button class="nhsuk-button"
-                        type="submit">Re-open/Re-close case</button></a></p>
+                      type="submit">Re-open/Re-close case</button></a></p>
                 <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/closed-cases"><button class="nhsuk-button"
-                        type="submit">Iteration 1 - ME Journey</button></a></p>
+                      type="submit">Iteration 1 - ME Journey</button></a></p>
                 <p class="nhsuk-u-margin-bottom-0"><a href="../meo-journey/closed-cases0"><button class="nhsuk-button"
-                        type="submit">Iteration 1 - ME0 Journey</button></a></p>
+                      type="submit">Iteration 1 - ME0 Journey</button></a></p>
               </details>
             </div>
           </details>
@@ -1120,8 +1263,12 @@
                   <span class="nhsuk-details__summary-text"><small>60 min timeout</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> Adding a timeout warning is an essential feature for users, as it will allow them to extend their session if they need to and be aware of the time limit users
-                <strong>as this will allow us to comply with data security requirements by having a 60 minute timeout.</strong></p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> Adding a timeout warning is an
+                  essential feature for users, as it will allow them to extend their session if they need to and be
+                  aware of the time limit users
+                  <strong>as this will allow us to comply with data security requirements by having a 60 minute
+                    timeout.</strong>
+                </p>
                 <h3 class="nhsuk-heading-m">What we added:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
                   <li>Added 3 pages: Timeout, Timing out and Timed out</li>
@@ -1144,11 +1291,12 @@
                 <h3 class="nhsuk-heading-m">Any known issues?</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
                   <li>Progressive enhancement</li>
-                  <li>If an user don't use Java Script then we need to use meta refresh tag inside Noscript tags that matches the session timeout time</li>
+                  <li>If an user don't use Java Script then we need to use meta refresh tag inside Noscript tags that
+                    matches the session timeout time</li>
                   <li>If am user is not able to see the warning if away from the screen, it will log them anyway</li>
                 </ul>
-                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/me-timeout/60-min-timeout"><button class="nhsuk-button"
-                        type="submit">60 min timeout</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/me-timeout/60-min-timeout"><button
+                      class="nhsuk-button" type="submit">60 min timeout</button></a></p>
               </details>
             </div>
           </details>
@@ -1162,22 +1310,31 @@
                   <span class="nhsuk-details__summary-text"><small>Coroner Notification - Iteration 2</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a Coroner Notification section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record information that can be
-                transferred to the Coroner.</strong> Users need to fill this section if they are not filling up the Coroner's web portal. <strong>This will</strong> enable a case to be referred to a coroner so that further independent scrutiny can
-                take place.</p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a Coroner Notification
+                  section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record
+                    information that can be
+                    transferred to the Coroner.</strong> Users need to fill this section if they are not filling up the
+                  Coroner's web portal. <strong>This will</strong> enable a case to be referred to a coroner so that
+                  further independent scrutiny can
+                  take place.</p>
                 <hr>
                 <h3 class="nhsuk-heading-m">What we changed:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
-                  <li>Added extra screens and changed wording, to help the user understand the options for coroner notification</li>
-                  <li>There are two types of scenario : Scenario 1 - this is the best case scenario & Scenario 2 - worst case scenario</li>
-                  <li>Scenario 1 - where all the fields in the other sections (incl the optional ones) are filled up</li>
+                  <li>Added extra screens and changed wording, to help the user understand the options for coroner
+                    notification</li>
+                  <li>There are two types of scenario : Scenario 1 - this is the best case scenario & Scenario 2 - worst
+                    case scenario</li>
+                  <li>Scenario 1 - where all the fields in the other sections (incl the optional ones) are filled up
+                  </li>
                   <li>Scenario 2 - where none of the optional fields been filled</li>
                 </ul>
                 <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
                   <li>Are users able to follow the user journey to complete the notification</li>
-                  <li>Do users understand what an external referral is, and what they need to do when they complete the referral using the ME service</li>
-                  <li>Whether users understand that some information has been filled in other sections within MES will be pull through to this section</li>
+                  <li>Do users understand what an external referral is, and what they need to do when they complete the
+                    referral using the ME service</li>
+                  <li>Whether users understand that some information has been filled in other sections within MES will
+                    be pull through to this section</li>
                   <li>..</li>
                 </ul>
                 <h3 class="nhsuk-heading-m">What we found:</h3>
@@ -1187,37 +1344,49 @@
                   <li>No validation errors</li>
                 </ul>
                 <hr>
-                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral2/case-overview"><button class="nhsuk-button"
-                        type="submit">Iteration 2</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral2/case-overview"><button
+                      class="nhsuk-button" type="submit">Iteration 2</button></a></p>
               </details>
               <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
                 <summary class="nhsuk-details__summary">
                   <span class="nhsuk-details__summary-text"><small>Coroner Referral - Iteration 1</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a Coroner Referral section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record information that can be
-                transferred to the Coroner.</strong> Users need to fill this section if they are not filling up the Coroner's web portal. <strong>This will</strong> enable a case to be referred to a coroner so that further independent scrutiny can
-                take place.</p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a Coroner Referral
+                  section <strong>will be a useful feature for</strong> users <strong>as this will ensure users record
+                    information that can be
+                    transferred to the Coroner.</strong> Users need to fill this section if they are not filling up the
+                  Coroner's web portal. <strong>This will</strong> enable a case to be referred to a coroner so that
+                  further independent scrutiny can
+                  take place.</p>
                 <hr>
                 <h3 class="nhsuk-heading-m">What we changed:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
-                  <li>Information will be derived from several parts of the system to be transferred to the Coroner (so that we are not asking the same question twice)</li>
-                  <li>There are two types of scenario : Scenario 1 - this is the best case scenario & Scenario 2 - worst case scenario</li>
-                  <li>Scenario 1 - where all the fields in the other sections (incl the optional ones) are filled up</li>
+                  <li>Information will be derived from several parts of the system to be transferred to the Coroner (so
+                    that we are not asking the same question twice)</li>
+                  <li>There are two types of scenario : Scenario 1 - this is the best case scenario & Scenario 2 - worst
+                    case scenario</li>
+                  <li>Scenario 1 - where all the fields in the other sections (incl the optional ones) are filled up
+                  </li>
                   <li>Scenario 2 - where none of the optional fields been filled</li>
                 </ul>
                 <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
                   <li>Are users able to follow the user journey to complete the referral</li>
-                  <li>Whether users understand that some information has been filled in other sections within MES will be pull through to this section</li>
+                  <li>Whether users understand that some information has been filled in other sections within MES will
+                    be pull through to this section</li>
                   <li>..</li>
                 </ul>
                 <h3 class="nhsuk-heading-m">What we found:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
-                  <li>Users never had to provide Communicable infections to the Coroner - although this is something that the Stakeholder requested; Following UR - we decided to remove this question</li>
-                  <li>Medical Device : users were confused with this term; further discussion within the team we found that this ques is for the FD therefore removed it and will be added to the MCCD service</li>
-                  <li>UR indicated cases referred to the Coroner are usually made by the MEO (with the advice from ME); Users were inputting the MEO's name in Reporting person fields - this was changed to Referring doctor as Coroner wants details of
-                  someone with the GMC number and not the MEO</li>
+                  <li>Users never had to provide Communicable infections to the Coroner - although this is something
+                    that the Stakeholder requested; Following UR - we decided to remove this question</li>
+                  <li>Medical Device : users were confused with this term; further discussion within the team we found
+                    that this ques is for the FD therefore removed it and will be added to the MCCD service</li>
+                  <li>UR indicated cases referred to the Coroner are usually made by the MEO (with the advice from ME);
+                    Users were inputting the MEO's name in Reporting person fields - this was changed to Referring
+                    doctor as Coroner wants details of
+                    someone with the GMC number and not the MEO</li>
                   <li>Further research finding can be found <a href="https://miro.com/app/board/o9J_kgGxF1o=/">here</a>
                   </li>
                 </ul>
@@ -1226,10 +1395,10 @@
                   <li>No validation errors</li>
                 </ul>
                 <hr>
-                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral/portal"><button class="nhsuk-button"
-                        type="submit">Scenario 2</button></a></p>
-                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral/coroner-ref"><button class="nhsuk-button"
-                        type="submit">Scenario 1</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral/portal"><button
+                      class="nhsuk-button" type="submit">Scenario 2</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/Coroner_referral/coroner-ref"><button
+                      class="nhsuk-button" type="submit">Scenario 1</button></a></p>
               </details>
             </div>
           </details>
@@ -1243,13 +1412,16 @@
                   <span class="nhsuk-details__summary-text"><small>MFA - Iteration 2</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger
-                authentication. <strong>This will</strong> reduce the risk of security threat.</p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be a
+                    useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security
+                  compliant and it enables stronger
+                  authentication. <strong>This will</strong> reduce the risk of security threat.</p>
                 <hr>
                 <p>Took learning from MOT Testing's MFA user journey.</p>
                 <h3 class="nhsuk-heading-m">What we changed:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
-                  <li>Added few more suggestions of authentication apps and letting users decide which app to download</li>
+                  <li>Added few more suggestions of authentication apps and letting users decide which app to download
+                  </li>
                   <li>Changed the display of 'Key to enter' from Inset text to warning call out</li>
                   <li>To provide better UX; added a screen asking user how are they going to download the app</li>
                 </ul>
@@ -1265,23 +1437,26 @@
                   <li>No validation errors</li>
                 </ul>
                 <hr>
-                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Authy/iteration-2/login-page"><button class="nhsuk-button"
-                        type="submit">Iteration2 - set up Authy</button></a></p>
-                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Sign_in/login-page"><button class="nhsuk-button"
-                        type="submit">User signing in once Authy been set up</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Authy/iteration-2/login-page"><button
+                      class="nhsuk-button" type="submit">Iteration2 - set up Authy</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Sign_in/login-page"><button
+                      class="nhsuk-button" type="submit">User signing in once Authy been set up</button></a></p>
               </details>
               <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
                 <summary class="nhsuk-details__summary">
                   <span class="nhsuk-details__summary-text"><small>MFA - Iteration 1</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be a useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security compliant and it enables stronger
-                authentication. <strong>This will</strong> reduce the risk of security threat.</p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a MFA <strong>will be a
+                    useful feature for</strong> users <strong>as it is a requirement</strong> in terms of security
+                  compliant and it enables stronger
+                  authentication. <strong>This will</strong> reduce the risk of security threat.</p>
                 <hr>
                 <p>Took learning from MOT Testing's MFA user journey.</p>
                 <h3 class="nhsuk-heading-m">What we changed:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
-                  <li>Added few screens to the journey to take users through on how to set the authentication app login</li>
+                  <li>Added few screens to the journey to take users through on how to set the authentication app login
+                  </li>
                 </ul>
                 <h3 class="nhsuk-heading-m">What we plan to test:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
@@ -1291,9 +1466,12 @@
                 <h3 class="nhsuk-heading-m">What we found:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
                   <li>Participants understood the need of MFA and was ok to download the app</li>
-                  <li>However, participants found difficulities in navigating 3rd party website (Authy) once they have downloaded the app</li>
-                  <li>Participant was unsure on how to progress once they have downloaded the app back to our service</li>
-                  <li>Participant did not see the key to be entered and went straight to the 2nd point on entering the code & got confused on what to do and did not know how to get the code</li>
+                  <li>However, participants found difficulities in navigating 3rd party website (Authy) once they have
+                    downloaded the app</li>
+                  <li>Participant was unsure on how to progress once they have downloaded the app back to our service
+                  </li>
+                  <li>Participant did not see the key to be entered and went straight to the 2nd point on entering the
+                    code & got confused on what to do and did not know how to get the code</li>
                   <li>Participant got confused between the smartphone and desktop app download journey</li>
                 </ul>
                 <h3 class="nhsuk-heading-m">Any known issues?</h3>
@@ -1301,10 +1479,10 @@
                   <li>No validation errors</li>
                 </ul>
                 <hr>
-                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Authy/login-page"><button class="nhsuk-button"
-                        type="submit">First time logging in - set up Authy</button></a></p>
-                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Sign_in/login-page"><button class="nhsuk-button"
-                        type="submit">User signing in once Authy been set up</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Authy/login-page"><button
+                      class="nhsuk-button" type="submit">First time logging in - set up Authy</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="me-journey/MFA/Sign_in/login-page"><button
+                      class="nhsuk-button" type="submit">User signing in once Authy been set up</button></a></p>
               </details>
             </div>
           </details>
@@ -1318,8 +1496,11 @@
                   <span class="nhsuk-details__summary-text"><small>Case concerns</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a case concern <strong>will be a useful feature for</strong> users <strong>as it will</strong> help users to add concerns to a case & to be able to
-                produce report for the quarterly report. <strong>This will</strong> help users to complete their tasks.</p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding a case concern
+                  <strong>will be a useful feature for</strong> users <strong>as it will</strong> help users to add
+                  concerns to a case & to be able to
+                  produce report for the quarterly report. <strong>This will</strong> help users to complete their
+                  tasks.</p>
                 <hr>
                 <h3 class="nhsuk-heading-m">What we changed:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
@@ -1332,7 +1513,8 @@
                 <ul class="nhsuk-list nhsuk-list--bullet">
                   <li>Are the provided fields sufficient for users to record a concern</li>
                   <li>Are users able to complete their task</li>
-                  <li>User need identified to add free text box to allow users to key in the name of the Organisation the concern relates to (this was added after the UR session)</li>
+                  <li>User need identified to add free text box to allow users to key in the name of the Organisation
+                    the concern relates to (this was added after the UR session)</li>
                   <li>Using exclamation mark to to flag cases with concerns - this was identified as a user need</li>
                   <li>Are users able to produce QR report with all the relevant fields asked</li>
                   <li>..</li>
@@ -1348,10 +1530,10 @@
                   <li>No validation errors</li>
                 </ul>
                 <hr>
-                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/add_concern"><button class="nhsuk-button"
-                        type="submit">Add a concen</button></a></p>
-                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/open-cases_concern"><button class="nhsuk-button"
-                        type="submit">Flagging case concern</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/add_concern"><button
+                      class="nhsuk-button" type="submit">Add a concen</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/Case_concern/open-cases_concern"><button
+                      class="nhsuk-button" type="submit">Flagging case concern</button></a></p>
               </details>
             </div>
           </details>
@@ -1365,8 +1547,12 @@
                   <span class="nhsuk-details__summary-text"><small>Search functionality</small></span>
                 </summary>
                 <h3 class="nhsuk-heading-m">Hypothesis A</h3>
-                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding the Search functionality <strong>will be a useful feature for</strong> users <strong>as it will</strong> help users to locate cases already in the
-                system so users can provide updates to others, add additional information within a case & this was identified as a key user need. <strong>This will</strong> help users to confidently use the service.</p>
+                <p style="background: #dee0e2; padding: 20px"><strong>We believe</strong> adding the Search
+                  functionality <strong>will be a useful feature for</strong> users <strong>as it will</strong> help
+                  users to locate cases already in the
+                  system so users can provide updates to others, add additional information within a case & this was
+                  identified as a key user need. <strong>This will</strong> help users to confidently use the service.
+                </p>
                 <hr>
                 <h3 class="nhsuk-heading-m">What we changed:</h3>
                 <ul class="nhsuk-list nhsuk-list--bullet">
@@ -1391,9 +1577,9 @@
                 </ul>
                 <hr>
                 <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/search"><button class="nhsuk-button"
-                        type="submit">Search</button></a></p>
-                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/search-no-results"><button class="nhsuk-button"
-                        type="submit">No results</button></a></p>
+                      type="submit">Search</button></a></p>
+                <p class="nhsuk-u-margin-bottom-0"><a href="../me-journey/search-no-results"><button
+                      class="nhsuk-button" type="submit">No results</button></a></p>
               </details>
             </div>
           </details>
@@ -1415,4 +1601,5 @@
     </div>{% endblock %}
   </div>
 </body>
+
 </html>

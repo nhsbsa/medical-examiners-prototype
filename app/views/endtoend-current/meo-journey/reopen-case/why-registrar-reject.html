@@ -1,0 +1,66 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Create a quick case {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %}
+
+
+				<header class="page-header">
+				                          <!--<span class="heading-secondary" style="color: #6f777b;font-size: 27px;">Reopen case</span>-->
+				                          <h1 class="nhsuk-heading-xl">Reason for rejection</h1>
+				                        </header>
+						<form action="QAP-proposed" method="get">
+
+						<fieldset class="nhsuk-fieldset">
+								<legend class="nhsuk-fieldset__legend">
+										<p class="nhsuk-fieldset__heading">
+												The MCCD (medical certificate of cause of death) was rejected because the cause of death is:​</p>
+								</legend>
+				​
+				<div class="nhsuk-radios">
+
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="unhappycod" aria-describedby="example-hints-1-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup1">
+not accepted by the bereaved​
+</label>
+</div>
+
+<div class="nhsuk-radios__item">
+<input class="nhsuk-radios__input" id="radioInlineGroup" name="radioInlineGroup" type="radio" value="invalidcod" aria-describedby="example-hints-2-item-hint">
+<label class="nhsuk-label nhsuk-radios__label" for="radioInlineGroup2">
+not on the official list​
+</label>
+</div>
+
+
+</div>
+						</fieldset>
+						<br>
+						<button class="nhsuk-button" type="submit">
+								Save and continue
+						</button>
+						</form>
+
+						<a href="closed-case-overview">Return to previous page without saving</a>
+
+		</div>
+	</div>
+
+
+
+{% endblock %}

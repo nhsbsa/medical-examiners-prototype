@@ -22,3 +22,22 @@
   display: table-cell;
   vertical-align: baseline;
 }
+
+.govuk-tag {
+  display: inline-block;
+  outline: 2px solid rgba(0,0,0,0);
+  outline-offset: -2px;
+  color: #fff;
+  background-color: #1d70b8;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1;
+  padding-top: 5px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+}

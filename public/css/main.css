@@ -6347,6 +6347,24 @@ b {
       font-size: 14pt;
       line-height: 1.2; } }
 
+.govuk-tag {
+  display: inline-block;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: -2px;
+  color: #fff;
+  background-color: #1d70b8;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1;
+  padding-top: 5px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px; }
+
 .nhsuk-related-nav {
   border-top: 1px solid #d8dde0; }
   @media (max-width: 48.0525em) {
