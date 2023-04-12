@@ -15,92 +15,122 @@
    <!-- Set the page title inside the pageTitle block -->
    {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
    {% block beforeContent %}
-  <div class="nhsBSA-sidebar-container">
-    <div class="nhsBSA-sidebar-wrapper">
-      <div class="nhsBSA-sidebar-content">
-        <div class="nhsuk-width-container">
-          <div class="nhsuk-main-wrapper"
-               id="maincontent">
-                  <a href="javascript:history.back()">Go back</a>
-                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">Case Scrutiny - Martin Lincoln</span>Attending practitioner's (AP) proposed cause of death  - Within the first 28 days of life</h1>
+                  <div class="nhsBSA-sidebar-container">
+                    <div class="nhsBSA-sidebar-wrapper">
+                      <div class="nhsBSA-sidebar-content">
+                        <div class="nhsuk-width-container">
+                          <div class="nhsuk-main-wrapper"
+                               id="maincontent">
+                                  <a href="javascript:history.back()">Go back</a>
+                                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">
+                                  Attending practitioner's (AP) proposed cause of death - Within the first 28 days of life - Martin Lincoln</span>
+                                  Record proposed cause of death</h1>
+                
+                                  <div class="nhsuk-warning-callout">
+                                    <h3 class="nhsuk-warning-callout__label">
+                                      <span role="text">
+                                        <span class="nhsuk-u-visually-hidden">Important: </span>
+                                        Important
+                                      </span>
+                                    </h3>
+                                    <p>You should ensure that the proposed cause of death entered here matches the copy provided by the attending practitioner (AP).
+                                    This section should not be an interpretation of what the AP has written.
+                                    </p>
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="example">
+                                      Cause of death summary
+                                    </label>
+                                    <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (a) Main diseases or conditions in infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (b) Other diseases or conditions in infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+                                                  
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (c)Main maternal diseases or conditions affecting infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (d)Other maternal diseases or conditions affecting infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
 
-            <form action="apCodKnown"
-                  method="get">
-              <fieldset class="nhsuk-fieldset">
-                <h3>Is the cause of death known?</h3>
-                  <div class="nhsuk-radios nhsuk-radios--conditional">
-                    <div class="nhsuk-radios nhsuk-radios--conditional">
-                      <div class="nhsuk-radios__item">
-                        <input aria-controls="rapid-yes"
-                             aria-expanded="false"
-                             class="nhsuk-radios__input"
-                             id="rapid-release-yes"
-                             name="rapid-release"
-                             type="radio"
-                             value="yes"> <label class="nhsuk-label nhsuk-radios__label"
-                             for="apid-release-yes">Yes</label>
-                      </div>
-                      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
-                           id="rapid-yes">
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="email">(a)Main diseases or conditions in infant</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                               id="email"
-                               name="email"
-                               type="text">
-                        </div>
-                       
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="email">(b)Other diseases or conditions in infant</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                               id="email"
-                               name="email"
-                               type="text">
-                        </div>
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (e)Other relevant causes
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
 
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="email">(c)Main maternal diseases or conditions affecting infant</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                               id="email"
-                               name="email"
-                               type="text">
+                                  <hr>
+                                 
+                                  <form>
+                
+                                    <div class="nhsuk-form-group">
+                                  
+                                      <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+                                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                                          <h2 class="nhsuk-fieldset__heading">
+                                            Declaration
+                                          </h2>
+                                        </legend>
+                                  
+                                        <div class="nhsuk-hint" id="nationality-hint">
+                                          You must agree to both declarations in order to mark this section as complete.
+                                        </div>
+                                  
+                                        <div class="nhsuk-checkboxes">
+                                  
+                                          <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" aria-describedby="nationality-1-item-hint">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+                                              I can confirm that I have:
+                                            </label>
+                                            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                                              <li>Recieved electronic instruction from the AP proposing the cause of death</li>
+                                              <li>Entered the cause of death proposed by the AP exactly as stated</li>
+                                            </div>
+                                          </div>
+                                  
+                                          <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-3">
+                                              I confirm that this section is complete and ready for the discussion between the AP and the medical examiner or medical examiner officer.
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </fieldset>
+                                    </div>
+                                  </form>
+                                </div>
+                            <div class="nhsuk-u-width-one-half">
+                              <a class="nhsuk-button"
+                                   draggable="false"
+                                   href="case-scrutiny-martin-lincoln-3-2">Save and continue</a>
+                          </div>
                         </div>
-
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="email">(d)Other maternal diseases or conditions affecting infant</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                               id="email"
-                               name="email"
-                               type="text">
-                        </div>
-
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label"
-                               for="email">(e)Other relevant causes</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                               id="email"
-                               name="email"
-                               type="text">
-                        </div>
-                      </div>
-                      <div class="nhsuk-radios__item">
-                        <input class="nhsuk-radios__input"
-                             id="apid-release-no"
-                             name="rapid-release"
-                             type="radio"
-                             value="no"> <label class="nhsuk-label nhsuk-radios__label"
-                             for="apid-release-no">No</label>
+                        {% endblock %}
                       </div>
                     </div>
                   </div>
-                </fieldset><br>
-              </div>
-              <button class="nhsuk-button"
-                    type="submit">Save and continue</button>
-            </form>
-          </div>
-        {% endblock %}
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+                </body>
+                </html>
+                
