@@ -1,0 +1,192 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar-bc-scrutiny.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-column-full">
+              
+              <div class="nhsuk-u-width-one-half">
+                <a href="javascript:history.back()">Go back</a>
+              </div>
+              
+              <p style="padding-top: 20px;"></p>
+              <h1 class="nhsuk-heading-xl">Case scrutiny</h1> 
+
+              <h2 class="nhsuk-heading-l">Pre-scrutiny notes</h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="pre-scrutiny-add-martin-lincoln">Add pre-scrutiny notes</a>
+                    </td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;"></td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a href="#"><strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l"><span role="text">Attending practitioner's (AP) proposed cause of death</span></h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="ap-proposed-cod-u28">Add attending practitioner's details</a><br>
+                          <a class="nhsuk-link"
+                          href="cod-details-u28">Add attending practitioner's proposed cause of death</a>
+                    </td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;"></td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a href="#"><strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong></a><br>
+                      <a href="#"><strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l"><span role="text">Discussion with the AP about the cause of death</span></h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="ap-discussion">Add discussion with the AP about the cause of death</a>
+                    </td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;"></td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a href="#"><strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+             <!--<h2 class="nhsuk-heading-l"><span role="text">Discussion with the main contact about scrutiny</span></h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                          href="main-contact-discussion">Add discussion with the main contact about scrutiny</a>
+                    </td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;"></td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a href="#"><strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>-->
+              <h2 class="nhsuk-heading-l"><span role="text">Medical examiner's independent review</span></h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                        href="medical-record-review">This section can only be completed by a medical examiner</a>
+                    </td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;"></td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a href="#"><strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="nhsuk-heading-l"><span role="text">Concerns notification</span></h2>
+              <table class="nhsuk-table">
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row"
+                      role="row">
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;">
+                      <a class="nhsuk-link"
+                        href="concern-notification">Raise a concern about this case</a>
+                    </td>
+                    <td class="nhsuk-table__cell"
+                        style="padding: 8px 24px 8px 0px;"></td>
+                    <td class="nhsuk-table__cell"
+                        style="text-align: right; padding: 8px 24px 8px 0px;">
+                      <a href="#"><strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nhsBSA-sidebar-nav">
+        <div class="side-nav">
+          <h3>Martin Lincoln <span class="nhsuk-caption-m nhsuk-caption--bottom"><span class="nhsuk-u-visually-hidden">-</span> NHS number 997 536 0025</span><span class="nhsuk-caption-m nhsuk-caption--bottom"><span class=
+          "nhsuk-u-visually-hidden">-</span> <strong class="nhsuk-tag nhsuk-tag--red">Urgent</strong></span></h3>
+          <ul>
+            <div class="options"
+                 id="options">
+              <ul>
+                <div class="options"
+                     id="options"></div>
+                <li>
+                  <a href="case-overview-martin-lincoln3">Case details</a>
+                </li>
+                <li>
+                  <a class="active"
+                      href="case-scrutiny-martin-lincoln">Case scrutiny</a>
+                </li>
+                <li>
+                  <a href="case-history-martin-lincoln">Communication and concerns</a>
+                </li>
+                <li>
+                  <a href="coroner-notification-martin-lincoln">Coroner notification</a>
+                </li>
+                <li>
+                  <a href="concerns-notification-martin-lincoln">Concerns notification</a>
+                </li>
+              </ul>
+            </div>
+          </ul><!-- <div class="action-buttons">
+                <button class="nhsuk-button nhsuk-button==secondary" type="submit">Add note</button>
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %} {% endblock %}
+</body>
+</html>

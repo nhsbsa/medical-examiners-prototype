@@ -1,0 +1,53 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-sidebar-bc-scrutiny.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+                  <a href="javascript:history.back()">Go back</a>
+                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">Case Scrutiny - Martin Lincoln</span>Attending practitioner's (AP) details</h1>
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="example">
+                    First name of the AP who proposed the cause of death
+                  </label>
+                  <input class="nhsuk-input" id="example" name="example" type="text">
+                </div>
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="example">
+                    Last name of the AP who proposed the cause of death
+                  </label>
+                  <input class="nhsuk-input" id="example" name="example" type="text">
+                </div>
+
+                <div class="nhsuk-u-width-one-half">
+                  <a class="nhsuk-button"
+                       draggable="false"
+                       href="case-scrutiny-martin-lincoln-3-1">Save and continue</a>
+                       </div>
+            </form>
+          </div>
+        </div>{% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

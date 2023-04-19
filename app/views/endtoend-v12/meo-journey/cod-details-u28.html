@@ -1,0 +1,136 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %}
+                  <div class="nhsBSA-sidebar-container">
+                    <div class="nhsBSA-sidebar-wrapper">
+                      <div class="nhsBSA-sidebar-content">
+                        <div class="nhsuk-width-container">
+                          <div class="nhsuk-main-wrapper"
+                               id="maincontent">
+                                  <a href="javascript:history.back()">Go back</a>
+                                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">
+                                  Attending practitioner's (AP) proposed cause of death - Within the first 28 days of life - Martin Lincoln</span>
+                                  Record proposed cause of death</h1>
+                
+                                  <div class="nhsuk-warning-callout">
+                                    <h3 class="nhsuk-warning-callout__label">
+                                      <span role="text">
+                                        <span class="nhsuk-u-visually-hidden">Important: </span>
+                                        Important
+                                      </span>
+                                    </h3>
+                                    <p>You should ensure that the proposed cause of death entered here matches the copy provided by the attending practitioner (AP).
+                                    This section should not be an interpretation of what the AP has written.
+                                    </p>
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="example">
+                                      Cause of death summary
+                                    </label>
+                                    <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (a) Main diseases or conditions in infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (b) Other diseases or conditions in infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+                                                  
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (c)Main maternal diseases or conditions affecting infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+                
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (d)Other maternal diseases or conditions affecting infant
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="full">
+                                      (e)Other relevant causes
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-u-width-full" id="full" name="full" type="text">
+                                  </div>
+
+                                  <hr>
+                                 
+                                  <form>
+                
+                                    <div class="nhsuk-form-group">
+                                  
+                                      <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+                                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                                          <h2 class="nhsuk-fieldset__heading">
+                                            Declaration
+                                          </h2>
+                                        </legend>
+                                  
+                                        <div class="nhsuk-hint" id="nationality-hint">
+                                          You must agree to both declarations in order to mark this section as complete.
+                                        </div>
+                                  
+                                        <div class="nhsuk-checkboxes">
+                                  
+                                          <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" aria-describedby="nationality-1-item-hint">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+                                              I can confirm that I have:
+                                            </label>
+                                            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                                              <li>Recieved electronic instruction from the AP proposing the cause of death</li>
+                                              <li>Entered the cause of death proposed by the AP exactly as stated</li>
+                                            </div>
+                                          </div>
+                                  
+                                          <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-3">
+                                              I confirm that this section is complete and ready for the discussion between the AP and the medical examiner or medical examiner officer.
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </fieldset>
+                                    </div>
+                                  </form>
+                                </div>
+                            <div class="nhsuk-u-width-one-half">
+                              <a class="nhsuk-button"
+                                   draggable="false"
+                                   href="case-scrutiny-martin-lincoln-3-2">Save and continue</a>
+                          </div>
+                        </div>
+                        {% endblock %}
+                      </div>
+                    </div>
+                  </div>
+                </body>
+                </html>
+                

@@ -5,6 +5,13 @@ const router = express.Router();
 router.use('/me-journey', require('./views/me-journey/_routes'));
 router.use('/meo-journey', require('./views/meo-journey/_routes'));
 
+
+// clear session data
+router.post('/clear-session-data/', (req, res) => {
+  req.session.data = {}
+  res.render('index')
+})
+
 // Coroner notification routes //
 router.get(/referralMethod/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
@@ -376,13 +383,58 @@ router.post(/subjectArea/, function (req, res) {
 
   // checking the value of the variable (incomeSingle) and directing to pages based on that value
   if (incomeSingle === 'gp-practice') {
+    req.session.data['over-under-28'] = 'over'
     res.redirect('case-scrutiny-martin-lincoln')
   } else if (incomeSingle === 'primary-care-network') {
+    req.session.data['over-under-28'] = 'under'
     res.redirect('case-scrutiny-martin-lincoln-u28')
   } else {
     res.redirect('#')
   }
 
 })
+
+// ME Journey
+router.post(/me-medical-record-review-under-28/, (req, res) => {
+
+  req.session.data['me-medical-review-provided-under'] = 'yes'
+  req.session.data['medical-review-provided'] = 'yes'
+  res.redirect('case-scrutiny-martin-lincoln3-u28')
+
+})
+
+router.post(/me-medical-record-review-over-28/, (req, res) => {
+
+  req.session.data['me-medical-review-provided-over'] = 'yes'
+  req.session.data['medical-review-provided'] = 'yes'
+  res.redirect('case-scrutiny-martin-lincoln3')
+
+})
+
+router.post(/meOverUnder28/, function (req, res) {
+
+  // points to the name attribute name="incomesingle"
+  const overUnderTwentyEightDays = req.session.data['over-under-28']
+
+  // checking the value of the variable (incomeSingle) and directing to pages based on that value
+  if (overUnderTwentyEightDays === 'over') {
+
+    req.session.data['medical-review-provided'] = 'no'
+    req.session.data['over-under-28'] = 'over'
+    res.redirect('case-scrutiny-martin-lincoln3')
+
+  } else if (overUnderTwentyEightDays === 'under') {
+
+    req.session.data['medical-review-provided'] = 'no'
+    req.session.data['over-under-28'] = 'under'
+    res.redirect('case-scrutiny-martin-lincoln3-u28')
+
+  } else {
+    res.redirect('#')
+  }
+
+})
+
+
 
 module.exports = router;

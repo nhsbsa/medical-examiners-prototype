@@ -1,0 +1,186 @@
+{% extends 'main-template.html' %}
+{% set active = "meo-user" %}
+{% set activesub = "cases" %}
+
+{% block pageTitle %}
+Case overview
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+  <a class="nhsuk-back-link__link" href="case-scrutiny-martin-lincoln3">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+      aria-hidden="true" height="24" width="24">
+      <path
+        d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+      </path>
+    </svg>
+    Go back</a>
+</div>
+<h1>
+  <span class="nhsuk-caption-m nhsuk-caption--bottom">
+    Medical examiner's independent review - Martin Lincoln
+  </span>
+  Record review
+</h1>
+
+<form id="medical-examiner-review-form" name="medicalExaminerReviewForm" method="POST"
+  action="me-medical-record-review-over-28" novalidate="">
+  <input type="hidden" name="_csrf" value="K10hmRLb-qnlm4VYunXHYnZZA8oV5zjaf_9A">
+
+  <div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__heading-l">
+        Have you had access to all documentation you required to scrutinise the case?
+      </legend>
+
+      <div class="nhsuk-radios">
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="accessToRequestedDocumentation" name="accessToRequestedDocumentation"
+            type="radio" value="YES">
+          <label class="nhsuk-label nhsuk-radios__label" for="accessToRequestedDocumentation">
+            Yes
+          </label>
+        </div>
+
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="No" name="accessToRequestedDocumentation" type="radio" value="NO">
+          <label class="nhsuk-label nhsuk-radios__label" for="No">
+            No
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+  </div>
+
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="reviewDetails">
+      Enter the details of what you have reviewed
+    </label>
+    <div class="nhsuk-hint nhsuk-u-width-two-thirds" id="reviewDetails-hint">
+      If you selected no, record any issues you had accessing the information.
+    </div>
+    <textarea class="nhsuk-textarea nhsuk-u-width-two-thirds" id="reviewDetails" name="reviewDetails" rows=" 10 "
+      aria-describedby="reviewDetails-hint"></textarea>
+  </div>
+
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="causeOfDeathSummary">
+      Cause of death summary
+    </label>
+    <textarea class="nhsuk-textarea nhsuk-u-width-two-thirds" id="causeOfDeathSummary" name="causeOfDeathSummary"
+      rows=" 10 "></textarea>
+  </div>
+
+  <div class="nhsuk-u-margin-bottom-8">
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="causeOfDeath1a">
+        1(a) disease or condition directly leading to death (required)
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-half" id="causeOfDeath1a" name="causeOfDeath1a" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="onsetInterval1a">
+        Approximate interval between onset of 1(a) and death
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-third" id="onsetInterval1a" name="onsetInterval1a" type="text">
+    </div>
+
+  </div>
+  <div class="nhsuk-u-margin-bottom-8">
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="causeOfDeath1b">
+        1(b) other disease or condition directly leading to 1(a) (optional)
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-half" id="causeOfDeath1b" name="causeOfDeath1b" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="onsetInterval1b">
+        Approximate interval between onset of 1(b) and death
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-third" id="onsetInterval1b" name="onsetInterval1b" type="text">
+    </div>
+
+  </div>
+  <div class="nhsuk-u-margin-bottom-8">
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="causeOfDeath1c">
+        1(c) other disease or condition directly leading to 1(b) (optional)
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-half" id="causeOfDeath1c" name="causeOfDeath1c" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="onsetInterval1c">
+        Approximate interval between onset of 1(c) and death
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-third" id="onsetInterval1c" name="onsetInterval1c" type="text">
+    </div>
+
+  </div>
+  <div class="nhsuk-u-margin-bottom-8">
+
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="causeOfDeath2">
+        2 - other significant conditions (optional)
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-half" id="causeOfDeath2" name="causeOfDeath2" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="onsetInterval2">
+        Approximate interval between onset of 2 and death
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-one-third" id="onsetInterval2" name="onsetInterval2" type="text">
+    </div>
+
+  </div>
+
+  <div class="nhsuk-form-group">
+    <div class="govuk-warning-text nhsuk-form-group nhsuk-u-padding-bottom-5">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <span class="govuk-warning-text__text">
+        <span class="visually-hidden"> Warning </span>
+        You must agree to the declaration in order to mark this section as complete.
+      </span>
+    </div>
+  </div>
+
+  <div class="nhsuk-form-group">
+
+    <div class="nhsuk-checkboxes">
+
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="reviewConfirmed" name="reviewConfirmed" type="checkbox" value="on">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="reviewConfirmed">
+          I confirm that I have:
+          <ul>
+            <li>carried out an independent and proportionate scrutiny of this death</li>
+            <li>complied with the national medical examiner's guidance</li>
+          </ul>
+        </label>
+      </div>
+
+      <button class="nhsuk-button" id="save-and-continue-button" type="submit">
+        Save and continue
+      </button>
+
+</form>
+{% endblock %}
