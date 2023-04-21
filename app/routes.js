@@ -435,6 +435,29 @@ router.post(/meOverUnder28/, function (req, res) {
 
 })
 
+router.post(/ap-proposed-cod/, (req, res) => {
+
+  const firstName = req.session.data['ap-details']
+  const lastName = req.session.data['ap-details']
+
+  res.redirect('case-scrutiny-martin-lincoln3')
+
+})
+
+router.post(/ap-cause-of-death/, (req, res) => {
+
+  req.session.data['ap-proposed-cause-provided'] = 'yes'
+  res.redirect('case-scrutiny-martin-lincoln3')
+
+})
+
+router.post(/under-28-cause/, (req, res) => {
+
+  req.session.data['ap-proposed-cause-provided-u28'] = 'yes'
+  res.redirect('case-scrutiny-martin-lincoln3-u28')
+
+})
+
 
 
 module.exports = router;

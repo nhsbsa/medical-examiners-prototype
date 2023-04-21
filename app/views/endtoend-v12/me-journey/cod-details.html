@@ -3,89 +3,69 @@
 <!-- Extends the layout from /views/layout.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
   <title></title>
 </head>
+
 <body>
   {% extends 'main-template-bc2.html' %} {% set active = "me-user" %} {% set activesub = "cases" %} <!--
   In /views/layout.html you can:
     - change the header and footer
     - add custom CSS and JavaScript
 -->
-   <!-- Set the page title inside the pageTitle block -->
-   {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
-   {% block beforeContent %}
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Case overview {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %}
   <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
       <div class="nhsBSA-sidebar-content">
         <div class="nhsuk-width-container">
-          <div class="nhsuk-main-wrapper"
-               id="maincontent">
-                  <a href="javascript:history.back()">Go back</a>
-                <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">Case Scrutiny - Martin Lincoln</span>Cause of Death</h1>
-        <fieldset class="nhsuk-fieldset">
-          <h3>Is the cause of death known?</h3>
-            <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-main-wrapper" id="maincontent">
+            <a href="javascript:history.back()">Go back</a>
+            <h1 class="nhsuk-u-margin-bottom-4"><span class="nhsuk-caption-l nhsuk-caption--bottom">Case Scrutiny -
+                Martin Lincoln</span>Cause of Death</h1>
+            <fieldset class="nhsuk-fieldset">
+              <h3>Is the cause of death known?</h3>
               <div class="nhsuk-radios nhsuk-radios--conditional">
-                <div class="nhsuk-radios__item">
-                  <input aria-controls="rapid-yes"
-                       aria-expanded="false"
-                       class="nhsuk-radios__input"
-                       id="rapid-release-yes"
-                       name="rapid-release"
-                       type="radio"
-                       checked="checked"
-                       value="yes"> <label class="nhsuk-label nhsuk-radios__label"
-                       for="rapid-release-yes">Yes</label>
-                </div>
-                <div class="nhsuk-radios__conditional nhsuk-radios__conditional"
-                     id="rapid-yes">
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label"
-                         for="email">1(a) Disease or condition directly leading to death</label>
-                         <input class="nhsuk-input nhsuk-u-width-three-thirds" 
-                         id="email"
-                         name="email"
-                         type="text">
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+                  <div class="nhsuk-radios__item">
+                    <input aria-controls="rapid-yes" aria-expanded="false" class="nhsuk-radios__input"
+                      id="rapid-release-yes" name="rapid-release" type="radio" checked="checked" value="yes"> <label
+                      class="nhsuk-label nhsuk-radios__label" for="rapid-release-yes">Yes</label>
                   </div>
-                 
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label"
-                         for="email">(b)Other disease or condition, if any, leading to death 1(a)</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                         id="email"
-                         name="email"
-                         type="text">
-                  </div>
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional" id="rapid-yes">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="email">1(a) Disease or condition directly leading to death</label>
+                      <input class="nhsuk-input nhsuk-u-width-three-thirds" id="email" name="email" type="text">
+                    </div>
 
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label"
-                         for="email">(c)Other disease or condition, if any, leading to death 1(b)</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                         id="email"
-                         name="email"
-                         type="text">
-                  </div>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="email">(b)Other disease or condition, if any, leading to death
+                        1(a)</label> <input class="nhsuk-input nhsuk-u-width-three-thirds" id="email" name="email"
+                        type="text">
+                    </div>
 
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label"
-                         for="email">2 Other significant conditions contributing to the death <br>but not related to the disease or condition causing it</label> <input class="nhsuk-input nhsuk-u-width-three-thirds"
-                         id="email"
-                         name="email"
-                         type="text">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="email">(c)Other disease or condition, if any, leading to death
+                        1(b)</label> <input class="nhsuk-input nhsuk-u-width-three-thirds" id="email" name="email"
+                        type="text">
+                    </div>
+
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="email">2 Other significant conditions contributing to the death
+                        <br>but not related to the disease or condition causing it</label> <input
+                        class="nhsuk-input nhsuk-u-width-three-thirds" id="email" name="email" type="text">
+                    </div>
                   </div>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input"
-                       id="apid-release-no"
-                       name="rapid-release"
-                       type="radio"
-                       value="no"> <label class="nhsuk-label nhsuk-radios__label"
-                       for="apid-release-no">No</label>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="apid-release-no" name="rapid-release" type="radio"
+                      value="no"> <label class="nhsuk-label nhsuk-radios__label" for="apid-release-no">No</label>
+                  </div>
                 </div>
               </div>
-            </div>
-          </fieldset><br>
-              <button class="nhsuk-button"
-                    type="submit">Save and continue</button>
+            </fieldset><br>
+            <button class="nhsuk-button" type="submit">Save and continue</button>
             </form>
           </div>
         </div>{% endblock %}
@@ -93,4 +73,5 @@
     </div>
   </div>
 </body>
+
 </html>
